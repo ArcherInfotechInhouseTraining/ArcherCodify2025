@@ -1,0 +1,22 @@
+.divider {
+    position: relative;
+    border: 2px solid #ccc;
+    margin: 20px;
+}
+
+.divider::before,
+.divider::after {
+    content: "•";
+    position: absolute;
+    top: -10px;
+    font-size: 18px;
+    color: #007acc;
+}
+
+.divider::before {
+    left: -10px;
+}
+
+.divider::after {
+    right: -10px;
+}
