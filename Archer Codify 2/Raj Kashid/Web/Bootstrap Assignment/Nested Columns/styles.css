@@ -1,0 +1,37 @@
+h1 {
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin: 10px auto;
+    border: 2px solid white;
+    padding: 10px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.container {
+    border: 1px solid;
+    background-color: #4C585B;
+    padding: 30px;
+    margin: 10% auto;
+    border-radius: 10px;
+}
+
+.row, .row {
+    border: 1px solid;
+    padding: 30px;
+    background-color: #7E99A3;
+}
+
+.col-sm-12, .col-md-4, .col-md-6 {
+    border: 1px solid;
+    background-color: #A5BFCC;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
