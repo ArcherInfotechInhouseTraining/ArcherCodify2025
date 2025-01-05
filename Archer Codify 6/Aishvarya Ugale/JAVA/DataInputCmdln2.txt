@@ -1,0 +1,11 @@
+class DataInputCmdln
+{
+	public static void main(String []args)
+	{
+		int x=args[0];
+		double y=args[1];
+
+		System.out.println("x is: "+x);
+		System.out.println("y is: "+y);
+	}
+}
