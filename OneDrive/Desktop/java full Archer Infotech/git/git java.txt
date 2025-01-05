@@ -32,6 +32,11 @@ cmd commands:
 7.git push -u origin main
 
 --------------------------------------------------------
+git branch  pgw0808
+git branch  git checkout name
+git push -u origin name
+
+
 
 
 
