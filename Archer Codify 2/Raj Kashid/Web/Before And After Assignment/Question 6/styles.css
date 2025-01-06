@@ -1,0 +1,30 @@
+.card {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card::before,
+.card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 30px;
+    background: #007acc;
+}
+
+.card::before {
+    transform: rotate(-45deg);
+    transform-origin: left top;
+}
+
+.card::after {
+    transform: rotate(45deg);
+    transform-origin: right top;
+}
