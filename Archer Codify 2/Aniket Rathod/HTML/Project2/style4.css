@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.box{
+	min-height: 50%;
+	max-height: 100%;
+	width: 550px;
+	margin: 20px 0px 0px 0px;
+	margin-left: 450px;
+
+
+	/* margin : top right bottom left */
+
+	border-image-source: url('C:/Users/ASUS/Desktop/Programming/Internship - Archer IT/HTML & CSS/Project2/Pics/border3.png');
+	border-image-slice: 100;
+	border-image-width: 200px;
+	border-image-repeat: no-repeat;
+
+	/*short hand :	border-image: url('C:/Users/ASUS/Desktop/Programming/Internship - Archer IT/HTML & CSS/Project2/Pics/border3.png') 100 / 200px /no-repeat;*/
+
+}
+
+.box h1, p{
+	text-align: center;
+	margin: 120px;
+	/*padding: 0px 10px 10px 0px;*/
+
+}
+
+h1{
+	font-size:larger;
+	color: brown;
+	font-family: "Space Mono", monospace;
+	padding: 20px 0px 0px 0px;
+	font-weight: 1000;
+}
+
+p{
+	font-family: "Lacquer", system-ui;
+  	font-weight: 400;
+  	font-style: normal;
+	color: rgb(62, 7, 71);
+	
+	padding: 0px 0px 20px 0px;
+}
+
+a{
+	
+	font-size: 20px;
+	padding: 10px 0px 20px 0px;
+	margin: 50px 0px 50px 0px;
+
+}
