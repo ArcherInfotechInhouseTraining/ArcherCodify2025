@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Questions Solution</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a3e0e1;
+            border: 3px solid black
+        }
+        h3 {
+            text-align: center;
+            color: #000000;
+        }
+        .card {
+            border: 2px solid #000000;
+            border-radius: 8px;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            color: #495057;
+        }
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+        .row-cols-auto .col {
+            padding: 10px;
+            background-color: #e9ecef;
+            border: 1px solid #100101;
+            text-align: center;
+            border-radius: 5px;     
+        }
+        .offset-4 {
+            background-color: #e2e6ea;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .align-items-center .col {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .row{
+            
+            text-align: center;
+            border: 2px solid black;
+
+        }
+    </style>
+</head>
+<body>
+              <h1 style="text-align: center;">✅Bootstrap Questions Solution✅</h1>
+    <div class="container mt-5">
+        
+        <h3>1. Basic Column Layout</h3>
+        <div class="row" weight="20px ", height="20px">
+            <div class="col bg-info border">Column 1</div>
+            <div class="col bg-info border">Column 2</div>
+            <div class="col bg-info border">Column 3</div>
+        </div>
+
+    
+        <h3 class="mt-5">2. Nested Columns</h3>
+        <div class="row">
+            <div class="col-6 bg-light border">Column 1</div>
+            <div class="col-6 bg-light border">
+                <div class="row">
+                    <div class="col-4 bg-secondary text-white border">Nested 1</div>
+                    <div class="col-4 bg-secondary text-white border">Nested 2</div>
+                    <div class="col-4 bg-secondary text-white border">Nested 3</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <h3 class="mt-5">3. Responsive Columns</h3>
+        <div class="row">
+            <div class="col-md-6 col-sm-12 bg-success border">Column 1</div>
+            <div class="col-md-6 col-sm-12 bg-success border">Column 2</div>
+            <div class="col-md-6 col-sm-12 bg-success border">Column 3</div>
+            <div class="col-md-6 col-sm-12 bg-success border">Column 4</div>
+        </div>
+
+
+        <h3 class="mt-5">4. Column Ordering</h3>
+        <div class="row">
+            <div class="col-4 order-2 order-lg-3 bg-warning border">Column 1</div>
+            <div class="col-4 order-3 order-lg-2 bg-warning border">Column 2</div>
+            <div class="col-4 order-1 order-lg-1 bg-warning border">Column 3</div>
+        </div>
+
+        
+        <h3 class="mt-5">5. Column Widths</h3>
+        <div class="row">
+            <div class="col-4 bg-light border">4/12 Width</div>
+            <div class="col-6 bg-light border">6/12 Width</div>
+            <div class="col-2 bg-light border">2/12 Width</div>
+        </div>
+
+        
+        <h3 class="mt-5">6. Auto Layout Columns</h3>
+        <div class="row row-cols-auto">
+            <div class="col">Column 1</div>
+            <div class="col">Column 2</div>
+            <div class="col">Column 3</div>
+            <div class="col">Column 4</div>
+            <div class="col">Column 5</div>
+        </div>
+
+        
+        <h3 class="mt-5">7. Offset Columns</h3>
+        <div class="row">
+            <div class="col-4 bg-light border">Column 1</div>
+            <div class="col-4 offset-4">Offset Column</div>
+        </div>
+
+        <h3 class="mt-5">8. Alignment</h3>
+        <div class="row align-items-center" style="height: 100px;">
+            <div class="col">Aligned Column 1</div>
+            <div class="col">Aligned Column 2</div>
+            <div class="col">Aligned Column 3</div>
+        </div>
+
+    
+        <h3 class="mt-5">9. Mixed Breakpoints</h3>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 bg-light border">Column 1</div>
+            <div class="col-lg-4 col-md-6 col-sm-12 bg-light border">Column 2</div>
+            <div class="col-lg-4 col-md-6 col-sm-12 bg-light border">Column 3</div>
+        </div>
+
+        
+        <h3 class="mt-5">10. Card Layout with Grid</h3>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 1</h5>
+                        <p class="card-text">Some quick example text.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 2</h5>
+                        <p class="card-text">Some quick example text.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 3</h5>
+                        <p class="card-text">Some quick example text.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 4</h5>
+                        <p class="card-text">Some quick example text.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
