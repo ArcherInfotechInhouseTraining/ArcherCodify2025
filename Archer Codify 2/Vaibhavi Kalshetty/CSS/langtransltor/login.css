@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Pacifico&display=swap');
+body
+{
+    background-image: url('img2.jpg');
+    background-size: cover;
+    background-color: rgb(103, 135, 202); 
+    background-blend-mode: multiply;
+    width: 1000px;
+    height: 800px;
+}
+ div{
+    border: 3px ridge pink;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    margin: 30px 200px 0px 350px;
+    background-color: rgb(166, 157, 160);
+}
+#head
+{
+    font-family: "DynaPuff", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    text-align: center;
+    color: rgb(160, 110, 206);
+    background-image: url('flex/apple-logo.png');
+}
+label
+{
+    font-size: 2em;
+    color: rgb(74, 82, 86);
+    background-color: rgb(166, 157, 160);;
+}  
