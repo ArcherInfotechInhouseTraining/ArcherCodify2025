@@ -31,10 +31,14 @@ cmd commands:
 6.git commit -m "first update"
 7.git push -u origin main
 
+fatal: destination path 'ArcherCodify2025' already exists and is not an empty directory
+
 --------------------------------------------------------
 git branch  pgw0808
 git branch  git checkout name
 git push -u origin name
+
+
 
 
 
