@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Conic Gradient</title>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		body{
+			background-image: url('https://images.pexels.com/photos/247600/pexels-photo-247600.jpeg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-blend-mode: saturation;
+			background-attachment: fixed;
+			margin: 80px auto;
+			overflow: scroll;
+		}
+		body::-webkit-scrollbar{
+			display: none;
+		}
+		.box{
+			width: 100%;
+			height: auto;
+		}
+		.box-item{
+			width: 200px;
+			height: 200px;
+			border: 2px solid yellow;
+			float: left;
+			margin: 20px;
+			border-radius: 50%;
+		}
+		.b1{
+			background-image: conic-gradient(red, yellow, green);
+			animation: rotateClockwise 5s linear infinite;
+		}
+		.b2{
+			background-image: conic-gradient(from 45deg, red, yellow, green);
+			animation: rotateClockwise 5s linear infinite;
+		}
+		.b3{
+			background-image: conic-gradient(from 45deg, red, yellow, green, red);
+			animation: rotateClockwise 5s linear infinite;
+		}
+		.b4{
+			background-image: conic-gradient(at 30% 60%, red, yellow, green, red);
+			animation: rotateClockwise 5s linear infinite;
+		}
+		.b5{
+			background-image: repeating-conic-gradient(red 10%, yellow 20%, green 30%);
+			animation: rotateClockwise 10s linear infinite;
+		}
+		.b6{
+			background-image: repeating-conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg, blue 360deg);
+			animation: rotateClockwise 5s linear infinite;
+		}
+		.b7{
+			background-image: repeating-conic-gradient(yellow 0deg, yellow 90deg, black 90deg, black 180deg);
+			animation: rotateClockwise 2s linear infinite;
+		}
+		.b8{
+			background-image: url('https://t3.ftcdn.net/jpg/02/70/62/24/360_F_270622417_2gasOBUwqXdcpkgEl9PUihhhnQZeX4nQ.jpg');
+			background-position: center;
+			background-repeat: space;
+			border-color: red green blue violet;
+			animation: rotateClockwise 2s linear infinite;
+		}
+		.b9{
+			background-image: repeating-conic-gradient(green 0deg, green 30deg, rgba(0,0,0,0.1) 20deg, rgba(0,0,0,0.1) 60deg);
+			animation: rotateClockwise 5s linear infinite;
+		}
+		.b10{
+			background-image: repeating-conic-gradient(yellow 0deg, yellow 90deg, black 90deg, black 180deg);
+			background-size: 20px 20px;
+			animation: rotateClockwise 5s linear infinite;
+		}
+
+		.b11{
+			width: 250px;
+			height: 250px;
+			border-radius: 0px;
+			border-color: transparent;
+			background-image: repeating-conic-gradient(from -45deg at 24% 55%, red 0deg, red 90deg, blue 90deg, blue 180deg, green 180deg, green 270deg, yellow 270deg, yellow 360deg);
+/*			background-image: linear-gradient(to right, blue, red);*/
+			font-size: 200px;
+			font-family: Facile Sans;
+/*			padding-top: -100px;*/
+			-webkit-background-clip: text;
+			color: transparent;
+
+		}
+
+		@keyframes rotateClockwise {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+               
+                transform: rotate(360deg);
+       		}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="box-item b1"></div>
+		<div class="box-item b2"></div>
+		<div class="box-item b3"></div>
+		<div class="box-item b4"></div>
+		<div class="box-item b5"></div>
+		<div class="box-item b6"></div>
+		<div class="box-item b7"></div>
+		<div class="box-item b8"></div>
+		<div class="box-item b9"></div>
+		<div class="box-item b10"></div>
+		<div class="box-item b11"><p>G</p></div>
+	</div>
+</body>
+</html>

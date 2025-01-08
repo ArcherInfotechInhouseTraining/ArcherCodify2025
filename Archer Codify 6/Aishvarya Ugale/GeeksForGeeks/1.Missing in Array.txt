@@ -1,0 +1,92 @@
+   //Problem Statement:
+
+You are given an array arr of size n - 1 that contains distinct integers in the range from 1 to n (inclusive). This array represents a permutation of the integers from 1 to n with one element missing. Your task is to identify and return the missing element.
+
+Examples:
+
+Input: arr[] = [1, 2, 3, 5]
+Output: 4
+Explanation: All the numbers from 1 to 5 are present except 4.
+Input: arr[] = [8, 2, 4, 5, 3, 7, 1]
+Output: 6
+Explanation: All the numbers from 1 to 8 are present except 6.
+Input: arr[] = [1]
+Output: 2
+Explanation: Only 1 is present so the missing element is 2
+
+
+   //Code:
+
+     class Solution {
+    int missingNumber(int arr[]) {
+        int n = arr.length + 1;
+        int xorFull = 0; 
+        int xorArray = 0; 
+        for (int i = 1; i <= n; i++) { 
+            xorFull ^= i; 
+        } 
+        for(int num : arr) { 
+            xorArray ^= num; 
+        }
+        return xorFull ^ xorArray;
+    }
+}
+
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+
+    //Code Explanation:
+
+Input Array and Total Numbers:
+
+n = arr.length + 1: Since one number is missing, the total numbers in the complete sequence would be arr.length + 1.
+XOR of Full Sequence:
+
+java
+Copy code
+for (int i = 1; i <= n; i++) { 
+    xorFull ^= i; 
+}
+This loop calculates the XOR of all numbers from 1 to n (the full set).
+For example, if n = 5, xorFull becomes 1 ^ 2 ^ 3 ^ 4 ^ 5.
+XOR of Array Elements:
+
+java
+Copy code
+for (int num : arr) { 
+    xorArray ^= num; 
+}
+This loop calculates the XOR of all elements in the array.
+For an array {1, 2, 4, 5}, xorArray becomes 1 ^ 2 ^ 4 ^ 5.
+Finding the Missing Number:
+
+java
+Copy code
+return xorFull ^ xorArray;
+XOR of xorFull and xorArray gives the missing number because all other numbers cancel out.
+Continuing with the example, if xorFull = 1 ^ 2 ^ 3 ^ 4 ^ 5 and xorArray = 1 ^ 2 ^ 4 ^ 5, the result is (3 ^ (1 ^ 2 ^ 4 ^ 5) ^ (1 ^ 2 ^ 4 ^ 5)) = 3, the missing number.
+Example Walkthrough
+Input:
+java
+Copy code
+arr = {1, 2, 4, 5}
+Steps:
+n = 5 (since arr.length + 1 = 4 + 1).
+XOR of full sequence:
+makefile
+Copy code
+xorFull = 1 ^ 2 ^ 3 ^ 4 ^ 5 = 1 ^ 2 ^ 3 ^ 4 ^ 5 = 1
+XOR of array:
+makefile
+Copy code
+xorArray = 1 ^ 2 ^ 4 ^ 5
+Missing number:
+kotlin
+Copy code
+return xorFull ^ xorArray = (1 ^ 2 ^ 3 ^ 4 ^ 5) ^ (1 ^ 2 ^ 4 ^ 5) = 3
+Output:
+mathematica
+Copy code
+Missing Number: 3
+
