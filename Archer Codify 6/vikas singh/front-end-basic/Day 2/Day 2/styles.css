@@ -1,0 +1,22 @@
+body{
+    background-image: url('images/img2.jpg'), url('images/img3.jpg'), url('images/img4.jpg'), url('images/img5.jpg');
+    background-size: 25% 1000px;
+    background-repeat: no-repeat;
+    background-position: 0% 0%, 33.33% 0%, 66.66% 0%, 100% 0%;
+
+}
+.box {
+    width: 1000px;
+    height: 580px;
+    margin: 150px auto;
+    color: #fff;
+    font-size: 24px;
+    background-attachment: fixed;
+    overflow: scroll;
+    
+}
+.box h1, p {
+    margin: 20px 40px;
+    float: left;
+    text-shadow: 2px 2px 2px #000;
+}

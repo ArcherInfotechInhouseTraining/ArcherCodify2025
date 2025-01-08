@@ -1,0 +1,7 @@
+body{
+	width: 100%;
+	height: auto;
+	background-image: url('images/img4.jpg'), url('images/peacock.png');
+	background-size:cover;
+	background-blend-mode: luminosity;
+}
