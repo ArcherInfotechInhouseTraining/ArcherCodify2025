@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 class Solution
 {
 public:
@@ -24,6 +25,7 @@ public:
         return ans;
     }
 };
+
 int main()
 {
     Solution sol;
