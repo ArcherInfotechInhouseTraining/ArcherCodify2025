@@ -1,0 +1,44 @@
+Title:- Toy Car Workshop
+        You work in a toy car workshop, and your job is to build toy cars from a collection of parts. Each toy car needs 4 wheels, 1 car body, and 2 figures of people to be placed inside. Given the total number of wheels, car bodies and figures available, how many complete toy cars can you make?
+
+Examples
+cars(2, 48, 76) ➞ 0
+// 2 wheels, 48 car bodies, 76 figures
+
+cars(43, 15, 87) ➞ 10
+
+cars(88, 37, 17) ➞ 8
+
+Link:- https://edabit.com/challenge/Ccoo3SHJwv4qCLKQb
+
+Approch:- algorithm name library are used to import min() function.
+
+Solution:-
+
+#include<iostream>
+#include<algorithm>
+using namespace std;
+
+int cars(int wheels, int bodies, int figures) {
+	if(wheels || bodies || figures !=0)
+	{
+		return min({wheels/4, bodies, figures/2});
+	}
+	else{
+		return 0;
+	}
+	
+	}
+int main()
+{
+    int wheel;
+    int bodie;
+    int fig;
+    
+    cout<<"Enter the Wheels, Bodies, Figures:"<<endl;
+    cin>>wheel>>bodie>>fig;
+    
+    cout<<"Total Complete cars are made is :"<<cars(wheel, bodie, fig);
+    
+    return 0;
+}
