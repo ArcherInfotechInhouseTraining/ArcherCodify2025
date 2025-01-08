@@ -1,0 +1,154 @@
+- Null pointer: 
+
+		Normally we decl the pointer as 
+
+			int *p; 
+
+			*p
+                        [ ] ---> ....     
+
+		By default it is pointing towards the random location.
+		to avoid this if we decl same as 
+
+			int *p=NULL;
+		
+		here NULL is constant decl. in stdio.h. and the pointer pointing
+		towards nothing
+
+	We can create a null pointer by assigning null value during the pointer declaration. 
+	This method is useful when you do not have any address assigned to the pointer. 
+	A null pointer always contains value 0.
+
+
+
+
+	- void pointer/generic pointer: 
+		A void pointer is also called as a generic pointer which is convertable to any type.
+ 		It does not have any standard data type. A void pointer is created by using the
+ 		keyword void. It can be used to store an address of any variable.
+
+#include <stdio.h>
+int main()
+{
+    void *p = NULL; 	//void pointer
+    int x=10;
+    double db=34.45;
+
+    printf("The size of pointer is:%d\n",sizeof(p));
+
+    p=&x;
+    printf("\n value of x is: %d",*(int*)p);
+
+    p=&db;
+    printf("\n value of db is: %lf",*(double*)p);
+    return 0;
+}
+
+
+	- wild pointer:
+		A pointer is said to be a wild pointer if it is not being initialized to anything.
+	 	These types of C pointers are not efficient because they may point to some unknown
+ 		memory location which may cause problems in our program and it may lead to crashing 
+		of the program. One should always be careful while working with wild pointers.
+
+#include <stdio.h>
+int main()
+{
+	int *p; 	//wild pointer
+	printf("\n%d",*p);
+	return 0;
+}
+
+	- Dangling pointer:
+		It is pointer refering towards the deallocated/deleted/dereferenced location.
+		Dangling pointer occurs at the time of the object destruction when the object is
+		deleted or de-allocated from memory without modifying the value of the pointer. 
+			
+int main()
+{
+    int *p,*q,cnt,i;
+
+	printf("\n Enter the element count: ");
+	scanf("%d",&cnt);
+
+	p=(int*)malloc(cnt*sizeof(int));      // allocates the memory for pointer
+	q=p;
+	printf("\n Enter the %d Nos: ",cnt);
+	for(i=0;i<cnt;i++)
+	{
+		scanf("%d",(p+i));
+	}
+
+	printf("\n Elements are: ");
+	for(i=0;i<cnt;i++)
+	{
+		printf("%5d",*(p+i));
+	}
+        free(p); 
+	   // Releases the allocated location, 
+                // After the releasing pointer becomes the Dangling pointer and q also.
+			
+	return 0;
+}
+	- Complex pointer: 
+		This is not a simple decl. It is quite complicated therefore it is known as
+		complex pointer
+			e.g. void (*ptr)(int (*)[2],int (*) void))
+
+
+	Before knowing how to read complex pointers then you should first know associativity 		and precedence.
+
+	Associativity: Order operators of equal precedence within an expression are employed.
+
+	Precedence: Operator precedence describes the order in which C reads expressions.
+
+
+	Operator		Precedence			Associative
+
+	(),[]			  1			    Left to Right
+
+	*,Identifier		  2			    Right to Left
+
+	Data Type		  3				–
+
+(): this operator is used to declare and define the function.
+[]: this is an array subscript operator.
+*: this is a pointer operator.
+Identifier: this is the name of a pointer.
+Data type: this is the type of variable.  
+
+
+		Reading the complex pointer
+
+			e.g.
+				char (*ptr)[3];  // block pointer
+				
+				void (*ptr)(int (*)[2],int (*) void))
+
+				double*(*(*ptr)(int))(double **,char c)
+
+		
+	- Near pointer
+		Near pointer means a pointer that is utilized to bit address of up to 16 bits within 
+		a given section of that computer memory which is 16 bit enabled.
+
+		It can only access data of the small size of about 64 kb within a given period, 
+		which is the main disadvantage of this type of pointer.
+			e.g.
+				 int near *ptr;
+
+	- Far pointer
+		A far pointer is typically 32 bit which can access memory outside that current 
+		segment. To utilize the far pointer, the compiler allows a segment register to 
+		save segment address, then another register to save offset inside the 
+		current segment.
+			e.g.
+				 int far *ptr;
+
+	- Huge pointr
+
+		Same as far pointer huge pointer is also typically 32 bit which can access outside 
+		the segment. A far pointer that is fixed and hence that part of that sector within
+ 		which they are located cannot be changed in any way; huge pointers can be.
+			e.g.
+				 char huge *far *a;
