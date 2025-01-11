@@ -7,7 +7,7 @@ Students at D. Y. Patil College of Engineering and Innovation (COEI) are known f
 ## Additional Resources
 
 - **Team Members and Project Guidelines PDF:**  
-  [Check your name in List](https://drive.google.com/file/d/1cSxpJSVcxCUac94TaTGKdpgFY_F9Uyc8/view?usp=drive_link)
+    <a href="https://drive.google.com/file/d/1cSxpJSVcxCUac94TaTGKdpgFY_F9Uyc8/view?usp=drive_link" target="_blank">[Check your name in List]</a>
 
 
 ---
