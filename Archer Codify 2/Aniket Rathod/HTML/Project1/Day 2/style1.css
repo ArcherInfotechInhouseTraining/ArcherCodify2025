@@ -1,0 +1,25 @@
+.box {
+    width: 1000px;
+    height: 580px;
+    margin: 150px auto;
+    color: #000;
+    font-size: 24px;
+
+    border: 15px dotted #ff0;
+    background-image: repeating-linear-gradient(red 10%, yellow 20%, green 30%), url('images/img1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-attachment: local;
+    overflow: scroll;
+    
+}
+.box .content{
+    width: 100%;
+}
+
+.box h1, p {
+    margin: 20px 40px;
+    float: left;
+    text-shadow: 2px 2px 2px #000;
+}
