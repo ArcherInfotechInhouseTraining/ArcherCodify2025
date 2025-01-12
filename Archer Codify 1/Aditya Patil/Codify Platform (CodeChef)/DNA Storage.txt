@@ -1,0 +1,63 @@
+DNA Storage
+For encoding an even-length binary string into a sequence of A, T, C, and G, we iterate from left to right and replace the characters as follows:
+
+00 is replaced with A
+01 is replaced with T
+10 is replaced with C
+11 is replaced with G
+Given a binary string S of length N (N is even),  find the encoded sequence.
+
+Output Format
+For each test case, output in a single line the encoded sequence.
+
+Note: Output is case-sensitive.
+
+
+
+
+code:::
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+
+        while (t-- > 0) {
+            int n = sc.nextInt();
+            String s = sc.next();
+            
+            if(n%2==0)
+            {
+                StringBuilder Finalresult = new StringBuilder();
+                int i=0;
+                
+                while(i<s.length())
+                {
+                    char first=s.charAt(i);
+                    char sec =s.charAt(i+1);
+                    
+                
+                
+                    if (first=='0' && sec=='0' )
+                        Finalresult.append('A');
+                    else if (first=='0' && sec=='1' )
+                       Finalresult.append('T');
+                    else if (first=='1' && sec=='0' )
+                        Finalresult.append('C');
+                    else if (first=='1' && sec=='1' )
+                        Finalresult.append('G');
+                    
+                
+                    i+=2;
+                }
+                System.out.println(Finalresult.toString());
+                
+            }
+            // Your code goes here
+        }
+    }
+    
+}
+
