@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Car Rental</string>
+    <string name="TextView">Car Rental Shop</string>
+    <string name="EditText">Welcome to Car rental</string>
+    <string name="Button">Login</string>
+</resources>
