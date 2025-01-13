@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@drawable/fitness1">
+
+
+    <TextView
+        android:id="@id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to My Fitness Hub!"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:layout_marginHorizontal="20dp"
+        android:textColor="@color/white"/>
+
+    <EditText
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_text"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="20dp"/>
+
+
+</LinearLayout>
