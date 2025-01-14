@@ -1,0 +1,27 @@
+bool isValid(char* s) {
+    char* stack;
+    int i=-1, top= -1;
+    stack= (char*) malloc(sizeof(char)*strlen(s));
+    printf("%ld", sizeof(s));
+
+    while(s[++i])
+    {
+        if(s[i] == '(' || s[i]== '[' || s[i]== '{')
+        {
+            stack[++top]=s[i];
+        }
+        else if(s[i]== ')' || s[i]== ']' || s[i]== '}')
+        {
+            if(top < 0)
+                return false;
+            else if (stack[top]+ 1== s[i] || stack[top]+ 2== s[i])
+                top--;
+            else
+                return false;
+        }
+    }
+    if(top<0)
+        return true;
+    else
+        return false;
+}
