@@ -1,0 +1,39 @@
+Title:- Find the Perimeter of a Rectangle
+        Create a function that takes length and width and finds the perimeter of a rectangle.
+
+
+Examples:-
+
+findPerimeter(6, 7) ➞ 26
+
+findPerimeter(20, 10) ➞ 60
+
+findPerimeter(2, 9) ➞ 22
+
+Link:-https://edabit.com/challenge/yCs49ppiH3WwsaxBe
+
+solution:- 
+
+#include<iostream>
+using namespace std;
+
+int findPerimeter(int length, int width) {
+	
+	double perimeter= 2* (length + width);
+	return perimeter;
+}
+int main()
+{
+    int len, wid;
+    
+    cout<<"Enter the Length of rectangle:"<<endl;
+    cin>>len;
+    
+    cout<<"Enter the Width of rectangle:"<<endl;
+    cin>>wid;
+    
+    cout<<"Perimeter of Rectangle is :"<<findPerimeter(len, wid)<<endl;
+    
+    return 0;
+    
+}

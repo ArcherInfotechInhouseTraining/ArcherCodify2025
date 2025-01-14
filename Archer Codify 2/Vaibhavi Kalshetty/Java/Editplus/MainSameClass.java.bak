@@ -1,0 +1,19 @@
+class MainSameClass 
+{
+	private static int a;
+
+	public static void set()
+	{
+		a=10;
+	}
+	public static void show()
+	{
+		System.out.println(" "+a);
+	}
+		
+	public static void main(String[] args) 
+	{
+		System.out.println("A:"+a);
+
+	}
+}

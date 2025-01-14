@@ -1,0 +1,44 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Navbar Container */
+.navbar {
+    margin: 10px;
+    background-color: #007acc;
+    padding: 10px 0;
+    box-shadow: 5px 5px 5px rgba(10, 0, 0, 0.5);
+}
+
+/* Navigation List */
+.nav-list {
+    list-style: none; /* Remove bullets */
+    margin: 0;
+    padding: 10px;
+    text-align: center; /* Center the list items */
+    border-radius: 10px;
+}
+
+/* Navigation Items */
+.nav-list li {
+    display: inline; /* Inline elements for horizontal alignment */
+}
+
+/* Navigation Links */
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-list a:hover {
+    background-color: white;
+    color: #007acc;
+    border-radius: 10px;
+}
