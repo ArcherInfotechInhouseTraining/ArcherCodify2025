@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .hero {
+      background: url('https://imgs.search.brave.com/TUxGNkwFV8b-Pw1M30KfiDL6MYsjFlia2hr7RRVL23w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9oYW5kc29tZS1t/YW4tYm93LXRpZS1z/dWl0LWJ1c2luZXNz/bWFuLWlzb2xhdGVk/LXdoaXRlLWZvcm1h/bC13ZWFyLWNvbmNl/cHRfNDc0NzE3LTI3/MTQ2LmpwZz9zZW10/PWFpc19oeWJyaWQ') center/cover no-repeat;
+      height: 100vh;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-size: contain;
+    }
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+    }
+    .portfolio-item img {
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+    }
+    .portfolio-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">My Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home"><i class="fa-solid fa-house-user"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about"><i class="fa-solid fa-circle-info"></i> About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services"><i class="fa-solid fa-handshake-angle"></i> Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio"><i class="fa-solid fa-right-to-bracket"></i> Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact"><i class="fa-solid fa-address-book"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Welcome Alpha Male</h1>
+    <p>The ultimate destination for men to dominate every facet of life </p>
+    <a href="#about" class="btn btn-primary">Get Started</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-4">
+        <img src="https://imgs.search.brave.com/j69zQU8kSAW0l7xAUmxSXy-g3msf-NsygPUtonGkUDM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kMWZ1/ZnZ5NHhhbzZrOS5j/bG91ZGZyb250Lm5l/dC9pbWFnZXMvYmxv/Zy9wb3N0cy8yMDI0/LzAyL2J1c2luZXNz/LWNvcnBvcmF0ZS5q/cGc" alt="Profile" class="img-fluid rounded-circle">
+      </div>
+      <div class="col-md-8">
+        <h2>About Me</h2>
+        <p>"Redefine your style and swagger with the ultimate hub for men’s fashion and grooming.  We are your go-to destination for timeless trends, bold statements, and effortless sophistication."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="bg-light py-5">
+    <div class="container text-center">
+      <h2>Services</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card p-3">
+            <i class="fas fa-laptop-code fa-3x mb-3"></i>
+            <h4>Web Design</h4>
+            <p>Crafting modern and responsive websites tailored to your needs.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <i class="fas fa-paint-brush fa-3x mb-3"></i>
+            <h4>Graphic Design</h4>
+            <p>Creating visually appealing designs that captivate your audience.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <i class="fas fa-bullhorn fa-3x mb-3"></i>
+            <h4>Digital Marketing</h4>
+            <p>Boosting your online presence with strategic marketing solutions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="container my-5">
+    <h2 class="text-center">Portfolio</h2>
+    <div class="row">
+      <div class="col-md-4 portfolio-item">
+        <img src="https://imgs.search.brave.com/nKsUX8KauW5aKRVYRp1hGfLFIssQblCNeQf-jpvn1Pg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFGT0EwbG9YcEwu/anBn" alt="Portfolio 1">
+        <div class="portfolio-overlay">Men's Blazers</div>
+      </div>
+      <div class="col-md-4 portfolio-item">
+        <img src="https://imgs.search.brave.com/qV2334jQik-tCD8tJ8f3dMDhXpH4fpytUCvSBQfy_OE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jb250/ZW50Lm1vc3MuY28u/dWsvaW1hZ2VzL2V4/dHJhZXh0cmFsYXJn/ZS85NjY4MjY0MDFf/MDEuanBn" alt="Portfolio 2">
+        <div class="portfolio-overlay">Pants & Trousers </div>
+      </div>
+      <div class="col-md-4 portfolio-item">
+        <img src="https://imgs.search.brave.com/-wpJSRxmLGC6YRLBVZzuyhH-3VeislGmaIc8lBl2nFQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODEyaE8wZTNaZEwu/anBn" alt="Portfolio 3">
+        <div class="portfolio-overlay">Old Money</div>
+      </div>
+      <div class="col-md-4 portfolio-item">
+        <img src="https://imgs.search.brave.com/gh5eXvHzHgbnGi0jAHqxQlP46lIcbEnc6fY1p8Izzrg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZS5tZW5zd2Vhcmhv/dXNlLmNvbS9pcy9p/bWFnZS9UTVcvVE1X/XzQyOENfMDJfU1RB/Q1lfQURBTVNfRk9S/TUFMX1NIT0VTX0JM/QUNLX01BSU4_aW1Q/b2xpY3k9cGdwLXNt" alt="Portfolio 4">
+        <div class="portfolio-overlay">Shoe</div>
+      </div>
+      <div class="col-md-4 portfolio-item">
+        <img src="https://imgs.search.brave.com/WyrHF3gfthOCRDqvVroiT5Gih4mkRLR2tQwoZBlJDCw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYWRk/YWxvbmlqZXdlbGVy/cy5jb20vY2RuL3No/b3AvZmlsZXMvMTcx/NTM2OTIxMi1lcGlj/LXgtY3I3LXBhdmUt/Z3JlZW4tXzIuanBn/P3Y9MTcxNzc3NDY4/MSZ3aWR0aD01MzM" alt="Portfolio 5">
+        <div class="portfolio-overlay">Time Piece</div>
+      </div>
+      <div class="col-md-4 portfolio-item">
+        <img src="https://imgs.search.brave.com/_ZFN6zch2yPgOTYyhNBkUG-VTJ41WtYxN_vhJvhqKJg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXMu/Y2xvdWRpbmFyeS5j/b20vbm1nLXByb2Qv/aW1hZ2UvdXBsb2Fk/L2NfZmlsbCxoXzE1/MDAsd18xMjAwL2Zf/YXV0by9jc19zcmdi/LHFfYXV0bzpnb29k/L3YxNjY5OTg4ODYz/L2NvbnRlbnQvY3Jl/YXRpdmUvbG9ld2Vf/YzV1MnNfMTEyODIy/X2Nyb3BwZWRfMDYy/LnRpZmY" alt="Portfolio 6">
+        <div class="portfolio-overlay">Perfume</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center">Contact</h2>
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="subject" class="form-label">Subject</label>
+          <input type="text" id="subject" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" class="form-control" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
+    <div>
+      <a href="#" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
