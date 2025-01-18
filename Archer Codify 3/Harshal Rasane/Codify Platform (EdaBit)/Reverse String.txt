@@ -1,0 +1,42 @@
+Title:- Recursion: Reverse a String
+        Write a function that reverses a string. Make your function recursive.
+
+Examples:-
+
+reverse("hello") ➞ "olleh"
+
+reverse("world") ➞ "dlrow"
+
+reverse("a") ➞ "a"
+
+reverse("") ➞ ""
+
+Link:- https://edabit.com/challenge/HXGx9oXukEgsFK6PH
+
+Solution:- 
+
+#include<iostream>
+using namespace std;
+
+string reverse(string str) 
+{
+	if (str.empty())
+	{
+		return "";
+		
+	}
+	
+	return str.back() +reverse(str.substr(0, str.size()-1));
+	
+	
+}
+int main()
+{
+    string ch;
+    cout<<"Enter the String:";
+    getline(cin, ch);
+    
+    cout << "Reversed string: " << reverse(ch) << endl;
+    
+    return 0;
+}

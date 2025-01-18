@@ -1,0 +1,116 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+
+body {
+	font-family: "Bokor", system-ui;
+	font-weight: 400;
+	font-style: normal;
+
+	background-color: whitesmoke;
+  }
+  
+  .container {
+	width: 80%;
+	margin: 20px auto;
+	padding: 20px;
+	border-radius: 8px;
+	text-align: center;
+  }
+  
+  .heading {
+	font-size: 24px;
+	font-weight: bold;
+	color: yellow;
+	padding: 10px;
+	margin-bottom: 40px; 
+	background-color: gray;
+	scrollbar-highlight-color: aqua;
+	
+
+	font-family: "Edu AU VIC WA NT Arrows", cursive;
+  	font-optical-sizing: auto;
+  	font-weight: <weight>;
+  	font-style: normal;
+
+	
+  }
+  
+  .frame {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #a446b4; 
+	margin-bottom: 20px;
+	padding: 20px;
+	border-radius: 15px;
+  }
+  
+  .image {
+	width: 100px; 
+	height: 100px;
+	background-color: black; 
+	border-radius: 8px;
+	margin-right: 20px;
+  }
+  
+  .image.image1 {
+	background-image: url('images/shoe1.jpg');
+	background-size: cover;
+	background-position: center;
+  }
+  
+  .image.image2 {
+	background-image: url('images/shoe2.jfif');
+	background-size: cover;
+	background-position: center;
+  }
+  
+  .image.image3 {
+	background-image: url('images/shoe3.jfif');
+	background-size: cover;
+	background-position: center;
+  }
+
+  .image.image4 {
+	background-image: url('images/shoe4.jfif');
+	background-size: cover;
+	background-position: center;
+  }
+
+  .image.image5 {
+	background-image: url('images/shoe5.jfif');
+	background-size: cover;
+	background-position: center;
+  }
+
+  .image.image6 {
+	background-image: url('images/shoe6.jpg');
+	background-size: cover;
+	background-position: center;
+  }
+
+  .image.image7 {
+	background-image: url('images/shoe7.jpg');
+	background-size: cover;
+	background-position: center;
+  }
+
+  .image.image8 {
+	background-image: url('images/shoe8.jpg');
+	background-size: cover;
+	background-position: center;
+  }
+
+  
+  .text {
+	flex-grow: 1;
+	text-align: left;
+	font-size: 18px;
+	font-weight: bold;
+	color: black;
+	background-color: #e6e6e6; 
+	padding: 10px;
+	border-radius: 8px;
+  }
+  
