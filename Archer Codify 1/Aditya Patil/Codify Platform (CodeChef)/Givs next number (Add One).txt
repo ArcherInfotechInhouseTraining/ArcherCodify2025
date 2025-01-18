@@ -1,0 +1,87 @@
+Add One
+You are given a large number N. You need to print the number N+1.
+
+Note: The number is very large and it will not fit in standard integer data type. You have to take the input as String and then manipulate the digits to convert it to N+1.
+
+Input Format
+The first line of the input contains a single integer - the number of test cases. The description of T test cases follows.
+
+The first line of each test case contains a single integer N.
+
+Output Format
+For each test case, print a single line containing one integer - the number N+1.
+
+Sample 1:
+Input
+
+6
+99
+17
+1
+599
+10000000000000000000
+549843954323494990404
+
+Output
+100
+18
+2
+600
+10000000000000000001
+549843954323494990405
+
+
+output::: 
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner (System.in);
+		int t= sc.nextInt();
+		sc.nextLine();
+		
+		StringBuilder result = new StringBuilder();
+		
+		
+		
+		
+		
+		while (t-->0)
+		{
+		    result.setLength(0);
+		    String largenum=sc.nextLine();
+		    
+		    
+		
+		    int carry =1;
+		    
+		    int n=largenum.length();
+		    
+		    
+		    for (int i= n-1 ; i>=0 ; i--)
+		    {
+		        int digit = largenum.charAt(i) - '0';   //for converting char to int '0' is used
+		        
+		        int sum = digit + carry;
+		        
+		        result.append(sum%10);
+		        carry = sum /10;
+		    }
+		    
+		    if (carry >0)
+		    {
+		        result.append(carry);
+		    }
+		    
+		    
+		    
+		    System.out.println(result.reverse().toString());
+		}
+
+	}
+}
