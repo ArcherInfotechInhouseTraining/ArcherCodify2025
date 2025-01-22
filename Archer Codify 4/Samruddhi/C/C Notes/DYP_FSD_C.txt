@@ -1,0 +1,1018 @@
+	// Control Instruction: Used to control or manage the execution flow of your program.
+
+				C provides different control statments for that and these are...
+
+							Control statments
+							      |
+						------------------------------
+						|			      |
+					Conditional CS			UnConditional CS
+						|				|
+				-------------------------------		----------------------------------
+				|		|	     |		|	   |		|	  |
+			   Decision	     Loop	   Case	       goto      break      continue     return 
+			    |		      |		    |	
+			- if()		    - for()	  switch()
+			- if() else	    - while()
+			- Nesting	    - do while()
+			- Ladder
+
+if(): 
+
+	syntax:
+
+	if(<condi>)
+	{
+		-------------;
+		-------------;
+	}
+
+	// WAP to calc the total bill and apply the discount of 6% when the total bill exceeds 500
+
+int main()
+{
+	float p1,p2,p3,p4,tot,dis=0.0;
+
+	printf("\n Enter the price of 4 items: ");
+	scanf("%f %f %f %f",&p1, &p2, &p3, &p4);
+
+	tot=p1+p2+p3+p4;
+
+	if(tot>500)
+	{
+		dis=tot*0.06;
+	}
+
+	printf("\n Total Bill: %f",tot);
+	printf("\n Discount: %f",dis);
+	printf("\n Pay Rs: %f",(tot-dis));
+
+	return 0;
+}
+
+
+
+if() else: 
+
+	syntax:
+
+	if(<condi>)
+	{
+		-------------;
+		-------------;
+	}
+	else
+	{
+		-----------------;
+		---------------;
+	}
+
+
+// WAP to calc the total bill and apply the discount of 12% when the total bill exceeds 500 other discount is 3%
+
+int main()
+{
+	float p1,p2,p3,p4,tot,dis=0.0;
+
+	printf("\n Enter the price of 4 items: ");
+	scanf("%f %f %f %f",&p1, &p2, &p3, &p4);
+
+	tot=p1+p2+p3+p4;
+
+	if(tot>500)
+	{
+		printf("\n Applying Discount of 12%%");
+		dis=tot*0.12;
+	}
+	else
+	{
+		printf("\n Applying Discount of 3%%");
+		dis=tot*0.03;
+	}
+
+	printf("\n Total Bill: %f",tot);
+	printf("\n Discount: %f",dis);
+	printf("\n Pay Rs: %f",(tot-dis));
+
+	return 0;
+}	
+
+	// 	Using Nesting of if() else:
+
+			Nesting refers to using one control statement in to same or another control statement
+
+
+	some combinations:
+
+
+		if()				if()				if()			if()
+		{				{				{			{
+			if()				if()			}				if()
+			{				{			else				{
+			}				}			{				}
+		}					else				if()		}
+							{				{		else
+							}				}		{
+						}				}				if()
+														{
+														}
+													}
+
+
+		
+		if()					if()
+		{					{
+			if()					if()	
+			{					{
+			}					}
+		}						else
+		else						{
+		{						}
+			if()				}
+			{				else
+			}				{
+			else					if()
+			{					{
+			}					}
+		}						else
+								{
+								}
+							}
+
+
+//--------------------------------------------------------------------------------------------------------------
+
+
+	// WAP to find the entered number is even or odd, 
+		
+		- when no is even and greater than 10 then add 5 in it otherwise multi. by 3
+		- when no is odd and greater than 20 then add div it by 3 otherwise add 100 in it.
+		
+
+int main()
+{
+	int no;
+	float ans;
+	printf("\n Enter any Number: ");
+	scanf("%d",&no);
+
+	if(no%2==0)
+	{
+		printf("\n Number is Even");
+		if(no>10)
+		{
+			printf("\n Number is greater than 10");
+			ans=no+5;
+		}
+		else
+		{
+			printf("\n Number is less than 10");
+			ans=no*3;
+		}
+	}
+	else
+	{
+		printf("\n Number is Odd");
+		if(no>20)
+		{
+			printf("\n Number is greater than 20");
+			ans=no/3.0;
+		}
+		else
+		{
+			printf("\n Number is less than 20");
+			ans=no+100;
+		}
+	}
+	printf("\n Answer is %f",ans);
+	return 0;
+}
+
+//-------------------------------------------------------------------------------------------------------
+
+	// WAP to find the max from 3 nos using if else nesting
+
+int main()
+{
+	int a,b,c;
+
+	printf("\n Enter any 3 nos: ");
+	scanf("%d %d %d",&a,&b,&c);
+
+	if(a>b)
+	{
+		if(a>c)
+		{
+			printf("\n a=%d is max",a);
+		}
+		else
+		{
+			printf("\n c=%d is max",c);
+		}
+	}
+	else
+	{
+		if(b>c)
+		{
+			printf("\n b=%d is max",b);
+		}
+		else
+		{
+			printf("\n c=%d is max",c);
+		}
+	}
+	return 0;	
+}
+
+//--------------------------------------------------------------------------------------------------
+
+	// Enter any no through keyboard and find it is div by 3 or 5 or both or not by both - use if else nesting 
+
+int main()
+{
+	int no;
+
+	printf("\n Enter the no: ");
+	scanf("%d",&no);
+
+	if(no%3==0)
+	{
+		if(no%5==0)
+		{
+			printf("\n Number is div by both");
+		}
+		else
+		{
+			printf("\n Number is div by 3 only");
+		}
+	}
+	else
+	{
+		if(no%5==0)
+		{
+			printf("\n Number is div 5 only");
+		}
+		else
+		{
+			printf("\n Number is not div by both");
+		}
+	}
+	return 0;
+}
+
+//----------------------------------------------------------------------------------------------------
+
+	// if else ladder
+
+//----------------------------------------------------------------------------------
+
+   // WAP to the position of employee in the company using the salary.
+
+
+        upto 1K --> Worker
+
+        1K - 3K --> Jr
+
+        3K - 5K --> Sr
+
+        5K - 7K --> Dr
+
+        7K Onward --> CEO
+
+
+int main()
+{
+	int sal;
+
+	printf("\n Enter the salary of employee: ");
+	scanf("%d",&sal);
+
+	if(sal<=1000)
+	{
+		printf("Worker");
+	}
+
+	if(sal>1000 && sal<=3000)
+	{
+		printf("Jr");
+	}
+
+	if(sal>3000 && sal<=5000)
+	{
+		printf("Sr");
+	}
+
+	if(sal>5000 && sal<=7000)
+	{
+		printf("Dr");
+	}
+
+	if(sal>7000)
+	{
+		printf("CEO");
+	}
+	return 0;
+}
+
+ // or can be solved using nesting to avoid the unwanted checking
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	int sal;
+
+	printf("\n Enter the salary of employee: ");
+	scanf("%d",&sal);
+
+	if(sal<=1000)
+	{
+		printf("Worker");
+	}
+    else
+    {
+    
+        if(sal>1000 && sal<=3000)
+        {
+            printf("Jr");
+        }
+        else
+        {
+            if(sal>3000 && sal<=5000)
+            {
+                printf("Sr");
+            }
+            else
+            {
+                if(sal>5000 && sal<=7000)
+                {
+                    printf("Dr");
+                }
+                else
+                {
+                    printf("CEO");
+                }
+            }
+        }
+    }
+	return 0;
+}
+
+
+	// In above program, when complex. incr. we as a programmer unable to handle it, and for that ladder is prefered
+
+//---------------------------------------------------------------------------------------------------------------------
+
+
+	// Using if() else Ladder
+
+	syntax:
+
+		if(<>)
+		{
+			---------;
+			---------;
+		}
+		else if(<>)
+		{
+			---------;
+			---------;
+		}
+		else if(<>)
+		{
+			---------;
+			---------;
+		}
+		else if(<>)
+		{
+			---------;
+			---------;
+		}
+		else
+		{
+			---------;
+			---------;
+		}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	int sal;
+
+	printf("\n Enter the salary of employee: ");
+	scanf("%d",&sal);
+
+	if(sal<=1000)
+	{
+		printf("Worker");
+	}
+    else if(sal>1000 && sal<=3000)
+    {
+        printf("Jr");
+    }
+    else if(sal>3000 && sal<=5000)
+    {
+        printf("Sr");
+    }
+    else if(sal>5000 && sal<=7000)
+    {
+        printf("Dr");
+    }
+    else
+    {
+        printf("CEO");
+    }
+
+	return 0;
+}
+
+
+or we can rewrite it as ..
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	int sal;
+
+	printf("\n Enter the salary of employee: ");
+	scanf("%d",&sal);
+
+	if(sal<=1000)
+	{
+		printf("Worker");
+	}
+    	else if(sal<=3000)
+    	{
+        	printf("Jr");
+    	}
+    	else if(sal<=5000)
+    	{
+        	printf("Sr");
+    	}
+    	else if(sal<=7000)
+    	{
+        	printf("Dr");
+    	}
+   	else
+    	{
+        	printf("CEO");
+    	}
+
+	return 0;
+}
+
+//-------------------------------------------------------------------------------------------------------------------------------
+
+	// Enter the co-ordinates of point in 2D system, and display the exact location of that point.
+
+
+			       y axis
+                                ^
+                       II QD    |   I QD
+                                |
+                        -+      |   ++
+                                |
+                  <-------------|------------> x axis
+                                |(0,0)
+                                |
+                        --      |   +-
+                                |
+                    III QD      V     IV QD
+
+
+int main()
+{
+	int x,y;
+	printf("\n Enter the co-ordinates of point in 2D System: ");
+	scanf("%d %d",&x,&y);
+
+	if(x>0 && y>0)
+	{
+		printf("\n 1st Qd");
+	}
+	else if(x<0 && y>0)
+	{
+		printf("\n 2nd Qd");
+	}
+	else if(x<0 && y<0)
+	{
+		printf("\n 3rd Qd");
+	}
+	else if(x>0 && y<0)
+	{
+		printf("\n 4th Qd");
+	}
+	else if(x!=0 && y==0)
+	{
+		printf("\n on x axis");
+	}
+	else if(x==0 && y!=0)
+	{
+		printf("\n on y axis");
+	}
+	else
+	{
+		printf("\n @origin");
+	}
+	return 0;
+}
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+
+		// Using the Loops in C: Loops are used to avoid the continue repetition of code in the program.
+					 There are three different loops in C.
+
+				1. For() loop		2. While() loop		3. do..While() loop
+
+
+
+	1. For() loop:
+
+		syntax:	
+				
+			for( <init> ; <condi> ; <inc/dec/stat/expr> )					
+			{									
+				--------------;							   
+				--------------;						
+				--------------;							 
+				--------------;							
+				--------------;							     
+			}
+
+
+	// WAP to display the "Hello"
+
+int main()
+{
+	printf("\n Hello");
+	return 0;
+}
+
+
+// a program to display "Hi"
+/**
+int main()
+{
+    int y;
+    for( y=10 ; y<20 ; y++ )
+    {
+        printf("\n Hi");
+    }
+	return 0;
+}
+
+    // OR
+
+int main()
+{
+    int y;
+    for( y=100 ; y<200 ; y=y+10 )
+    {
+        printf("\n Hi");
+    }
+	return 0;
+}
+
+
+    /// OR
+
+int main()
+{
+    int y;
+    for( y=10 ; y>0 ; y-- )
+    {
+        printf("\n Hi");
+    }
+	return 0;
+}
+
+    /// OR
+
+int main()
+{
+    int y;
+    for( y=50 ; y>0 ; y=y-5 )
+    {
+        printf("\n Hi");
+    }
+	return 0;
+}
+
+    /// OR
+
+int main()
+{
+    int y=50;
+    for( ; y>0 ;  )
+    {
+        printf("\n Hi");
+        y=y-5;
+    }
+	return 0;
+}
+
+
+    // infinite loop
+
+int main()
+{
+    int y;
+    for( y=50 ; y>0 ; y=y+5 )
+    {
+        printf("\n Hi");
+    }
+	return 0;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------
+
+	// WAP to display multi table of number entered using keyboard
+
+	no = 5;
+
+	no x m = r
+	5 x 1 = 5
+	5 x 2 = 10
+	5 x 3 = 15
+	5 x 4 = 20
+	.
+	.
+	.	
+	.
+	
+	5 x 10 = 50
+
+
+int main()
+{
+	int no,r,m,y;
+
+	printf("\n Enter any number: ");
+	scanf("%d",&no);
+
+	m=1;	// multiplier
+	for(y=100 ; y<115 ; y++) // y is iterator(loop variable) - decides the number of iterations
+	{
+		r=no*m;
+		m=m+1;
+		printf("\n %d",r);
+	}
+	return 0;
+}
+
+	// Iterator can be used as a multipier
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	int no,r,m;
+
+	printf("\n Enter any number: ");
+	scanf("%d",&no);
+
+	for( m=1 ; m<=10 ; m++)
+	{
+		r=no*m;
+		printf("\n %d",r);
+	}
+	return 0;
+}
+
+	// you are allowed to write expression in printf()
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	int no,m;
+
+	printf("\n Enter any number: ");
+	scanf("%d",&no);
+
+	for( m=1 ; m<=10 ; m++)
+	{
+		printf("\n %d",(no*m));
+	}
+	return 0;
+}
+
+//-------------------------------------------------------------------------------------------------------------------------------
+
+	// We have seen following program
+
+	// Enter any 3 digit number and display the addition of all 3 digits.
+
+            e.g. 148 -> 8+4+1 ==> 13
+
+		no	rem    sum
+				0
+		148	8	8
+		14	4	12
+		1	1	13
+		0
+
+	
+int main()
+{
+    int no,rem,sum=0;
+
+    printf("\n Enter any 3 digit no: ");
+    scanf("%d",&no);//148
+
+    rem=no%10;//8
+    sum=sum+rem;//8
+    no=no/10;//14
+
+    rem=no%10;//4
+    sum=sum+rem;//12
+    no=no/10;//1
+
+    rem=no%10;//1
+    sum=sum+rem;//13
+    no=no/10;//0
+
+    printf("\n Addition of all digits: %d",sum);
+    return 0;
+}
+
+// can be solved using loop as shown below
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int no,rem,sum=0;
+
+    printf("\n Enter any no: ");
+    scanf("%d",&no); // 148
+
+    for( ; no!=0 ; )
+    {
+        rem=no%10;  // 8, 4, 1
+        sum=sum+rem; // 8, 12, 13
+        no=no/10; // 14, 1, 0
+    }
+    printf("\n Addition of all digits: %d",sum);
+    return 0;
+}
+
+//---------------------------------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------------------------------------------------------
+
+	// Enter any 3 digit number and reverse it.
+
+		e.g.	No = 148	rev_No = 841
+
+No 	rem	rev=0[rev=(rev*10)+rem;]
+148	8	8     [0*10]+8==>8
+14	4	84----[8*10]+4==>84
+1	1	841---[84*10]+1==>841
+
+int main()
+{
+	int no,rem,rev=0;
+
+	printf("\n Enter any 3 digit number: ");
+	scanf("%d",&no); // 148
+	
+	rem=no%10; // 8
+	rev=(rev*10)+rem; // 8
+	no=no/10; //14
+
+	rem=no%10; // 4
+	rev=(rev*10)+rem; // 84
+	no=no/10; // 1
+
+	rem=no%10; // 1
+	rev=(rev*10)+rem; //841
+	no=no/10; // 0
+
+	printf("\n Reverse Number is: %d",rev);	
+
+	return 0;
+}
+
+	// can be solved using looop as
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	int no,rem,rev;                             	///  no     rem      rev
+                                                	/// 9457     7         0
+	printf("\n Enter any 3 digit number: ");    	///                    7
+	scanf("%d",&no); /// 9457                   	///  945     5        75
+                                                	///  94      4        754
+	for( rev=0 ; no!=0  ; no=no/10 )            	///  9       9       7549
+    	{                                           	///  0 
+        	rem=no%10;
+        	rev=(rev*10)+rem;
+    	}
+	printf("\n Reverse Number is: %d",rev);
+
+	return 0;
+}
+//----------------------------------------------------------------------------
+
+	// WAP to add All digits of number entered thw keyboard
+
+int main()
+{
+	int no,sum;
+
+	printf("\n Enter the no: ");
+	scanf("%d",&no); //4957
+
+	for( sum=0 ; no>0 ; no=no/10 ) //495, 49, 4, 0
+	{
+		sum=sum+(no%10);	// 7, 12, 21, 25
+	}
+
+	printf("\n Sum of all digits: %d",sum);
+	return 0;
+}
+
+//----------------------------------------------------------------------------
+
+	// WAP to count digits of number entered thw keyboard
+
+int main()
+{
+	int no,cnt=0;
+
+	printf("\n Enter the no: ");
+	scanf("%d",&no); //4957
+
+	for(  ; no>0 ; no=no/10 ) //495, 49, 4, 0
+	{
+		cnt++;
+	}
+
+	printf("\n digit count: %d",cnt);
+	return 0;
+}
+
+//-----------------------------------------------------------------------
+
+	// even and odd digit count
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	int no, ecnt=0, ocnt=0, rem;
+
+	printf("\n Enter the no: ");
+	scanf("%d",&no); //4957
+
+	for(  ; no>0 ; no=no/10 ) //495, 49, 4, 0
+	{
+	    rem=no%10;
+	    if(rem%2==0)
+            ecnt++;
+        else
+            ocnt++;
+	}
+
+	printf("\n Even digit count: %d",ecnt);
+	printf("\n Odd digit count: %d",ocnt);
+	return 0;
+}
+
+
+//-------------------------------------------------------------------------------------
+
+	// even digit sum and odd digit sum
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	int no, ecnt=0, ocnt=0, rem;
+    	int esum=0,osum=0;
+	printf("\n Enter the no: ");
+	scanf("%d",&no); //4957
+
+	for(  ; no>0 ; no=no/10 ) //495, 49, 4, 0
+	{
+		rem=no%10;
+	    	if(rem%2==0)
+        	{
+           		ecnt++;
+           		esum=esum+rem;
+        	}
+        	else
+        	{
+           		ocnt++;
+            		osum=osum+rem;
+        	}
+	}
+
+	printf("\n Even digit count: %d",ecnt);
+	printf("\n Odd digit count: %d",ocnt);
+	printf("\n Even digit sum:%d \t odd digit sum: %d",esum,osum);
+	return 0;
+}
+
+//--------------------------------------------------------------------------------------------------------
+
+	// WAP to check the number is palindrome or not
+
+	121 ---> reverse ---> 121			19291 ---> reverse --> 19291
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int no,rem,tmp,rev=0;
+
+    printf("\n Enter any no: ");
+    scanf("%d",&no); 
+    tmp=no;
+    for( ; no!=0 ; )
+    {
+        rem=no%10; 
+        rev=(rev*10)+rem; 
+        no=no/10; 
+    }
+
+    if(tmp==rev)
+    	printf("\n Number is Palindrome");
+    else
+    	printf("\n Number is not Palindrome");
+    return 0;
+}
+
+//-------------------------------------------------------------------------------------------
+
+	// 10 to 100  ---> palindromes
+
+
+int main()
+{
+    int no,rem,tmp,rev=0;
+
+    printf("\n List of Palindrome Nos: ");
+    for(no=10;no<=1000;no++)
+    {
+        rev=0;
+        tmp=no;
+        for( ; no!=0 ; )
+        {
+            rem=no%10;
+            rev=(rev*10)+rem;
+            no=no/10;
+        }
+
+        if(tmp==rev)
+            printf("%6d",tmp);
+
+        no=tmp;
+    }
+    return 0;
+}
+
+//-------------------------------------------------------------------------------------------
+	// enter the no and digit from keyboard
+	// no=19939  digit=9	==> 
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int no,digit,rem,cnt=0,tmp;
+    printf("\n Enter the no: ");
+    scanf("%d",&no);
+    tmp=no;
+    printf("\n Enter the digit: ");
+    scanf("%d",&digit);
+
+    for( ; no!=0 ; )
+    {
+        rem=no%10;
+        if(rem==digit)
+        {
+            cnt++;
+        }
+        no=no/10;
+    }
+    if(cnt>0)
+        printf("\n %d is present in %d, %d times",digit,tmp,cnt);
+    else
+        printf("\n %d is no present in %d",digit,tmp);
+    return 0;
+}
+
+
