@@ -1,0 +1,93 @@
+/------APPROACH 1-----------/
+
+import java.util.Scanner;
+
+public class Main {
+    public static int canFormByInterleaving(String S, String T) {
+        if (S.length() % 2 != 0 || S.length() != T.length()) {
+            return 0; 
+        }
+
+        int n = S.length();
+        String part1 = S.substring(0, n / 2); 
+        String part2 = S.substring(n / 2);  
+
+        int i = 0, j = 0, k = 0; 
+
+        
+        while (k < T.length()) {
+            if (i < part1.length() && T.charAt(k) == part1.charAt(i)) {
+                i++; 
+            } else if (j < part2.length() && T.charAt(k) == part2.charAt(j)) {
+                j++; 
+            } else {
+                return 0; 
+            }
+            k++; 
+        }
+
+
+        return (i == part1.length() && j == part2.length()) ? 1 : 0;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        
+        String S = sc.next();
+        String T = sc.next();
+
+        
+        System.out.println(canFormByInterleaving(S, T));
+    }
+}
+
+/-----------------APPROACH 2--------------------------
+
+import java.util.Scanner;
+
+public class Main {
+    public static int canFormByInterleaving(String S, String T) {
+        
+        if (S.length() % 2 != 0 || S.length() != T.length()) {
+            return 0;
+        }
+
+        int n = S.length();
+        String part1 = S.substring(0, n / 2);
+        String part2 = S.substring(n / 2);
+
+        int m1 = part1.length(), m2 = part2.length();
+        boolean[][] dp = new boolean[m1 + 1][m2 + 1];
+
+        
+        for (int i = 0; i <= m1; i++) {
+            for (int j = 0; j <= m2; j++) {
+                if (i == 0 && j == 0) {
+                    dp[i][j] = true; 
+                } else if (i == 0) {
+                    dp[i][j] = dp[i][j - 1] && part2.charAt(j - 1) == T.charAt(i + j - 1);
+                } else if (j == 0) {
+                    dp[i][j] = dp[i - 1][j] && part1.charAt(i - 1) == T.charAt(i + j - 1);
+                } else {
+                    dp[i][j] = (dp[i - 1][j] && part1.charAt(i - 1) == T.charAt(i + j - 1)) ||
+                               (dp[i][j - 1] && part2.charAt(j - 1) == T.charAt(i + j - 1));
+                }
+            }
+        }
+
+     
+        return dp[m1][m2] ? 1 : 0;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+    
+        String S = sc.next();
+        String T = sc.next();
+
+        
+        System.out.println(canFormByInterleaving(S, T));
+    }
+}
