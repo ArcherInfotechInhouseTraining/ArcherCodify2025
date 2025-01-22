@@ -1,0 +1,51 @@
+169. Majority Element
+
+Title:
+Given an array nums of size n, return the majority element.
+The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+
+Example 1:
+Input: nums = [3,2,3]
+Output: 3                                                                                     
+Example 2:
+Input: nums = [2,2,1,1,1,2,2]
+Output: 2
+
+Link: https://leetcode.com/problems/majority-element/description/?envType=problem-list-v2&envId=array
+
+Approach Used/Constraints:
+
+n == nums.length
+1 <= n <= 5 * 104
+-109 <= nums[i] <= 109
+
+Solution: 
+import java.util.*;
+class Solution {
+    public static int majorityElement(int[] nums) {
+
+        int candidate = nums[0];
+        int count = 0;
+
+        for (int num : nums) {
+            if (count == 0) {
+                candidate = num;
+            }
+            count += (num == candidate) ? 1 : -1;
+        }
+        return candidate;
+    }
+
+
+         public static void main(String[] args) {
+    
+        int[] nums1 = {2, 2, 1, 1, 1, 2, 2};
+        System.out.println("Output: " + majorityElement(nums1));
+    }
+} 
+                                                                                                                        output :                                                                                           [2,2,1,1,1,2,2]                                                                                            2   
+                                                                                                Explaination:                                                                                - candidate: Stores the current candidate for the majority element.
+-count: Tracks the number of votes for the current candidate.                                                                                               - If count is 0, the current number becomes the new candidate.
+-If the current number is the same as the candidate, increment count.
+Otherwise, decrement count.
+The key idea is that when count drops to 0, it means the current candidate is no longer supported, and a new candidate is chosen.
