@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@drawable/bgimg">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/name_input"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="20dp"
+        android:hint="@string/placeholder"
+        />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/password"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="20dp"
+        android:hint="@string/password_hint"
+        android:inputType="textPassword"
+        />
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/submit_btn"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:layout_marginStart="90dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/grey"
+        />
+
+</LinearLayout>

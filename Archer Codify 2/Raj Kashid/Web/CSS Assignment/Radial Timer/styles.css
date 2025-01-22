@@ -1,0 +1,64 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.radial-timer {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+            #007acc 0%,
+            #ddd 0%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.timer-text {
+    position: absolute;
+    font-size: 25px;
+    font-weight: bold;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005f99;
+}
+
+@keyframes progress {
+    from {
+        background: conic-gradient(
+                #007acc 0%,
+                #ddd 0%
+        );
+    }
+    to {
+        background: conic-gradient(
+                #007acc 100%,
+                #ddd 0%
+        );
+    }
+}

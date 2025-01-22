@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Before and After</title>
+	<style>
+
+		.box{
+			padding: 0% 20%;
+		}
+
+		.btn{
+			border: 3px solid black;
+			border-radius: 20px;
+			margin: 30px;
+			text-align: center;
+			cursor: pointer;
+		}
+		p{
+			
+			font-size: 18px;
+			font-weight: 900;
+		}
+		/*	Button 1	*/
+		.b1{
+			color: green;
+			border-color: green;
+			box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+			position: relative;
+			z-index:1;
+			overflow: hidden;
+		}
+		.b1::before{
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: green;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			transform: translateX(-100%);
+			
+			transition: .5s all ease;
+		}
+		.b1:hover::before{
+			transform: translateX(0%);
+		}
+		.b1:hover{
+			color: white;
+			border-color: white;
+		}
+
+		/*	Button2	*/
+		.b2{
+			color: white;
+			border-color: white;
+			box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+			position: relative;
+			z-index:1;
+			overflow: hidden;
+		}
+		.b2::before{
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: red;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			transform: translateX(-40%);
+			
+			transition: .5s all ease;
+		}
+		.b2:hover::before{
+			transform: translateX(-100%);
+		}
+		.b2::after{
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: red;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			transform: translateX(40%);
+			
+			transition: .5s all ease;
+		}
+		.b2:hover::after{
+			transform: translateX(100%);
+		}
+		.b2:hover{
+			color: red;
+			border-color: red;
+		}
+
+		/*	Button3	*/
+		.b3{
+			color: white;
+			border-color: white;
+			box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+			position: relative;
+			z-index:1;
+			overflow: hidden;
+		}
+		.b3::before{
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: blue;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			transform: translateY(-40%);
+			
+			transition: .5s all ease;
+		}
+		.b3:hover::before{
+			transform: translateY(-100%);
+		}
+		.b3::after{
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: blue;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			transform: translateY(40%);
+			
+			transition: .5s all ease;
+		}
+		.b3:hover::after{
+			transform: translateY(100%);
+		}
+		.b3:hover{
+			color: blue;
+			border-color: blue;
+		}
+
+		/*	Button4	*/
+		.b4{
+			color: white;
+			border-color: white;
+			box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+			position: relative;
+			z-index:1;
+			overflow: hidden;
+		}
+		.b4::before{
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: green;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			transform: translate(-50%);
+			
+			transition: .5s all ease;
+		}
+		.b4:hover::before{
+			transform: translateX(-100%)rotate(-180deg);
+		}
+		.b4::after{
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: green;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			transform: translate(50%);
+			
+			transition: .5s all ease;
+		}
+		.b4:hover::after{
+			transform: translateX(100%)rotate(180deg);
+		}
+		.b4:hover{
+			color: green;
+			border-color: green;
+		}
+
+		/*	Button5	*/
+		.b5{
+			color: red;
+			border-color: red;
+			box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+			position: relative;
+			z-index:1;
+			overflow: hidden;
+		}
+		.b5::before{
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: red;
+			position: absolute;
+			border-radius: 20px;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			transform: translateX(0px)translateY(0px)scale(0%);
+			
+			transition: .5s all ease;
+		}
+		.b5:hover::before{
+			transform: translateX(0px)translateY(0px)scale(100%);
+		}
+		
+		.b5:hover{
+			color: white;
+			border-color: white;
+		}
+
+		/* Image 7	*/
+		.img7{
+			width: 200px;
+			height: 300px;
+			border: 2px solid red;
+			box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.5);
+			border-radius: 20px;
+			background-image: url('');
+			cursor: pointer;
+			background-repeat: no-repeat;
+			background-size: cover;
+/*			z-index: 1;*/
+			position: relative;
+			text-align:center;
+			overflow: hidden;
+			
+		}
+
+		.img7::before{
+			content: 'Chott el Jerid';
+			width: 100%;
+			height: 50px;
+			color: floralwhite;
+			font-family: "Roboto", serif;
+		    font-weight: 700;
+		    font-style: normal;
+		    font-size: 20px;
+		    text-transform: uppercase;
+			padding-top: 15px;
+			background-color: rgba(0, 0, 0, 0.7);
+			z-index: 1;
+			transform: translateX(0px) translateY(-250px);
+			transition: .5s all ease;	
+			position: absolute;
+		}
+
+		.img7:hover::before{
+			transform: translateX(0px) translateY(0px);	
+		}
+
+		.img7::after{
+			content: 'Chott el Jerid is the largest salt lake in southern Tunisia and the largest salt pan of the Sahara.';
+			width: 100%;
+			height: 100px;
+			color: black;
+			font-family: "Lavishly Yours", serif;
+			  font-weight: 900;
+			  font-style: normal;
+		    font-size: 15px;
+			padding-top: 15px;
+			background-color: rgba(255, 255, 255, 0.5);
+			z-index: 1;
+			transform: translateX(-100%) translateY(300px);
+			transition: .5s all ease;	
+			position: absolute;
+		}
+
+		.img7:hover::after{
+			transform: translateX(-100%) translateY(200px);	
+		}
+
+
+		.img7 img{
+			transition: 0.5s all ease;
+		}
+
+		.img7 img:hover{
+			transform: scale(1.2);
+		}
+
+		/*.content{
+			border: 3px solid red;
+			padding: 20px;
+		}
+		.content::before{
+			content: "🤑";
+			color: green;
+			font-weight: 900;
+			font-size: 50px;
+		}
+		.content::after{
+			content: "The End...";
+			color: blueviolet;
+			font-weight: 900;
+		}*/
+
+
+		
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="btn b1"><p>Button1</p></div>
+		<div class="btn b2"><p>Button2</p></div>
+		<div class="btn b3"><p>Button3</p></div>
+		<div class="btn b4"><p>Button4</p></div>
+		<div class="btn b5"><p>Button5</p></div>
+		<div class="img7">
+			<img src="https://imgs.search.brave.com/pKfb8pF2381_fX-y_Dar4RgJCE5JSZBaKHUTMY_RYPk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5jbnRyYXZlbGVy/LmNvbS9waG90b3Mv/NWFkNzljMmRlZTRm/Mjg2YjUxYmVkYWQ4/L21hc3Rlci93XzMy/MCxjX2xpbWl0L0No/b3R0LWVsLUplcmlk/LUdldHR5SW1hZ2Vz/LTEzNTE2NTE5OC5q/cGc" width="200px" height="300px">
+		</div>
+
+		<!-- <div class="content">
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		</div> -->
+	</div>
+</body>
+</html>

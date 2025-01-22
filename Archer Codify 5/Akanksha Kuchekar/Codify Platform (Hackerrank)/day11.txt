@@ -1,0 +1,32 @@
+https://www.hackerrank.com/challenges/java-string-tokens/problem?isFullScreen=true
+
+sol->
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        // Write your code here.
+        s.trim();//remove spaces
+        String [] token=s.split("[^A-Za-z]+");//A-Z a-z charaters remove.
+        //no of tokens
+        if(s.length()==0)//if string is empty then print 0
+        {
+         System.out.println("0");   
+        }
+        else{
+            System.out.println(token.length);
+        }
+        
+        //individual token
+        for(String tokenz:token){
+            System.out.println(tokenz);
+        }
+        scan.close();
+    }
+}
+
