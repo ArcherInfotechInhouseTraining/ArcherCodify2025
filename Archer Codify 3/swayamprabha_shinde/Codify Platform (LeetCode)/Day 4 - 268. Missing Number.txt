@@ -1,0 +1,67 @@
+268. Missing Number
+
+title:
+Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array. 
+
+Example 1:
+Input: nums = [3,0,1]
+Output: 2
+
+
+Explanation:
+n = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the missing number in the range since it does not appear in nums.
+
+Constraints:
+
+n == nums.length
+1 <= n <= 104
+0 <= nums[i] <= n
+All the numbers of nums are unique.
+
+solution:
+
+class Solution {
+    public int missingNumber(int[] nums) {
+
+        int n = nums.length;
+            
+            int totalsum = n*(n+1)/2;
+
+            int arraysum = 0;
+
+            for(int num : nums)
+            {
+               arraysum = arraysum + num;
+            }
+
+             return totalsum-arraysum;
+        } 
+
+    public static void main(String args[]){
+
+        int nums[] = {4,7,8,3,2,6,9,1};
+
+        Solution ob = new Solution();
+
+        int missingno = ob.missingNumber(nums);
+
+        System.out.println(" "+ missingno);
+    }
+}
+
+output:
+Input
+nums =[9,6,4,2,3,5,7,0,1]
+Output
+8
+Expected
+8
+
+Explanation:
+
+Missing Number: The missing number is the difference between the total sum and the sum of the array elements.
+
+Formula for Total Sum: The sum of the first 𝑛  natural numbers is given by the formula:
+sum = sum*(sum+1)/2
+
+Array Sum: The sum of the elements in the array is calculated using a loop.
