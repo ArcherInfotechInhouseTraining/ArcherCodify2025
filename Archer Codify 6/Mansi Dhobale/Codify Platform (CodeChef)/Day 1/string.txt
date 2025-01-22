@@ -1,0 +1,91 @@
+#include <stddef.h>
+#include <inttypes.h>
+
+void digitize (uint64_t n, uint8_t digits[], size_t *length_out)
+{
+  int count = 0;
+  uint64_t div = n;
+  do {
+    count++;
+    div /= 10;
+  }while (div != 0);
+  for (int i = 0; i < count; i++)
+    {
+    digits[i] = n % 10; // write your answer to the pre-allocated digits array
+    n /= 10;
+  }
+  *length_out = count;
+
+
+
+
+#include <stddef.h>
+#include <inttypes.h>
+
+void digitize(uint64_t n, uint8_t digits[], size_t *length_out) {
+    size_t length = 0;
+
+    if (n == 0) {    
+      digits[0] = 0;
+      length = 1;
+    } else {
+      while (n > 0) {
+          digits[length++] = n % 10;
+          n /= 10;
+      }
+    }
+    *length_out = length;
+}
+
+
+
+
+#include <stddef.h>
+#include <math.h>
+#include <stdio.h>
+#include <inttypes.h>
+
+void digitize (uint64_t n, uint8_t digits[], size_t *length_out)
+{
+    
+    size_t length = 0;
+    uint64_t temp = n;
+
+    do {
+        length++;
+        temp /= 10;
+    } while (temp > 0);
+
+    *length_out = length;
+
+    for (size_t i = 0; i < length; i++) {
+      // Get the last digit  
+      digits[i] = n % 10; 
+      // Remove the last digit
+      n /= 10;           
+    }
+    }
+
+
+
+
+#include <stddef.h>
+#include <inttypes.h>
+
+void digitize (uint64_t n, uint8_t digits[], size_t* length_out)
+{
+    *length_out = 0;
+  
+    if (n == 0) {
+      digits[0] = 0;
+      *length_out = 1;
+      return;
+    }
+  
+    for (size_t i = 0; n > 0; i++) {
+      digits[i] = n % 10;
+      n = n / 10;
+      *length_out += 1;
+    }
+}
+

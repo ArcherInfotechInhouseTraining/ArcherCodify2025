@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+
+        
+        .hero-section {
+            position: relative;
+            background-image: url("https://images.hdqwalls.com/wallpapers/dragon-ball-z-ozaru-vegeta-blue-4k-1d.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-section .hero-text {
+            background: rgba(0, 0, 0, 0.5); /* Optional: Add a translucent background */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        
+        .portfolio-item img {
+          width: 40%;
+          transition: transform 0.3s ease;
+        }
+        .portfolio-item:hover img {
+          transform: scale(1.1);
+        }
+        footer {
+          margin-top: 20px;
+          border-top: 1px solid black;
+          padding: 20px ;
+        }
+        h4{
+          margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Portfolio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Porfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+      <!-- Hero section -->
+      <section class="hero-section d-flex align-items-center justify-content-center">
+        <div class="container text-center text-white">
+            <h1 class="display-4"><b>Welcome To My Personal Portfolio </b></h1>
+            <br>
+            <a href="#contact" class="btn btn-primary">Get Started</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <div class="container py-5">
+        <div class="row align-items-center">
+
+          <div class="col-6 about">
+            <img src="https://play-lh.googleusercontent.com/UWxivEC5xpKhEmvRum3OMBZci1fl6zAPUzviSWH3BGnAcW3wmZATyM48iJwIGgq-FhA=w526-h296-rw" alt="Profile Image">
+          </div>
+          <div class="col-6"><h2>About Me</h2><b>Hi,</b> <p>I am Harshal Rasane Specialize in front-end and back-end development.
+            I also have good Knlowlege of Java, C, C++ Programming languages.<br>
+            I'm Pursuing Last year computer engineering at Dr. D. Y. Patil College.</p></div>
+        </div>
+      </div>
+
+
+      <!-- Services Section -->
+       <section id="services" class="container py-5">
+      <h2 class="text text-center mb-4"> Our Services</h2><br>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card">
+            <i class="bi bi-laptop mb-3" style="font-size: 50px; color: blue;"></i>
+            <div class="card-body">
+              <h5 class="card-title">WEB DESIGN</h5>
+              <p class="card-text">We are Create a Attractive website Design that meet costumer needs. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <i class="bi bi-paint-bucket mb-3" style="font-size: 50px; color: blue;"></i>
+            <div class="card-body">
+              <h5 class="card-title">GRAPHIC DESIGN</h5>
+              <p class="card-text">We are design eye-catching graphics to enhance your brand's identity.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <i class="bi bi-bar-chart-line mb-3" style="font-size: 50px; color: blue;"></i>
+            <div class="card-body">
+              <h5 class="card-title">DIGITAL MARKETING</h5>
+              <p class="card-text">We help businesses grow through effective digital marketing strategies.</p>
+            </div>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Portfolio Section -->
+     <section id="portfolio" class="container py-5">
+    <h2 class="text-center "> Our Portfolio </h2>
+    <div class="container text-center py-5 ">
+        <div class="row row-cols-3">
+          <div class="col portfolio-item">
+            <img src="html.png" class="img-fluid" alt="Portfolio Item 1">
+        <div class="overlay py-4">
+          <h5>HTML</h5>
+        </div>
+          </div>
+
+
+        <div class="col portfolio-item">
+            <img src="css-3.png" class="img-fluid" alt="Portfolio Item 1">
+        <div class="overlay py-4">
+          <h5>CSS</h5>
+        </div>
+          </div>
+
+
+        <div class="col portfolio-item">
+        <img src="java-script.png" class="img-fluid" alt="Portfolio Item 1">
+        <div class="overlay py-4">
+          <h5>JAVA SCRIPT</h5>
+        </div>
+          </div>
+
+
+        <div class="col portfolio-item">
+        <img src="java.png" class="img-fluid" alt="Portfolio Item 1">
+        <div class="overlay py-4">
+          <h5>JAVA</h5>
+        </div>
+    </div>
+
+
+        <div class="col portfolio-item">
+        <img src="app-development.png" class="img-fluid" alt="Portfolio Item 1">
+        <div class="overlay py-4">
+          <h5>APP DEV</h5>
+        </div>
+          </div>
+
+
+        <div class="col portfolio-item">
+        <img src="code.png" class="img-fluid" alt="Portfolio Item 1">
+        <div class="overlay py-4">
+          <h5>WEB DEV</h5>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+     <section id="contact" class="container py-3">
+      <h2 class="text-center py-5"> Contact Us </h2>
+      <div class="form-floating py-3">
+        <input type="text" class="form-control" id="floatingname" placeholder="Name">
+        <label for="floatingname">Name</label>
+      </div>
+      <div class="form-floating mb-3 py-3">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating py-3">
+        <textarea class="form-control" placeholder="Enter the Subject" id="floatingTextarea"></textarea>
+        <label for="floatingTextarea">Subject</label>
+      </div>
+      <div class="form-floating py-3">
+        <textarea class="form-control" placeholder="Enter Your Message" id="floatingTextarea2" style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Message</label>
+      </div>
+      <a href="#" class="btn btn-primary">Send Message</a>
+     </section>
+
+
+
+     <!-- Footer Section -->
+     <footer class="bg-light text-center">
+      <div class="container py-4">
+        <p><b> &copy;CopyRights,<br>All rights reserved.</b></p>
+        <div>
+          <a href="#" class="mx-2"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="mx-2"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="mx-2"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="mx-2"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+</body>
+</html>

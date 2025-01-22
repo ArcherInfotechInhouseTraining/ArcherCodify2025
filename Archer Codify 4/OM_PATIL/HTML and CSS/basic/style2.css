@@ -1,0 +1,180 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    background-image: url('img5\ \(7\).jpg');
+    background-size: cover;
+    background-blend-mode: saturation;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 80px auto;
+    overflow: scroll;
+}
+
+.box
+{
+    width: 100%;
+    height: auto;
+}
+/* remove scroolbar */
+/* body::-webkit-scrollbar
+{
+    display: none;
+} */
+
+.box-item
+{
+    width: 130px;
+    height: 130px;
+    border: 2px solid yellow;
+    float: left;
+    margin: 20px;
+    border-radius:50%;
+    background: repeating-conic-gradient(rgb(255, 60, 0),rgb(55, 128, 0),yellow,white,pink,rgb(255, 0, 230));
+    
+}
+
+.box-item.b1
+{
+    background-image: repeating-conic-gradient(at 30% 60% red 10%,yellow 20%);
+    /* animation: rotate 2s infinite ease; */
+    animation: rotateClockwise 2s linear infinite;
+}
+
+.box-item.b2
+{
+    background-image: repeating-conic-gradient(at 30% 70%,red 10%,yellow 20%,rgb(0, 128, 15) 30%);
+    /* animation: rotate 2s infinite ease; */
+    animation: rotateClockwise 2s linear infinite;
+}
+
+.box-item.b3
+{
+    background-image: repeating-conic-gradient(red 0deg,red 90deg,yellow 90deg,yellow 180deg,green 180deg,green 270deg,blue 270deg,blue 360deg);
+    /* animation: rotate 2s infinite ease; */
+    animation: rotateClockwise 2s linear infinite;
+}
+
+.box-item.b4
+{
+    background-image: repeating-conic-gradient(black 0deg,black 10deg,white 10deg,white 20deg);
+    /* animation: rotate 2s infinite ease; */
+    animation: rotateClockwise 4s linear infinite;
+}
+
+.box-item.b5
+{
+    background: url('https://cdn.pixabay.com/photo/2024/05/07/00/59/hulk-8744607_1280.jpg');
+    /* background-image: repeating-conic-gradient(at 50% 50%,yellow 20%,rgb(128, 85, 0) 30%); */
+    /* animation: rotate 2s infinite ease; */
+    background-size: cover;
+    background-position: center;
+    animation: rotateClockwise 5s linear infinite;
+}
+
+.box-item.b6
+{
+    background-image: repeating-conic-gradient(red 0deg,red 120deg,yellow 120deg,yellow 240deg,green 240deg,green 360deg);
+    /* animation: rotate 2s infinite ease; */
+    animation: rotateClockwise 3s linear infinite;
+}
+
+.box-item.b7
+{
+    background: url('https://img.freepik.com/free-vector/flat-design-spiral-circle-background_23-2150329365.jpg?t=st=1735552491~exp=1735556091~hmac=0ce3f49cce75cb858b8bd0e23db36fa11fb88d367d41eee1f0dea62cfe4fe2d9&w=826');
+    /* animation: rotate 2s infinite ease; */
+    background-size: cover;
+    background-position: center;
+    animation: rotateClockwise 1s linear infinite;
+}
+
+.box-item.b8
+{
+    background-image: repeating-conic-gradient(red 10%,yellow 20%,green 30%);
+    /* animation: rotate 2s infinite ease; */
+    animation: rotateClockwise 1s linear infinite;
+}
+
+.box-item.b9
+{
+    background: url('https://cdn.pixabay.com/photo/2024/09/10/08/30/mythology-9036492_1280.png');
+    /* animation: rotate 2s infinite ease; */
+    background-size: cover;
+    background-position: center;
+    animation: rotateClockwise 5s linear infinite;
+}
+
+.box-item.b10
+{
+    background: url('https://img.freepik.com/premium-vector/hypnotic-circle-pattern-abstract-optical-illusion-black-spiral-design-geometric-radial-vector_756957-6306.jpg?w=740');
+    /* animation: rotate 2s infinite ease; */
+    background-size: cover;
+    background-position: center;
+    animation: rotateClockwise 1s linear infinite;
+}
+
+.box-item.b11
+{
+    width: 250px;
+    height: 250px;
+    border-radius: 0px;
+    border-color: transparent;
+    background-image: repeating-conic-gradient(from -45deg at 25% 55%,red 0deg,red 90deg,blue 90deg,blue 180deg,green 180deg,green 270deg,yellow 270deg,yellow 360deg);
+    /* animation: rotate 2s infinite ease; */
+    font-size: 200px;
+    font-family: Facile Sans;
+    margin-top: -35px;
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.box-item.b12
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9rem;
+    overflow: hidden;
+    font-weight: bolder;
+    color: #fff;
+    border: 0;
+    background: blue;
+    font-family: 'Roboto', sans-serif;
+}
+.box-item.b12 p{
+    margin-top: 3rem;
+}
+
+
+/* 
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg)scale(0) skew(0deg);
+    }
+    50%
+    {
+        transform: rotate(360deg)scale(2) skew(40deg);
+    }
+    100%
+    {
+        transform: rotate(0deg)scale(0) skew(00deg);
+    }
+} */
+
+@keyframes rotateClockwise {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+    
+}

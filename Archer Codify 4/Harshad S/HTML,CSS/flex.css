@@ -1,0 +1,85 @@
+body{
+    /*background-image: url(junj.jpg);*/
+    background-color: lightpink;
+    background-size: cover;
+}
+.nav{
+    width: 1200px;
+    border-radius:20px ;
+    
+    height: auto;
+    padding: 20px; 
+    /*border: 3px solid red;
+    background-color: lightslategray;*/
+    justify-content: space-around;
+}
+
+.nav .nav_list{
+    display: inline-flex;
+    justify-content: space-around;
+
+    
+}
+.nav .nav_list .nav_item{
+    width: 100px;
+    height: 30px;
+      
+}
+
+.nav .nav_list .nav_item a{
+    text-decoration: none;
+    font-size: 20px;
+    color:red;
+    padding: 20px;
+     
+}
+#serch{
+    height: 20px;
+    width: 250px;
+    text-align: center;
+    background-color: lime;
+    border-radius: 25px;
+    border: solid black;
+    color: black;
+    padding: 10px;
+}
+.infor{
+    display: flex;
+    justify-content: space-around;
+  
+
+}
+.infor:hover{
+    
+}
+#box1{
+
+    border: 5px solid red;
+    height: 200px;
+    width:  300px;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 25px;
+    padding-top:15px ;
+    transition: all 1s ease;
+}
+#box2{
+    border: 5px solid red;
+    height: 200px;
+    width:  300px;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 25px;
+    padding-top:15px ;
+}
+
+#box3{
+    border: 5px solid red;
+    height: 200px;
+    width:  300px;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 25px;
+    padding-top:15px ;
+    
+}
