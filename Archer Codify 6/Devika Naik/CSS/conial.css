@@ -1,0 +1,101 @@
+body{
+    background-image:url(animal3.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 80px auto;
+    overflow: scroll;
+}
+body::-webkit-scrollbar{
+    display:none;
+}
+.box{
+    width:100%;
+    height:auto;
+}
+.box-item{
+    width:200px;
+    height:200px;
+    border:2px solid greenyellow;
+    float:left;
+    margin:20px;
+    border-radius:50%;
+}
+.b1{
+    background-image:conic-gradient(red,yellow,green);
+    animation: rotateClockwise 5s linear infinite;
+}
+.b2{
+    background-image: conic-gradient(from 45deg,red,yellow,green);
+    animation: rotateClockwise 5s linear infinite;
+}
+.b3{
+    background-image:conic-gradient(from 45deg,red,yellow,green,red);
+    animation: rotateClockwise 1s linear infinite;
+}
+.b4{
+    background-image: conic-gradient(at 30% 60%,red,yellow,green);
+    animation: rotateClockwise 1s linear infinite;
+}
+.b5{
+    background-image: repeating-conic-gradient(red 10%,yellow 20%,green 30%);
+    animation: rotateClockwise 1s linear infinite;
+}
+.b6{
+    background-image:repeating-conic-gradient(red 0deg,red 90deg,yellow 90deg,yellow 180deg,green 180deg,green 270deg,blue 270deg,blue 360deg);
+    animation: rotateClockwise 5s linear infinite;
+}
+.b7{
+    background-image:repeating-conic-gradient(yellow 0deg,yellow 90deg,black 90deg,black 180deg,yellow 180deg,yellow 270deg,black 270deg,black 360deg);
+    animation: rotateClockwise 5s linear infinite;
+}
+.b8{
+    background-image:url(spiral2.png);
+    background-position:center;
+    border-color:red green blue yellowgreen;
+    background-size:20px 20px;
+    animation: rotateClockwise 10s linear infinite;
+}
+.b9{
+    background-image: repeating-conic-gradient(green 0deg,green 30deg,rgba(0,0,0,0.1) 20deg,rgba(0,0,0,0.1) 60deg);
+    animation: rotateClockwise 5s linear infinite;
+}
+.b10{
+    background-image:repeating-conic-gradient(yellow 0deg,yellow 90deg,black 90deg,black 180deg);
+    background-size:20px 20px;
+    animation: rotateClockwise 60s linear infinite;
+}
+.b11{
+    width:700px;
+    height:250px;
+    border-radius:0px;
+    border-color:transparent;
+    background-image:repeating-conic-gradient(from -45deg at 20% 20%,red 0deg,red 90deg,blue 90deg, blue 180deg,green 180deg,green 270deg,yellow 270deg,yellow 360deg);
+    font-size:200px;
+    font-weight:30% ;
+    font-family: Facile Sans;
+    -webkit-background-clip: text;
+    color:transparent;
+
+}
+.b12{
+    width:700px;
+    height:250px;
+    border-radius:0px;
+    border-color:transparent;
+    background-image: linear-gradient(red,blue,yellow,green);
+    font-size:200px;
+    font-weight:50% ;
+    font-family: Facile Sans;
+    -webkit-background-clip: text;
+    color:transparent;
+}
+
+@keyframes rotateClockwise{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}

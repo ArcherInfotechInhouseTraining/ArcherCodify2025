@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Radial Timer</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="radial-timer">
+    <div class="timer-text">0%</div>
+</div>
+<button id="start-timer">Start Timer</button>
+
+<script>
+    const timerElement = document.querySelector('.radial-timer');
+    const timerText = document.querySelector('.timer-text');
+    const startButton = document.getElementById('start-timer');
+    
+    startButton.addEventListener('click', () => {
+	let progress = 0;
+	timerElement.style.animation = 'progress 5s linear forwards';
+	
+	const interval = setInterval(() => {
+	    progress += 1;
+	    timerText.textContent = `${progress}%`;
+	    
+	    if (progress === 100) {
+		clearInterval(interval);
+	    }
+	}, 50); // Updates the percentage text every 50ms
+    });
+
+</script>
+</body>
+</html>

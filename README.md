@@ -4,6 +4,12 @@
 
 Students at D. Y. Patil College of Engineering and Innovation (COEI) are known for their creativity, dedication, and passion for technology. They demonstrate excellent teamwork, problem-solving skills, and adaptability. Their proactive approach to learning and willingness to embrace challenges make them well-suited for dynamic projects in software development and competitive programming.
 
+## Additional Resources
+
+- **Team Members and Project Guidelines PDF:**  
+    <a href="https://drive.google.com/file/d/1cSxpJSVcxCUac94TaTGKdpgFY_F9Uyc8/view?usp=drive_link" target="_blank">Check your name in List</a>
+
+
 ---
 
 ## Projects Undertaken

@@ -1,0 +1,90 @@
+.box{
+    height: 440px;
+    width: 595px;
+    background-clip: border-box;
+    background-image:url(img.jpg);
+    border: 20px solid;
+    margin-left:  400px;
+    border-color: black;
+    background-size: 300px,500px;
+    background-attachment: fixed;
+    overflow: scroll;
+}
+.box1{
+    background-image: url(img.jpg);
+    margin-left:  400px;
+    background-size: 298px,498px;
+    border-radius: 40px;
+    /*background-repeat: no-repeat;*/
+    height: 440px;
+    width: 595px;
+    background-clip: border-box;
+    border: 15px solid;
+    background-color:rgb(210, 199, 199);
+}
+.box2{
+    border: 20px solid;
+    height: 440px;
+    width: 595px;
+    margin-left: 400px;
+    background-image:repeating-linear-gradient(red,yellow,wheat,green);
+    background-attachment: local;
+    background-clip: border-box;
+    border: 15px solid;
+   
+    
+}
+
+.box3{
+    border: 20px solid;
+    height: 440px;
+    width: 595px;
+    border-radius: 100px;
+    margin-left: 400px;
+    background-image:repeating-radial-gradient(red,yellow,wheat,green);
+    background-attachment: local;
+    background-clip: border-box;
+    border: 15px solid;  
+}
+.box4{
+    border: 20px solid;
+    height: 440px;
+    width: 595px;
+    border-radius: 100px;
+    margin-left: 400px;
+    background-clip: border-box;
+    border: 15px solid;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-image: url(yoga.jpg),url(devika.jpg);
+   
+    
+}
+
+.box5.item{
+        width: 200px;
+        height: 200px;
+        border: 2px solid #000;
+        border-radius: 50%;
+        margin: 20px;
+        float: left;
+    }
+    
+    #b1{
+        background-image: conic-gradient(red, green, blue);
+    }
+    
+    #b2{
+        background-image: conic-gradient(red, green, blue, red);
+    }
+    
+    #b3{
+        background-image: repeating-conic-gradient(red 20%, white 30%);
+    }
+    #b4{
+        background-image: repeating-conic-gradient(at 30px 50px, red 20%, white 30%);
+    }
+    #b5{
+        background-image: repeating-conic-gradient(green 0deg, green 90deg, black 90deg, black 180deg);
+    }
+}
