@@ -1,0 +1,74 @@
+import java.util.*;
+import java.io.*;
+
+class Solution {
+    public static void main(String []argh){
+        Scanner in = new Scanner(System.in);
+        int t = in.nextInt(); 
+        
+       
+        for(int i = 0; i < t; i++) {
+            int a = in.nextInt(); // First integer
+            int b = in.nextInt(); // Second integer
+            int n = in.nextInt(); // Number of terms in the series
+            
+            int sum = a; 
+           
+            for(int j = 0; j < n; j++) {
+                sum += (int) Math.pow(2, j) * b; 
+                System.out.print(sum + " "); 
+            }
+            System.out.println(); 
+        }
+        
+        in.close();
+    }
+}
+---------------------------------------------------
+
+Reading Input:
+
+The first line reads the integer 𝑡
+t, the number of test cases.
+For each test case, we read the three integers 
+𝑎 𝑏, and n.
+Generating the Series:
+
+We initialize the first term sum = a.
+For each term in the series, we calculate sum += (int) Math.pow(2, j) * b where Math.pow(2, j) computes 
+2 j
+ .
+We print each term in the series using System.out.print(sum + " ").
+Formatting Output:
+
+After printing all terms for a test case, we use System.out.println() to move to the next line, ensuring each test case's result is printed on a new line.
+
+
+For the first query:
+
+a=0, 
+
+b=2, and 
+
+n=10.
+The series starts as 
+
+0+2=2.
+Then each subsequent term adds 
+
+b×2 
+j
+ resulting in the sequence: 2 6 14 30 62 126 254 510 1022 2046.
+For the second query:
+
+a=5, 
+
+b=3, and 
+
+n=5.
+The series starts as 
+
+5+3=8.
+Each subsequent term adds 3×2 
+j
+ resulting in the sequence: 8 14 26 50 98.
