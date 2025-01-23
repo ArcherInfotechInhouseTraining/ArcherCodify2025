@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Website</title>
+  <title>My Website</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
     /* Hero Section Styling */
     .hero {
-      background-image: url('your-background-image.jpg');
+      background-image: url('bg1.jpg');
       background-size: cover;
       height: 100vh;
       color: white;
@@ -51,6 +51,153 @@
     .portfolio-item:hover .overlay {
       display: flex;
     }
+
+
+    /* for om-bg adjust */
+    .container img{
+      height: 300px;
+      width: 300px;
+      border: 1px solid red;
+      margin-top: 95px;
+      margin-right: -10px;
+    }
+
+    .h2, h2 {
+    font-size: 2rem;
+    margin-top: 45px;
+    text-align: center;
+    }
+
+
+    /* for our services */
+    .h5, h5 {
+    font-size: 1.25rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    }
+
+    .card{
+      padding: 10px;
+      margin: 10px;
+      background-color: #D0DDD0;
+    }
+
+    
+
+  /* portfolio section all*/
+
+  /* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Portfolio Section */
+.portfolio {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.portfolio h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Flex container for projects */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Individual Project Card */
+.project {
+    flex: 1 1 calc(33.33% - 20px); /* 3 items per row on large screens */
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px); /* Hover effect */
+    background-color: #F6DEF6;
+}
+
+.project-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.project-description {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.project-tech {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #3498db;
+}
+
+.project-role, .project-overview {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.project-outcome {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.project-link {
+    text-align: center;
+}
+
+.project-link a {
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.project-link a:hover {
+    background-color: #2980b9;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .project {
+        flex: 1 1 calc(50% - 20px); /* 2 items per row on tablets */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project {
+        flex: 1 1 100%; /* 1 item per row on mobile */
+    }
+}
+
+
   </style>
 </head>
 <body>
@@ -80,14 +227,19 @@
 </section>
 
 <!-- About Section -->
-<section id="about" class="container my-5">
+<section id="about" class="container">
   <div class="row">
-    <div class="col-md-6">
-      <img src="your-profile-image.jpg" alt="Profile" class="img-fluid rounded-circle">
+    <div class="col-md-4">
+      <img src="om-bg.jpg" alt="Profile" class="img-fluid rounded-circle">
     </div>
-    <div class="col-md-6">
+    <div class="col-md-8">
       <h2>About Me</h2>
-      <p>Hello! I am a web designer and digital marketer with over 5 years of experience. My goal is to create visually appealing and user-friendly websites that help businesses grow. I specialize in both creative and technical aspects of web development.</p>
+      <p>Hello, I’m Om Vishnu Patil, a Full Stack Java Developer and a Bachelor of Engineering (BE) student in Computer Engineering at Savitribai Phule Pune University (SPPU), Pune. My passion for technology drives me to constantly learn, innovate, and create scalable solutions through code.
+        With expertise in languages like Java, C++, C, and JavaScript, I've developed both front-end and back-end applications. I am proficient in building responsive web interfaces using HTML, CSS, and JavaScript, and I use powerful frameworks like Spring Boot and Hibernate to develop secure, efficient, and scalable back-end services.
+        In addition to my web development skills, I have experience in Android development, creating dynamic mobile applications that enhance user experiences. I thrive in an environment where I can solve complex problems and deliver high-quality solutions, and I enjoy working on both individual and collaborative projects.
+        This portfolio showcases some of the work I've done so far, and I’m always eager to take on new challenges. Feel free to explore my projects and reach out if you'd like to connect or discuss potential opportunities!
+        
+        </p>
     </div>
   </div>
 </section>
@@ -95,22 +247,30 @@
 <!-- Services Section -->
 <section id="services" class="container my-5">
   <h2 class="text-center">Our Services</h2>
+  <h5>As a Full Stack Java Developer with a strong foundation in both front-end and back-end technologies, I offer a range of services to help bring your digital ideas to life. Here’s what I can do for you:</h5>
+
   <div class="row">
     <div class="col-md-4">
       <div class="card">
+        <div class="card1">
         <div class="card-body text-center">
           <i class="fas fa-laptop-code fa-3x"></i>
-          <h4 class="card-title">Web Design</h4>
-          <p class="card-text">We create stunning, responsive websites tailored to your needs.</p>
+          <h4 class="card-title">1. Full Stack Web Development</h4>
+          <p class="card-text">Building dynamic and responsive web applications using Java, HTML, CSS, JavaScript, and popular frameworks like Spring Boot and Hibernate..
+            End-to-end solutions for front-end and back-end development, ensuring a seamless user experience.
+          </p>
         </div>
+      </div>
       </div>
     </div>
     <div class="col-md-4">
       <div class="card">
         <div class="card-body text-center">
           <i class="fas fa-paint-brush fa-3x"></i>
-          <h4 class="card-title">Graphic Design</h4>
-          <p class="card-text">Our graphic designs help your brand stand out with creativity and impact.</p>
+          <h4 class="card-title">2. Android App Development</h4>
+          <p class="card-text">Creating intuitive and high-performance mobile applications for Android devices.
+            Custom app development to meet business needs, including UI/UX design and database integration.
+          As per requirement needed</p>
         </div>
       </div>
     </div>
@@ -118,8 +278,43 @@
       <div class="card">
         <div class="card-body text-center">
           <i class="fas fa-chart-line fa-3x"></i>
-          <h4 class="card-title">Digital Marketing</h4>
-          <p class="card-text">We drive targeted traffic and grow your business through digital marketing strategies.</p>
+          <h4 class="card-title">3. Custom Web Solutions</h4>
+          <p class="card-text">Developing tailored web applications that solve specific problems for businesses or individuals.
+            From e-commerce platforms to content management systems, I can help turn your unique ideas into fully functional applications.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <i class="fas fa-laptop-code fa-3x"></i>
+          <h4 class="card-title">4. API Development & Integration</h4>
+          <p class="card-text">Building RESTful APIs for efficient communication between the front-end and back-end systems.
+            Integrating third-party APIs into your application to extend functionality as per your requirements.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <i class="fas fa-paint-brush fa-3x"></i>
+          <h4 class="card-title">5. Database Management</h4>
+          <p class="card-text">Designing and optimizing databases to ensure data is stored securely and accessed efficiently.
+            Working with relational databases such as MySQL, PostgreSQL, and NoSQL databases when required.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <i class="fas fa-chart-line fa-3x"></i>
+          <h4 class="card-title">6. UI/UX Design</h4>
+          <p class="card-text">Crafting clean, modern, and user-friendly interfaces to ensure your web and mobile applications are visually appealing and easy to navigate.
+            Focusing on responsive design to ensure your application works seamlessly across all devices.</p>
         </div>
       </div>
     </div>
@@ -127,47 +322,88 @@
 </section>
 
 <!-- Portfolio Section -->
-<section id="portfolio" class="container my-5">
-  <h2 class="text-center">Portfolio</h2>
-  <div class="row">
-    <div class="col-md-4 portfolio-item">
-      <img src="portfolio1.jpg" alt="Portfolio 1" class="img-fluid">
-      <div class="overlay">
-        <p>Project 1</p>
+
+<div class="portfolio">
+  <h2>My Portfolio</h2>
+
+  <div class="projects-container">
+      <!-- Project 1 -->
+      <div class="project">
+          <div class="project-header">Online Bookstore Application</div>
+          <div class="project-description">A fully functional online bookstore that allows users to browse books, add them to a cart, make secure payments, and track their orders.</div>
+
+          <div class="project-tech">Technologies Used: Java, Spring Boot, Hibernate, MySQL, HTML, CSS, JavaScript</div>
+
+          <div class="project-role">
+              <strong>Role:</strong> Full Stack Developer
+          </div>
+
+          <div class="project-overview">
+              <strong>Overview:</strong> The project aimed to create an e-commerce platform for an online bookstore. I developed both the front-end and back-end using Java, Spring Boot, and MySQL.
+          </div>
+
+          <div class="project-outcome">
+              <strong>Outcome:</strong> Successfully deployed with features like user-friendly navigation, secure checkout, and fast load times. Client feedback was very positive.
+          </div>
+
+          <div class="project-link">
+              <a href="#">View Project</a>
+          </div>
       </div>
-    </div>
-    <div class="col-md-4 portfolio-item">
-      <img src="portfolio2.jpg" alt="Portfolio 2" class="img-fluid">
-      <div class="overlay">
-        <p>Project 2</p>
+
+      <!-- Project 2 -->
+      <div class="project">
+          <div class="project-header">Task Management System</div>
+          <div class="project-description">A task management system that allows teams to manage, assign, and track tasks efficiently in a collaborative environment.</div>
+
+          <div class="project-tech">Technologies Used: Java, Spring Boot, MySQL, HTML, CSS, JavaScript, React</div>
+
+          <div class="project-role">
+              <strong>Role:</strong> Full Stack Developer
+          </div>
+
+          <div class="project-overview">
+              <strong>Overview:</strong> Built a web-based task management system with real-time updates and intuitive UI. Integrated features like notifications and priority settings.
+          </div>
+
+          <div class="project-outcome">
+              <strong>Outcome:</strong> Improved team collaboration and task tracking, with high user engagement. The system now serves as a core tool for many small businesses.
+          </div>
+
+          <div class="project-link">
+              <a href="#">View Project</a>
+          </div>
       </div>
-    </div>
-    <div class="col-md-4 portfolio-item">
-      <img src="portfolio3.jpg" alt="Portfolio 3" class="img-fluid">
-      <div class="overlay">
-        <p>Project 3</p>
+
+      <!-- Project 3 -->
+      <div class="project">
+          <div class="project-header">Portfolio Website</div>
+          <div class="project-description">A personal portfolio website showcasing my skills, projects, and experience as a developer.</div>
+
+          <div class="project-tech">Technologies Used: HTML, CSS, JavaScript, React</div>
+
+          <div class="project-role">
+              <strong>Role:</strong> Web Developer
+          </div>
+
+          <div class="project-overview">
+              <strong>Overview:</strong> Created a personal portfolio site that highlights my technical expertise and provides a platform for potential clients or employers to reach me.
+          </div>
+
+          <div class="project-outcome">
+              <strong>Outcome:</strong> The website serves as both a showcase of my skills and a contact point for new opportunities. It is highly responsive and mobile-friendly.
+          </div>
+
+          <div class="project-link">
+              <a href="#">View Project</a>
+          </div>
       </div>
-    </div>
-    <div class="col-md-4 portfolio-item">
-      <img src="portfolio4.jpg" alt="Portfolio 4" class="img-fluid">
-      <div class="overlay">
-        <p>Project 4</p>
-      </div>
-    </div>
-    <div class="col-md-4 portfolio-item">
-      <img src="portfolio5.jpg" alt="Portfolio 5" class="img-fluid">
-      <div class="overlay">
-        <p>Project 5</p>
-      </div>
-    </div>
-    <div class="col-md-4 portfolio-item">
-      <img src="portfolio6.jpg" alt="Portfolio 6" class="img-fluid">
-      <div class="overlay">
-        <p>Project 6</p>
-      </div>
-    </div>
+
+      <!-- More projects can be added here -->
   </div>
-</section>
+</div>
+
+
 
 <!-- Contact Section -->
 <section id="contact" class="container my-5">
@@ -202,11 +438,13 @@
 <!-- Footer -->
 <footer class="bg-dark text-white py-3 text-center">
   <p>Follow us on:</p>
-  <a href="#" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
-  <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
-  <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+  <a href="#" class="text-white mx-2">Linkedin : <i class="fab fa-facebook"></i>url</a>
+  <a href="#" class="text-white mx-2">Github : <i class="fab fa-twitter">url</i></a>
+  <a href="#" class="text-white mx-2">Instagram : <i class="fab fa-instagram">om_patil_7026</i></a>
   <p>&copy; 2025 MyWebsite. All Rights Reserved.</p>
 </footer>
+
+
 
 <!-- Bootstrap JS and dependencies -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
