@@ -1,0 +1,19 @@
+.input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.input-container input {
+    padding-left: 30px;
+    font-size: 16px;
+}
+
+.input-container::before {
+    content: "🔍";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #aaa;
+}

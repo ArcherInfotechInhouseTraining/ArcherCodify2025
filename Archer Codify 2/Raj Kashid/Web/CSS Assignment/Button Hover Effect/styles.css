@@ -1,0 +1,43 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #1a1a1a;
+}
+
+/* Glowing Button */
+.glow-button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    box-shadow: 0 0 10px #007acc, 0 0 20px #007acc, 0 0 30px #007acc;
+    transition: transform 0.2s ease;
+}
+
+.glow-button:hover {
+    animation: glow 1.5s infinite alternate;
+    transform: scale(1.5); /* Slight zoom-in effect */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #007acc, 0 0 20px #007acc, 0 0 30px #007acc;
+    }
+    50% {
+        box-shadow: 0 0 20px #00ccff, 0 0 40px #00ccff, 0 0 60px #00ccff;
+    }
+    100% {
+        box-shadow: 0 0 30px #33d1ff, 0 0 60px #33d1ff, 0 0 90px #33d1ff;
+    }
+}

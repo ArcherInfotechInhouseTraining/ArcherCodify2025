@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+
+        while (t-- > 0) {
+            int n = sc.nextInt();
+            String s = sc.next();
+            String result="";
+            
+            
+            if(n%2==0)
+            {
+                
+                int i=0;
+                
+                while(i+1<s.length())
+                {
+                    char first=s.charAt(i);
+                    char sec =s.charAt(i+1);
+                    
+                
+                
+                    if (first=='0' && sec=='0' )
+                        result=result+"A";
+                    else if (first=='0' && sec=='1' )
+                       result=result+"T";
+                    else if (first=='1' && sec=='0' )
+                        result=result+"C";
+                        
+                    else if (first=='1' && sec=='1' )
+                        result=result+"G";
+                    
+                
+                    i+=2;
+                }
+                System.out.println(result);
+                
+            }
+            // Your code goes here
+        }
+    }
+    
+}

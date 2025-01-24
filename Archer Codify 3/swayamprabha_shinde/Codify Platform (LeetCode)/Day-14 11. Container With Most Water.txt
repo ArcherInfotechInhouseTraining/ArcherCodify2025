@@ -1,0 +1,83 @@
+11. Container With Most Water
+
+You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
+
+Find two lines that together with the x-axis form a container, such that the container contains the most water.
+
+Return the maximum amount of water a container can store.
+
+Notice that you may not slant the container.
+
+Example 1:
+Input: height = [1,8,6,2,5,4,8,3,7]
+Output: 49
+Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.
+
+Example 2:
+Input: height = [1,1]
+Output: 1
+
+Solution:
+class Solution {
+    public int maxArea(int[] height) {
+        int left = 0;  // Pointer at the beginning
+        int right = height.length - 1;  // Pointer at the end
+        int maxArea = 0;  // To store the maximum area
+
+        // Move the pointers towards each other
+        while (left < right) {
+            // Calculate the area between the two pointers
+            int currentArea = (right - left) * Math.min(height[left], height[right]);
+            // Update the maximum area
+            maxArea = Math.max(maxArea, currentArea);
+
+            // Move the pointer with the smaller height
+            if (height[left] < height[right]) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+
+        return maxArea;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+
+        // Test cases
+        int[] height1 = {1, 8, 6, 2, 5, 4, 8, 3, 7};
+        int[] height2 = {1, 1};
+
+        System.out.println("Max Area (Test Case 1): " + solution.maxArea(height1));  // Output: 49
+        System.out.println("Max Area (Test Case 2): " + solution.maxArea(height2));  // Output: 1
+    }
+}
+
+Explanation:
+
+We need to find two vertical lines from the array height such that, together with the x-axis, they form a container that holds the maximum amount of water. The area of water a container can hold is determined by:
+Area=(right index−left index)×min(height[left],height[right])
+The width is the distance between the two lines (right - left).
+The height is determined by the shorter of the two lines (min(height[left], height[right])).
+Our task is to maximize this area using the two-pointer technique.
+
+Start with two pointers: one at the leftmost end (left = 0) and the other at the rightmost end (right = height.length - 1).
+Initialize maxArea to store the largest container area we find during the process.
+
+Condition: Run the loop while left < right (until the two pointers meet).
+Calculate Current Area:
+currentArea=(right−left)×min(height[left],height[right])
+This gives the area of the container formed by the lines at indices left and right.
+Update Maximum Area:
+Compare currentArea with maxArea and store the larger value in maxArea.
+
+Why move the smaller height?
+The area is limited by the shorter line (min(height[left], height[right])).
+To potentially increase the area, we move the pointer pointing to the shorter line inward (closer to the other pointer). This is because moving the taller line inward will not increase the area, as the height will remain limited by the shorter line.
+Since the area is limited by the shorter of the two lines, moving the pointer with the smaller height might give a better result.
+Move the pointer pointing to the smaller height to potentially find a taller line and maximize the area.
+
+
+Stop when left and right pointers meet, as all possible containers have been considered.
+

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .hero {
+      background: url('background.png') center/cover no-repeat;
+      height: 100vh;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+    }
+    .hero p{
+      color:yellow;   
+    }
+    .hero h1{
+      color:yellow;
+    }
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+    }
+    .portfolio-item img {
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+    }
+    .portfolio-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">My Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home"><i class="fa-solid fa-house-user"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about"><i class="fa-solid fa-circle-info"></i> About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services"><i class="fa-solid fa-handshake-angle"></i> Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio"><i class="fa-solid fa-right-to-bracket"></i> Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact"><i class="fa-solid fa-address-book"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Welcome !!</h1>
+    <p>Coding by Day, Dancing by Night</p>
+    <a href="#about" class="btn btn-primary">Get Started</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-4">
+        <img src="bitmoji.jpeg" alt="Profile" class="img-fluid">
+      </div>
+      <div class="col-md-8">
+        <h2>About Me</h2>
+        <p>Hello! I'm Devika Prashant Naik, and I've been weaving stories through the elegant art of Kathak since childhood. Dance has been my companion and teacher, imparting grace, discipline, and a deep appreciation for cultural heritage.</p>
+
+        <p>In parallel to my journey as a dancer, I discovered a profound passion for the world of coding and programming. Just as dance is an expressive language of the body, coding allows me to create, innovate, and solve problems in the digital realm.</p>
+          
+         <p>By fusing these two seemingly different worlds, I bring a unique perspective to both my dance and tech projects. Whether it's performing intricate footwork on stage or developing seamless code, I strive for excellence, creativity, and a touch of artistry in everything I do.</p>
+          
+        <p>Welcome to my portfolio, where tradition meets technology and passion knows no bounds.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="bg-light py-5">
+    <div class="container text-center">
+      <h2>Technical Skills</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card p-3">
+            <i class="fas fa-laptop-code fa-3x mb-3"></i>
+            <h4>Web Development</h4>
+            <p>HTML ,CSS ,BOOTSTRAP.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <i class="fas fa-paint-brush fa-3x mb-3"></i>
+            <h4>Programming Languages</h4>
+            <p>C,C++,JAVA</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <i class="fa-solid fa-mobile fa-3x mb-3"></i>
+            <h4>Additional Skills</h4>
+            <p>Android</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Education Section -->
+  <section id="services" class="bg-light py-5">
+    <div class="container text-center">
+      <h2>Education</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card p-3">
+            <i class="fa-solid fa-school fa-3x mb-3"></i>
+            <h4>School</h4>
+            <p>Auxilium Convent High School ,Lonavala</p>
+            <p>SSC Boards: 83%</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <i class="fa-solid fa-building-columns fa-3x mb-3"></i>
+            <h4>Junior College</h4>
+            <p>D.P Mehta Junior College ,Lonavala</p>
+            <p>HSC Boards:82%</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <i class="fa-solid fa-graduation-cap fa-3x mb-3"></i>
+            <h4>Bachelors Degree</h4>
+            <p>Currently Pursuing B.E :Computer Engineering</p>
+            <p>SPPU : Average CGPA:8.5</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="container my-5">
+    <h2 class="text-center">Dancers Gallery</h2>
+    <div class="row">
+      <div class="col-md-4 portfolio-item">
+        <img src="d1.jpeg" alt="Portfolio 1">
+        <div class="portfolio-overlay">Festival Performance at Ayodya</div>
+      </div>
+      <div class="col-md-4 portfolio-item">
+        <img src="d2.jpeg" alt="Portfolio 2">
+        <div class="portfolio-overlay">National Level Competitions</div>
+      </div>
+      <div class="col-md-4 portfolio-item">
+        <img src="d3.jpeg" alt="Portfolio 3">
+        <div class="portfolio-overlay">College Performances</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center">Contact</h2>
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="subject" class="form-label">Subject</label>
+          <input type="text" id="subject" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" class="form-control" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
+    <div>
+      <a href="#" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
