@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position sticky</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        img{
+            width: 100%;
+            height: 400px;
+
+        }
+        .nav img, .nav{
+            width: 100%;
+            height: 100px;
+            
+        }
+        .nav , .nav ul li, .nav ul li a{
+               width: 100%;
+               
+        }
+        .nav ul{
+            list-style-type: none;
+            display: flex;
+            text-align: center;
+            padding-top: 10px;
+            height: 40px;
+            background: black;
+        }
+       
+        a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+           /* cursor: crosshair;
+            cursor: help;
+            cursor: progress; */
+            cursor: url(ppp.png),pointer;
+            
+        }
+        li{
+            border-right:  3px solid white;
+            line-height: 30px;
+        }
+        
+        .content h1{
+              margin: 50px;
+              color:rgb(0, 9, 5);
+              border-bottom: 5px solid rgb(192, 22, 22);
+              text-transform: uppercase;
+              text-decoration-line:  underline;
+              text-decoration-style: wavy;
+              
+        }
+        .content p{
+            margin: 20px;
+            text-align: justify;
+            cursor: url(ppp.png),pointer;
+        }
+        .nav{
+            position: sticky;
+            top: -3px;
+           overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav">
+    
+            <ul>
+                <li> <a href="#">Home</a></li>
+                <li> <a href="#">Service</a></li>
+                <li> <a href="#">About Us</a></li>
+                <li> <a href="#">Career</a></li>
+            </ul>
+
+    </div>
+    </header>
+    <img src="https://w0.peakpx.com/wallpaper/762/251/HD-wallpaper-black-and-silver-laptop-computer-on-white-table.jpg" alt="slider">
+    
+    <div class="content">
+        <h1>Computer</h1>
+        <p>A computer is a machine that can be programmed to automatically carry out sequences of arithmetic or logical operations (computation). Modern digital electronic computers can perform generic sets of operations known as programs. These programs enable computers to perform a wide range of tasks. 
+            The term computer system may refer to a nominally complete computer that includes the hardware, operating system, software, and peripheral equipment needed and used for full operation; or to a group of computers that are linked and function together, such as a computer network or computer cluster.
+          A broad range of industrial and consumer products use computers as control systems, including simple special-purpose devices like microwave ovens and remote controls, 
+          and factory devices like industrial robots. Computers are at the core of general-purpose devices such as personal computers and mobile devices such as smartphones. Computers power the Internet, which links billions of computers and users.</p>
+
+    </div>
+    <div class="content">
+        <h1>Laptop</h1>
+        <p>A laptop computer or notebook computer, also known as a laptop or notebook, is a small, portable personal computer (PC). Laptops typically have a clamshell form factor with a flat-panel screen on the inside of the upper lid and an alphanumeric keyboard and pointing device on the inside of the lower lid.[1][2] Most of the computer's internal hardware is fitted inside the lower lid enclosure under the keyboard, although many modern laptops have a built-in webcam at the top of the screen, and some even feature a touchscreen display. In most cases, unlike tablet computers which run on mobile operating systems, laptops tend to run on desktop operating systems, which were originally developed for desktop computers.
+           The word laptop, modeled after the term desktop (as in desktop computer), refers to the fact that the computer can be practically placed on the user's lap; while the word notebook refers to most laptops sharing a form factor with paper notebooks. As of 2024, in American English, the terms laptop and notebook are used interchangeably;[3] in other dialects of English, one or the other may be preferred.[4] The term notebook originally referred to a type of portable computer that was smaller and lighter than mainstream laptops of the time, but has since come to mean the same thing and no longer refers to any specific size.</p>
+
+    </div>
+
+    <div class="content">
+        <h1>Mouse</h1>
+        <p>A computer mouse (plural mice, also mouses)[nb 1] is a hand-held pointing device that detects two-dimensional motion relative to a surface. This motion is typically translated into the motion of the pointer (called a cursor) on a display, 
+            which allows a smooth control of the graphical user interface of a computer.
+          The first public demonstration of a mouse controlling a computer system was done by Doug Engelbart in 1968 as part of the Mother of All Demos.
+           Mice originally used two separate wheels to directly track movement across a surface: one in the x-dimension and one in the Y. Later, the standard design shifted to use a ball rolling on a surface to detect motion, in turn connected to internal rollers. 
+           Most modern mice use optical movement detection with no moving parts. Though originally all mice were connected to a computer by a cable, many modern mice are cordless, relying on short-range radio communication with the connected system.</p>
+
+    </div>
+    
+</body>
+</html>

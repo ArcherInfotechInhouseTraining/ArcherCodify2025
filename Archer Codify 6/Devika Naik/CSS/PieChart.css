@@ -1,0 +1,19 @@
+.Pie{
+    height:400px;
+    width:400px;
+    border-radius:50%;
+    border:3px solid red;
+    background-image: conic-gradient(red 0deg,red 90deg,yellow 90deg,yellow 198deg,green 198deg,green 270deg,blue 270deg,blue 360deg);
+}
+.class{
+    height:105px;
+    width:100%;
+    border-radius:20px;
+    border:2px solid red;
+}
+.Timer{
+    height:100px;
+    width:100px;
+    border-radius:50%;
+    border:3px solid orange;
+}
