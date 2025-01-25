@@ -1,0 +1,50 @@
+https://www.codechef.com/practice/course/sorting/SORTING/problems/FACEBOOK?tab=statement
+
+Facebook
+A post on facebook is said to be more popular if the number of likes on the post is strictly greater than the number of likes on some other post. In case the number of likes is same, the post having more comments is more popular.
+
+Given arrays A and B, each having size N, such that the number of likes and comments on the ith post are Ai and Bi respectively, find out which post is most popular.
+
+It is guaranteed that the number of comments on all the posts is distinct.
+
+
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt();
+        while (t-- > 0) {
+            int n = scanner.nextInt();
+            int[] a = new int[n];
+            int[] b = new int[n];
+            for (int i = 0; i < n; i++) {
+                a[i] = scanner.nextInt();     //likes
+            }
+            for (int i = 0; i < n; i++) {
+                b[i] = scanner.nextInt();          //comments
+            }
+            
+            
+            // your code goes here
+            
+            int tmp=0;
+            for (int i=1; i<n ; i++)
+            {
+                if (a[i] > a[tmp])
+                {
+                    tmp = i;
+                }
+                else if ( a[i] == a[tmp]  && b[ i] > b[tmp] )
+                {
+                    tmp = i;
+                }
+                
+            }
+            
+            System.out.println(tmp + 1);
+        }
+    }
+}

@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Imperial+Script&family=Sevillana&display=swap');
+body{
+    text-align: center;
+    margin: 2rem;
+}
+/* 
+body > *{
+    border-radius: 40px;
+    margin: 20px;
+} */
+
+header{
+    background-color: #ff0 ;
+    padding: 20px;
+    text-align: center;
+    min-width: 40%;
+    max-width: 100%;
+    min-height: 40%;
+    max-height: 100%;
+    margin-top: 20px;
+}
+
+main{
+    background-image: url('img1.jpg');
+    background-size: cover;
+    padding: 20px;
+    min-width: 40%;
+    max-width: 100%;
+    min-height: 40%;
+    max-height: 100%;
+    height: 500px;
+    margin-top: 20px;
+}
+
+p{
+    text-align: center;
+    font-size: larger;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    min-width: 40%;
+    max-width: 100%;
+    font-family: fantasy;
+}
+footer{
+    background-image: url('img2.jpg'), linear-gradient(red, green,blue);
+    padding: 20px;
+    background-size: 100% 100% ;
+    background-blend-mode: soft-light;
+    height: 100% 100%;
+    min-width: 40%;
+    max-width: 100%;
+    min-height: 40%;
+    max-height: 100%;
+    margin-top: 20px;
+}
+
+.box .content h1{
+    background-color: aquamarine;
+    
+}
+
+.box .content p{
+    background-color: #ff0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.box .content p:hover{
+    background-color: aquamarine;
+}
+
+section .box2{
+    color: #ff0;
+}
+
+.background-image-section{
+    position: relative;
+    background-image: url('img4.jpg');
+    height: 300px;
+    background-position: top right;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: right;
+    padding: 20px;
+    min-width: 40%;
+    max-width: 100%;
+    min-height: 40%;
+    max-height: 100%;
+}
+
+.background-image-section h1{
+    padding=20px;
+    color: #ff0;
+    margin: 30px;
+}
+
+.background-image-section p{
+    color:black;
+}
+
+.border{
+    min-width: 40%;
+    max-width: 100%;
+    margin: 100px auto 100px auto;
+    border: 20px solid;
+    color: black;
+    border-image: url('border.png');
+    border-image-slice: 35;
+    border-image-width: 30px;
+    border-image-repeat: round;
+    border-image-outset: 20px;
+}
+
+.border p{
+    font-family: "Imperial Script", cursive;
+    /* font-weight: 900;
+    font-size: 25px;
+    line-height: 50px;
+    word-spacing: 10px; */
+}
+.border h1{
+    color: darkgreen;
+    text-align: center;
+    font-style: oblique;
+}
+
+.border a{
+    color: rgb(248, 216, 6);
+    font-size: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 20px ;
+    
+}
+
+/* .box1{
+    background-color: red;
+    height: 500px;
+    width: 500px;
+    margin-top: -100px;
+    float: right; 
+} */
+
+/* .box1{
+    background-image: url('img5\ \(3\).jpg');
+}
+.box1 img{
+    height: 600px;
+    width: 650px;
+    background-size: cover;
+    float: left;
+}
+
+.box1 .border1 p{
+    background-color: aqua;
+    height: 600px;
+    width: 300px;
+    float: right;
+} */
+
+/* .box1 .border1{
+    border-image: url('border.png');
+    border-image-width: auto;
+    height: fit-content;
+    border-image-slice: 5;
+    border-image-repeat: inherit;
+    background-size: 100% 100% 100% 100%;
+    margin: auto ;
+} */
+
+.head{
+    background-color: #ff0;
+    border-radius: 0%;
+    border: 2px solid black;
+}
+
+.box1 .border1 p{
+    text-align: center;
+    padding: 100px 10px 150px 650px;
+    background-color: antiquewhite;
+    height: 250px;
+    width: 400px;
+    margin: 20px 5% 0px 0%;
+    border: 10px solid black;
+    border-image: url('border.png');
+    border-image-slice: 35;
+}
+
+.box1 .border1 img{
+    height: 500px;
+    width: 700px;
+    float: left;
+    size: cover;
+    position: relative;
+    border: 2px solid black;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+/* .box1{
+    background-image: url('img5\ \(4\).jpg');
+    background-size: cover;
+    padding: 20px;
+    float: right;
+
+}
+*/
+
+.box3{
+    width: 650px;
+    height: 500px;
+    /* border: 2px solid aquamarine; */
+    margin: 30px auto 0px auto;
+    border-radius: 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.box3 .item{
+    width: 150px;
+    height: 150px;
+    /* border: 1px solid orangered; */
+    margin: 5px;
+    background-image: url('frameimg.jpg');
+    background-size: cover;
+}
+
+.box3 .item-text-box{
+    width: 150px;
+    height: 150px;
+    /* border: 2px solid black; */
+    margin: 5px;
+}
+
+.box3 .item-text-box p{
+    font-size: smaller;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: blueviolet;
+}
+
+.box3 #img-box1{
+    background-color:rgb(255, 0, 174);
+    background-blend-mode: multiply;
+    outline: 2px double black;
+    outline-offset: -7px;
+}
+.box3 #img-box2{
+    background-color:rgb(0, 255, 102);
+    background-blend-mode: multiply;
+    outline: 2px dotted black;
+    outline-offset: -7px;
+}
+.box3 #img-box3{
+    background-color:rgb(217, 255, 0);
+    background-blend-mode: multiply;
+    outline: 2px solid black;
+    outline-offset: -7px;
+}
+.box3 #img-box4{
+    background-color:rgb(255, 94, 0);
+    background-blend-mode: multiply;
+    outline: 2px dashed black;
+    outline-offset: -7px;
+}
+.box3 #img-box5{
+    background-color:rgb(0, 255, 229);
+    background-blend-mode: multiply;
+    outline: 2px dotted black;
+    outline-offset: -7px;
+}
+.box3 #img-box6{
+    background-color:rgb(123, 0, 255);
+    background-blend-mode: multiply;
+    outline: 2px inset black;
+    outline-offset: -7px;
+}
+
+
+.box3 #img-box{
+    background-image: url('frameimg.jpg');
+    background-size: cover;
+    outline: 2px groove black;
+    outline-offset: -7px;
+}
+
+.box3 .item1 p{
+    font-size: smaller;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: blueviolet;
+}
+
+.box3 #img-boxx1{
+    background-color:rgb(255, 204, 0);
+    background-blend-mode: multiply;
+    background-image: url('frameimg.jpg');
+    background-size: cover;
+    outline: 2px groove black;
+    outline-offset: -7px;
+}
+
+.box3 #img-boxx2{
+    background-color:rgb(255, 0, 13);
+    background-blend-mode: multiply;
+    background-image: url('frameimg.jpg');
+    background-size: cover;
+    outline: 2px outset black;
+    outline-offset: -7px;
+}
+
+.btn{
+    margin: 50px auto 0px 400px;
+    width:400px;
+    height: auto;
+    
+}
+
+.btn a{
+    width: 100px;
+    text-decoration: none;
+    border: 3px solid red;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.btn a:hover{
+    background-color: rgb(64, 255, 0);
+    color: blueviolet;
+}
+
+.task1{
+    height: 400px;
+    width: 500px;
+    background-color: #ff0;
+    margin-top: 100px;
+    outline: 4px dashed red;
+    margin-left: 30%;
+}
+
+.task1:hover{
+    outline: 4px solid green;
+}
+
+.task2{
+    height: 400px;
+    width: 500px;
+    background-color: rgb(0, 255, 200);
+    margin-top: 100px;
+    border: 4px dotted rgb(255, 102, 0);
+    margin-left: 30%;
+}
+
+.task3{
+    padding: 20px;
+    margin: 50px auto auto auto;
+    text-align: center;
+    height: 100px;
+    width: 400px;
+}
+
+.task3 p{
+    font-family: "Imperial Script", serif;
+}
+
+.task4 p{
+    font-family: "Sevillana", cursive;
+    height: 200px;
+    width: 900px;
+    text-align: center;
+    margin-left: 10%;
+    font-size: 2rem;
+
+}
+
+.task5 h1{
+    font-size: 24px;
+    margin-top: 20%;
+}
+
+/* Medium screens (601px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+.task5 h2{
+    font-size: 36px;
+}
+}
+
+/* Large screens (above 1024px) */
+@media (min-width: 1025px) {
+.task5 h3 {
+        font-size: 48px;
+    }
+}
+
+.boxxx {
+    height: 300px;
+    width: 300px;
+    background-color: darkgreen;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.boxxx .task6{
+    width: 70px;
+    height: 70px;
+    border: 2px solid red;
+    margin-left: 15px;
+    margin-top: 15px;
+}

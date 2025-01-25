@@ -1,0 +1,906 @@
+#include<stdio.h>
+
+int main()
+{
+	
+	int n1,n2,rem1,rem2,enumber=0,onumber=0;
+	
+	
+	printf("Enter two different numbers:");
+	scanf("%d %d",&n1,&n2);
+	
+	while(n1>0 || n2>0)
+	{
+        rem1=n1%10;
+		rem2=n2%10;
+		
+		if(rem1%2==0)
+		{
+			enumber=enumber*10+rem1;
+				}
+				else{
+					onumber=onumber*10+rem1;
+				}
+				
+		if(rem2%2==0)
+		{
+			enumber=enumber*10+rem2;
+				}
+				else{
+					onumber=onumber*10+rem2;
+				}
+				
+		n1=n1/10;
+		n2=n2/10;
+	}
+	
+	printf("Even number= %d \n Odd number= %d",enumber,
+
+/////////////////////////////////////////////////
+
+ #include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	int no,dc=0,tmp,sum=0,a,i,rem;
+	printf("\n Enter any no: ");
+	scanf("%d",&no);
+	tmp=no;
+
+	// Digit Count
+	while(no!=0)
+	{
+		dc++;
+		no=no/10;
+	}
+
+	// calc digit^dc
+	no=tmp;
+	while(no!=0)
+	{
+		rem=no%10;
+		a=1;
+		i=0;
+		while(i<dc)
+		{
+			a=a*rem;
+			i++;
+		}
+		sum=sum+a;
+		no=no/10;
+	}
+	if(sum==tmp)
+	{
+		printf("\n Number is Armstrong");
+	}
+	else
+	{
+		printf("\n Number is Not Armstrong");
+	}
+	return 0;
+}
+
+////////////////////////////////////////////
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	int no,dc,tmp,sum,a,i,rem;
+	printf("\n List of Armstrong's from(10-10000) ");
+	no=10;
+	while(no<=10000)
+    {
+        tmp=no;
+        // Digit Count
+        dc=0;
+        while(no!=0)
+        {
+            dc++;
+            no=no/10;
+        }
+
+        // calc digit^dc
+        no=tmp;
+        sum=0;
+        while(no!=0)
+        {
+            rem=no%10;
+            a=1;
+            i=0;
+            while(i<dc)
+            {
+                a=a*rem;
+                i++;
+            }
+            sum=sum+a;
+            no=no/10;
+        }
+        if(sum==tmp)
+        {
+            printf("%8d",tmp);
+        }
+        no=tmp;
+        no++;
+    }
+
+	return 0;
+}
+
+
+//////////////////////////////////////
+
+ #include <stdio.h>
+int main()
+{
+    int start, end, c3=0, c5=0, cb=0, cnb=0;
+    printf("\n Enter the range(start and stop): ");
+    scanf("%d %d",&start, &end);
+    
+    if(start>end)
+    {
+        printf("\n end must be greater than start");
+        return 0;
+    }
+    
+    do
+    {
+        if(start%3==0)
+        {
+            if(start%5==0)
+            {
+                cb++;
+            }
+            else
+            {
+                c3++;
+            }
+        }
+        else
+        {
+            if(start%5==0)
+            {
+                c5++;
+            }
+            else
+            {
+                cnb++;
+            }
+        }
+        start++;
+    }while(start<=end);
+    
+    printf("\n div by 3 Count is %d",c3);
+    printf("\n div by 5 Count is %d",c5);
+    printf("\n div by Both Count is %d",cb);
+    printf("\n Not div by both Count is %d",cnb);
+    return 0;
+}
+//---------------------------------------------------------------------------------------------
+
+#include <stdio.h>
+int main()
+{
+    int start, end, c3=0, c5=0, cb=0, cnb=0;
+    printf("\n Enter the range(start and stop): ");
+    scanf("%d %d",&start, &end);
+    
+    if(start>end)
+    {
+        printf("\n end must be greater than start");
+        return 0;
+    }
+    
+    do
+    {
+        if(start%3==0 && start%5==0)
+        {
+            cb++;
+        }
+        else if(start%3==0)
+        {
+            c3++;
+        }
+        else if(start%5==0)
+        {
+            c5++;
+        }
+        else
+        {
+            cnb++;
+        }
+        
+    }while(++start<=end);
+    
+    printf("\n div by 3 Count is %d",c3);
+    printf("\n div by 5 Count is %d",c5);
+    printf("\n div by Both Count is %d",cb);
+    printf("\n Not div by both Count is %d",cnb);
+    return 0;
+}
+
+/////////////////////////////
+
+ #include <stdio.h>
+/**
+int main()
+{
+    float a,b,ans;
+    int opt,i;
+    i=0;
+    do
+    {
+        i++;
+        ans=0.0;
+        printf("\n ------------ Menu ------------\n");
+        printf("\n 1.add \n 2.sub \n 3.Muti \n 4.div");
+        printf("\n Select your option: ");
+        scanf("%d",&opt);
+        
+        printf("\n Any two nos: ");
+        scanf("%f %f",&a, &b);
+        if(opt==1)
+        {
+            ans=a+b;
+        }
+        else if(opt==2)
+        {
+            ans=a-b;
+        }
+        else if(opt==3)
+        {
+            ans=a*b;
+        }
+        else if(opt==4)
+        {
+            ans=a/b;
+        }
+        else
+        {
+            printf("\n Incorrect Option");
+        }
+        printf("\n Ans is: %f",ans);
+    }while(i<3);
+    return 0;
+}
+*/
+//------------
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    float a,b,ans;
+    int opt,i;
+    i=0;
+    do
+    {
+        i++;
+        ans=0.0;
+        printf("\n ------------ Menu ------------\n");
+        printf("\n 1.add \n 2.sub \n 3.Muti \n 4.div \n 5.stop");
+        printf("\n Select your option: ");
+        scanf("%d",&opt);
+        
+        printf("\n Any two nos: ");
+        scanf("%f %f",&a, &b);
+        if(opt==1)
+        {
+            ans=a+b;
+        }
+        else if(opt==2)
+        {
+            ans=a-b;
+        }
+        else if(opt==3)
+        {
+            ans=a*b;
+        }
+        else if(opt==4)
+        {
+            ans=a/b;
+        }
+        else if(opt==5)
+        {
+           exit(0); // break;
+        }
+        else
+        {
+            printf("\n Incorrect Option");
+        }
+        printf("\n Ans is: %f",ans);
+    }while(5);
+    return 0;
+}
+
+
+//////////////////////////////
+
+ #include <stdio.h>
+/*
+
+
+***
+ **
+  *
+   **
+    *
+    
+int main()
+{
+    int i,j;
+    for(i=0;i<5;i++)
+    {
+        for(j=0;j<5;j++)
+        {
+            if(j<i)
+            {
+                printf(" ");
+            }
+            else
+            {
+                printf("*");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+//-------------------------------
+
+
+12345
+ 1234
+  123
+   12
+    1
+
+int main()
+{
+    int i,j,k;
+    for(i=0;i<5;i++)
+    {
+        k=1;
+        for(j=0;j<5;j++)
+        {
+            if(j<i)
+            {
+                printf(" ");
+            }
+            else
+            {
+                printf("%d",k);
+                k++;
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+//-------------------------------
+
+12345
+ 2345
+  345
+   45
+    5
+    
+
+int main()
+{
+    int i,j;
+    for(i=0;i<5;i++)
+    {
+        for(j=0;j<5;j++)
+        {
+            if(j<i)
+            {
+                printf(" ");
+            }
+            else
+            {
+                printf("%d",(j+1));
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+//-------------------------------
+
+ABCDE
+ BCDE
+  CDE
+   DE
+    E
+    
+
+int main()
+{
+    int i,j,k;
+    for(i=0;i<5;i++)
+    {
+        k=65;
+        for(j=0;j<5;j++)
+        {
+            if(j<i)
+            {
+                printf(" ");
+            }
+            else
+            {
+                printf("%c",k);
+            }
+            k++;
+        }
+        printf("\n");
+    }
+    return 0;
+}
+//-------------------------------
+
+ABCDE
+ ABCD
+  ABC
+   AB
+    A
+    
+
+int main()
+{
+    int i,j,k;
+    for(i=0;i<5;i++)
+    {
+        k=65;
+        for(j=0;j<5;j++)
+        {
+            if(j<i)
+            {
+                printf(" ");
+            }
+            else
+            {
+                printf("%c",k);
+                k++;
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+#include <stdio.h>
+/*
+    --- switch case simple example ----------
+    
+int main()
+{
+    float a,b,ans=0.0;
+    int opt;
+    printf("\n ---------- Menu -------------\n");
+    printf("\n 1.add \n 2.sub \n 3.multi \n 4.div");
+    
+    printf("\n Select your option: ");
+    scanf("%d",&opt);
+    
+    printf("\n Enter the values of a and b: ");
+    scanf("%f %f",&a,&b);
+    
+    switch(opt)
+    {
+        case 1:
+            ans=a+b;
+            break;
+        case 2:
+            ans=a-b;
+            break;
+        case 3:
+            ans=a*b;
+            break;
+        case 4:
+            ans=a/b;
+            break;
+        default:
+            printf("\n Incorrect Option");
+    }
+    printf("%f is answer",ans);
+    return 0;
+}
+//------------------------------------------------------------------------
+
+    // switch - case without default
+    
+int main()
+{
+    float a,b,ans=0.0;
+    int opt;
+    printf("\n ---------- Menu -------------\n");
+    printf("\n 1.add \n 2.sub \n 3.multi \n 4.div");
+    
+    printf("\n Select your option: ");
+    scanf("%d",&opt);
+    
+    printf("\n Enter the values of a and b: ");
+    scanf("%f %f",&a,&b);
+    
+    switch(opt)
+    {
+        case 1:
+            ans=a+b;
+            break;
+        case 2:
+            ans=a-b;
+            break;
+        case 3:
+            ans=a*b;
+            break;
+        case 4:
+            ans=a/b;
+            break;
+    }
+    printf("%f is answer",ans);
+    return 0;
+}
+
+//------------------------------------------------------------------------
+
+
+    // case constant sequence is not important
+    
+int main()
+{
+    float a,b,ans=0.0;
+    int opt;
+    printf("\n ---------- Menu -------------\n");
+    printf("\n 1.add \n 2.sub \n 3.multi \n 4.div");
+    
+    printf("\n Select your option: ");
+    scanf("%d",&opt);
+    
+    printf("\n Enter the values of a and b: ");
+    scanf("%f %f",&a,&b);
+    
+    switch(opt)
+    {
+        case 4:
+            ans=a/b;
+            break;
+        case 1:
+            ans=a+b;
+            break;
+        default:
+            printf("\n Incorrect Option");
+        case 3:
+            ans=a*b;
+            break;
+        case 2:
+            ans=a-b;
+            break;
+    }
+    printf("%f is answer",ans);
+    return 0;
+}
+
+//------------------------------------------------------------------------
+
+
+    // zero can be a case constant and it will work with switch(0) correctly, coz
+    // in switch condition not needed, it takes it as an option
+
+int main()
+{
+    float a,b,ans=0.0;
+    int opt;
+    printf("\n ---------- Menu -------------\n");
+    printf("\n 0.show numbers \n 1.add \n 2.sub \n 3.multi \n 4.div");
+    
+    printf("\n Select your option: ");
+    scanf("%d",&opt);
+    
+    printf("\n Enter the values of a and b: ");
+    scanf("%f %f",&a,&b);
+    
+    switch(opt)
+    {
+        case 4:
+            ans=a/b;
+            break;
+        case 0:
+            printf("\n Number are %f and %f",a,b);
+            break;
+        case 1:
+            ans=a+b;
+            break;
+        default:
+            printf("\n Incorrect Option");
+        case 3:
+            ans=a*b;
+            break;
+        case 2:
+            ans=a-b;
+            break;
+    }
+    printf("\n %f is answer",ans);
+    return 0;
+}
+
+//------------------------------------------------------------------------
+
+
+    // character can be used as a case constant
+    
+  
+int main()
+{
+    float a,b,ans=0.0;
+    char opt;
+    printf("\n ---------- Menu -------------\n");
+    printf("\n a.add \n b.sub \n c.multi \n d.div");
+    
+    printf("\n Select your option: ");
+    scanf("%c",&opt);
+    
+    printf("\n Enter the values of a and b: ");
+    scanf("%f %f",&a,&b);
+    
+    switch(opt)
+    {
+        case 'a':
+            ans=a+b;
+            break;
+        case 'b':
+            ans=a-b;
+            break;
+        case 'c':
+            ans=a*b;
+            break;
+        case 'd':
+            ans=a/b;
+            break;
+        default:
+            printf("\n Incorrect Option");
+    }
+    printf("\n %f is answer",ans);
+    return 0;
+}
+
+//------------------------------------------------------------------------
+
+    // It will work fine but as uppercase and lowercase characters are different, it will
+    // give incorrect Option for same letters in uppercase.
+    
+    // this problem can be solved as...
+    
+int main()
+{
+    float a,b,ans=0.0;
+    char opt;
+    printf("\n ---------- Menu -------------\n");
+    printf("\n a.add \n b.sub \n c.multi \n d.div");
+    
+    printf("\n Select your option: ");
+    scanf("%c",&opt);
+    
+    printf("\n Enter the values of a and b: ");
+    scanf("%f %f",&a,&b);
+    
+    switch(opt)
+    {
+        case 'A':
+        case 'a':
+            ans=a+b;
+            break;
+        case 'B':
+        case 'b':
+            ans=a-b;
+            break;
+        case 'C':
+        case 'c':
+            ans=a*b;
+            break;
+        case 'D':
+        case 'd':
+            ans=a/b;
+            break;
+        default:
+            printf("\n Incorrect Option");
+    }
+    printf("\n %f is answer",ans);
+    return 0;
+}
+  
+ //-------------------------------------------------------------------------------------------   
+ 
+        // switch - case can be written within if()
+
+ 
+int main()
+{
+    float a,b,ans=0.0;
+    int opt;
+    printf("\n ---------- Menu -------------\n");
+    printf("\n 1.add \n 2.sub \n 3.multi \n 4.div");
+    
+    printf("\n Select your option: ");
+    scanf("%d",&opt);
+    
+    if(opt>=1 && opt<=4)
+    {
+        printf("\n Enter the values of a and b: ");
+        scanf("%f %f",&a,&b);
+        
+        switch(opt)
+        {
+            case 1:
+                ans=a+b;
+                break;
+            case 2:
+                ans=a-b;
+                break;
+            case 3:
+                ans=a*b;
+                break;
+            case 4:
+                ans=a/b;
+                break;
+        }
+        printf("%f is answer",ans);
+    }
+    else
+    {
+        printf("\n Incorrect Option");
+    }
+    return 0;
+}
+
+//-------------------------------------------------------------------------------------------
+
+
+    // switch-case within loop - finite
+    
+int main()
+{
+    float a,b,ans=0.0;
+    int opt,i;
+    
+    while(i<3)
+    {
+        printf("\n ---------- Menu -------------\n");
+        printf("\n 1.add \n 2.sub \n 3.multi \n 4.div");
+        
+        printf("\n Select your option: ");
+        scanf("%d",&opt);
+        
+        printf("\n Enter the values of a and b: ");
+        scanf("%f %f",&a,&b);
+        
+        switch(opt)
+        {
+            case 1:
+                ans=a+b;
+                break;
+            case 2:
+                ans=a-b;
+                break;
+            case 3:
+                ans=a*b;
+                break;
+            case 4:
+                ans=a/b;
+                break;
+            default:
+                printf("\n Incorrect Option");
+        }
+        printf("%f is answer",ans);
+        
+        i++;
+    }
+    return 0;
+}
+    
+//-------------------------------------------------------------------------------------------
+
+
+    // switch-case within loop - infinite (break for termination)
+  
+int main()
+{
+    float a,b,ans=0.0;
+    int opt,i;
+    
+    while(1)
+    {
+        printf("\n ---------- Menu -------------\n");
+        printf("\n 1.add \n 2.sub \n 3.multi \n 4.div \n 5. stop");
+        
+        printf("\n Select your option: ");
+        scanf("%d",&opt);
+        
+        if(opt==5)
+        {
+            break;
+        }
+        
+        printf("\n Enter the values of a and b: ");
+        scanf("%f %f",&a,&b);
+        
+        switch(opt)
+        {
+            case 1:
+                ans=a+b;
+                break;
+            case 2:
+                ans=a-b;
+                break;
+            case 3:
+                ans=a*b;
+                break;
+            case 4:
+                ans=a/b;
+                break;
+            default:
+                printf("\n Incorrect Option");
+        }
+        printf("%f is answer",ans);
+        
+        i++;
+    }
+    return 0;
+}
+        
+       
+//-------------------------------------------------------------------------------------------
+
+
+    // switch-case within loop - infinite (exit(0) for termination)
+ 
+ #include<stdlib.h>
+int main()
+{
+    float a,b,ans=0.0;
+    int opt,i;
+    
+    while(1)
+    {
+        printf("\n ---------- Menu -------------\n");
+        printf("\n 1.add \n 2.sub \n 3.multi \n 4.div \n 5. stop");
+        
+        printf("\n Select your option: ");
+        scanf("%d",&opt);
+        
+        printf("\n Enter the values of a and b: ");
+        scanf("%f %f",&a,&b);
+        
+        switch(opt)
+        {
+            case 1:
+                ans=a+b;
+                break;
+            case 2:
+                ans=a-b;
+                break;
+            case 3:
+                ans=a*b;
+                break;
+            case 4:
+                ans=a/b;
+                break;
+            case 5:
+                exit(0);
+            default:
+                printf("\n Incorrect Option");
+        }
+        printf("%f is answer",ans);
+        
+        i++;
+    }
+    return 0;
+}
+
+
+
+
+
+
+

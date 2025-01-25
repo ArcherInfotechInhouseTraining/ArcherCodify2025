@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<style>
+    *{
+      padding: 20px;
+    }
+</style>
+
+<body>
+    
+    <ul class="list-unstyled">
+        <li>Harshad Shinde</li>
+        <li>It appears completely unstyled.</li>
+        <li>Structurally, it's still a list.</li>
+        <li>However, this style only applies to immediate child elements.</li>
+        <li>Nested lists:
+          <ol type="A">
+            <li>are unaffected by this style</li>
+            <li>will still show a bullet</li>
+            <li>and have appropriate left margin</li>
+          </ol>
+        </li>
+        <li>This may still come in handy in some situations.</li>
+      </ul>
+      <ul class="list-inline">
+        <li class="list-inline-item">This is a list item.</li>
+        <li class="list-inline-item">And another one.</li>
+        <li class="list-inline-item">But they're displayed inline.</li>
+      </ul>
+
+      <ol class="list-inline">
+        <li class="list-inline-item">Harshad</li>
+        <li class="list-inline-item">Nana</li>
+        <li class="list-inline-item">Shinde.</li>
+      </ol>
+
+      <dl class="row">
+        <dt class="col-sm-3">Description lists</dt>
+        <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+      
+        <dt class="col-sm-3">Term</dt>
+        <dd class="col-sm-9">
+          <p>Definition for the term.</p>
+          <p>And some more placeholder definition text.</p>
+        </dd>
+      
+        <dt class="col-sm-3">Another term</dt>
+        <dd class="col-sm-9">This definition is short, so no extra paragraphs or anything.</dd>
+      
+        <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
+        <dd class="col-sm-9">This can be useful when space is tight. Adds an ellipsis at the end.</dd>
+      
+        <dt class="col-sm-3">Nesting</dt>
+        <dd class="col-sm-9">
+          <dl class="row">
+            <dt class="col-sm-4">Nested definition list</dt>
+            <dd class="col-sm-8">I heard you like definition lists. Let me put a definition list inside your definition list.</dd>
+          </dl>
+        </dd>
+      </dl>
+
+      <img src="devika.jpg" class="img-fluid" alt="...">
+      <br>
+      <img src="devika.jpg" class="img-thumbnail" alt="...">
+      <br>
+      <img src="devika.jpg" class="rounded float-start" alt="...">
+      <br>
+        <img src="devika.jpg" class="rounded float-end" alt="...">
+        <br>
+        <img src="devika.jpg" class="rounded mx-auto d-block" alt="...">
+        <br>
+        <div class="text-center">
+            <img src="devika.jpg" class="rounded" alt="...">
+        </div>
+        <br>
+        <picture>
+            <source srcset="https://imgs.search.brave.com/ROc-pYjtIygdELQA52WEACKCyFcrUAJT9UB5fUSSncc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL2htZy1wcm9k/L2ltYWdlcy8xOTg3/LWxpbmNvbG4tdG93/bi1jYXItMTIwLTY2/MmJkOWJmYmE5ZGQu/anBnP2Nyb3A9MC42/NzF4dzoxLjAweGg7/MC4xODF4dywwJnJl/c2l6ZT0zNjA6Kg" media="(min-width:800px)"type="image/svg+xml">
+            <img src="tiger.jpeg" class="img-fluid img-thumbnail" alt=" ">
+          </picture>
+          <img src="swan.webp" class="img-circle" alt="...">
+
+          <h1>Overview </h1>
+
+          <table class="table table-success">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+            </table>
+            <h1>Striped rows</h1>
+            <table class="table table-striped">
+                <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+            </table>
+                <h1> Striped columns</h1>
+            <table class="table table-striped-columns">
+                <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td colspan="2">Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                  </table>
+            </table>
+
+            <h1>Active table</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-active">
+                
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                      <td colspan="2">Larry the Bird</td>
+                      <td>@twitter</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2" class="table-active">Larry the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h1>hover table</h1>
+              <table class="table table-hover">
+                <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td colspan="2">Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+              </table>
+              <h1>table table-dark table-hove</h1>
+              <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td colspan="2">Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+              </table>
+
+              <h1>Figures</h1>
+              <figure class="figure">
+                <img src="tiger.jpeg" class="figure-img img-fluid rounded" alt="...">
+                <figcaption class="figure-caption">The harshad shinde.</figcaption>
+              </figure>
+              <figure class="figure">
+                <img src="devika.jpg" class="figure-img img-fluid rounded" alt="...">
+                <figcaption class="figure-caption text-end">This is Devika.</figcaption>
+              </figure>
+
+              <h1>Forms HTML</h1>
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+              <h1>Form controls</h1>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <h1>Forms in HTML</h1>
+              <div class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="card shadow-sm">
+                            <div class="card-header text-center bg-success text-white">
+                                <h3>Example of form </h3>
+                            </div>
+                            <div class="card-body">
+                                <form action="/submit" method="POST" enctype="multipart/form-data">
+                                
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label bg-danger">Enter The Name</label>
+                                        <input type="text" class="form-control bg-warning" id="name" name="name" placeholder=" Name" required>
+                                    </div>
+                                
+                                    <div class="mb-3">
+                                        <label for="dob" class="form-label bg-danger">Date of Birth</label>
+                                        <input type="date" class="form-control bg-warning" id="dob" name="dob" required>
+                                    </div>
+                                
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label bg-danger"> Enter The Email</label>
+                                        <input type="email" class="form-control bg-warning" id="email" name="email" placeholder=" your email" required>
+                                    </div>
+                                
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label bg-danger"> Enter the Password</label>
+                                        <input type="password" class="form-control bg-warning" id="password" name="password" placeholder="your password" required>
+                                    </div>
+                                
+                                    <div class="mb-3">
+                                        <label for="photo" class="form-label bg-danger">Upload Photo</label>
+                                        <input type="file" class="form-control " id="photo" name="photo" accept="image/*" required>
+                                    </div>
+                                
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-dark">Done</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1>Select</h1>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Open this select menu</option>
+              <option value="1">Harshad</option>
+              <option value="2">Devika</option>
+              <option value="3">Pratham</option>
+            </select>
+
+            <h1>Sizing in Form</h1>
+            <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+              <option selected>This Large is menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <select class="form-select form-select-sm" aria-label="Small select example">
+              <option selected>This Small is menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+
+            <h1> Checks and radios
+              <h2>Checks</h2>
+            </h1>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Default checkbox
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                Checked checkbox
+              </label>
+            </div>
+            <h1>Radios</h1>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Default radio
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                Default checked radio
+              </label>
+            </div>
+
+            <h1>Switches</h1>
+
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+              <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+              <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+              <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
+              <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+            </div>
+
+            <h1>inline</h1>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">Harshad</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">Devika</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+              <label class="form-check-label" for="inlineCheckbox3">Pratham (disabled)</label>
+            </div>
+            <br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <label class="form-check-label" for="inlineRadio1">Harshad</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">Pratham</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+              <label class="form-check-label" for="inlineRadio3">Devika (disabled)</label>
+            </div>
+            <h1>Reverse</h1>
+            <div class="form-check form-check-reverse">
+              <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+              <label class="form-check-label" for="reverseCheck1">
+                Reverse checkbox
+              </label>
+            </div>
+            <div class="form-check form-check-reverse">
+              <input class="form-check-input" type="checkbox" value="" id="reverseCheck2" disabled>
+              <label class="form-check-label" for="reverseCheck2">
+                Disabled reverse checkbox
+              </label>
+            </div>
+            
+            <div class="form-check form-switch form-check-reverse">
+              <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
+              <label class="form-check-label" for="flexSwitchCheckReverse">Reverse switch checkbox input</label>
+            </div>
+
+            <h1>Toggle buttons </h1>
+
+            <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+              <label class="btn btn-primary" for="btn-check">Single toggle</label>
+
+              <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
+              <label class="btn btn-primary" for="btn-check-2">Checked</label>
+
+              <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" disabled>
+              <label class="btn btn-primary" for="btn-check-3">Disabled</label>
+
+              <h1>Outlined styles</h1>
+              <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label><br>
+
+                  <input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="btn-check-2-outlined">Checked</label><br>
+
+                  <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+                  <label class="btn btn-outline-success" for="success-outlined">Checked success radio</label>
+
+                  <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+                  <label class="btn btn-outline-danger" for="danger-outlined">Danger radio</label>
+
+                  <h1>Range</h1>
+                  <label for="customRange1" class="form-label">Example range</label>
+                  <input type="range" class="form-range" id="customRange1">
+                  
+                  <label for="customRange2" class="form-label">Example range</label>
+                  <input type="range" class="form-range" min="0" max="5" id="customRange2">
+
+                  <h1> Input Group</h1>
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <span class="input-group-text" id="basic-addon2">@example.com</span>
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="basic-url" class="form-label">Your vanity URL</label>
+                    <div class="input-group">
+                      <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                      <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                    </div>
+                    <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
+                  </div>
+                  
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">$</span>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <span class="input-group-text">.00</span>
+                  </div>
+                  
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                    <span class="input-group-text">@</span>
+                    <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+                  </div>
+                  
+                  <div class="input-group">
+                    <span class="input-group-text">With textarea</span>
+                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                  </div>
+                  <h1>Wrapping</h1>
+                  <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                  </div>
+
+                  <h1>Sizing</h1>
+                  <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                  </div>
+                  
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  
+                  <div class="input-group input-group-lg">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                  </div>
+                  <h1>Checkboxes and radios</h1>
+                  <div class="input-group mb-3">
+                    <div class="input-group-text">
+                      <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                    </div>
+                    <input type="text" class="form-control" aria-label="Text input with checkbox">
+                  </div>
+                  
+                  <div class="input-group">
+                    <div class="input-group-text">
+                      <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
+                    </div>
+                    <input type="text" class="form-control" aria-label="Text input with radio button">
+                  </div>
+                  <h1>Multiple inputs</h1>
+                  <div class="input-group mb-3">
+                    <div class="input-group-text">
+                      <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                    </div>
+                    <input type="text" class="form-control" aria-label="Text input with checkbox">
+                  </div>
+                  
+                  <div class="input-group">
+                    <div class="input-group-text">
+                      <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
+                    </div>
+                    <input type="text" class="form-control" aria-label="Text input with radio button">
+                  </div>
+                  <h1>Alert</h1>
+
+                  <div class="alert alert-primary" role="alert">
+                    dont touch!
+                  </div>
+                  <div class="alert alert-secondary" role="alert">
+                    Harshad!
+                  </div>
+                  <div class="alert alert-success" role="alert">
+                    Pratham!
+                  </div>
+                  <div class="alert alert-danger" role="alert">
+                    Devika!
+                  </div>
+                  <div class="alert alert-warning" role="alert">
+                    Pankaj!
+                  </div>
+                  <div class="alert alert-info" role="alert">
+                    Yoga!
+                  </div>
+                  <div class="alert alert-light" role="alert">
+                    Darshan!
+                  </div>
+                  <div class="alert alert-dark" role="alert">
+                    Shubham!
+                  </div>
+                  <h1>Badges</h1>
+                  <h1>Example heading <span class="badge text-bg-secondary">Harshad</span></h1>
+                    <h2>Example heading <span class="badge text-bg-secondary">Pratham</span></h2>
+                    <h3>Example heading <span class="badge text-bg-secondary">Devika</span></h3>
+                    <h4>Example heading <span class="badge text-bg-secondary">Pankaj</span></h4>
+                    <h5>Example heading <span class="badge text-bg-secondary">Yoga</span></h5>
+                    <h6>Example heading <span class="badge text-bg-secondary">Shinde</span></h6>
+
+                    <h1>Buttons</h1>
+                    <button type="button" class="btn btn-primary">
+                      Harshad <span class="badge text-bg-danger">69</span>
+                    </button>
+
+                    <h1>Positioned</h1>
+                    <button type="button" class="btn btn-primary position-relative">
+                      Harshad
+                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        99+
+                        <span class="visually-hidden">unread messages</span>
+                      </span>
+                    </button>
+                    <h1>Breadcrumb</h1>
+                    <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">Home</li>
+                      </ol>
+                    </nav>
+                    
+                    <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Library</li>
+                      </ol>
+                    </nav>
+                    
+                    <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Library</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Data</li>
+                      </ol>
+                    </nav>
+
+                    <h1>Cards</h1>
+                    <div class="card" style="width: 18rem;">
+                      <img src="tiger.jpeg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Tiger</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Play now!!</a>
+                      </div>
+                    </div>
+                    <h1>Carousel</h1>
+                    <div id="carouselExample" class="carousel slide">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="tiger.jpeg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="swan.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="devika.jpg" class="d-block w-100" alt="...">
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                    <img src="..." class="object-fit-contain border rounded" alt="...">
+                        <img src="tiger.jpeg" class="object-fit-cover border rounded" alt="...">
+                        <img src="tiger.jpeg" class="object-fit-fill border rounded" alt="...">
+                        <img src="tiger.jpeg" class="object-fit-scale border rounded" alt="...">
+                        <img src="tiger.jpeg" class="object-fit-none border rounded" alt="...">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
