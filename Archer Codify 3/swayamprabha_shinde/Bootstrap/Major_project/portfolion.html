@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero {
+            height: 100vh;
+            background: url('https://plus.unsplash.com/premium_photo-1661775756810-82dbd209fc95?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cG9ydGZvbGlvJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        #col .btn-about {
+            background: #34b7a7;
+            border-radius: 50px;
+            color: #fff;
+            display: inline-block;
+            font-family: Raleway, sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-left: 10px;
+            margin-top: 30px;
+            padding: 12px 40px;
+            text-transform: uppercase;
+            transition: .5s;
+        }
+        #col .btn-about:hover {
+            background: #3dc8b7
+        }
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+        }
+        .portfolio-item img {
+            transition: transform 0.3s ease;
+        }
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        .portfolio-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .portfolio-item:hover .overlay {
+            opacity: 1;
+        }
+/* About Section Styles */
+#about {
+  background-color: #f8f9fa;
+}
+
+#about h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #34b7a7;
+}
+
+#about h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #050d18;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+#about ul {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+#about ul li {
+  margin-bottom: 10px;
+}
+
+#about a {
+  text-decoration: none;
+}
+
+#about a.btn-primary {
+  background-color: #34b7a7;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 12px 30px;
+  text-transform: uppercase;
+}
+
+#about a.btn-primary:hover {
+  background-color: #3dc8b7;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  #about h2 {
+      font-size: 28px;
+  }
+
+  #about h4 {
+      font-size: 20px;
+  }
+
+  #about p {
+      font-size: 14px;
+  }
+
+  #about ul li {
+      font-size: 14px;
+  }
+}
+    /*# Skills*/
+  
+  .hero h1 {
+      font-size: 3rem;
+      margin-top: 20px;
+      font-weight: bold;
+  }
+
+  .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+  }
+
+  .hero a {
+      background-color: #fff;
+      color: #2575fc;
+      border-radius: 30px;
+      padding: 10px 20px;
+      font-weight: bold;
+      text-decoration: none;
+  }
+
+  .hero a:hover {
+      background-color: #ddd;
+  }
+
+  .section {
+      padding: 60px 20px;
+  }
+
+  /* Style for Skills */
+.skill {
+  background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+  color: white;
+  padding: 15px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+}
+
+.skill p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* Adjustments for small screen sizes */
+@media (max-width: 576px) {
+  .skill {
+      font-size: 1rem;
+      padding: 10px;
+  }
+}
+
+/* Resume Section Styles */
+.resume-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #34b7a7;
+}
+
+.resume-item {
+  margin-bottom: 30px;
+}
+
+.resume-item h4 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #050d18;
+}
+
+.resume-item h5 {
+  font-size: 18px;
+  color: #888;
+  font-weight: normal;
+}
+
+.resume-item ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.resume-item ul li {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.resume-item p {
+  font-size: 16px;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .resume-title {
+      font-size: 20px;
+  }
+
+  .resume-item h4 {
+      font-size: 20px;
+  }
+
+  .resume-item h5 {
+      font-size: 16px;
+  }
+
+  .resume-item ul li {
+      font-size: 14px;
+  }
+}
+  nav {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  nav .nav-link {
+      color: #fff !important;
+      font-weight: bold;
+  }
+
+  nav .nav-link:hover {
+      color: #ffd700 !important;
+  }
+
+  a.btn-primary {
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      border: none;
+      border-radius: 30px;
+      padding: 10px 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #fff;
+  }
+
+  a.btn-primary:hover {
+      background: #2575fc;
+  }
+
+  #resume {
+    padding: 60px 0;
+    background: #f4f4f4;
+}
+
+.resume-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.resume-header h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.left-column {
+    padding-right: 30px;
+}
+
+.right-column {
+    padding-left: 30px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.resume-item {
+    margin-bottom: 20px;
+}
+
+.resume-item h5 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.resume-item p {
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #34b7a7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #3dc8b7;
+}
+
+@media (max-width: 768px) {
+    .resume-container {
+        padding: 20px;
+    }
+
+    .left-column,
+    .right-column {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .resume-header h2 {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .resume-item h5 {
+        font-size: 16px;
+    }
+
+    .resume-item p {
+        font-size: 14px;
+    }
+}
+
+    #portfolio {
+      background-color: #f8f9fa;
+      padding: 60px 0;
+  }
+
+  .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+  }
+
+  .portfolio-item:hover {
+      transform: scale(1.05);
+  }
+
+  .portfolio-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: opacity 0.3s ease;
+  }
+
+  .portfolio-item .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+
+  .portfolio-item:hover .overlay {
+      opacity: 1;
+  }
+
+  .overlay h4 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+
+  .overlay p {
+      font-size: 16px;
+      margin-bottom: 15px;
+  }
+
+  .btn-primary {
+      background-color: #34b7a7;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+  }
+
+  .btn-primary:hover {
+      background-color: #3dc8b7;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+      .portfolio-item h4 {
+          font-size: 20px;
+      }
+
+      .portfolio-item p {
+          font-size: 14px;
+      }
+
+      .btn-primary {
+          font-size: 14px;
+      }
+  }
+
+    #contact {
+      background-color: #f8f9fa;
+      padding: 60px 0;
+  }
+
+  .contact-form {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-form h2 {
+      color: #34b7a7;
+      font-size: 32px;
+      font-weight: bold;
+  }
+
+  .form-label {
+      font-size: 18px;
+      color: #050d18;
+  }
+
+  .form-control {
+      font-size: 16px;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+  }
+
+  .form-control:focus {
+      border-color: #34b7a7;
+      box-shadow: 0 0 5px rgba(52, 183, 167, 0.5);
+  }
+
+  .btn-primary {
+      background-color: #34b7a7;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+  }
+
+  .btn-primary:hover {
+      background-color: #3dc8b7;
+  }
+
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+      .contact-form {
+          padding: 30px;
+      }
+
+      .contact-form h2 {
+          font-size: 28px;
+      }
+
+      .form-label {
+          font-size: 16px;
+      }
+
+      .form-control {
+          font-size: 14px;
+      }
+
+      .btn-primary {
+          font-size: 14px;
+          padding: 10px 20px;
+      }
+    }
+
+    footer {
+      background-color: #212529;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+  }
+
+  footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+  }
+
+  footer a:hover {
+      text-decoration: underline;
+  }
+
+  .footer-icons img {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+  }
+
+  .footer-icons img:hover {
+      transform: scale(1.2);
+      transition: all 0.3s ease-in-out;
+  }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Swayamprabha🙋🏻‍♀️</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#resume">Education</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container d-flex flex-column align-items-center aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+        <h1>Hi, I'm Swayamprabha!</h1>
+        <h1>A passionate Computer Engineer 👩‍💻</h1><div class="row"><a href="#about" class="btn btn-primary mt-3">Abot Me</a></div>
+    </div></div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5">
+  <div class="container">
+      <div class="row align-items-center">
+          <!-- Profile Picture -->
+          <div class="col-md-4 mb-4 mb-md-0">
+              <img src="images/swayamprabha.jpg" alt="Profile Picture" class="img-fluid rounded-circle shadow-lg">
+          </div>
+          
+          <!-- About Me Content -->
+          <div class="col-md-8">
+              <h2 class="display-4 mb-3">About Me</h2>
+              <p class="lead mb-4">
+                  I'm a passionate Computer Engineering student with a keen interest in web development and software engineering. 
+                  Constantly learning and evolving, I strive to push my boundaries by exploring new technologies and building 
+                  innovative projects that can make a difference.
+              </p>
+              
+              <h4 class="mb-3">Personal Information</h4>
+              <ul class="list-unstyled">
+                  <li><strong>First Name:</strong> Swayamprabha</li>
+                  <li><strong>Last Name:</strong> Shinde</li>
+                  <li><strong>Age:</strong> 21 Years</li>
+                  <li><strong>Nationality:</strong> Indian</li>
+                  <li><strong>Location:</strong> Pune, Maharashtra</li>
+                  <li><strong>Phone:</strong> <a href="tel:+918080247967">+91 8767589753</a></li>
+                  <li><strong>Email:</strong> <a href="mailto:swayamprabhashinde26@gmail.com">swayamprabhashinde26@gmail.com</a></li>
+                  <li><strong>Languages:</strong> Marathi, Hindi, English</li>
+              </ul>
+              <a href="#portfolio" class="btn btn-primary mt-3">Check Out My Portfolio</a>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Skills Section -->
+<section id="skills" class="section bg-light py-5">
+  <div class="container">
+      <h2 class="text-center">Skills</h2>
+      <div class="row justify-content-center">
+          <!-- Skill 1 -->
+          <div class="col-4 col-md-2 mb-4">
+              <div class="skill text-center">
+                  <p>C</p>
+              </div>
+          </div>
+          <!-- Skill 2 -->
+          <div class="col-4 col-md-2 mb-4">
+              <div class="skill text-center">
+                  <p>C++</p>
+              </div>
+          </div>
+          <!-- Skill 3 -->
+          <div class="col-4 col-md-2 mb-4">
+              <div class="skill text-center">
+                  <p>Java</p>
+              </div>
+          </div>
+          <!-- Skill 4 -->
+          <div class="col-4 col-md-2 mb-4">
+              <div class="skill text-center">
+                  <p>Python-Django</p>
+              </div>
+          </div>
+          <!-- Skill 5 -->
+          <div class="col-4 col-md-2 mb-4">
+              <div class="skill text-center">
+                  <p>HTML & CSS</p>
+              </div>
+          </div>
+          <!-- Skill 6 -->
+          <div class="col-4 col-md-2 mb-4">
+              <div class="skill text-center">
+                  <p>Bootstrap</p>
+              </div>
+          </div>
+          <!-- Skill 7 -->
+          <div class="col-4 col-md-2 mb-4">
+              <div class="skill text-center">
+                  <p>JavaScript</p>
+              </div>
+          </div>
+          <!-- Skill 8 -->
+          <div class="col-4 col-md-2 mb-4">
+              <div class="skill text-center">
+                  <p>SQL</p>
+              </div>
+          </div>
+          <!-- Skill 9 -->
+          <div class="col-4 col-md-2 mb-4">
+              <div class="skill text-center">
+                  <p>OOPS</p>
+              </div>
+          </div>
+          <!-- Skill 10 -->
+          <div class="col-4 col-md-2 mb-4">
+              <div class="skill text-center">
+                  <p>Android</p>
+              </div>
+          </div>
+          <!-- Skill 11 -->
+          <div class="col-4 col-md-2 mb-4">
+            <div class="skill text-center">
+                <p>Git/Github</p>
+            </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+<section id="resume">
+  <div class="container">
+      <div class="resume-container">
+          <div class="resume-header">
+              <h2>My Resume</h2>
+          </div>
+
+          <div class="row">
+              <!-- Left Column (Work Experience) -->
+              <div class="col-md-6 left-column">
+                <div class="section-title">Contact Information</div>
+                  <div class="resume-item">
+                      <p><strong>Email:</strong><a href="mailto:swayamprabhashinde26@gmail.com"> swayamprabhashinde26@gmail.com</a></p>
+                      <p><strong>Phone:</strong> +8767589753</p>
+                  </div>
+
+                  <div class="section-title">Skills</div>
+                  <div class="resume-item">
+                      <p><strong>Web / App Development:</strong> HTML, CSS, JavaScript, Python-Django, Bootstrap, Android</p>
+                      <p><strong>Languages / Fundamentals / Databases:</strong> C, C++, Java, PHP, OOPS</p>
+                      <p><strong>Tools / Server:</strong> Git, VSCode, XAMPP Server</p>
+                  </div>
+
+                  <div class="section-title">Work Experience</div>
+                  <div class="resume-item">
+                      <h5>Full Stack Web Developer Intern | Archer Infotech, Pune</h5>
+                      <p><strong>Duration:</strong> Aug 2024 - Present</p>
+                      <p>Lead the development of dynamic web applications and managed a team of developers to create scalable solutions.</p>
+                  </div>
+                  <div class="resume-item">
+                      <h5>Web Developer Intern | Elite Software Pvt Ltd</h5>
+                      <p><strong>Duration:</strong> Dec 2023 - Jan 2024</p>
+                      <p>Worked on enhancing the user interface and improving the user experience for clients’ web platforms.</p>
+                  </div>
+              </div>
+
+              <!-- Right Column (Education) -->
+              <div class="col-md-6 right-column">
+                  <div class="section-title">Education</div>
+                  <div class="resume-item">
+                      <h5>Bachelor's Degree in Computer Engineering With Honors in Data Science</h5>
+                      <p><strong>University:</strong> Dr D Y Patil College Of Engineering And Innovation, Pune</p>
+                      <p><strong>Year:</strong> 2022 - 2025</p>
+                      <p><strong>CGPA:</strong> 8.95</p>
+                  </div>
+
+                  <div class="resume-item">
+                      <h5>Diploma in Information Technology</h5>
+                      <p><strong>University:</strong> Government Polytechnic, Nashik</p>
+                      <p><strong>Year:</strong> 2019 - 2022</p>
+                      <p><strong>Percentage:</strong> 85.19</p>
+                  </div>
+
+                  <div class="resume-item">
+                      <h5>Secondary Education</h5>
+                      <p><strong>University:</strong> R J C B Girls Highschool, Nashik</p>
+                      <p><strong>Year:</strong> March 2019</p>
+                      <p><strong>Percentage:</strong> 77.60</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="text-center mt-4">
+              <a href="#contact" class="btn btn-primary">Get in Touch</a>
+          </div>
+
+          <div class="text-center mt-4">
+            <a href="C:\Users\DELL\OneDrive\Documents\Resume\Swayamprabha_Vikram_Shinde.pdf" class="btn btn-primary" download="Swayamprabha_Vikram_Shinde.pdf">Download CV</a>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-5 bg-light">
+  <div class="container">
+      <h2 class="text-center mb-4">My Portfolio</h2>
+      <div class="row">
+          <!-- Portfolio Item 1 -->
+          <div class="col-md-4 mb-4">
+              <div class="portfolio-item">
+                  <img src="https://tse1.mm.bing.net/th?id=OIP.5aQp_8ilp34aqiRxdUvC5wHaE7&pid=Api&P=0&h=180" class="img-fluid" alt="Project 1">
+                  <div class="overlay">
+                      <h4>CargoConnect: Dynamic Bidding Platform for Luggage Transport</h4>
+                      <p>Description of project 1.</p>
+                      <a href="#" class="btn btn-primary">View Details</a>
+                  </div>
+              </div>
+          </div>
+          <!-- Portfolio Item 2 -->
+          <div class="col-md-4 mb-4">
+              <div class="portfolio-item">
+                  <img src="https://tse3.mm.bing.net/th?id=OIP.IJqwEJvI1jk4krFZZ2l2YAHaEl&pid=Api&P=0&h=180" class="img-fluid" alt="Project 2">
+                  <div class="overlay">
+                      <h4>Hostify: Comprehensive Hotel Management Tool</h4>
+                      <p>Description of project 2.</p>
+                      <a href="#" class="btn btn-primary">View Details</a>
+                  </div>
+              </div>
+          </div>
+          <!-- Portfolio Item 3 -->
+          <div class="col-md-4 mb-4">
+              <div class="portfolio-item">
+                  <img src="https://tse1.mm.bing.net/th?id=OIP.6LDuuREuzD_19rfMybu9kgHaF6&pid=Api&P=0&h=180" class="img-fluid" alt="Project 3">
+                  <div class="overlay">
+                      <h4>Counterfeit Product Detection Using Blockchain Technology</h4>
+                      <p>Description of project 3.</p>
+                      <a href="#" class="btn btn-primary">View Details</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+  <div class="container">
+      <h2 class="text-center mb-4">Contact Me</h2>
+      <div class="row justify-content-center">
+          <div class="col-md-6">
+              <form id="contactForm" method="POST" action="your-backend-script.php" class="contact-form">
+                  <!-- Name Input -->
+                  <div class="mb-3">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" placeholder="Name - abc" required>
+                  </div>
+                  
+                  <!-- Email Input -->
+                  <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="abc11@gmail.com" required>
+                  </div>
+                  
+                  <!-- Subject Input -->
+                  <div class="mb-3">
+                      <label for="subject" class="form-label">Subject</label>
+                      <input type="text" class="form-control" id="subject" placeholder="Regarding xyz" required>
+                  </div>
+                  
+                  <!-- Message Textarea -->
+                  <div class="mb-3">
+                      <label for="message" class="form-label">Message</label>
+                      <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+                  </div>
+                  
+                  <!-- Submit Button -->
+                  <button type="submit" class="btn btn-primary">Send</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p>Designed with ❤️ by<a href="#">Swayamprabha Shinde</a></p>
+    <p>&copy; 2025 Swayamprabha🙋🏻‍♀️. All rights reserved.</p>
+    <div class="footer-icons">
+      <a href="https://github.com/swayamprabha2604">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/github.svg" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/swayamprabha-shinde-339309270/">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/linkedin.svg" alt="LinkedIn">
+      </a>
+  </div>
+</footer>
