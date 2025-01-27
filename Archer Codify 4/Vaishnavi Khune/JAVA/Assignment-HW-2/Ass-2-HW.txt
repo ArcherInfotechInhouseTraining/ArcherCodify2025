@@ -1,0 +1,140 @@
+1. Explain how platform independence is achieved in Java.
+
+Ans:
+
+-Java Bytecode:
+When you write a program in Java, it is first compiled by the Java Compiler (javac).
+The result of this compilation is a .class file, which contains Java bytecode.
+Unlike languages like C or C++, where the compiler generates OS-dependent executable files (e.g., .exe files), Java produces bytecode that is non-executable.
+This bytecode serves as an intermediate representation of your program.
+
+-Java Virtual Machine (JVM):
+The magic lies in the Java Virtual Machine (JVM).
+Each operating system has its own JVM, which gets installed automatically when you install the Java Development Kit (JDK).
+The JVM is responsible for executing the Java bytecode.
+When you run a Java program, the JVM interprets the bytecode and executes it.
+This interpretation allows Java to be platform-independent.
+
+-Write Once, Run Anywhere (WORA):
+Java’s motto is “Write Once, Run Anywhere” (WORA).
+Here’s how it works:
+You write your Java code once on any platform (Windows, Linux, macOS, etc.).
+The Java compiler generates bytecode from your source code.
+This bytecode can be executed by any JVM on any platform.
+As long as the target system has a compatible JVM, your Java program will run seamlessly.
+So, you don’t need to rewrite your code for each specific platform.
+
+-Platform-Dependent JVM:
+While Java itself is platform-independent, the JVM is platform-dependent.
+Different JVMs are designed for different operating systems.
+When you download the JVM, you’ll notice that there are versions corresponding to various OSes.
+For example, if you’re running macOS, you’ll choose the JVM targeted for macOS.
+The JVM bridges the gap between the platform-independent bytecode and the specific OS.
+
+In summary, Java’s platform independence is achieved through bytecode, the JVM, and the WORA principle. The JVM acts as the interpreter, allowing Java programs to run harmoniously across diverse environments.
+
+2. Write a program using BufferedReader and InputStreamReader to input and display the 
+elements of different types and explain them.
+
+Ans:
+
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+
+class BuffRead
+{
+
+public static void main(String args[]) throws Exception
+{
+
+InputStreamReader isr = new InputStreamReader(System.in);
+BufferedReader br = new BufferedReader(isr);
+
+System.out.println("Enter int value:");
+int i =Integer.parseInt(br.readLine());
+
+System.out.println("Enter float value:");
+float f =Float.parseFloat(br.readLine());
+
+System.out.println("Enter double value:");
+double d =Double.parseDouble(br.readLine());
+
+System.out.println("Enter char value:");
+String x =br.readLine();
+char ch=x.charAt(0);
+
+System.out.println("Enter string value:");
+String s =br.readLine();
+
+System.out.println("int:"+i);
+System.out.println("Float:"+f);
+System.out.println("Double:"+d);
+System.out.println("Char:"+ch);
+System.out.println("String:"+s);
+
+}
+
+}
+
+4. Write a C program to input basic salary of an employee and calculate its Gross salary 
+according to the following:
+Basic Salary <= 10000 : HRA = 20%, DA = 80%
+Basic Salary <= 20000 : HRA = 25%, DA = 90%
+Basic Salary > 20000 : HRA = 30%, DA = 95%
+
+Ans:
+
+
+import java.util.Scanner;
+
+class EmpSal
+{
+public static void main(String args[])
+{
+
+Scanner sc =new Scanner(System.in);
+
+int sal;
+float grosal;
+
+System.out.println("Enter the Basic Salary of employee:");
+sal=sc.nextInt();
+
+if(sal<=10000)
+{
+grosal=sal+0.2*sal+0.8*sal;
+
+System.out.println("Your Gross Salary is :"+grosal);
+
+}else if(sal>10000 && sal<=20000)
+{
+grosal=sal+0.25*sal+0.9*sal;
+
+System.out.println("Your Gross Salary is :"+grosal);
+
+}else if(sal>20000)
+{
+grosal=sal+0.3*sal+0.95*sal;
+
+System.out.println("Your Gross Salary is :"+grosal);
+
+}
+
+
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
