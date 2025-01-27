@@ -8,3 +8,8 @@ D.Y. Patil COEI
 ---C++ programming.
 ---practice
 ---mock question
+
+---bootstrap
+---projects
+---major()
+---minor()
