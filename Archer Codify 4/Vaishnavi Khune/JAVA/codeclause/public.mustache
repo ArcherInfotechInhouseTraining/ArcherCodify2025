@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-Commerce</title>
+</head>
+<body>
+    <h1>Simple E-Commerce</h1>
+    <ul>
+        {{#products}}
+            <li>
+                {{name}} - ${{price}}
+                <form method="post" action="/addToCart/{{id}}">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </li>
+        {{/products}}
+    </ul>
+    <a href="/cart">View Cart</a>
+</body>
+</html>

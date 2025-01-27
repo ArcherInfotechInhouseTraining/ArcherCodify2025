@@ -1,0 +1,69 @@
+Problem
+Oz has a list arr[] of M integers. He has to find all integers K such that :
+
+1) K > 1
+2) arr[1]%K = arr[2]%K = arr[3]%K = ... = arr[M]%K where '%' is a modulus operator
+Help Oz to find all such K's.
+
+Input :
+First line of input contains an integer M. Then M lines follow each containing one integer of the list. Input data is such that at least one integer K will always exist.
+
+Output :
+Output all possible integers K separated by space in increasing order.
+
+Constraints :
+- 2<= M <=100
+- 1< value of each integer <109
+- All integers will be distinct
+
+Sample Input
+3
+38
+6
+34
+Sample Output
+2 4 
+
+Code:
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        int m;
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        
+        m=Integer.parseInt(br.readLine());
+
+        int num[]=new int[m];
+        int max=0;
+        int flag=0;
+       for(int i=0;i<m;i++)
+       {
+        num[i] = Integer.parseInt(br.readLine());  
+        if(max<num[i])
+        {
+            max=num[i];
+        }   
+       } 
+
+       for(int k=2;k<=max/2;k++)
+       {
+        flag=0;
+           for(int i=0;i<m-1;i++)
+           {
+            if(num[i]%k != num[i+1]%k)
+            {
+                flag=1;
+                break;
+            }
+            }
+            if(flag==0)
+            {
+                System.out.print(k+" ");
+            }
+           
+       }         
+
+    }
+}
