@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password - Career Roadmap</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* background: #f0f0f0; */
+            background-image: url("C:/Users/sai/Desktop/project/Implementation/forgot_bg.webp");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 400px;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .forgot-password-box h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .forgot-password-box p {
+            color: #666;
+            font-size: 14px;
+        }
+        .forgot-password-box input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .forgot-password-box button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .forgot-password-box button:hover {
+            background: #0056b3;
+        }
+        .forgot-password-box a {
+            display: block;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .forgot-password-box a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="forgot-password-box">
+            <h2>Forgot Your Password?</h2>
+            <p>Enter your email address below and we'll send you a link to reset your password.</p>
+            <form action="forgot_password.php" method="POST">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Send Reset Link</button>
+            </form>
+            <p><a href="login.html">Back to Login</a></p>
+        </div>
+    </div>
+</body>
+</html>

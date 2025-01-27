@@ -1,0 +1,14 @@
+div{
+    float:left;
+    margin:5px;
+    display:flex;
+}
+img{
+    width:300px;
+    height:300px;
+    border:2px solid palevioletred;
+}
+p{
+    padding:10px;
+    text-align:justify;
+}

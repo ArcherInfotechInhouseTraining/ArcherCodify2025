@@ -1,0 +1,36 @@
+Given a undirected graph represented by an adjacency list adj, which is a vector of vectors where each adj[i] represents the list of vertices connected to vertex i. Perform a Breadth First Traversal (BFS) starting from vertex 0, visiting vertices from left to right according to the adjacency list, and return a list containing the BFS traversal of the graph.
+Input: adj = [[2,3,1], [0], [0,4], [0], [2]]
+
+Output: [0, 2, 3, 1, 4]
+Explanation: Starting from 0, the BFS traversal will follow these steps: 
+Visit 0 → Output: 0 
+Visit 2 (first neighbor of 0) → Output: 0, 2 
+Visit 3 (next neighbor of 0) → Output: 0, 2, 3 
+Visit 1 (next neighbor of 0) → Output: 0, 2, 3, 
+Visit 4 (neighbor of 2) → Final Output: 0, 2, 3, 1, 4
+
+
+
+class Solution {
+    // Function to return Breadth First Traversal of given graph.
+    public ArrayList<Integer> bfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
+        ArrayList<Integer> bfs = new ArrayList<>();
+        boolean [] visited = new boolean [V];
+        Queue <Integer> queue = new LinkedList <>();
+        visited[0] =true;
+        queue.add(0);
+        
+        while(!queue.isEmpty()){
+            int vertex = queue.poll();
+            bfs.add(vertex);
+            
+            for(Integer neighbor:adj.get(vertex)){
+                if(!visited[neighbor]){
+                    visited[neighbor]=true;
+                    queue.add(neighbor);
+                }
+            }
+        }
+        return bfs;
+    }
+}
