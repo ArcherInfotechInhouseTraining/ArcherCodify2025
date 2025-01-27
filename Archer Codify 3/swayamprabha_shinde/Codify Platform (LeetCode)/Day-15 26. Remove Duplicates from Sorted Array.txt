@@ -1,0 +1,121 @@
+26. Remove Duplicates from Sorted Array
+
+Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
+
+Consider the number of unique elements of nums to be k, to get accepted, you need to do the following things:
+
+Change the array nums such that the first k elements of nums contain the unique elements in the order they were present in nums initially. The remaining elements of nums are not important as well as the size of nums.
+Return k. 
+
+Example 1:
+Input: nums = [1,1,2]
+Output: 2, nums = [1,2,_]
+Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
+It does not matter what you leave beyond the returned k (hence they are underscores).
+
+Example 2:
+Input: nums = [0,0,1,1,1,2,2,3,3,4]
+Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
+Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
+It does not matter what you leave beyond the returned k (hence they are underscores).
+
+Solution:
+ class Solution {
+    public int removeDuplicates(int[] nums) {
+        if (nums.length == 0) {
+            return 0; // If the array is empty, return 0
+        }
+
+        int k = 1; // Pointer for the position of unique elements
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != nums[k - 1]) {
+                nums[k] = nums[i]; // Place the unique element at position k
+                k++; // Increment the unique count
+            }
+        }
+        return k; // Return the count of unique elements
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+
+        // Test case 1
+        int[] nums1 = {1, 1, 2};
+        int k1 = solution.removeDuplicates(nums1);
+        System.out.println("k = " + k1 + ", nums = " + arrayToString(nums1, k1)); // Output: k = 2, nums = [1, 2, _]
+
+        // Test case 2
+        int[] nums2 = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+        int k2 = solution.removeDuplicates(nums2);
+        System.out.println("k = " + k2 + ", nums = " + arrayToString(nums2, k2)); // Output: k = 5, nums = [0, 1, 2, 3, 4, _]
+    }
+
+    // Helper method to display the array up to the first k elements
+    private static String arrayToString(int[] nums, int k) {
+        StringBuilder result = new StringBuilder("[");
+        for (int i = 0; i < k; i++) {
+            result.append(nums[i]);
+            if (i < k - 1) {
+                result.append(", ");
+            }
+        }
+        result.append("]");
+        return result.toString();
+    }
+}
+
+Explanation:
+
+Modify the array such that the first k elements contain only unique elements, in the same order as they originally appeared.
+Return the number of unique elements k.
+
+If the input array nums is empty (nums.length == 0), there are no elements, so we return 0.
+
+Two-Pointer Technique:
+
+he variable k keeps track of the position where the next unique element will be placed.
+We initialize k = 1 because the first element is always unique, and it remains at index 0.
+
+Start the loop from i = 1 because the first element at index 0 is already unique.
+Condition:
+Compare nums[i] (current element) with nums[k - 1] (the last unique element):
+If nums[i] is different, it means nums[i] is a new unique element.
+Update Array:
+Place the new unique element nums[i] at the position k.
+Increment k to point to the next position for the next unique element.
+
+After the loop, k holds the count of unique elements.
+The first k elements of nums contain the unique elements in the correct order.
+
+Use two pointers:
+i: Iterates through the array.
+k: Tracks the position of the next unique element.
+Start with k = 1 since the first element is always unique.
+Check for Uniqueness:
+
+If the current element nums[i] is not equal to the previous unique element nums[k - 1], it is a new unique element.
+Assign nums[k] = nums[i] and increment k.
+Return Unique Count:
+
+After processing, k will contain the number of unique elements, and the first k elements of nums will be the unique elements.
+
+
+nums = [1, 1, 2]
+Start with k = 1.
+Compare nums[1] (1) with nums[0] (1):
+They are the same, so skip.
+Compare nums[2] (2) with nums[0] (1):
+They are different, so set nums[k] = 2 and increment k to 2.
+Result:
+k = 2, nums = [1, 2, _].
+
+Example 2: nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+Start with k = 1.
+Iterate through the array:
+Compare each element with nums[k - 1]:
+At nums[2]: Set nums[k] = 1, increment k.
+At nums[5]: Set nums[k] = 2, increment k.
+At nums[7]: Set nums[k] = 3, increment k.
+At nums[9]: Set nums[k] = 4, increment k.
+Result:
+k = 5, nums = [0, 1, 2, 3, 4, _, _, _, _, _].

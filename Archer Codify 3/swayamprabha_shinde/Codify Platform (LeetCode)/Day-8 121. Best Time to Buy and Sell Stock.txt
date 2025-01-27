@@ -1,0 +1,118 @@
+121. Best Time to Buy and Sell Stock
+
+You are given an array prices where prices[i] is the price of a given stock on the ith day.
+
+You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+
+Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+
+Example 1:
+Input: prices = [7,1,5,3,6,4]
+Output: 5
+Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
+
+Example 2:
+Input: prices = [7,6,4,3,1]
+Output: 0
+Explanation: In this case, no transactions are done and the max profit = 0.
+ 
+Constraints:
+1 <= prices.length <= 105
+0 <= prices[i] <= 104
+
+
+Solution:
+
+class Solution {
+    public static int maxProfit(int[] prices) {
+        if (prices == null || prices.length < 2) {
+            return 0; // No profit can be made
+        }
+
+        int minPrice = Integer.MAX_VALUE; // Track the minimum price so far
+        int maxProfit = 0; // Track the maximum profit
+
+        for (int price : prices) {
+            // Update the minimum price if a lower price is found
+            if (price < minPrice) {
+                minPrice = price;
+            } else {
+                // Calculate the profit if selling on this day
+                int profit = price - minPrice;
+                // Update the maximum profit
+                maxProfit = Math.max(maxProfit, profit);
+            }
+        }
+
+        return maxProfit;
+    }
+ public static void main(String[] args) {
+        // Example 1
+        int[] prices1 = {7, 1, 5, 3, 6, 4};
+        System.out.println("Maximum profit: " + maxProfit(prices1)); // Output: 5
+
+        // Example 2
+        int[] prices2 = {7, 6, 4, 3, 1};
+        System.out.println("Maximum profit: " + maxProfit(prices2)); // Output: 0
+    }
+}
+
+output:
+Input prices = [7,1,5,3,6,4]
+Output 5
+Expected 5
+
+
+Explaination:
+
+The Integer.MAX_VALUE in Java works as a predefined constant in the Integer class, which is part of the java.lang package. It is used to represent the largest possible value that a 32-bit signed integer can hold.
+
+minPrice is initialized to the largest possible integer value (Integer.MAX_VALUE) to ensure any price in the array will be smaller.
+maxProfit starts at 0 because no transactions might yield no profit.
+
+If the current price is less than minPrice, update minPrice to the current price.
+Otherwise, calculate the profit as price - minPrice and update maxProfit if the calculated profit is greater than the current maxProfit.
+
+After traversing the entire array, maxProfit will hold the maximum profit achievable.
+
+
+Purpose: This method computes the maximum profit achievable by buying and selling stock on different days.
+Parameters: Takes an array prices[], where prices[i] represents the stock price on day i.
+Returns: The maximum profit that can be made. If no profit is possible, it returns 0.
+
+2.1 Base Case
+if (prices == null || prices.length < 2) {
+    return 0; // No profit can be made if there are less than 2 prices
+}
+If the input array is null or contains less than two elements, no transactions can be made, so the profit is 0.
+
+2.2 Tracking Minimum Price and Maximum Profit
+int minPrice = Integer.MAX_VALUE; // Initially set to the largest possible value
+int maxProfit = 0; // Start with no profit
+minPrice: Tracks the lowest stock price encountered so far.
+maxProfit: Stores the maximum profit that can be achieved.
+
+2.3 Iterating Through Prices
+for (int price : prices) {
+Loops through every price in the input array.
+Logic Inside the Loop
+Updating minPrice
+
+if (price < minPrice) {
+    minPrice = price;
+}
+If the current price is lower than the minPrice seen so far, update minPrice to this price.
+This ensures you always buy stock at the lowest possible price seen so far.
+Calculating Profit
+
+int profit = price - minPrice;
+Calculate the profit if you were to sell at the current price (price) after buying at minPrice.
+Updating maxProfit
+
+maxProfit = Math.max(maxProfit, profit);
+Compare the calculated profit with the current maxProfit. Update maxProfit if the new profit is greater.
+
+3. Returning the Result
+return maxProfit;
+After traversing all prices, the maximum profit achievable is stored in maxProfit, which is returned.

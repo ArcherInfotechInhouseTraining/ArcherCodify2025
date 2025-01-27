@@ -1,0 +1,87 @@
+In computing, End Of File (commonly abbreviated EOF) is a condition in a computer operating system where no more data can be read from a data source.
+
+The challenge here is to read  lines of input until you reach EOF, then number and print all  lines of content.
+
+Hint: Java's Scanner.hasNext() method is helpful for this problem.
+
+______________________________________________________________________________________________________________
+
+Input Format
+
+Read some unknown  lines of input from stdin(System.in) until you reach EOF; each line of input contains a non-empty String.
+
+______________________________________________________________________________________________________________
+
+Output Format
+
+For each line, print the line number, followed by a single space, and then the line content received as input.
+
+______________________________________________________________________________________________________________
+
+Sample Input
+
+Hello world
+I am a file
+Read me until end-of-file.
+______________________________________________________________________________________________________________
+Sample Output
+
+1 Hello world
+2 I am a file
+3 Read me until end-of-file.
+
+______________________________________________________________________________________________________________
+Code:
+
+import java.util.*; //Scanner class to read
+
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc= new Scanner(System.in);
+        int i=1;
+        while(sc.hasNext())
+        {
+            System.out.println(i+" "+sc.nextLine());
+            i++;
+        }
+        sc.close();
+    }
+}
+______________________________________________________________________________________________________________
+
+Explaination:
+	The required import is java.util.*
+	Provides the Scanner class to read input.
+
+	Main Function: It is the entry point of the program
+	public static void main(String[] args) {
+
+	Create a Scanner Object
+	Scanner sc = new Scanner(System.in);
+	To read input from the standard input (keyboard),  Scanner object sc is created.
+	
+	int i = 1;
+	i is initialized to 1
+	The program should start line number for each input line from 1
+
+	while(sc.hasNext()) {
+    	System.out.println(i + " " + sc.nextLine());
+    	i++;
+
+	sc.hasNext(): Checks if there is more input to read. 
+			     The loop continues as long as there is input.
+	sc.nextLine() reads the next line of input.
+			     Each line is printed with its line number using System.out.println(i + " " + sc.nextLine()).
+	                     After printing a line, i is incremented to update the line number for the next input.
+
+	sc.close();
+	The Scanner is closed after all input has been processed to release resources.	
+}
+______________________________________________________________________________________________
+
+Problem Link: https://www.hackerrank.com/challenges/java-end-of-file/problem?isFullScreen=true
+
+	
