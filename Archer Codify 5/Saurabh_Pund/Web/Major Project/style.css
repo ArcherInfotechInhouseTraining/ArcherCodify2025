@@ -17,6 +17,78 @@ body {
   a {
     color: #007bff;
   }
+  .loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-primary1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .loader-circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  
+  .percentage-text {
+    position: absolute;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .circular-loader {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+  
+  .circle-background {
+    fill: none;
+    stroke: #f0f0f0;
+    stroke-width: 8;
+  }
+  
+  .circle-progress {
+    fill: none;
+    stroke: tomato;
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 314;
+    stroke-dashoffset: 314;
+    transition: stroke-dashoffset 0.5s linear;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #main-content {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  #main-content.visible {
+    opacity: 1;
+  }
+  
+  /* Sliding transition for the loader */
+  .loader-container.slide-up {
+    transform: translateY(-100%);
+  }
+
+
   .hero {
     position: relative; /* Ensure proper stacking context */
     height: 100vh;
@@ -203,4 +275,55 @@ body {
   grid-area: 1 / 2 / 3 / 3;
 }
 
+#profile-img, #about-title, #about-paragraph, #download-resume {
+  will-change: transform, opacity;
+}
 
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ff5733; /* Cursor color */
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* Initially hidden */
+  transition: transform 0.2s ease, opacity 0.2s ease; /* Smooth transition */
+}
+
+.section-5 .cursor {
+  display: block; /* Show the cursor only in section-5 */
+  opacity: 1; /* Make cursor visible */
+}
+
+/* Increase cursor size and change color on hover */
+.card:hover .cursor, .btn:hover .cursor {
+  transform: scale(2); /* Increase size */
+  background-color: #3498db; /* Change color */
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Add hover effect on cards */
+.card {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.card:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Add hover effect on buttons */
+.btn {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}

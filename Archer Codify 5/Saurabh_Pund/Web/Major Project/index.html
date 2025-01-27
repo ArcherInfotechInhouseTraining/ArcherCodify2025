@@ -16,7 +16,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
 
@@ -26,6 +26,17 @@
     <script src="main.js" defer></script>
   </head>
   <body>
+
+    <div id="loader" class="loader-container">
+      <div class="loader-circle">
+        <div class="percentage-text" id="percentageText">0%</div>
+        <svg class="circular-loader" viewBox="0 0 120 120">
+          <circle class="circle-background" cx="60" cy="60" r="50" />
+          <circle class="circle-progress" cx="60" cy="60" r="50" />
+        </svg>
+      </div>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero z-2" id="hero">
       <div class="wrapper">
@@ -69,44 +80,68 @@
 
     <section class="section-3 flex justify-center">
       <div class="wrapper">
-        <span>Crafting</span
-        ><span class="dancing-script items-center">Outstanding</span
-        ><span class="items-end">Websites</span><span>That leave a</span
-        ><span class="dancing-script items-end">Lasting Impression</span>
+        <span>Crafting</span>
+        <span class="dancing-script items-center">Outstanding</span>
+        <span class="items-end">Websites</span><span>That leave a</span>
+        <span class="dancing-script items-end">Lasting Impression</span>
       </div>
     </section>
-
     <div class="section-4 mx-auto min-h-[100vh] items-center gap-8 particles" id="particles">
-      <div class="child-1 about rounded-xl p-6">
+      <div class="child-1 about rounded-xl p-6" id="about-section">
         <div class="flex items-center gap-5">
-          <picture class="w-[100px]"
-            ><img src="./img/profile.jpg" class="rounded-full" alt=""
-          /></picture>
-          <h2 class="text-7xl">About Me</h2>
+          <picture class="w-[150px]" id="profile-img">
+            <img src="./img/profile.jpg" class="rounded-full" alt="" />
+          </picture>
+          <h2 class="text-7xl uppercase" id="about-title">About Me</h2>
         </div>
-        <p class="my-4 text-lg">
+        <p class="my-4 text-3xl mb-10" id="about-paragraph">
           I'm a passionate MERN Stack Developer & Java Learner, with a deep love
           for technology and design. I have a background in Computer Science and
-          a keen interest in software development. I'm currently available for
-          freelance opportunities.
+          a keen interest in software development. I'm currently available for freelance opportunities.
         </p>
+        <a href="#" class="border btn-primary px-6 py-4 text-2xl mt-2" id="download-resume">Download Resume</a>
       </div>
-     
-      <div class="child-1 about rounded-xl p-6">
-        <div class="flex items-center gap-5">
-          <picture class="w-[100px]"
-            ><img src="./img/profile.jpg" class="rounded-full" alt=""
-          /></picture>
-          <h2 class="text-7xl">About Me</h2>
+    </div>
+    
+
+    <!-- Make projects section -->
+    <section class="section-5 py-14">
+      <div class="container mx-auto">
+        <h2 class="text-5xl uppercase mb-10">My Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+          <div class="card">
+            <img src="./img/project1.jpg" alt="Project Image 1" class="card-img-top" />
+            <div class="card-body">
+              <h5 class="card-title">Project Title 1</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./img/project2.jpg" alt="Project Image 2" class="card-img-top" />
+            <div class="card-body">
+              <h5 class="card-title">Project Title 2</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./img/project3.jpg" alt="Project Image 3" class="card-img-top" />
+            <div class="card-body">
+              <h5 class="card-title">Project Title 3</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
         </div>
-        <p class="my-4 text-lg">
-          I'm a passionate MERN Stack Developer & Java Learner, with a deep love
-          for technology and design. I have a background in Computer Science and
-          a keen interest in software development. I'm currently available for
-          freelance opportunities.
-        </p>
       </div>
-     
+    </section>
+    
+      
+
+    </div>
+    
+
     </div>
   </body>
 
@@ -123,103 +158,6 @@
   </script>
   <script>
     particlesJS("hero", {
-      particles: {
-        number: {
-          value: 100,
-          density: {
-            enable: true,
-            value_area: 1000,
-          },
-        },
-        color: {
-          value: ["#aa73ff", "#f8c210", "#83d238", "#33b1f8"],
-        },
-
-        shape: {
-          type: "circle",
-          stroke: {
-            width: 0,
-            color: "#fff",
-          },
-          polygon: {
-            nb_sides: 5,
-          },
-          image: {
-            src: "img/github.svg",
-            width: 100,
-            height: 100,
-          },
-        },
-        opacity: {
-          value: 1,
-          random: false,
-          anim: {
-            enable: false,
-            speed: 1,
-            opacity_min: 0.1,
-            sync: false,
-          },
-        },
-        size: {
-          value: 2,
-          random: true,
-          anim: {
-            enable: false,
-            speed: 40,
-            size_min: 0.1,
-            sync: false,
-          },
-        },
-        line_linked: {
-          enable: true,
-          distance: 120,
-          color: "#ffffff",
-          opacity: 0.4,
-          width: 1,
-        },
-      },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: {
-            enable: true,
-            mode: "grab",
-          },
-          onclick: {
-            enable: false,
-          },
-          resize: true,
-        },
-        modes: {
-          grab: {
-            distance: 140,
-            line_linked: {
-              opacity: 1,
-            },
-          },
-          bubble: {
-            distance: 400,
-            size: 40,
-            duration: 2,
-            opacity: 8,
-            speed: 3,
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4,
-          },
-          push: {
-            particles_nb: 4,
-          },
-          remove: {
-            particles_nb: 2,
-          },
-        },
-      },
-      retina_detect: true,
-    });
-
-    particlesJS("section-4", {
       particles: {
         number: {
           value: 100,
