@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pie-chart{
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            background-image: conic-gradient(red 0%, red 40%, green 40%, green 60%, blue 60%, blue 100%);
+            border: 2px solid black;
+            position: relative;
+        }
+        .lable{
+            position: absolute;
+            
+        }
+        .red{
+            top: 5rem;
+            left: 8rem;
+        }
+
+        .green{
+            top: 9rem;
+            left: 4rem;
+        }
+        .blue{
+            top: 5rem;
+            left: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="pie-chart">
+        <div class="red lable">red 40%</div>
+        <div class="green lable">green 20%</div>
+        <div class="blue lable">blue 40%</div>
+    </div>
+</body>
+</html>
