@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structural pseudo classes</title>
+    <style>
+        .box1,.box2{
+            border: 2px solid red;
+            padding: 0px 30px;
+            width: 300px;
+        }
+        .container h1:first-child{
+            background-color: yellow;
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+            <h1>Heading of box1</h1>
+            <p>1st para for box1</p>
+            <p>2nd para for box1</p>
+            <p>3rd para for box1</p>
+        </div>
+        <p>1st para of container</p>
+        <p>2nd para of container</p>
+        <div class="box2">
+            <p>1st para of box2</p>
+            <p>2nd para of box2</p>
+            <p>3rd para of box2</p>
+            <p>4th para of box2</p>
+        </div>
+    </div>
+</body>
+</html>

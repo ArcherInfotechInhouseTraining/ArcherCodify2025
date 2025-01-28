@@ -1,0 +1,84 @@
+349. Intersection of Two Arrays
+
+Title:
+Given two integer arrays nums1 and nums2, return an array of their 
+intersection Each element in the result must be unique and you may return the result in any order.
+
+Example 1:
+Input: nums1 = [1,2,2,1], nums2 = [2,2]
+Output: [2]
+
+Example 2:
+Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+Output: [9,4]
+Explanation: [4,9] is also accepted.
+ 
+
+Constraints:
+
+1 <= nums1.length, nums2.length <= 1000
+0 <= nums1[i], nums2[i] <= 1000
+
+
+Solution:
+
+class Solution {
+    public static int[] intersection(int[] nums1, int[] nums2) {
+
+        Set<Integer> set1 = new HashSet<>();
+        for (int num : nums1) {
+            set1.add(num);
+        }
+
+        // Step 2: Find the intersection
+        Set<Integer> intersectionSet = new HashSet<>();
+        for (int num : nums2) {
+            if (set1.contains(num)) { // Check if the element is present in nums1
+                intersectionSet.add(num); // Add to intersectionSet
+            }
+        }
+
+        // Step 3: Convert the intersection set to an array
+        int[] result = new int[intersectionSet.size()];
+        int index = 0;
+        for (int num : intersectionSet) {
+            result[index++] = num;
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int[] nums1_2 = {4, 9, 5};
+        int[] nums2_2 = {9, 4, 9, 8, 4};
+        int[] result2 = intersection(nums1_2, nums2_2);
+
+        for (int num : result2) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+}
+
+output:
+Input nums1 = [4,9,5]
+      nums2 = [9,4,9,8,4]
+
+Output [4,9]
+
+Expected [9,4]
+
+Explaination:
+
+The HashSet is a part of Java's java.util package and implements the Set interface, backed by a HashMap. It is used to store unique elements and does not allow duplicates.
+
+Use a HashSet (set1) to store all unique elements from nums1.
+HashSet ensures that duplicate elements in nums1 are automatically removed.
+Example: For nums1 = [1, 2, 2, 1], set1 will contain {1, 2}.
+
+Iterate through nums2. For each element:
+If it exists in set1, add it to another HashSet (intersectionSet).
+This ensures that the result only contains unique elements from both arrays.
+Example: For nums2 = [2, 2] and set1 = {1, 2}, intersectionSet will contain {2}.
+
+Convert intersectionSet to an array using a simple loop.
