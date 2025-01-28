@@ -1,0 +1,41 @@
+DAY-3
+
+Question:
+
+https://leetcode.com/problems/climbing-stairs
+
+Solution:
+class Solution
+{
+    public int climbStairs(int n)
+    {
+        if(n==1)
+        {
+         return 1;
+        }
+        if(n==2)
+        {
+            return 2;
+        }
+        
+        int n1=2;
+        int n2=1;
+        
+        for(int i=3;i<=n;i++)
+        {
+            int current=n1+n2;
+            n2=n1;
+            n1=current;
+            
+        }
+        
+        return n1;
+    }
+    
+    public static void main(String args[])
+    {
+        Solution ob=new Solution();
+        
+        System.out.println(ob.climbStairs(5));
+    }
+}
