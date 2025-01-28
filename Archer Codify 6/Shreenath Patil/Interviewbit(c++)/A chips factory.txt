@@ -1,0 +1,30 @@
+A chips factory is packing chips in packets.
+The packets of chips are represented as an array A.
+Find the packet of chips which are empty (Ai = 0) and move them to the end of the array.
+Return the resultant array.
+
+
+
+vector<int> Solution::solve(vector<int> &A) {
+    int n=-1;
+    for(int i=0;i<A.size();i++) 
+    if(A[i]==0) 
+    {
+        n=i;
+        break;
+    }
+   
+    
+    if(n==-1) 
+    return A;
+   
+    for(int i=n+1;i<A.size();i++) 
+    if(A[i]!=0) 
+    {
+        swap(A[i],A[n]);
+         n++;
+    }
+   
+     return A;
+   
+}
