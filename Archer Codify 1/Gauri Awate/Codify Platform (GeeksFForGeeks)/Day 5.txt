@@ -1,0 +1,85 @@
+Problem Statement:
+Given a string s, your task is to find the longest palindromic substring within s. A substring is a contiguous sequence of characters within a string, defined as s[i...j] where 0 ≤ i ≤ j < len(s).
+
+A palindrome is a string that reads the same forward and backwards. More formally, s is a palindrome if reverse(s) == s.
+
+Note: If there are multiple palindromes with the same length, return the first occurrence of the longest palindromic substring from left to right.
+
+Examples :
+
+Input: s = "aaaabbaa"
+Output: "aabbaa"
+Explanation: The longest palindromic substring is "aabbaa". 
+
+Input: s = "abc"
+Output: "a"
+Explanation: "a", "b", and "c" are all palindromes of the same length, but "a" appears first. 
+
+Input: s = "abacdfgdcaba" 
+Output: "aba" 
+Explanation: The longest palindromic substring is "aba", which occurs twice. The first occurrence is returned.
+
+Constraints:
+1 ≤ s.size() ≤ 103
+The string s consists of only lowercase English letters ('a' to 'z').
+
+Solution:
+#include <bits/stdc++.h>
+using namespace std;
+class Solution {
+  public:
+    string longestPalindrome(string& s) {
+     vector<string> res;
+    string n;
+
+    // Generate all substrings and store in res
+    for (int i = 0; i < s.length(); ++i) {
+        for (int j = i + 1; j <= s.length(); ++j) { 
+            n = s.substr(i, j - i);
+            res.push_back(n);
+        }
+    }
+
+    // Find all palindromic substrings and store in r
+    vector<string> r;
+    int k = 0;
+    while (k < res.size()) {
+        string find = res[k];
+        string reversedFind = find;
+        reverse(reversedFind.begin(), reversedFind.end());
+        if (find == reversedFind) {
+            r.push_back(find);
+        }
+        k++;
+    }
+
+  
+
+    // Find the longest palindrome
+    int maxLen = 0, maxIdx = 0;
+    for (int i = 0; i < r.size(); ++i) {
+        if (r[i].length() > maxLen) {
+            maxLen = r[i].length();
+            maxIdx = i;
+        }
+    }
+
+    return r.empty() ? "" : r[maxIdx];
+    }
+    }
+};
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        string S;
+        cin >> S;
+
+        Solution ob;
+        cout << ob.longestPalindrome(S) << endl;
+
+        cout << "~"
+             << "\n";
+    }
+}
+
