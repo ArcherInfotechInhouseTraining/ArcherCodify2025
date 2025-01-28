@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Travel App</string>
+    <string name="placeholder">Enter Username</string>
+    <string name="name_input">Enter the Name:</string>
+    <string name="password">Enter Password:</string>
+    <string name="password_hint">Enter valid password</string>
+    <string name="submit_btn">Submit</string>
+</resources>
