@@ -1,0 +1,80 @@
+.box{
+    width: 570px;
+    height: 500px;
+    margin: 35px auto 0px auto;
+    border: 0px solid blue;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+}
+
+.box #img-box1{
+    background-image: url(chy.jpg);
+    background-size: cover;
+    background-color: aqua;
+}
+
+.box #img-box2{
+    background-image: url(har.jpg);
+    background-size: cover;
+}
+
+.box #img-box3{
+    background-image: url(hal.jpg);
+    background-size: cover;
+}
+
+.box #img-box4{
+    background-image: url(piu.jpg);
+    background-size: cover;
+}
+
+.box #img-box5{
+    background-image: url(shu.jpg);
+    background-size: cover;
+}
+
+
+.box #img-box6{
+    background-image: url(pra.jpg);
+    background-size: cover;
+}
+
+
+
+.box .box-item{
+    width: 120px;
+    height: 120px;
+    border: 0px solid red;
+    margin: auto;
+    overflow: hidden;
+}
+
+.box .text-box p{
+    margin-left: 10px;
+    font-size: small;
+    font-style: italic;
+    overflow: hidden;
+
+}
+
+.btn{
+    margin-top: 30px;
+    width: 350px;
+    height: auto;
+}
+
+.btn a{
+    width: 80px;
+    text-decoration: none;
+    border: 3px solid red;
+    color: red;
+    padding: 10px 20px;
+    border-radius: 20px;
+
+}
+
+.btn a:hover{
+    background-color: red;
+    color: white;
+}

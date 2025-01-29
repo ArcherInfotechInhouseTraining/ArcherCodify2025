@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Brand Section -->
+            <a class="navbar-brand" href="#" style="background: linear-gradient(90deg, #4facfe, #00f2fe); 
+                       -webkit-background-clip: text; 
+                       color: transparent; 
+                       font-family: 'Poppins', sans-serif; 
+                       font-size: 1.5rem; 
+                       font-weight: 700;">
+                Aditya Kamble
+            </a>
+
+            <!-- Toggler Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Menu (Centered) -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav ms-3">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#home">HOME</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#projects">PROJECTS</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#work">WORK</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#contacts">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Hire Me Button (Aligned to the Right) -->
+            <button class="btn btn-primary ms-auto" onclick="location.href='#contacts'">Hire Me</button>
+
+        </div>
+    </nav>
+
+    <section class="d-flex align-items-center justify-content-center vh-100 text-center"
+        style="background: linear-gradient(135deg, #1e1e2f, #2a2a40); color: white;">
+        <div>
+
+
+            <!-- Introduction -->
+            <h1 class="display-3 fw-bold">Hi, I'm <span class="name-highlight">Aditya Kamble</span></h1>
+            <p class="lead">A Java Full Stack Web Developer passionate about building robust, scalable, and efficient
+                web
+                applications.</p>
+
+            <!-- Buttons -->
+            <a href="#projects" class="btn btn-primary btn-lg mt-3">View My Work</a>
+            <a href="images/Resume.pdf" download class="btn custom-btn btn-lg mt-3">
+                <i class="fas fa-download"></i> Download My CV
+            </a>
+
+            <!-- Phone Number -->
+            <div class="mt-4">
+                <p class="phone-number">
+                    <i class="fas fa-phone-alt me-2"></i>
+                    <span>Call:</span>
+                    <strong><a href="tel:7558210840" class="text-decoration-none text-light">7558210840</a></strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="section-divider text-center my-5">
+        <span class="divider-text"></span>
+        <hr>
+    </div>
+
+
+    <section id="about" class="py-5" style="background: linear-gradient(135deg, #f8f9fa, #e0e0e0);
+    clip-path: ellipse(100% 75% at 50% 25%);
+    font-family: 'Roboto', sans-serif;">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="text-center mb-5">
+                <h2 class="section-title about-title" style="color: #333;">About Me</h2>
+                <p class="lead">Learn more about my journey, education, and professional experience.</p>
+            </div>
+
+            <!-- About and Image -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h3 class="fw-bold">Hi, I'm <span class="name-highlight"
+                            style="color: #f45a4e; font-style: italic;">Aditya Kamble</span></h3>
+                    <p style="text-align: justify;">
+                        I'm a <strong
+                            style="color: #f45a4e; background-color: #fff3f0; padding: 3px 6px; border-radius: 5px;">Java
+                            Full Stack Web Developer</strong> passionate about building scalable, robust,
+                        and innovative web applications. With expertise in technologies like
+                        <strong style="color: #007bff; font-style: italic;">Java, Spring Boot, Angular,</strong> and
+                        <strong style="color: #007bff; font-style: italic;">MySQL</strong>,
+                        I thrive on crafting solutions that solve real-world problems and create value for users.
+                    </p>
+                    <p style="text-align: justify;">
+                        Apart from coding, I enjoy <strong style="color: #f45a4e; text-decoration: underline;">learning
+                            new
+                            technologies</strong>, collaborating on exciting projects, and
+                        continuously improving my skills to stay ahead in the ever-evolving tech landscape.
+                    </p>
+                    <a href="#projects" class="btn explore-btn mt-3"
+                        style="background-color: #f45a4e; color: #fff; padding: 10px 20px; border-radius: 20px;">Explore
+                        My
+                        Projects</a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="images/Bhau.jpg" alt="Aditya Kamble" class="img-fluid rounded-circle shadow"
+                        style="max-width: 300px;">
+                </div>
+            </div>
+
+            <!-- Education and Experience -->
+            <div class="row">
+                <!-- Education Section -->
+                <div class="col-lg-6 mb-5">
+                    <h4 class="fw-bold mb-4"><i class="fas fa-graduation-cap" style="color: #f45a4e;"></i> Education
+                    </h4>
+                    <ul class="timeline list-unstyled">
+                        <li class="mb-4">
+                            <h5 class="fw-bold" style="color: #007bff;">B.Tech in Computer Science</h5>
+                            <p class="mb-1" style="color: #333;">SPPU University, <strong style="color: #f45a4e;">2021 -
+                                    2025</strong></p>
+                            <p style="text-align: justify;">Focused on <strong style="color: #007bff;">Java, Data
+                                    Structures,</strong> and
+                                <strong style="color: #007bff;">Full Stack Web Development</strong>.
+                            </p>
+                        </li>
+                        <li class="mb-4">
+                            <h5 class="fw-bold" style="color: #007bff;">Higher Secondary Education</h5>
+                            <p class="mb-1" style="color: #333;">Shree Shivaji Vidyamandir, <strong
+                                    style="color: #f45a4e;">2019 - 2021</strong></p>
+                            <p style="text-align: justify;">Specialized in <strong style="color: #007bff;">Science
+                                    (Physics,
+                                    Chemistry, Mathematics)</strong>.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Experience Section -->
+                <div class="col-lg-6">
+                    <h4 class="fw-bold mb-4"><i class="fas fa-briefcase" style="color: #f45a4e;"></i> Experience</h4>
+                    <ul class="timeline list-unstyled">
+                        <li class="mb-4">
+                            <h5 class="fw-bold" style="color: #007bff;">Intern - Web Developer</h5>
+                            <p class="mb-1" style="color: #333;">Elite Softwares, <strong style="color: #f45a4e;">Jun
+                                    2024 -
+                                    Aug 2024</strong></p>
+                            <p style="text-align: justify;">Worked on developing responsive web applications using
+                                <strong style="color: #007bff;">Java</strong> and
+                                <strong style="color: #007bff;">Django</strong>.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider text-center my-5">
+        <span class="divider-text"></span>
+        <hr>
+    </div>
+
+    <section id="projects" class="py-5" style="background: linear-gradient(135deg, #f0f4f7, #e3e8f0);  clip-path: ellipse(100% 75% at 50% 25%);
+    font-family: 'Roboto', sans-serif;">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="text-center mb-5">
+                <h2 class="section-title project-title" style="color: #333;">My Projects</h2>
+                <p class="lead">Here’s a glimpse of the work I’ve done so far.</p>
+            </div>
+
+            <!-- Project Card: Car Selling Website -->
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 mb-4">
+                        <img src="images/01.png" alt="Car Selling Website" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Car Selling Website</h5>
+                            <p class="card-text">A user-friendly platform that allows buyers and sellers to connect and
+                                trade cars easily. The website features a seamless interface, advanced search
+                                functionality,
+                                and secure payment options for a smooth transaction process.</p>
+                            <ul class="list-unstyled">
+                                <li><strong>Technologies Used:</strong> HTML, CSS, JavaScript, PHP, MySQL</li>
+                                <li><strong>Role:</strong> Full Stack Developer</li>
+                            </ul>
+                            <a href="https://adi7558.github.io/CarSelling/" class="custom-btn-primary mt-3">View
+                                Project</a>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- You can add more project cards here -->
+            </div>
+    </section>
+
+    <div class="section-divider text-center my-5">
+        <span class="divider-text"></span>
+        <hr>
+    </div>
+
+    <section id="work" class="py-5" style="background: linear-gradient(135deg, #f0f4f7, #e3e8f0);  clip-path: ellipse(100% 75% at 50% 25%);
+    font-family: 'Roboto', sans-serif;">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="text-center mb-5">
+                <h2 class="section-title" style="color: #333;">My Work</h2>
+                <p class="lead">I actively solve problems to improve my coding skills on platforms like Exercism and
+                    HackerRank.</p>
+            </div>
+
+            <!-- Card Container for Horizontal Layout -->
+            <div class="row justify-content-center">
+                <!-- Card for Exercism -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Exercism - Problem Solving</h5>
+                            <p class="card-text">
+                                On Exercism, I’ve been solving problems related to algorithms, data structures, and
+                                specific
+                                coding challenges across different languages.
+                            </p>
+                            <ul class="list-unstyled">
+                                <li>Sorting Algorithms</li>
+                                <li>Dynamic Programming</li>
+                                <li>Data Structures</li>
+                            </ul>
+                            <a href="https://exercism.org/dashboard" class="btn btn-primary" target="_blank">View
+                                Exercism Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card for HackerRank -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">HackerRank - Coding Challenges</h5>
+                            <p class="card-text">
+                                On HackerRank, I tackle a variety of coding challenges focusing on problem-solving and
+                                algorithm optimization.
+                            </p>
+                            <ul class="list-unstyled">
+                                <li>Graph Algorithms</li>
+                                <li>String Manipulation</li>
+                                <li>Recursion</li>
+                            </ul>
+                            <a href="https://www.hackerrank.com/aditya_kamble" class="btn btn-success"
+                                target="_blank">View
+                                HackerRank Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="rate-my-work" class="py-5" style="background: linear-gradient(135deg, #e3e8f0, #f0f4f7);">
+                <div class="container">
+                    <!-- Section Title -->
+                    <div class="text-center mb-5">
+                        <h2 class="section-title" style="color: #333;">Rate My Work</h2>
+                        <p class="lead">Your feedback helps me improve and grow. Share your thoughts!</p>
+                    </div>
+
+                    <!-- Rating and Comments Section -->
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <!-- Rating -->
+                            <div class="rating text-center mb-4">
+                                <h5 class="mb-3">How would you rate my work?</h5>
+                                <div class="stars">
+                                    <i class="star fa fa-star" data-value="1"></i>
+                                    <i class="star fa fa-star" data-value="2"></i>
+                                    <i class="star fa fa-star" data-value="3"></i>
+                                    <i class="star fa fa-star" data-value="4"></i>
+                                    <i class="star fa fa-star" data-value="5"></i>
+                                </div>
+                            </div>
+
+                            <!-- Comments Form -->
+                            <div class="comments-form">
+                                <h5 class="mb-3">Leave a Comment</h5>
+                                <form>
+                                    <div class="form-group mb-3">
+                                        <label for="name">Name</label>
+                                        <input type="text" id="name" class="form-control" placeholder="Enter your name"
+                                            required>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" class="form-control"
+                                            placeholder="Enter your email" required>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="comment">Your Feedback</label>
+                                        <textarea id="comment" rows="4" class="form-control"
+                                            placeholder="Share your thoughts" required></textarea>
+                                    </div>
+                                    <button type="submit" class="custom-btn-primary">Submit Feedback</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <div class="section-divider text-center my-5">
+        <span class="divider-text"></span>
+        <hr>
+    </div>
+
+    <section id="contacts" class="py-5" style="background: linear-gradient(135deg, #f0f4f7, #e3e8f0);  clip-path: ellipse(100% 75% at 50% 25%);
+    font-family: 'Roboto', sans-serif;">
+        <div class="container text-center">
+            <h2 class="section-title mb-4">Contact Me</h2>
+            <p class="lead mb-5">I'm always open to discussing new projects, creative ideas, or opportunities to be part
+                of
+                your vision.</p>
+
+            <!-- Contact Details -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-phone-alt"></i> Phone</h5>
+                    <a href="tel:+917558210840" class="text-muted text-decoration-none">
+                        +91 7558210840
+                    </a>
+
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-envelope"></i> Email</h5>
+                    <a href="mailto:adityakamble7558@gmail.com" class="text-muted text-decoration-none">
+                        adityakamble7558@gmail.com
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-map-marker-alt"></i> Location</h5>
+                    <p class="text-muted">Pune, India</p>
+                </div>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="mb-5">
+                <a href="https://linkedin.com/in/aditya-kamble" class="me-3 text-dark">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/Adi7558" class="me-3 text-dark">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="https://www.hackerrank.com/AdityaKamble" class="text-dark">
+                    <i class="fab fa-hackerrank fa-2x"></i>
+                </a>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <form action="YOUR_FORM_HANDLER_URL" method="POST">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider text-center my-5">
+        <span class="divider-text"></span>
+        <hr>
+    </div>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <!-- About Section -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold">About Me</h5>
+                    <p>
+                        Hi, I'm Aditya Kamble, a passionate Java Full Stack Developer working on innovative solutions
+                        like
+                        Marathi Sign Language recognition and building responsive web applications.
+                    </p>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-decoration-none text-light">Home</a></li>
+                        <li><a href="#projects" class="text-decoration-none text-light">Projects</a></li>
+                        <li><a href="#contact" class="text-decoration-none text-light">Contact</a></li>
+                        <li><a href="#blog" class="text-decoration-none text-light">Blog</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Section -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Contact</h5>
+                    <p><i class="fas fa-phone-alt me-2"></i> <a href="tel:7558210840"
+                            class="text-decoration-none text-light">7558210840</a></p>
+                    <p><i class="fas fa-envelope me-2"></i> <a href="mailto:adityakamble@example.com"
+                            class="text-decoration-none text-light">adityakamble@example.com</a></p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Pune, Maharashtra, India</p>
+                </div>
+            </div>
+            <hr class="border-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Aditya Kamble. All Rights Reserved.</p>
+                <div class="social-icons mt-2">
+                    <a href="https://linkedin.com" target="_blank" class="text-light me-3"><i
+                            class="fab fa-linkedin fa-lg"></i></a>
+                    <a href="https://github.com/Adi7558" target="_blank" class="text-light me-3"><i
+                            class="fab fa-github fa-lg"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="text-light"><i
+                            class="fab fa-twitter fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS (Required for Collapse) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Js/script.js"></script>
+</body>
+
+</html>

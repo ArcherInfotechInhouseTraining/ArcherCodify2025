@@ -1,0 +1,480 @@
+.navbar-nav .nav-link {
+    position: relative;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #e7dada;
+    /* Default text color */
+    padding: 5px 30px;
+    /* Add some spacing */
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for underline */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #d8780b;
+    /* Line color */
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+    /* Change text color on hover */
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.name-highlight {
+    color: rgb(237, 136, 21);
+    /* Set text color to orange */
+    font-weight: 900;
+    /* Make the text extra bold */
+}
+
+/* Optional: Add hover effect for the name */
+.name-highlight:hover {
+    color: #ff8c00;
+    /* Change to a darker orange on hover */
+    text-decoration: underline;
+    /* Add underline effect */
+    transition: color 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+/* Common Styles for Section Titles */
+.section-title {
+    font-size: 2.5rem;
+    /* Same font size for all section titles */
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.section-title:hover {
+    text-shadow: 3px 3px 15px rgba(244, 90, 78, 0.7);
+}
+
+/* Optional Margin Adjustments for Consistency */
+.about-title,
+.project-title {
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.phone-number {
+    font-family: 'Poppins', sans-serif;
+    /* Font style */
+    font-size: 1.2rem;
+    /* Adjust font size */
+    color: #333;
+    /* Initial text color */
+    transition: color 0.3s, font-size 0.3s;
+    /* Smooth transition for color and font size */
+}
+
+.phone-number:hover {
+    color: #007bff;
+    /* Change color on hover */
+    font-size: 1.3rem;
+    /* Increase font size on hover */
+    cursor: pointer;
+    /* Change cursor to indicate it's clickable */
+    text-decoration: underline;
+    /* Add underline on hover */
+}
+
+.custom-btn {
+    background-color: #f45a4e;
+    /* Button color */
+    border-color: #f45a4e;
+    /* Button border color */
+    margin-left: 30px;
+    color: white;
+    /* Text color */
+}
+
+.custom-btn:hover {
+    background-color: #d13935;
+    /* Darker shade on hover */
+    border-color: #d13935;
+    /* Darker border on hover */
+}
+
+/* Font for the About Section */
+#about {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* About Title Hover Effect */
+
+
+/* Explore Button Hover Effect */
+.explore-btn {
+    background-color: #f45a4e;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #d13e38;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Timeline Bullet Points Styling (Optional) */
+.timeline li::before {
+    content: '\f111';
+    /* FontAwesome Circle */
+    font-family: 'Font Awesome 5 Free';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 10px;
+    color: #f45a4e;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(216, 114, 81, 0.893);
+    /* Orange shade */
+    transition: all 0.3s ease;
+}
+
+
+
+/* Card Overlay Effect */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.card:hover::before {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Card Content Pop */
+.card-body {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-body {
+    transform: translateY(-5px);
+}
+
+.custom-btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    /* Primary color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.custom-btn-primary:hover {
+    background-color: #cc580a;
+    /* Darker shade on hover */
+    transform: translateY(-5px);
+    /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow on hover */
+}
+
+/* Star Rating Styles */
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 2rem;
+    color: #ccc;
+    /* Default star color */
+    cursor: pointer;
+}
+
+.stars .fa-star {
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Stars */
+.stars .fa-star:hover,
+.stars .fa-star:hover~.fa-star {
+    color: #f39c12;
+    /* Yellow color for stars on hover */
+}
+
+/* Active Star Color */
+.stars .fa-star.selected {
+    color: #f39c12;
+    /* Highlight selected stars with yellow */
+}
+
+/* Optional: Add a light background when hovering the rating section */
+.stars:hover {
+    background-color: rgba(243, 156, 18, 0.1);
+    border-radius: 5px;
+}
+
+/* Optional: Style for the comment form */
+.comments-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comments-form h5 {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Form styles */
+.comments-form .form-group label {
+    font-weight: 600;
+    color: #333;
+}
+
+.comments-form textarea,
+.comments-form input[type="text"],
+.comments-form input[type="email"] {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.comments-form button[type="submit"] {
+    background-color: #f45a4e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.comments-form button[type="submit"]:hover {
+    background-color: #d13e38;
+}
+
+/* Hover effect for the comments form */
+.comments-form {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* When hovered */
+.comments-form:hover {
+    transform: scale(1.02);
+    /* Slightly enlarge the form */
+    box-shadow: 0 4px 12px rgba(216, 114, 81, 0.893);
+    /* Add a shadow effect */
+    background-color: #f9f9f9;
+    /* Slight background change on hover */
+}
+
+/* Contact Section Styles */
+#contacts {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #f8f9fa, #e3e8f0);
+}
+
+.form-label {
+    font-weight: bold;
+    /* Makes the labels bold */
+    font-family: 'Poppins', sans-serif;
+    /* Changes the font style */
+    font-size: 1.1rem;
+    /* Adjusts the font size slightly */
+    color: #333;
+    /* Ensures the text color is readable */
+}
+
+/* Section Title */
+#contacts .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#contacts .section-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #f45a4e;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* Lead Text */
+#contacts .lead {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+/* Contact Details */
+#contacts h5 {
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+#contacts p.text-muted {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Social Media Links */
+#contacts a {
+    text-decoration: none;
+    color: #555;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#contacts a:hover {
+    color: #f45a4e;
+    transform: scale(1.2);
+}
+
+#contacts a i {
+    font-size: 2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#contacts a:hover i {
+    color: #f45a4e;
+    transform: rotate(10deg);
+}
+
+/* Contact Form */
+#contacts form .form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#contacts form .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+#contacts form button[type="submit"] {
+    background-color: #f45a4e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#contacts form button[type="submit"]:hover {
+    background-color: #d13935;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #contacts .section-title {
+        font-size: 2rem;
+    }
+
+    #contacts h5 {
+        font-size: 1rem;
+    }
+
+    #contacts p.text-muted {
+        font-size: 0.9rem;
+    }
+}
+
+.section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.section-divider hr {
+    width: 80%;
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+}
+
+
+.section-divider .divider-text {
+    position: relative;
+    background: #ffffff;
+    /* Match your section background */
+    color: #f45a4e;
+    font-size: 1.5rem;
+    padding: 0 20px;
+    z-index: 2;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}

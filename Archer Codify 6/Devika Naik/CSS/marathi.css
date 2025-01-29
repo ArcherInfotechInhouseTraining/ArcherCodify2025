@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Tillana:wght@400;500;600;700;800&display=swap');
+.box{
+    width:600px;
+    height:600px;
+    border:7px solid orange;
+    margin:35px auto 0px auto;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap:1px;
+    background-color: black;
+}
+.box .box-item{
+    width:120px;
+    height:120px;
+    border:3px solid aquamarine;
+    margin:auto 10px auto 10px;
+}
+.text p{
+    justify-content: center;
+    color:yellow;
+    margin:10px auto 0px 10px;
+    font-family: "Tillana", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+#img1{
+    background-image: url(pengus.jpg);
+    background-size: cover;
+    background-color: bisque;
+    background-blend-mode: multiply;
+    outline:3px solid greenyellow;
+    outline-offset: -7px;
+}
+#img2{
+    background-image: url(pengus.jpg);
+    background-size: cover;
+    background-color: burlywood;
+    background-blend-mode: multiply;
+    outline:3px solid greenyellow;
+    outline-offset: -7px;
+}
+#img3{
+    background-image: url(pengus.jpg);
+    background-size: cover;
+    background-color: rgb(223, 160, 64);
+    background-blend-mode: multiply;
+    outline:3px solid greenyellow;
+    outline-offset: -7px;
+}
+#img4{
+    background-image: url(pengus.jpg);
+    background-size: cover;
+    background-color: palevioletred;
+    background-blend-mode: multiply;
+    outline:3px solid greenyellow;
+    outline-offset: -7px;
+}
+#img5{
+    background-image: url(pengus.jpg);
+    background-size: cover;
+    background-color: plum;
+    background-blend-mode: multiply;
+    outline:3px solid greenyellow;
+    outline-offset: -7px;
+}
+#img6{
+    background-image: url(pengus.jpg);
+    background-size: cover;
+    background-color:rgb(153, 153, 244);
+    background-blend-mode: multiply;
+    outline:3px solid greenyellow;
+    outline-offset: -7px;
+}
+.btn{
+    margin-top: 30px;
+    width:350px;
+    height: auto;
+}
+.btn a{
+    width:80px;
+    text-decoration: none;
+    border:3px solid red;
+    color:red;
+    padding:10px 20px;
+    border-radius:20px;
+}
+
+.btn a:hover{
+    background-color: red;
+    color:white;
+}
