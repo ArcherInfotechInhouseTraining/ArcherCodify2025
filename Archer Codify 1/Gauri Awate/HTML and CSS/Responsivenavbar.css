@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Bungee+Spice&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Galada&family=Geist+Mono:wght@100..900&family=Kalam:wght@300;400;700&family=Monsieur+La+Doulaise&family=Protest+Revolution&family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Bungee+Spice&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Galada&family=Geist+Mono:wght@100..900&family=Kalam:wght@300;400;700&family=Monsieur+La+Doulaise&family=Protest+Revolution&family=Sevillana&display=swap');
+body{
+	background-image:url('MarketplaceImages/background.jpg') ;
+	background-color: rgba(255, 255, 255, 0.6);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	max-height:100% ;
+	max-width: 100%;
+	overflow: hidden;
+
+	
+}
+.nav{
+	width: 1310px;
+	height: auto;
+	padding: 20px;
+	margin: auto 100px 0px auto;
+	display: flex;
+	justify-content: space-around;
+	background-attachment: fixed;
+}
+.nav .nav-list{
+	display: flex;
+	justify-content: flex-start;
+}
+.nav .nav-list .nav-items{
+	
+	margin-left:20px;
+	padding-right: 20px;
+
+}
+.nav-items{
+	margin: 5px 10px;
+}
+
+.nav .nav-list .nav-items a{
+	text-decoration: none;
+	color: #fff;
+	font-family: "Protest Revolution", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  font-style: normal;
+	
+
+}
+.nav .nav-list .nav-items a:hover{
+	color: #000;
+	 background-color: lavenderblush;
+  	border-radius: 20px;
+  	/*text-decoration: underline;*/
+}
+
+.nav .logo{
+	
+	margin-top: -20px;
+	width: 50px;
+	height: 50px;
+	background-image: url('MarketplaceImages/marketlogo.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-top: -12px;
+	border: 3px solid white;
+	border-radius: 50%;
+	margin-left:5px ;
+
+	
+}
+.nav .search-box  input{
+	width: 350px;
+	height: 35px;
+	border-radius: 40px;
+	border: 3px solid white;
+	
+	
+}
+/*.nav .search-box{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+*/
+.nav .search-box input {
+	color: black;
+	background-color: rgba(255, 255, 255, 0.4);
+
+}
+.content article{
+	width:20.5%;
+	height:500px;
+	/*background-color: rgba(0, 255, 255, 1.0);*/
+	background-color: lavenderblush;
+	float: left;
+	margin: 100px auto 0px 10%;
+	border-radius: 30px 30px 30px 30px;
+	transition: all 1s ease-out;
+}
+.content article:hover{
+	background-color: darkcyan;
+	color: #fff;
+	margin-top: -2px;
+	
+
+}
+.content article img{
+	padding: 40px 60px 20px 70px;
+	height: 150px;
+	width: 180px;
+	
+	border-radius:20px ;
+}
+.content article h1{
+	padding: 5px;
+	text-align: center;
+	font-family: "Protest Revolution", sans-serif;
+	font-weight: 600;
+  font-style: normal;
+}
+.content article p{
+	padding: 15px;
+	margin-top: -30px;
+	 font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  text-align: center;
+
+
+}
+.content article p button{
+	background-color: darkcyan;
+	border: 1px solid #fff;
+	border-radius: 20px;
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+	color: #fff;
+	margin: 30px;
+	padding: 10px;
+	
+}
+.content article p button:hover{
+	background-color: #fff;
+	color: #000;
+}
+ i .fa{
+	
+	color: #fff;
+	
+}
+
+ .nav .search-box label i .fa-solid
+ {
+	
+	margin: 5px;
+	padding: 5px;
+	color: #fff;
+	
+
+}

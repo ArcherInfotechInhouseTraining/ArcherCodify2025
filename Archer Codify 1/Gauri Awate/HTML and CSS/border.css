@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galada&family=Monsieur+La+Doulaise&display=swap');
+
+.box{
+	width:950px;
+	
+	margin: 110px 110px 110px 110px;
+	border: 20px solid ;
+	border-image-source: url('images/border.png');
+	border-image-slice:200 ;
+	border-image-width: 250px;
+	border-image-repeat: round;
+	height:500px;
+	padding:30px 30px 30px 30px;
+	/*border-image-outset: 20px;*/
+	/*margin:top right bottom left*/
+	
+	
+	
+}
+
+
+.para p{
+	text-align: center;
+  	float: right;
+}
+
+
+#box1  h1{
+font-family: "Galada",cursive;
+font-weight: 700;
+font-style: normal;/*oblique,italic*/
+font-size: 30px;
+}
+.para p{
+	font-family: "Monsieur La Doulaise", cursive;
+	font-weight: 700;
+font-style: bold;
+font-size: 30px;
+line-height: 50px;/*space between two lines*/
+word-spacing: 20px;
+text-align: center;
+
+}
+
+
+#box2 h1,p{
+	text-align: center;
+  margin:20px ;
+ 
+ padding:20px 20px 20px 20px;
+}
+
+
+#box2  h1,p{
+font-family: "Galada",cursive;
+font-weight: 700;
+font-style: normal;/*oblique,italic*/
+font-size: 30px;
+}
+#box2 h1,p{
+	font-family: "Monsieur La Doulaise", cursive;
+	font-weight: 700;
+font-style: bold;
+font-size: 30px;
+line-height: 50px;/*space between two lines*/
+word-spacing: 20px;
+text-align: center;
+}
+h1{
+	text-align: center;
+	font-size: 50px;
+	font-weight: 700;
+}
+#box1 img{
+	height: 350px;
+	width:300px;
+	float: left;
+	margin: 50px;
+}
