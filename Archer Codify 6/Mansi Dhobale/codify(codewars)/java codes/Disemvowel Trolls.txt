@@ -1,0 +1,52 @@
+Problem:
+Trolls are attacking your comment section!
+
+A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+
+Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+
+Note: for this kata y isn't considered a vowel.
+
+Code:
+
+#include <stdlib.h>
+
+//solution must allocate all required memory
+//and return a free-able buffer to the caller.
+
+int vowel(char c)
+{
+
+  if ( 
+    (c == 'a') || (c == 'e') || (c == 'i') || (c == 'o') || (c == 'u') ||
+    (c == 'A') || (c == 'E') || (c == 'I') || (c == 'O') || (c == 'U')
+    )
+  {
+    return 1;
+  }
+  else
+  { 
+    return 0;
+  }  
+}
+
+char *disemvowel(const char *str)
+{
+    char *rst = (char *) malloc( sizeof(char) * (strlen(str)+1) );
+    const char *p = str;
+    int idx = 0;
+    
+    while(p != NULL && *p != '\0')
+    {      
+      if(!vowel(*p))
+      {
+        rst[idx] = *p;
+        idx++;
+      }
+      p++;      
+    }    
+    rst[idx] = '\0';    
+    return rst;
+}
