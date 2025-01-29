@@ -1,0 +1,32 @@
+/* following code uses datatypes that have limited ranges.*/
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+
+long getNum(struct ListNode* node, long long num){
+    if(node->next)
+        return (getNum(node->next, num) * 10)+ node->val;
+    else
+        return (num * 10)+ node->val; 
+}
+
+struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
+    struct ListNode* current, *head, *temp;
+    long long num;
+    num= getNum(l1, 0)+ getNum(l2, 0);
+    current= head= (struct ListNode*)malloc(sizeof(struct ListNode));
+    current->val= num % 10;
+    for(num/= 10; num; num/= 10)
+    {
+        temp= (struct ListNode*)malloc(sizeof(struct ListNode));
+        temp->val= num % 10;
+        current->next= temp;
+        current= current->next;
+    }
+    current->next= NULL;
+    return head;
+}

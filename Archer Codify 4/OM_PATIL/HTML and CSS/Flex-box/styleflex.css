@@ -1,0 +1,114 @@
+body{
+    background-image: url('img2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: fixed;
+    overflow: hidden;
+}
+
+.nav{
+    width: auto;
+    height: fit-content;
+    padding: 10px;
+    margin-right: auto;
+    border: 1px solid green;
+    border-radius: 20px;
+    background-color: rgba(44, 42, 44,0.4);
+}
+
+.nav .nav-list .nav-items{
+    font-family: fantasy;
+    margin: 5px 30px 0px 100px;
+}
+
+.nav .nav-list .nav-items a{
+    text-decoration: none;
+    color: rgb(255, 232, 127);
+}
+
+.nav .nav-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .nav .logo1{
+    height: 55px;
+    width: 56px;
+    background-image: url('logobird.png');
+    background-size: cover;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    margin-left: -70px;
+    margin-top: -17px;
+    margin-bottom: -17px;
+    margin-right: 50px;
+    
+} */
+
+.nav .logo2{
+    height: 30px;
+    width: 30px;
+    background-image: url('logo.png');
+    background-size: cover;
+    margin-left: 10px;
+    margin-top: 1px;
+}
+
+.search-box input{
+    border-radius: 15px;
+    height: 25px;
+    width: 300px;
+    margin-left: -1%;
+}
+.content article {
+    width: 19.5%;
+    height: 800px;
+    background-color: rgba(246, 255, 0, 0.3);
+    float: left;
+    margin: 150px auto 0px 10%;
+    padding-top: 100px;
+    transition: all 1s ease;
+    border-radius: 50px;
+}
+
+.content article:hover{
+    background-color: rgb(208, 212, 14);
+    margin-top: -2px;
+    color: rgb(0, 0, 0);
+}
+
+.content article h1{
+    padding: 20px;
+    margin: 50px 0px 0px 50px;
+}
+
+.content article h1,p{
+    padding: 20px;
+    margin-top: -20px;
+}
+
+/* .nav-items1 i{
+    position: relative;
+    background-repeat: no-repeat;
+} */
+
+.content article i{
+    color: black;
+    margin-top: -100px;
+    font-size: 70px;
+    margin-left: 40%;
+    margin-bottom: 20px;
+}
+
+.content2 h1{
+    /* height: 40px;
+    width: 30%; */
+    margin-left: 60%;
+    align-items: center;
+    color: black;
+}

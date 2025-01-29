@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After </title>
+    <style>
+        .box{
+            padding: 0% 30%;
+        }
+        .btn{
+            border: 3px solid black;
+            border-radius: 20px;
+            margin: 30px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .content{
+            border: 3px solid red;
+            padding: 20px;
+        }
+          
+
+        .b1{
+            color: black;
+            border-color: black;
+            box-shadow: -2px 2px 5px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            
+        }
+        .b1::before{
+            content: ' ';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(231, 59, 21);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: transLateX(-100%);
+            z-index: -1;
+            transition: .5s all ease;
+        }
+        .b1:hover::before{
+            transform: translateX(0%);
+        }
+        .b1:hover{
+            color: white;
+            border-color: white;
+        }
+        
+        
+        /* Button 2*/
+        .b2{
+            color: black(18, 222, 65);
+            border-color: black;
+            box-shadow: -2px 2px 5px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            
+        }
+        .b2::before{
+            content: ' ';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(66, 209, 33);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: transLateX(-40%);
+            z-index: -1;
+            transition: .5s all ease;
+        }
+        .b2:hover::before{
+            transform: translateX(-100%);
+        }
+        .b2:hover{
+            color: rgb(28, 207, 73);
+            border-color: rgb(22, 195, 33);
+        }
+        .b2::after{
+            content: ' ';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(66, 209, 33);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: transLateX(40%);
+            z-index: -1;
+            transition: .5s all ease;
+        }
+        .b2:hover::after{
+            transform: translateX(100%);
+        }
+        .b2:hover{
+            color: rgb(5, 214, 57);
+            border-color: rgb(20, 200, 50);
+        }
+
+        /* Button 3*/
+        .b3{
+            color: black;
+            border-color:  black;
+            box-shadow: -2px 2px 5px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            
+        }
+        .b3::before{
+            content: ' ';
+            width: 100%;
+            height: 100%;
+            background-color: blue;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: transLateY(-40%);
+            z-index: -1;
+            transition: .5s all ease;
+        }
+        .b3:hover::before{
+            transform: translateY(-100%);
+        }
+        .b3:hover{
+            color:  blue;
+            border-color:  blue;
+        }
+        .b3::after{
+            content: ' ';
+            width: 100%;
+            height: 100%;
+            background-color:  blue;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: transLateY(40%);
+            z-index: -1;
+            transition: .5s all ease;
+        }
+        .b3:hover::after{
+            transform: translateY(100%);
+        }
+        .b3:hover{
+            color:blue;
+            border-color: blue;
+        }
+
+
+         /* Button 4*/
+        .b4{
+            color: rgb(203, 54, 156);
+            border-color: rgb(203, 54, 156);
+            box-shadow: -2px 2px 5px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            
+        }
+        .b4::before{
+            content: ' ';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(203, 54, 156);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: transLateX(-100%);
+            z-index: -1;
+            transition: .5s all ease;
+        }
+        .b4:hover::before{
+            transform: translateX(-40%) rotate(180deg);
+        }
+        .b4:hover{
+            color:  white;
+            border-color:   white;
+        }
+        .b4::after{
+            content: ' ';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(203, 54, 156);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: transLateX(100%);
+            z-index: -1;
+            transition: .5s all ease;
+        }
+        .b4:hover::after{
+            transform: translateX(40%) rotate(180deg);
+        }
+        .b4:hover{
+            color: white;
+            border-color: white;
+        }
+
+       
+        /* Button 5*/
+        .b5{
+            color: rgb(16, 238, 234);
+            border-color: rgb(16, 238, 234);
+            box-shadow: -2px 2px 5px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            
+        }
+        .b5::before{
+            content: ' ';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(16, 238, 234);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: transLateY(-100%);
+            z-index: -1;
+            transition: .5s all ease;
+        }
+        .b5:hover::before{
+            transform: translateY(-40%);
+        }
+        .b5:hover{
+            color: rgb(16, 238, 234);
+            border-color: rgb(16, 238, 234);
+        }
+        .b5::after{
+            content: ' ';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(16, 238, 234);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: transLateY(100%);
+            z-index: -1;
+            transition: .5s all ease;
+        }
+        .b5:hover::after{
+            transform: translateY(40%);
+        }
+        .b5:hover{
+            color:black;
+            border-color: black;
+        }
+
+        
+        /* Button 6*/
+        .b6{
+            color: black;
+            border-color: black;
+            box-shadow: -2px 2px 5px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            
+        }
+        .b6::before{
+            content: ' ';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(184, 237, 8);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: transLateX(0%)translateY(0px)scale(0%);
+            z-index: -1;
+            transition: .5s all ease;
+        }
+        .b6:hover::before{
+            transform: transLateX(0%)translateY(0px)scale(100%);
+        }
+        .b6:hover{
+            color: black;
+            border-color: black;
+        }
+        
+        /* Image 7	*/
+		.img7{
+			width: 200px;
+			height: 300px;
+			border: 2px solid palevioletred;
+			box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.5);
+			border-radius: 20px;
+			background-image: url('');
+			cursor: pointer;
+			background-repeat: no-repeat;
+			background-size: cover;
+/*			z-index: 1;*/
+			position: relative;
+			text-align:center;
+			overflow: hidden;
+            
+			
+		}
+
+		.img7::before{
+			content: 'Start......!!!!!!!';
+			width: 100%;
+			height: 50px;
+			color: palevioletred;
+			font-family: "Roboto", serif;
+		    font-weight:700;
+		    font-style: normal;
+		    font-size: 20px;
+			padding-top: 15px;
+			background-color: rgba(0, 0, 0, 0.7);
+			z-index: 1;
+			transform: translateX(0px) translateY(-250px);
+			transition: .5s all ease;	
+			position: absolute;
+		}
+
+		.img7:hover::before{
+			transform: translateX(0px) translateY(0px);	
+		}
+
+		.img7::after{
+			content: 'End Here....!!!!!!!';
+			width: 100%;
+			height: 100px;
+			color: palevioletred;
+			font-family: "Lavishly Yours", serif;
+            font-weight:700;
+			font-style: normal;
+		    font-size: 20px;
+			padding-top: 15px;
+			background-color: rgba(0, 0, 0, 0.7);
+			z-index: 1;
+			transform: translateX(-100%) translateY(300px);
+			transition: .5s all ease;	
+			position: absolute;
+		}
+
+		.img7:hover::after{
+			transform: translateX(-100%) translateY(200px);	
+		}
+
+
+		.img7 img{
+			transition: 0.5s all ease;
+		}
+
+		.img7 img:hover{
+			transform: scale(1.4);
+		}
+        /*
+        .content::before{
+            content:"😀";
+            color: rgb(42, 220, 22);
+            font-weight: 900;
+            font-size: 50px;
+        }
+
+        .content::after{
+            content: "The End....!!!!";
+            color: rgb(96, 234, 9);
+            font-weight: 900;
+            font-size: 50px;
+        }
+            */
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="btn b1"><p>Button1</p></div>
+        <div class="btn b2"><p>Button2</p></div>
+        <div class="btn b3"><p>Button3</p></div>
+        <div class="btn b4"><p>Button4</p></div>
+        <div class="btn b5"><p>Button5</p></div>
+        <div class="btn b6"><p>Button6</p></div>
+        <div class="img7">
+			<img src="https://scontent.fpnq15-1.fna.fbcdn.net/v/t39.30808-6/375672082_208375768894008_8036960097731929240_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=Ps6g9hRsgEsQ7kNvgG4yJiu&_nc_zt=23&_nc_ht=scontent.fpnq15-1.fna&_nc_gid=AJIvk5RWgmndheoVNlfl_PP&oh=00_AYBa7PN-ModzYoF6PVvn_Ph3vxWuotz8IAkFMIaBbGTmrg&oe=67793A39" alt="frog" width="200px" height="300px"  >
+		</div>
+
+        
+        <div class="content">
+            <p>A computer is a machine that can be programmed to automatically carry out sequences of arithmetic or logical operations (computation). Modern digital electronic computers can perform generic sets of operations known as programs. These programs enable computers to perform a wide range of tasks. 
+                The term computer system may refer to a nominally complete computer that includes the hardware, operating system, software, and peripheral equipment needed and used for full operation; or to a group of computers that are linked and function together, such as a computer network or computer cluster.
+              A broad range of industrial and consumer products use computers as control systems, including simple special-purpose devices like microwave ovens and remote controls, 
+              and factory devices like industrial robots. Computers are at the core of general-purpose devices such as personal computers and mobile devices such as smartphones. Computers power the Internet, which links billions of computers and users.</p>  
+        </div>
+    </div>
+    
+</body>
+</html>

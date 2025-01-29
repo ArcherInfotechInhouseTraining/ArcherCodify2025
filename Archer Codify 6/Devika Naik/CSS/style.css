@@ -1,0 +1,89 @@
+.box{
+    
+    width: 500px;
+    height:200px;
+    background-clip: border-box;
+    border:20px solid;
+    border-color: aqua;
+    background-color: blue;
+    background-attachment: local;
+    overflow:scroll;
+}
+.box h1{
+    color:antiquewhite;
+}
+.box p{
+    text-align: center;
+    color:blanchedalmond;
+}
+.box2{
+    background-image: url(animals.jpg);
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-size:cover;
+    width:600px;
+    height:336px;
+    border-radius: 40px;
+}
+.box3{
+    background-clip: border-box;
+    width: 500px;
+    height:200px;
+    border-image-source:url(penguinsborder.png);
+    border-image-slice: 40;
+    border-image-width:30px;
+    background-attachment: local;
+    overflow: scroll;
+    padding:30px;
+    background-color: aqua;
+}
+.box4{
+    width: 1000px;
+    height: 580px;
+    margin: 150px auto;
+    color: #000;
+
+    border: 15px solid black;
+    background-image: radial-gradient(circle,aqua,orange,yellow);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-attachment: local;
+    overflow: scroll;
+    
+}
+.box5{
+    background-image:url(animal3.webp),url(animal2.jpg);
+    width: 1000px;
+    height: 580px;
+    margin: 150px auto;
+    background-blend-mode: darken; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box6 .item{
+	width: 200px;
+	height: 200px;
+	border: 2px solid #000;
+	border-radius: 50%;
+	margin: 20px;
+	float: left;
+}
+
+#b1{
+	background-image: conic-gradient(red, green, blue);
+}
+
+#b2{
+	background-image: conic-gradient(red, green, blue, red);
+}
+
+#b3{
+	background-image: repeating-conic-gradient(red 20%, white 30%);
+}
+#b4{
+	background-image: repeating-conic-gradient(at 30px 50px, red 20%, white 30%);
+}
+#b5{
+	background-image: repeating-conic-gradient(green 0deg, green 90deg, black 90deg, black 180deg);
+}

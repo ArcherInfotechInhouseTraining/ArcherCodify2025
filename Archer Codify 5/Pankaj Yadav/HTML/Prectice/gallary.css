@@ -1,0 +1,102 @@
+.head{
+    margin: 20px auto 0px auto;
+    width: 500px;
+    height: 50px;
+    background-color: aqua;
+    background-clip: border-box;
+    text-align: center;
+}
+
+.Box{
+    margin:20px auto 0px auto; 
+    width: 500px;
+    height: 175px;
+    background-color: rgb(23, 245, 245);
+    border: 1px solid red;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#img-box{
+    width: 100px;
+    height: 120px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 30px;
+    background-image: url(img/har.jpg);
+    background-size: cover;
+}
+
+#img-box1{
+    width: 100px;
+    height: 120px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 30px;
+    background-image: url(img/chy.jpg);
+    background-size: cover;
+}
+
+#img-box2{
+    width: 100px;
+    height: 120px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 30px;
+    background-image: url(img/hal.jpg);
+    background-size: cover;
+}
+
+#img-box3{
+    width: 100px;
+    height: 120px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 30px;
+    background-image: url(img/Piu.jpg);
+    background-size: cover;
+}
+
+#text-box{
+    width: 250px;
+    height: 120px;
+    background-color: blanchedalmond;
+    margin-right: 65px;
+    margin-top: 20px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+
+.Box1{
+    margin:20px auto 0px auto; 
+    width: 500px;
+    height: 175px;
+    background-color: rgb(23, 245, 245);
+    border: 1px solid red;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Box2{
+    margin:20px auto 0px auto; 
+    width: 500px;
+    height: 175px;
+    background-color: rgb(23, 245, 245);
+    border: 1px solid red;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Box3{
+    margin:20px auto 0px auto; 
+    width: 500px;
+    height: 175px;
+    background-color: rgb(23, 245, 245);
+    border: 1px solid red;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}

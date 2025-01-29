@@ -1,0 +1,32 @@
+.progress-bar {
+    position: relative;
+    width: 300px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar::before {
+    content: "Start";
+    position: absolute;
+    left: 0;
+    top: -25px;
+    font-size: 12px;
+    color: #333;
+}
+
+.progress-bar::after {
+    content: "End";
+    position: absolute;
+    right: 0;
+    top: -25px;
+    font-size: 12px;
+    color: #333;
+}
+
+.progress {
+    width: 50%;
+    height: 100%;
+    background: #007acc;
+}

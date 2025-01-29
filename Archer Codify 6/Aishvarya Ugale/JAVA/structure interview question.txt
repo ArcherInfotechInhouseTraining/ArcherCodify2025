@@ -1,0 +1,47 @@
+  //Basic Questions:
+
+What is a constructor in Java?
+How is a constructor different from a method?
+What are the types of constructors in Java?
+What is a default constructor?
+What happens if you don't explicitly define any constructor in a class?
+Can a constructor have a return type? Why or why not?
+Why are constructors used in Java?
+How do you create a parameterized constructor?
+What is constructor overloading?
+What are the rules for creating constructors in Java?
+
+
+  //Intermediate Questions:
+
+Can you explicitly call a constructor? How?
+What is the role of the this keyword in constructors?
+What is the difference between this() and super() in constructors?
+Can a constructor call another constructor of the same class? How?
+What happens when you try to inherit a class that does not have a default constructor?
+Explain the concept of constructor chaining with an example.
+Why can't a constructor be final, static, or abstract in Java?
+Can you overload a constructor in Java? Give an example.
+How does the compiler ensure that the base class constructor is always called during object creation in inheritance?
+What is the significance of super() in a subclass constructor?
+
+  //Advanced Questions:
+
+What happens if you call this() and super() in the same constructor?
+How does Java handle constructor execution in multi-level inheritance?
+Can a constructor invoke a method? Why might this be a bad idea?
+What happens if there is an exception in a constructor?
+Explain the use of constructor references in Java 8.
+What are private constructors, and how are they used in singleton design patterns?
+Can constructors be synchronized? Why or why not?
+What is the impact of constructors on the garbage collection process?
+Explain how you can prevent a class from being instantiated using constructors.
+What are the differences between a constructor and a factory method?
+
+//Scenario-Based Questions:
+
+Write a program to demonstrate constructor overloading.
+How would you ensure that a constructor initializes only valid values?
+Design a class using a private constructor to control object creation through a factory method.
+If a class has both a default and parameterized constructor, which one gets called during object creation?
+What will happen if a subclass does not explicitly call the superclass constructor in its constructor?

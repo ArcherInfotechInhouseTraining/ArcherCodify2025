@@ -1,0 +1,56 @@
+Given an array arr[] containing only non-negative integers, your task is to find a continuous subarray (a contiguous sequence of elements) whose sum equals a specified value target. You need to return the 1-based indices of the leftmost and rightmost elements of this subarray. You need to find the first subarray whose sum is equal to the target.
+
+Note: If no such array is possible then, return [-1].
+
+Examples:
+
+Input: arr[] = [1, 2, 3, 7, 5], target = 12
+Output: [2, 4]
+Explanation: The sum of elements from 2nd to 4th position is 12.
+Input: arr[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], target = 15
+Output: [1, 5]
+Explanation: The sum of elements from 1st to 5th position is 15.
+Input: arr[] = [5, 3, 4], target = 2
+Output: [-1]
+Explanation: There is no subarray with sum 2.
+
+approach 1:
+create a result array
+initialize start=0 sum=0 end =arr.length;
+1.use a for loop to calculate the sum
+2.add array element one by one 
+3.on each addition check the following condition(Within the for loop itself)
+4.While (the sum exceed the target and start is less than end)
+	if both conditions are true
+	we will subtract the start arr element from the sum
+	i.e sum-=arr[start++]//position in array
+5.if sum==target
+	result.add(start+1)
+	result.add(end+1)
+	return result
+for loop ends
+6.//if no condition is statisfies result.add(-1)
+7.return result;
+
+class Solution {
+    static ArrayList<Integer> subarraySum(int[] arr, int target) {
+        ArrayList<Integer>result = new ArrayList<Integer>();
+        int start=0;
+        int sum = 0;
+        
+        for(int end=0;end<arr.length;end++){
+            sum+=arr[end];
+            while(sum>target && start<=end){
+                sum-=arr[start++];
+            }
+            if(sum==target){
+                result.add(start+1);
+                result.add(end+1);
+                return result;
+            }
+        }
+        result.add(-1);
+        return result;
+    }
+}
+

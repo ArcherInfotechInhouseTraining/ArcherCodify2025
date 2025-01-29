@@ -1,0 +1,38 @@
+username- shreenathpatil7
+
+
+
+git clone https://github.com/shreenathpatil7/fullStack2025.git
+
+
+
+cd =karun tya folder cha aat madhe jane
+
+git add . 
+
+git status
+
+git commit -m "first update"
+
+git config --flobal user.email "
+
+
+
+
+…or create a new repository on the command line
+
+echo "# Cpp-prgrams" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/shreenathpatil7/Cpp-prgrams.git
+git push -u origin main
+
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/shreenathpatil7/Cpp-prgrams.git
+git branch -M main
+git push -u origin main
+
+
