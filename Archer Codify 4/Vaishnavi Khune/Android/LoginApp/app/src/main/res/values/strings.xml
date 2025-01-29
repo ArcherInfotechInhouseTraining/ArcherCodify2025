@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Login App</string>
+    <string name="registration_page">Registration Page</string>
+</resources>
