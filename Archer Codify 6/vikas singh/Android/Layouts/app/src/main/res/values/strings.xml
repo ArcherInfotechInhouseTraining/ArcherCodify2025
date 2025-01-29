@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Layouts</string>
+    <string name="button">Button</string>
+    <string name="login_page">Constraint Layout Page</string>
+    <string name="imagelogo">ImageLogo</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="relative_layout">Relative Layout</string>
+    <string name="linear_ver_layout">Vertical Linear Layout</string>
+    <string name="linear_hor_layout">Horizontal Linear Layout</string>
+    <string name="grid_layout">Grid Layout</string>
+    <string name="image_view">image</string>
+    <string name="input1">input1</string>
+    <string name="input2">input2</string>
+
+
+</resources>

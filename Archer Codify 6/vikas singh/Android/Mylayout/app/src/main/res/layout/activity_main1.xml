@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".MainActivity1">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="731dp"
+        android:background="@color/red"
+        android:text="Login "
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="241dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginBottom="498dp"
+        android:background="#FDF8F8"
+        android:src="@drawable/img"
+        android:text="@string/img_view"
+        android:textAlignment="center"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        tools:ignore="InvalidId" />
+
+    <TextView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_above="@+id/image_1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="110dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="53dp"
+        android:background="@color/white"
+        android:text="@string/UserName"
+        android:textAlignment="center"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        tools:ignore="InvalidId" />
+
+    <TextView
+        android:id="@+id/image_1"
+        android:layout_width="224dp"
+        android:layout_height="52dp"
+        android:layout_above="@+id/button"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="108dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="116dp"
+        android:background="@color/white"
+        android:text="@string/PassWord"
+        android:textAlignment="center"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        tools:ignore="InvalidId" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="105dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="107dp"
+        android:background="#1332EF"
+        android:text="@string/button"
+        android:textAlignment="center"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        tools:ignore="InvalidId" />
+</RelativeLayout>

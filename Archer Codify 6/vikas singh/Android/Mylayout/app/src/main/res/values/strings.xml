@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">My layout</string>
+    <string name="UserName">UserName</string>
+    <string name="PassWord">PassWord</string>
+
+    <string name="img_view">vikas</string>
+
+    <string name="input_1">input1</string>
+
+
+    <string name="input_2">input2</string>
+
+    <string name="button">Button</string>
+
+    <string name="table">TABLE LAYOU</string>
+
+    <string name="text1">1st Row</string>
+    <string name="text2">1st Row</string>
+    <string name="text3">1st Row</string>
+    <string name="text4">1st Row</string>
+
+
+</resources>
