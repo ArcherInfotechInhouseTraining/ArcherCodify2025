@@ -1,0 +1,33 @@
+header{
+	background-image: linear-gradient(rgba(255, 0, 255, 0.1),yellow);
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: center;
+
+
+}
+body{
+	background-image: url('images/nature.jpg'),url('images/her.jpg');
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-position:0% 0%,100% 0% ;
+	
+}
+ .box p{
+	margin: 20px;
+	padding: 20px 20px;
+	font-size: 25px;
+	height: 100%;
+	width: 100%;
+	color: #fff;
+	border: 5px dashed #fff;
+	float: center;
+}
+footer{
+	background-color: #ffff00;
+	font-size: 20px;
+   float: bottom;
+   text-align: center;
+
+}
