@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Spotify"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/spotify"
+        android:textColor="@color/green"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:columnCount="2"
+                android:rowCount="2">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:text="Today's Top Hits"
+                    android:textColor="@color/white"
+                    android:gravity="bottom|right"
+                    android:textStyle="bold"
+                    android:background="@drawable/bg">
+
+                </TextView>
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:text="Chill Hits"
+                    android:textColor="@color/white"
+                    android:gravity="bottom|right"
+                    android:textStyle="bold">
+                </TextView>
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:text="Late Night Lo-Fi"
+                    android:textColor="@color/white"
+                    android:gravity="bottom|right"
+                    android:textStyle="bold">
+                </TextView>
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:text="Weekly Top 50"
+                    android:textColor="@color/white"
+                    android:gravity="bottom|right"
+                    android:textStyle="bold">
+                </TextView>
+            </GridLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Made For You !"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:textStyle="bold"/>
+                <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <GridLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:columnCount="6"
+                        android:rowCount="1">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/music"
+                            android:layout_margin="10dp">
+                        </ImageView>
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/music"
+                            android:layout_margin="10dp">
+                        </ImageView>
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/music"
+                            android:layout_margin="10dp">
+                        </ImageView>
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/music"
+                            android:layout_margin="10dp">
+                        </ImageView>
+
+                    </GridLayout>
+                    </HorizontalScrollView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Made For You !"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:textStyle="bold"/>
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <GridLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:columnCount="6"
+                        android:rowCount="1">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image"
+                            android:layout_margin="10dp">
+                        </ImageView>
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image"
+                            android:layout_margin="10dp">
+                        </ImageView>
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image"
+                            android:layout_margin="10dp">
+                        </ImageView>
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image"
+                            android:layout_margin="10dp">
+                        </ImageView>
+
+                    </GridLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Made For You !"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:textStyle="bold"/>
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <GridLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:columnCount="6"
+                        android:rowCount="1">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/music"
+                            android:layout_margin="10dp">
+                        </ImageView>
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/music"
+                            android:layout_margin="10dp">
+                        </ImageView>
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/music"
+                            android:layout_margin="10dp">
+                        </ImageView>
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/music"
+                            android:layout_margin="10dp">
+                        </ImageView>
+
+                    </GridLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Made For You !"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:textStyle="bold"/>
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <GridLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:columnCount="6"
+                        android:rowCount="1">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/music"
+                            android:layout_margin="10dp">
+                        </ImageView>
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/music"
+                            android:layout_margin="10dp">
+                        </ImageView>
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/music"
+                            android:layout_margin="10dp">
+                        </ImageView>
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/music"
+                            android:layout_margin="10dp">
+                        </ImageView>
+
+                    </GridLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Made For You !"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:textStyle="bold"/>
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <GridLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:columnCount="6"
+                        android:rowCount="1">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/music"
+                            android:layout_margin="10dp">
+                        </ImageView>
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/music"
+                            android:layout_margin="10dp">
+                        </ImageView>
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/music"
+                            android:layout_margin="10dp">
+                        </ImageView>
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/music"
+                            android:layout_margin="10dp">
+                        </ImageView>
+
+                    </GridLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        android:weightSum="4"
+        android:padding="20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/home" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/search" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/library" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/spotify" />
+    </LinearLayout>
+</RelativeLayout>
