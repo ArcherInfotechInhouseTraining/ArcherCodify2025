@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Galada&family=Monsieur+La+Doulaise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Bungee+Spice&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Galada&family=Geist+Mono:wght@100..900&family=Monsieur+La+Doulaise&family=Sevillana&display=swap');
+h1{
+	align-content: center;
+	
+	text-align: center;
+	color: lightsalmon;
+	 font-family: "Sevillana", cursive;
+	font-weight: 700;
+	font-size: 90px;
+	margin-left: 150px;
+	
+
+}
+h1:hover{
+	color: white;
+}
+button{
+
+	align-content: center;
+	background-color: lightcoral;
+	text-align: center;
+	border: 5px solid lightsalmon;
+	font-family: "Geist Mono", monospace;
+	font-weight: 700;
+	font-size: 20px;
+	margin-left: 450px;
+	border-radius:20px ;
+}
+a:hover{
+	background-color: red;
+	color: white;
+}
+a{
+	text-decoration: none;
+	color: black;
+
+}
+body{
+	background-image: url('images/texture.jpg');
+	background-size: cover;
+    background-repeat: no-repeat;
+    
+	
+}
+.box{
+	height: 700px;
+	width: 700px;
+	
+	margin: 35px auto 0px auto;/*flex:only row or column Grid:both rows and columns*/
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	row-gap: 1px;
+	
+
+}
+.box .box-item{
+	width:200px ;
+	height:200px ;
+	
+	margin:10px auto 0px auto ;
+
+
+
+}
+.box .box-item p{
+	padding: 10px;
+	text-align: center;
+	margin: 5px;
+	padding: 20px;
+	font-weight: 700;
+	 font-family: "Sevillana", cursive;
+	 font-size: 15px;
+	 color: #fff;
+
+
+
+}
+
+.box #img-box1{
+	background-image:url('images/img1.jpg') ;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color:red;
+	background-blend-mode:multiply ;
+	outline: 3px solid black;
+	outline-offset: -6px;
+}
+.box #img-box2{
+	background-image:url('images/img2.jpg') ;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color:lightpink;
+	background-blend-mode:multiply ;
+	outline: 3px groove black;
+	outline-offset: -6px;
+}
+.box #img-box3{
+	background-image:url('images/nature.jpg') ;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color:blanchedalmond;
+	background-blend-mode:multiply ;
+	outline: 3px double black;
+	outline-offset: -6px;
+}
+.box #img-box4{
+	background-image:url('images/img3.jpg') ;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color:lightcoral;
+	background-blend-mode:multiply ;
+	outline: 3px dashed black;
+	outline-offset: -6px;
+}
+.box #img-box5{
+	background-image:url('images/nature2.jpg') ;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color:yellowgreen;
+	background-blend-mode:multiply ;
+	outline: 3px ridge black;
+	outline-offset: -6px;
+}
+.box #img-box6{
+	background-image:url('images/img5.jpg') ;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color:lightblue;
+	background-blend-mode:multiply ;
+	outline: 3px dotted black;
+	outline-offset: -6px;
+}

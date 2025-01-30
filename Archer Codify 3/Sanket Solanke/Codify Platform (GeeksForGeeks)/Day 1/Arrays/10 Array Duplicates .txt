@@ -1,0 +1,40 @@
+*Title:*
+Given an array arr of integers, find all the elements that occur more than once in the array. If no element repeats, return an empty array.
+
+*Link:*
+https://www.geeksforgeeks.org/problems/find-duplicates-in-an-array/1?page=1&category=Arrays&sortBy=submissions
+
+*Solution:*
+
+class Solution {
+    public List<Integer> findDuplicates(int[] arr) {
+        // code here
+        int n = arr.length;
+        HashMap<Integer, Integer> dupl = new HashMap<>();
+        for(int i=0; i<n; i++)
+        {
+            int tmp = arr[i];
+            dupl.put(tmp, dupl.getOrDefault(tmp, 0) + 1);
+        }
+        List <Integer> li = new ArrayList<Integer>(n);
+        for(int i=0; i<n; i++)
+        {
+            int tmp = arr[i];
+            if(dupl.get(tmp)>1)
+            {
+                if(li.contains(tmp)==false)
+                    li.add(tmp);
+            }
+        }
+        return li;
+    }
+}
+
+*Test Cases:*
+For Input: 
+2 3 1 2 3
+Your Output: 
+2 3
+Expected Output: 
+2 3
+
