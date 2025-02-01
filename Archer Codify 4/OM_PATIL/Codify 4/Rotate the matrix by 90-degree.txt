@@ -1,0 +1,87 @@
+Given a square mat[][]. The task is to rotate it by 90 degrees in clockwise direction without using any extra space.
+
+Examples:
+
+Input: mat[][] = [[1 2 3], [4 5 6], [7 8 9]]
+Output:
+7 4 1 
+8 5 2
+9 6 3
+Input: mat[][] = [1 2], [3 4]
+Output:
+3 1 
+4 2
+Input: mat[][] = [[1]]
+Output:
+1
+Constraints:
+1 ≤ mat.size() ≤ 1000
+1 <= mat[][] <= 100
+
+
+Solution:
+//{ Driver Code Starts
+// Initial Template for Java
+
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+
+class DriverClass {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+
+        while (t-- > 0) {
+            int n = sc.nextInt();
+            int[][] arr = new int[n][n];
+
+            for (int i = 0; i < n; i++)
+                for (int j = 0; j < n; j++) arr[i][j] = sc.nextInt();
+
+            GFG g = new GFG();
+            g.rotate(arr);
+            printMatrix(arr);
+
+            System.out.println("~");
+        }
+    }
+
+    static void printMatrix(int arr[][]) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[0].length; j++) System.out.print(arr[i][j] + " ");
+            System.out.println("");
+        }
+    }
+}
+// } Driver Code Ends
+
+
+// User function Template for Java
+
+class GFG {
+    static void rotate(int mat[][]) {
+        // Code Here
+        
+        //1st operation is transpose
+        for(int i=0;i<mat.length;i++)//rows
+        {
+            for(int j=i;j<mat[0].length;j++)//columns
+            {
+                int tmp=mat[i][j];
+                mat[i][j]=mat[j][i];
+                mat[j][i]=tmp;
+            }
+        }
+        //2nd operation is reverse the rows only
+        for(int i=0;i<mat.length;i++)
+        {
+            for(int j=0;j<mat.length/2;j++)
+            {
+                int tmp=mat[i][j];
+                mat[i][j]=mat[i][mat.length-1-j];
+                mat[i][mat.length-1-j]=tmp;
+            }
+        }
+    }
+}
