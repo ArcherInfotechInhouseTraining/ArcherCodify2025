@@ -1,0 +1,20 @@
+int* plusOne(int* digits, int digitsSize, int* returnSize) {
+    int* ret, dig;
+    long num;
+    for(num= dig= 0; dig< digitsSize; num=(num*10)+ digits[dig++]);
+    ret= (int*)calloc(digitsSize+1, sizeof(int));
+    for(num++; num; dig--)
+    {
+        ret[dig]= num%10;
+        num/= 10;
+    }
+    if(ret[0]==0)
+    {
+        ret= ret+1;
+        *returnSize= digitsSize;
+    }
+    else
+        *returnSize= digitsSize + 1;
+
+    return ret;
+}

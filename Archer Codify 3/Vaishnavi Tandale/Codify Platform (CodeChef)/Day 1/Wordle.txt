@@ -1,0 +1,35 @@
+
+Chef invented a modified wordle.
+
+There is a hidden word S and a guess word T, both of length 5.
+
+Chef defines a string M to determine the correctness of the guess word. For the ith index:
+
+If the guess at the ith index is correct, the ith character of M is G.
+If the guess at the ith index is wrong, the ith character of M is B.
+Given the hidden word S and guess T, determine string M.
+
+Solution:
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    string s,t,m="";
+	    cin>>s;
+	    cin>>t;
+	for(int i =0;i<5;i++){
+	 
+	        if(s[i]==t[i])
+	            m+="G";
+	        
+	        else
+	            m+="B";
+	        }
+	    
+	cout<<m<<"\n";
+	}
+}

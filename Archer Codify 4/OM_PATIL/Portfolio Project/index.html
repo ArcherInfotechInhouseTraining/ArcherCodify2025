@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Hero Section Styling */
+    .hero {
+      background-image: url('your-background-image.jpg');
+      background-size: cover;
+      height: 100vh;
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .hero h1 {
+      font-size: 3rem;
+    }
+    .hero p {
+      font-size: 1.5rem;
+    }
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+    }
+    .portfolio-item img {
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+    }
+    .portfolio-item .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .portfolio-item:hover .overlay {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header (Navigation Bar) -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <a class="navbar-brand" href="#">MyWebsite</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+      <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <h1>Welcome to My Website</h1>
+  <p>Your one-stop solution for web design and digital services.</p>
+  <a href="#services" class="btn btn-primary btn-lg">Get Started</a>
+</section>
+
+<!-- About Section -->
+<section id="about" class="container my-5">
+  <div class="row">
+    <div class="col-md-6">
+      <img src="your-profile-image.jpg" alt="Profile" class="img-fluid rounded-circle">
+    </div>
+    <div class="col-md-6">
+      <h2>About Me</h2>
+      <p>Hello! I am a web designer and digital marketer with over 5 years of experience. My goal is to create visually appealing and user-friendly websites that help businesses grow. I specialize in both creative and technical aspects of web development.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="container my-5">
+  <h2 class="text-center">Our Services</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <i class="fas fa-laptop-code fa-3x"></i>
+          <h4 class="card-title">Web Design</h4>
+          <p class="card-text">We create stunning, responsive websites tailored to your needs.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <i class="fas fa-paint-brush fa-3x"></i>
+          <h4 class="card-title">Graphic Design</h4>
+          <p class="card-text">Our graphic designs help your brand stand out with creativity and impact.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <i class="fas fa-chart-line fa-3x"></i>
+          <h4 class="card-title">Digital Marketing</h4>
+          <p class="card-text">We drive targeted traffic and grow your business through digital marketing strategies.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="container my-5">
+  <h2 class="text-center">Portfolio</h2>
+  <div class="row">
+    <div class="col-md-4 portfolio-item">
+      <img src="portfolio1.jpg" alt="Portfolio 1" class="img-fluid">
+      <div class="overlay">
+        <p>Project 1</p>
+      </div>
+    </div>
+    <div class="col-md-4 portfolio-item">
+      <img src="portfolio2.jpg" alt="Portfolio 2" class="img-fluid">
+      <div class="overlay">
+        <p>Project 2</p>
+      </div>
+    </div>
+    <div class="col-md-4 portfolio-item">
+      <img src="portfolio3.jpg" alt="Portfolio 3" class="img-fluid">
+      <div class="overlay">
+        <p>Project 3</p>
+      </div>
+    </div>
+    <div class="col-md-4 portfolio-item">
+      <img src="portfolio4.jpg" alt="Portfolio 4" class="img-fluid">
+      <div class="overlay">
+        <p>Project 4</p>
+      </div>
+    </div>
+    <div class="col-md-4 portfolio-item">
+      <img src="portfolio5.jpg" alt="Portfolio 5" class="img-fluid">
+      <div class="overlay">
+        <p>Project 5</p>
+      </div>
+    </div>
+    <div class="col-md-4 portfolio-item">
+      <img src="portfolio6.jpg" alt="Portfolio 6" class="img-fluid">
+      <div class="overlay">
+        <p>Project 6</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container my-5">
+  <h2 class="text-center">Contact Us</h2>
+  <form action="#" method="POST" class="needs-validation" novalidate>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Your name" required>
+        <div class="invalid-feedback">Please provide a name.</div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Your email" required>
+        <div class="invalid-feedback">Please provide a valid email.</div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="subject">Subject</label>
+      <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+      <div class="invalid-feedback">Please provide a subject.</div>
+    </div>
+    <div class="mb-3">
+      <label for="message">Message</label>
+      <textarea class="form-control" id="message" rows="4" required></textarea>
+      <div class="invalid-feedback">Please provide a message.</div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-3 text-center">
+  <p>Follow us on:</p>
+  <a href="#" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+  <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+  <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+  <p>&copy; 2025 MyWebsite. All Rights Reserved.</p>
+</footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  // Bootstrap form validation
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      var forms = document.getElementsByClassName('needs-validation');
+      Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+</script>
+
+</body>
+</html>
