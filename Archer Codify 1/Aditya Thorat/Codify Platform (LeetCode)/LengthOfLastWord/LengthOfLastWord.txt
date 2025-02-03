@@ -1,4 +1,3 @@
-
 int lengthOfLastWord(char* s) {
     int len= strlen(s)-1, i;
     for( ;len>= 0; len--)
