@@ -1,0 +1,46 @@
+Problem Stmt: 
+Given an array of positive integers arr[], return the second largest element from the array. If the second largest element doesn't exist then return -1.
+
+Note: The second largest element should not be equal to the largest element.
+
+Examples:
+
+Input: arr[] = [12, 35, 1, 10, 34, 1]
+Output: 34
+Explanation: The largest element of the array is 35 and the second largest element is 34.
+
+
+Solution:
+class Solution {
+    public int getSecondLargest(int[] arr) {
+        
+        //initial length check
+        // array should be of more than 2 elements
+        int arlength = arr.length;
+        if(arlength<2)
+        {
+            return -1;
+        }
+        
+        int large=0;
+        int secondlarge=0;
+        for(int i=0; i<arlength; i++)
+        {
+        
+            if(arr[i]>large)
+            {
+                secondlarge=large;
+                large=arr[i];
+            }
+            else if(arr[i]<large && arr[i]>secondlarge)
+            {
+                secondlarge=arr[i];
+            }
+        }
+        
+        if(secondlarge!=0)
+            return secondlarge;
+            
+        return -1;
+    }
+}
