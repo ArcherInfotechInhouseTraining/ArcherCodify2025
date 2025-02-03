@@ -1,0 +1,54 @@
+https://www.codechef.com/practice/course/arrays/ARRAYS/problems/DISCOUNTT
+
+Take discount or Not
+There are N items in a shop. You know that the price of the i-th item is Ai. Chef wants to buy all the N items.
+
+There is also a discount coupon that costs X rupees and reduces the cost of every item by Y rupees. If the price of an item was initially ≤Y, it becomes free, i.e, costs 0.
+
+Determine whether Chef should buy the discount coupon or not. Chef will buy the discount coupon if and only if the total price he pays after buying the discount coupon is strictly less than the price he pays without buying the discount coupon.
+
+output--------------------------------------------->
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt();
+
+        while (t-- > 0) {
+            int n = scanner.nextInt();
+            int x = scanner.nextInt();
+            int y = scanner.nextInt();
+            int[] a = new int[n];
+
+            for (int i = 0; i < n; i++) {
+                a[i] = scanner.nextInt();
+            }
+            // Your code goes here
+            
+            
+            int totalwithoutcoupon =0;
+            int totalwithcoupon =x;      //coupon price
+            for (int i : a)
+            {
+                totalwithoutcoupon += i;
+                
+                if (i >y)
+                {
+                    totalwithcoupon= totalwithcoupon + (i-y);
+                }
+                    
+            }
+            
+            
+            System.out.println( totalwithoutcoupon > totalwithcoupon ? "COUPON" : "NO COUPON");
+            
+        
+            
+            
+            
+            
+        }
+    }
+}
