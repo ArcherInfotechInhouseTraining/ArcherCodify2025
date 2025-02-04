@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:Archer Codify 3/Sanket Solanke/Codify Platform (GeeksForGeeks)/Day 1/Arrays/12 Max Consecutive One's.txt
 *Title:*
 Maximum consecutive one’s (or zeros) in a binary array
@@ -43,6 +44,8 @@ class maxconsecativeones
 Input: arr[] = {0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1}
 Output: 2
 =======
+=======
+>>>>>>> 5333078431571a6bce7979cbd082bb2dd4f8b6a0
 *Title:*
 Maximum consecutive one’s (or zeros) in a binary array
 Given a binary array, find the count of a maximum number of consecutive 1s present in the array.
@@ -86,4 +89,7 @@ class maxconsecativeones
 
 Input: arr[] = {0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1}
 Output: 2
+<<<<<<< HEAD
 >>>>>>> 8cff53712df04a2a81859368b073020d99b3916c:Archer Codify 3/Sanket Solanke/Codify Platform (GeeksForGeeks)/Arrays & Hashing/12 Max Consecutive One's.txt
+=======
+>>>>>>> 5333078431571a6bce7979cbd082bb2dd4f8b6a0

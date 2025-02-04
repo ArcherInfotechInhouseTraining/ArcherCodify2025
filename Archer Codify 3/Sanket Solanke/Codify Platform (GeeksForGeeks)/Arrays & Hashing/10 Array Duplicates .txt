@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:Archer Codify 3/Sanket Solanke/Codify Platform (GeeksForGeeks)/Day 1/Arrays/10 Array Duplicates .txt
 *Title:*
 Given an array arr of integers, find all the elements that occur more than once in the array. If no element repeats, return an empty array.
@@ -40,6 +41,8 @@ Expected Output:
 2 3
 
 =======
+=======
+>>>>>>> 5333078431571a6bce7979cbd082bb2dd4f8b6a0
 *Title:*
 Given an array arr of integers, find all the elements that occur more than once in the array. If no element repeats, return an empty array.
 
@@ -80,4 +83,7 @@ Your Output:
 Expected Output: 
 2 3
 
+<<<<<<< HEAD
 >>>>>>> 8cff53712df04a2a81859368b073020d99b3916c:Archer Codify 3/Sanket Solanke/Codify Platform (GeeksForGeeks)/Arrays & Hashing/10 Array Duplicates .txt
+=======
+>>>>>>> 5333078431571a6bce7979cbd082bb2dd4f8b6a0

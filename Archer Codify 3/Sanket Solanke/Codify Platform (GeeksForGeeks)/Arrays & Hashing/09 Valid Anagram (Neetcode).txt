@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:Archer Codify 3/Sanket Solanke/Codify Platform (GeeksForGeeks)/Day 1/Arrays/09 Valid Anagram (Neetcode).txt
 *Title:*
 Given two strings s and t, return true if the two strings are anagrams of each other, otherwise return false.
@@ -57,6 +58,8 @@ output: true
 
 
 =======
+=======
+>>>>>>> 5333078431571a6bce7979cbd082bb2dd4f8b6a0
 *Title:*
 Given two strings s and t, return true if the two strings are anagrams of each other, otherwise return false.
 
@@ -114,4 +117,7 @@ t = "carrace"
 output: true
 
 
+<<<<<<< HEAD
 >>>>>>> 8cff53712df04a2a81859368b073020d99b3916c:Archer Codify 3/Sanket Solanke/Codify Platform (GeeksForGeeks)/Arrays & Hashing/09 Valid Anagram (Neetcode).txt
+=======
+>>>>>>> 5333078431571a6bce7979cbd082bb2dd4f8b6a0
