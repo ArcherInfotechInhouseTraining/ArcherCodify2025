@@ -1,0 +1,44 @@
+Title: You are given two strings, A and B, separated by a new line. Each string will consist of lower case Latin characters (‘a’-‘z’).
+
+Output three lines:
+
+First line print two space-separated integers, representing the length of A and B respectively.
+Second line print the string produced by concatenating A and B (A+B).
+Third line print two strings separated by a space, A' and B'. A' and B' are the same as A and B, respectively, except that their first characters are swapped.
+Sample input:
+
+abcd
+ef
+Sample Output:
+
+4 2
+abcdef
+ebcd af
+
+Link: https://www.interviewbit.com/problems/strings/
+
+Solution: 
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main()  {
+    string A, B;
+    cin>>A>>B;
+    // YOUR CODE GOES HERE
+    // Print the lengths of A and B
+    cout << A.length() << " " << B.length() << endl;
+
+    // Print the concatenated string A + B
+    cout << A + B << endl;
+
+    // Swap the first characters of A and B
+    // Create new strings A' and B' with swapped first characters
+    if (!A.empty() && !B.empty()) {
+        string A_prime = B[0] + A.substr(1); 
+        string B_prime = A[0] + B.substr(1); 
+        cout << A_prime << " " << B_prime << endl;
+    }
+
+    return 0;
+}
