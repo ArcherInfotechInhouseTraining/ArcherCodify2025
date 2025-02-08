@@ -1,0 +1,93 @@
+Given a sorted array arr and an integer k, find the position(0-based indexing) at which k is present in the array using binary search.
+
+Note: If multiple occurrences are there, please return the smallest index.
+
+Examples:
+
+Input: arr[] = [1, 2, 3, 4, 5], k = 4
+Output: 3
+Explanation: 4 appears at index 3.
+Input: arr[] = [11, 22, 33, 44, 55], k = 445
+Output: -1
+Explanation: 445 is not present.
+Input: arr[] = [1, 1, 1, 1, 2], k = 1
+Output: 0
+Explanation: 1 appears at index 0.
+Note: Try to solve this problem in constant space i.e O(1)
+
+Constraints:
+1 <= arr.size() <= 105
+1 <= arr[i] <= 106
+1 <= k <= 106
+
+
+
+//{ Driver Code Starts
+// Initial Template for Java
+
+import java.io.*;
+import java.util.*;
+
+public class GFG {
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        sc.nextLine(); // consume the newline
+        while (t-- > 0) {
+            int k = sc.nextInt();
+            sc.nextLine(); // consume the newline
+            String input = sc.nextLine();
+            String[] strNumbers = input.split(" ");
+            int[] arr = new int[strNumbers.length];
+            for (int i = 0; i < strNumbers.length; i++) {
+                arr[i] = Integer.parseInt(strNumbers[i]);
+            }
+            Solution ob = new Solution();
+            int res = ob.binarysearch(arr, k);
+            System.out.println(res);
+
+            System.out.println("~");
+        }
+        sc.close();
+    }
+}
+
+// } Driver Code Ends
+
+
+// User function Template for Java
+
+class Solution {
+    public int binarysearch(int[] arr, int k) {
+        // Code Here
+        int left = 0;
+        int right = arr.length - 1;
+        int result = -1;
+        
+        while (left <= right) 
+        {
+            int mid = left + (right - left) / 2; 
+            
+            if (arr[mid] == k) 
+            {
+                // Update result to mid
+                result = mid; 
+                // Continue searching in the left half
+                right = mid-1; 
+            }
+            // Search right half
+            else if (arr[mid] < k) 
+            {
+                left = mid + 1; 
+            } 
+            // Search left half
+            else 
+            {
+                right = mid - 1; 
+            }
+        }
+        
+        return result;
+    }
+    
+}
