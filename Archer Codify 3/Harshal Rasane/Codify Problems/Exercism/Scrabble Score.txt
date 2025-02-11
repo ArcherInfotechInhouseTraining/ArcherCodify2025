@@ -1,0 +1,89 @@
+Title:- 
+
+Your task is to compute a word's Scrabble score by summing the values of its letters.
+
+The letters are valued as follows:
+
+    Letter	               Value
+A, E, I, O, U, L, N, R, S, T	1
+D, G	                        2
+B, C, M, P	                3
+F, H, V, W, Y            	4
+K	                        5
+J, X	                        8
+Q, Z	                        10
+
+
+For example:- the word "cabbage" is worth 14 points:
+
+3 points for C
+1 point for A
+3 points for B
+3 points for B
+1 point for A
+2 points for G
+1 point for E
+
+Link :-https://exercism.org/tracks/java/exercises/scrabble-score
+
+Solution :-
+
+
+class Scrabble {
+
+int tot;
+    Scrabble(String word) {
+        
+        String[] pointone={"A", "E", "I", "O", "U", "L", "N", "R", "S", "T"};
+        String[] pointtwo={"D", "G"};
+        String[] pointthree={"B", "C", "M", "P"};
+        String[] pointfour={"F", "H", "V", "W", "Y"};
+        String[] pointfive={"K"};
+        String[] pointsix={"J", "X"};
+        String[] pointseven={"Q", "Z"};
+        try {
+            for(int i=0; i<=word.length();i++)
+           {
+               char ch= Character.toUpperCase(word.charAt(i));
+               
+               if(isInArray(ch, pointone)){
+                   tot +=1;
+               }else if(isInArray(ch, pointtwo)){
+                   tot +=2;
+               }else if(isInArray(ch, pointthree)){
+                   tot +=3;
+               }else if(isInArray(ch, pointfour)){
+                   tot +=4;
+               }else if(isInArray(ch, pointfive)){
+                   tot +=5;
+               }else if(isInArray(ch, pointsix)){
+                   tot +=8;
+               }else if(isInArray(ch, pointseven)){
+                   tot +=10;
+               }
+               
+           }
+        } catch(Exception e) {}  
+    }
+    
+    private boolean isInArray(char c, String[] array){
+        for(String s: array){
+            if(s.charAt(0)== c){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    int getScore() {
+        return tot;
+    }
+
+}
+
+class Main {
+    public static void main(String[] args) {
+        Scrabble ob = new Scrabble("cabbage");  
+        System.out.print(ob.getScore()); 
+    }
+}
