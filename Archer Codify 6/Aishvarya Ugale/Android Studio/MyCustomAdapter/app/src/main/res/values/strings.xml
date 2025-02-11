@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyCustomAdapter</string>
+    <string name="Apple">"An apple a day keeps the doctor away."</string>
+    <string name="apple_nm">Apple</string>
+</resources>

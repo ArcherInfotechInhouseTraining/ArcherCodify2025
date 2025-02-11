@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Register</string>
+    <string name="register_page">Register Page</string>
+    <string name="User_Name">User Name</string>
+    <string name="PassWord">Password</string>
+    <string name="C">C</string>
+    <string name="CPP">CPP</string>
+    <string name="Java">Java</string>
+    <string name="HTML">HTML</string>
+    <string name="CSS">CSS</string>
+    <string name="Android">Android</string>
+    <string name="Course">Select Your Course </string>
+    <string name="Gender">Select Your Gender </string>
+    <string name="Male">Male</string>
+    <string name="Female">Female</string>
+    <string name="Birth">Choose Your Birth Date </string>
+    <string name="Address">Address</string>
+    <string name="Address_Enter">Enter Address</string>
+    <string name="City">Select City</string>
+
+
+    <string name="list">City Selector</string>
+
+    <string-array name="City_List">
+        <item>Mumbai</item>
+        <item>Pune</item>
+        <item>Nashik</item>
+        <item>Jalgaon</item>
+        <item>Chennai</item>
+        <item>Thane</item>
+        <item>Dhule</item>
+    </string-array>
+
+    <string name="register_Data">Register Data</string>
+    <string name="user"> Your Username</string>
+    <string name="Password"> Your Password</string>
+    <string name="courses"> Your course</string>
+    <string name="ur_gender"> Your Gender</string>
+    <string name="Birthdate"> Your Birthdate</string>
+    <string name="ur_address"> Your Address</string>
+
+    <string name="upload"> Upload Photo</string>
+    <string name="term">  Agree All terms and conditions</string>
+    <string name="Implicit_intent"> Implicit Intent</string>
+    <string name="Open_WebPG"> Open Web Page</string>
+    <string name="Declaration"> Declaration</string>
+    <string name="skip"> Skip</string>
+
+
+
+
+</resources>
