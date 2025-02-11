@@ -1,0 +1,69 @@
+Platform:- Exercism
+
+Title:-Find the difference between the square of the sum and the sum of the squares of the first N natural numbers.
+
+The square of the sum of the first ten natural numbers is (1 + 2 + ... + 10)² = 55² = 3025.
+
+The sum of the squares of the first ten natural numbers is 1² + 2² + ... + 10² = 385.
+
+Hence the difference between the square of the sum of the first ten natural numbers and the sum of the squares of the first ten natural numbers is 3025 - 385 = 2640.
+
+Link:- https://exercism.org/tracks/java/exercises/difference-of-squares
+
+Solution:-
+
+class DifferenceOfSquaresCalculator {
+
+
+int x;
+int y;
+int z;
+int sumsquare;
+int squaresum;
+
+
+   int computeSquareOfSumTo(int input) {
+        for(int i=0;i<=input;i++){
+            x=x+i;
+        }
+        y=x*x;
+        return y;
+    }
+
+    int computeSumOfSquaresTo(int input) {
+        for(int i=0;i<=input;i++){
+            z=i*i;
+            x=x+z;
+        }
+        return x;
+        
+    }
+
+    int computeDifferenceOfSquares(int input) {
+        
+        for(int i=0;i<=input;i++){
+            x=x+i;
+        }
+        sumsquare=x*x;
+        
+        
+        for(int j=0;j<=input;j++){
+            z=z+(j*j);
+        }
+        squaresum=z;
+        
+        y=sumsquare-squaresum;
+        return y;
+        
+    }
+
+}
+class Main{
+	public static void main(String[] args)
+	{
+		DifferenceOfSquaresCalculator ob= new DifferenceOfSquaresCalculator();
+		System.out.println(ob.computeSquareOfSumTo(input));
+		System.out.println(ob.computeSumOfSquaresTo(input));
+		System.out.println(ob.computeDifferenceOfSquares(input));
+	}
+}
