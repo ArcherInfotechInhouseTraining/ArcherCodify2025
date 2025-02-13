@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Spotify</string>
+    <string name="podcast">pod</string>
+    <string name="Music">Music</string>
+    <string name="_0">0</string>
+    <string name="all">All</string>
+    <string name="Wrap">Wrap</string>
+    <string name="logo">logo</string>
+</resources>

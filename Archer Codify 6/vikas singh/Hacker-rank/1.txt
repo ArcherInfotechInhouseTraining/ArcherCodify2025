@@ -1,0 +1,50 @@
+Missing in Array (geeks for geeks)
+You are given an array arr of size n - 1 that contains distinct integers in the range from 1 to n (inclusive). This array represents a permutation of the integers from 1 to n with one element missing. Your task is to identify and return the missing element.
+Input: arr[] = [1, 2, 3, 5]
+Output: 4
+Explanation: All the numbers from 1 to 5 are present except 4.
+two approaches:
+1st approach : 
+executed successfully but was incorrect answer due to multiple test case failure
+calculate the n=length of input array
+calculate the sum of first n+1 natural numbers
+initialize the sum of input array to 0;
+calculate the sum of input array;
+return the difference of sum of first n+1 natural numbers and sum of input of array.
+class Solution {
+    int missingNumber(int arr[]) {
+        int n = arr.length + 1;
+        int totalSum = n * (n + 1) / 2;
+        int arraySum = 0;
+        
+        for(int num: arr) {
+            arraySum += num;
+        }
+        
+        return totalSum - arraySum;
+    }
+}
+
+
+
+2nd approach:
+executed successfully ,correct and runs maximum testcases
+bit manipulation of array elements;
+calculate the n=array length
+Xoring all the element for 1 to n+1 store it in xorfull
+xoring all the input array element store it in xorarray
+find the missing no by xoring xorfull and xorarray
+class Solution {
+    int missingNumber(int arr[]) {
+        int n = arr.length + 1;
+        int xorFull = 0; 
+        int xorArray = 0; 
+        for (int i = 1; i <= n; i++) { 
+            xorFull ^= i; 
+        } 
+        for(int num : arr) { 
+            xorArray ^= num; 
+        }
+        return xorFull ^ xorArray;
+    }
+}

@@ -1,0 +1,50 @@
+Title :- Your task is to convert a number into its corresponding raindrop sounds.
+
+If a given number:
+
+is divisible by 3, add "Pling" to the result.
+is divisible by 5, add "Plang" to the result.
+is divisible by 7, add "Plong" to the result.
+is not divisible by 3, 5, or 7, the result should be the number as a string.
+
+
+Examples:-
+28 is divisible by 7, but not 3 or 5, so the result would be "Plong".
+30 is divisible by 3 and 5, but not 7, so the result would be "PlingPlang".
+34 is not divisible by 3, 5, or 7, so the result would be "34".
+
+Link:- https://exercism.org/tracks/java/exercises/raindrops
+
+Solution:- 
+
+class RaindropConverter {
+
+    String convert(int number) {
+        if(number%3==0 && number%5==0 && number%7==0){
+            return "PlingPlangPlong";
+        }else if(number%3==0 && number%5==0){
+            return "PlingPlang";
+        }else if(number%3==0 && number%7==0){
+            return "PlingPlong";
+        }else if(number%5==0 && number%7==0){
+            return "PlangPlong";
+        }else if(number%3==0){
+            return "Pling";
+        }else if(number%5==0){
+            return "Plang";
+        }else if(number%7==0){
+            return "Plong";
+        }else {
+            return String.valueOf(number);
+        }
+    }
+}
+
+class Main{
+    public static void main(String[] args)
+    {
+        RaindropConverter ob= new RaindropConverter();
+        System.out.println(ob.convert(105));
+        
+    }
+}

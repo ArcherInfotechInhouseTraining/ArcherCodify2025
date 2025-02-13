@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Day-1:
 
 https://leetcode.com/problems/palindrome-number
@@ -32,3 +33,39 @@ class Solution {
     }
 }
 
+=======
+Day-1:
+
+https://leetcode.com/problems/palindrome-number
+
+
+Problem:
+Given an integer x, return true if x is a 
+palindrome
+, and false otherwise.
+ 
+Example 1:
+Input: x = 121
+Output: true
+Explanation: 121 reads as 121 from left to right and from right to left.
+
+
+
+Solution:
+
+class Solution {
+    public boolean isPalindrome(int x) {
+        if (x < 0) {
+            return false;
+        }
+        int temp = x, rev = 0;
+        while (x > 0) {
+            int rem = x % 10;
+            rev = rev * 10 + rem;
+            x = x / 10;
+        }
+        return temp == rev;
+    }
+}
+
+>>>>>>> 8feb1522bfd3551cd424b4b9ff9ccf48e3f27623

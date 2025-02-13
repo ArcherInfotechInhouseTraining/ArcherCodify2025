@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My First Application</string>
+    <string name="send_message1">send</string>
+    <string name="Login">Button</string>
+    <string name="signup">Button</string>
+    <string name="Forget">Button</string>
+
+</resources>

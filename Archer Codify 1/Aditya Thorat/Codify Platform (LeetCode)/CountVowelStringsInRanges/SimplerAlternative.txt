@@ -1,0 +1,22 @@
+int* vowelStrings(char** words, int wordsSize, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {
+    int* ret;
+    int i, j, c, cnt;
+    *returnSize= queriesSize;
+    ret= (int*)malloc(sizeof(int)*returnSize);
+    for(i=0; i<queriesSize; i++)
+    {
+        for(cnt=0, j=queries[i][0]; j<=queries[i][1]; j++)
+        {
+            if(j>wordsSize)
+                return ret;
+            if(words[j][0]=='a' || words[j][0]=='A' || words[j][0]=='e' || words[j][0]=='E' || words[j][0]=='i' || words[j][0]=='I' ||words[j][0]=='o' ||words[j][0]=='O' ||words[j][0]=='u' ||words[j][0]=='U')
+            {
+                if(words[j][c]=='a' || words[j][c]=='A' || words[j][c]=='e' || words[j][c]=='E' || words[j][c]=='i' || words[j][c]=='I' ||words[j][c]=='o' ||words[j][c]=='O' ||words[j][c]=='u' ||words[j][c]=='U')
+                    cnt++;
+            }
+        }
+        ret[i]= cnt;
+    }    
+
+    return ret;
+}

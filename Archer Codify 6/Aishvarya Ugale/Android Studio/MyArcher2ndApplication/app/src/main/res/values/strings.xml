@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MyArcher2nd Application</string>
+    <string name="password">Password</string>
+    <string name="Login_page">Constraint Layout Page</string>
+    <string name="ralativelayout">Relative layout</string>
+    <string name="img">image</string>
+    <string name="input1">input1</string>
+    <string name="input2">input2</string>
+    <string name="button">Button</string>
+    <string name="Linearlayout">Vertical Linearlayout</string>
+    <string name="table_layout">Table Layout</string>
+    <string name="firstrow">1st Row</string>
+    <string name="secondRow">2nd Row</string>
+    <string name="Thirdrow">3rd Row</string>
+    <string name="content1">content1</string>
+    <string name="content2">content2</string>
+    <string name="grid_lay">Grid Layout</string>
+
+</resources>

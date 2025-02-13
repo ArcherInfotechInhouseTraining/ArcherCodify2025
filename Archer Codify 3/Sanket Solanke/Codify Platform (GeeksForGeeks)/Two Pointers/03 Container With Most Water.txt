@@ -1,0 +1,46 @@
+*Title:*
+You are given an integer array heights where heights[i] represents the height of the ith bar.
+You may choose any two bars to form a container. Return the maximum amount of water a container can store.
+
+Example 1:
+Input: height = [1,7,2,5,4,7,3,6]
+Output: 36
+
+
+*Link:*
+https://neetcode.io/problems/max-water-container
+
+*Solution:*
+class Solution {
+    public int maxArea(int[] heights) {
+    
+    int l=0, r=heights.length-1;
+    int res=0;
+    while(l<r)
+    {
+        int capacity = (r-l) * Math.min(heights[l],heights[r]);
+        res = (capacity>res) ? capacity : res;
+        if(heights[l]>heights[r])
+        {   
+            r--;
+        }else
+        {
+            l++;
+        }
+    }
+    return res;
+    }
+}
+
+
+*Test Cases:*
+Input: height = [1,7,2,5,4,7,3,6]
+Output: 36
+
+Input: height = [2,2,2]
+Output: 4
+
+*Approach Used:*
+Used two pointer algorithm to traverse through the array.
+stored capacity from left and right using formula i.e. capacity = (r-l) * Math.min(heights[l],heights[r]);
+checked if the height of left bar is less then incresed the pointer to next position otherwise decreased the right pointer.
