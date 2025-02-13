@@ -1,5 +1,6 @@
-Question:
-https://leetcode.com/problems/isomorphic-strings
+question:
+
+link:https://leetcode.com/problems/isomorphic-strings
 
 Given two strings s and t, determine if they are isomorphic.
 
@@ -8,8 +9,9 @@ Two strings s and t are isomorphic if the characters in s can be replaced to get
 All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.
 
  
-
 Solution:
+
+
 
 class Solution {
     static boolean isIsomorphic(String s, String t) {
@@ -49,8 +51,8 @@ class Solution {
         String s2 = "foo", t2 = "bar";
         String s3 = "paper", t3 = "title";
 
-        System.out.println(isIsomorphic(s1, t1)); // Output: true
-        System.out.println(isIsomorphic(s2, t2)); // Output: false
-        System.out.println(isIsomorphic(s3, t3)); // Output: true
+        System.out.println(isIsomorphic(s1, t1)); 
+        System.out.println(isIsomorphic(s2, t2)); 
+        System.out.println(isIsomorphic(s3, t3)); 
     }
 }
