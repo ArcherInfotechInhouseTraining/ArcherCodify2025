@@ -1,0 +1,32 @@
+https://www.codechef.com/practice/course/logical-problems/DIFF800/problems/SALESEASON
+
+sales season
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    Scanner sc = new Scanner (System.in);
+		int t=sc.nextInt();
+		while (t-- > 0) {
+            int X = sc.nextInt();  
+            int discount = 0;
+            
+            if (X > 5000) {
+                discount = 500;
+            } else if (X > 1000) {
+                discount = 100;
+            } else if (X > 100) {
+                discount = 25;
+            }
+            
+            int finalAmount = X - discount;
+            System.out.println(finalAmount);
+        }
+
+	}
+}
