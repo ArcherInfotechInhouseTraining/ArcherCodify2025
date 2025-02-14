@@ -1,0 +1,35 @@
+Problem:
+
+Complete the function that takes an array of words.
+
+You must concatenate the nth letter from each word to construct a new word which should be returned as a string, where n is the position of the word in the list.
+
+For example:
+
+["yoda", "best", "has"]  -->  "yes"
+  ^        ^        ^
+  n=0     n=1     n=2
+
+code:
+#include <stddef.h>
+#include <stdlib.h>
+
+
+char *nth_char(size_t length, const char *const strings[length],char str_out[length])
+{
+      *str_out = '\0';
+     str_out = malloc(sizeof(char) * length);
+
+    for (size_t i = 0, n = 0; i < length; i++) {
+        for (size_t j = 0; strings[i][j] != '\0'; j++) {
+            if (j == n) {
+                str_out[n++] = strings[i][j];
+                break;
+            }
+        }
+    }
+    
+str_out[length] = '\0';
+    
+    return str_out;
+}
