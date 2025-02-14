@@ -1,0 +1,35 @@
+https://www.codechef.com/practice/course/logical-problems/DIFF800/problems/WATERFILLING
+
+Watter Filling
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();  // Number of test cases
+        
+        while (T-- > 0) {
+            int B1 = sc.nextInt();
+            int B2 = sc.nextInt();
+            int B3 = sc.nextInt();
+            
+           
+            int emptyCount = (B1 == 0 ? 1 : 0) + (B2 == 0 ? 1 : 0) + (B3 == 0 ? 1 : 0);
+            
+            
+            if (emptyCount >= 2) {
+                System.out.println("Water filling time");
+            } else {
+                System.out.println("Not now");
+            }
+        }
+        
+        sc.close();
+
+	}
+}
