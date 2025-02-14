@@ -1,0 +1,38 @@
+class Resource
+{
+private String []data=
+{ hello","good day","to","all","wish","you","all the ","best"};
+
+synchronized public void show(){
+System.out.println("the data is:"){
+try{
+Thread.sleep(600);}
+catch(Exception e){}
+System.out.println(data[i]);
+}
+}
+}
+clas DemoSynMethod
+{
+public static void mian(String []args)
+{
+System.out.println("main started");
+ Resource rob=new Resource();
+
+Thread t1=new Thread(){
+public void run(){
+rob.show();
+}
+};
+
+t1.start();
+Thread t2=new Thread(){
+public void run(){
+rob.show();
+}
+};
+t2.start();
+
+System.out.println("main ended");
+}
+}
