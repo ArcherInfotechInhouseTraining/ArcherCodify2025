@@ -1,0 +1,963 @@
+// Interface in Java
+
+	An interface in Java is a reference type that defines a contract or a set of abstract methods that a 
+	class must implement. 
+
+	It acts as a blueprint for classes. Unlike a class, an interface can contain only:
+
+	- Abstract methods (methods without a body; method declarations)(implicitly public and abstract).
+	- Constant fields (implicitly public static final).
+	- Static methods (with a body, introduced in Java 8).
+	- Default methods (with a body, introduced in Java 8).
+	- private and private static methods (with a body, introduced in Java 9).
+	- Cannot have constructors, meaning interfaces cannot be instantiated.
+	- A class can implement multiple interfaces, enabling multiple inheritance in Java.
+
+	
+
+
+	Decl. Syntax;
+
+	interface <interface_name>	e.g.
+	{					interface Demo
+		<fields>;			{
+		<methods>;				int DATA=100;
+	};						void method1();
+							static void method2(){
+								System.out.println("In Static method of interface");
+							}
+							default void method3() {
+							      System.out.println("In default implementation of method in interface");
+							}
+						}
+
+
+	- Typically, interfaces are declared with public access modifiers to allow usage across different packages.
+	- Follow naming conventions: Capitalize the first letter and use camel case (e.g., Animal, Drawable).
+	- Fields in an interface are always public static final, even if you don't explicitly write it.
+	- Abstract Methods: Declared without a body, they must be implemented by any class that implements the interface.
+	- Default Methods: Have a method body and can provide a default implementation.
+	- Static Methods: Belong to the interface and can be called without an instance.
+
+
+	// A Class Implements an Interface
+
+	A class that implements an interface must provide concrete implementations for all of its abstract methods 
+	unless the class itself is abstract.
+
+interface Demo
+{
+	void show();
+}
+class Sample implements Demo
+{
+	public void show() { // must be public
+		System.out.println("In Show implementation - Sample");
+	}
+	public void display() {
+		System.out.println("In display - sample");
+	}
+}
+class ClassImplInterface 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Main Starts");
+		Sample ob = new Sample();
+		ob.show();
+		ob.display();
+	}
+}
+
+
+//--------------------------------------------------------------------------
+
+	// A class Extends class and implements an interface
+
+	- To extend the class, extends keyword must be used.
+	- To implement, implements keyword must be used
+
+interface Demo
+{
+	void show();
+}
+class Test
+{
+	public void view() {
+		System.out.println("In view - Test");
+	}
+}
+class Sample extends Test implements Demo
+{
+	public void show() { // must be public
+		System.out.println("In Show implementation - Sample");
+	}
+	public void display() {
+		System.out.println("In display - sample");
+	}
+}
+class ClassImplInterface 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Main Starts");
+		Sample ob = new Sample();
+		ob.show();
+		ob.display();
+		ob.view();
+	}
+}
+
+//--------------------------------------------------------------------------
+
+	// A class extends class and implements an interface multiple interfaces
+
+interface Demo
+{
+	void show();
+}
+interface Example
+{
+	void present();
+}
+class Test
+{
+	public void view() {
+		System.out.println("In view - Test");
+	}
+}
+class Sample extends Test implements Demo, Example
+{
+	public void show() { // must be public
+		System.out.println("In Show implementation - Sample");
+	}
+	public void display() {
+		System.out.println("In display - sample");
+	}
+	public void present() {
+		System.out.println("In present - sample");
+	}
+}
+class ClassImplInterface 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Main Starts");
+		Sample ob = new Sample();
+		ob.show();
+		ob.display();
+		ob.view();
+		ob.present();
+	}
+}
+
+//-------------------------------------------------------------------------------
+
+	// Note that As one class extends the another class, One interface also extends another interface.
+	// and A class implements one or more interfaces.
+
+interface Example
+{
+	void present();
+}
+interface Demo extends Example
+{
+	void show();
+}
+class Test
+{
+	public void view() {
+		System.out.println("In view - Test");
+	}
+}
+class Sample extends Test implements Demo
+{
+	public void show() { // must be public
+		System.out.println("In Show implementation - Sample");
+	}
+	public void display() {
+		System.out.println("In display - sample");
+	}
+	public void present() {
+		System.out.println("In present - sample");
+	}
+}
+class ClassImplInterface 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Main Starts");
+		Sample ob = new Sample();
+		ob.show();
+		ob.display();
+		ob.view();
+		ob.present();
+	}
+}
+
+//-------------------------------------------------------------------------------------------
+
+	// Knowing the facts when reference of base interface refers to object of child class.
+
+	when a reference of a base interface refers to an object of a child class, it demonstrates the concept of 
+	polymorphism. This is a fundamental object-oriented programming principle that allows a single interface 
+	reference to be associated with different implementations dynamically (at runtime).
+
+	In Such case we able to call only implemented methods from child.(methods present in same interface)
+
+interface Demo 
+{
+	void show();
+}
+
+class Sample implements Demo
+{
+	public void show() {
+		System.out.println("In Show implementation - Sample");
+	}
+	public void display() {
+		System.out.println("In display - sample");
+	}
+}
+class ClassImplInterface 
+{
+	public static void main(String[] args) 
+	{
+		Sample ob = new Sample();
+		ob.show();
+		ob.display();
+
+		// -- Create the reference of interface(base) to refer object of class(child)
+
+		Demo ref = new Sample();
+		ref.show();
+		ref.display();
+		
+	}
+}
+
+//----------- On Compile ------------
+ClassImplInterface.java:28: error: cannot find symbol
+                ref.display();
+                   ^
+  symbol:   method display()
+  location: variable ref of type Demo
+1 error
+Press any key to continue . . .
+
+//---------------------------------------------------------------------------------------------------------------------
+
+	/// Knowing the details about the members of interface
+
+	// Interface fields
+
+	fields in an interface behave differently from fields in a class. Interface fields are used to define 
+	constants that are shared across all implementing classes. They are fundamentally different because they 
+	are implicitly public, static, and final, regardless of how they are declared.
+
+	 - public: Accessible everywhere.
+	 - static: Belong to the interface, not to any instance of the implementing class.
+	 - final: Cannot be modified once initialized (constant)
+
+interface Constants {
+    int MAX_VALUE=100;  // Implicitly public, static, and final
+	// init. is compulsory even if you want to keep it zero.
+}
+
+class Example implements Constants {
+    void printConstant() {
+        System.out.println(MAX_VALUE); // Accessing the constant
+    }
+}
+
+class InterfaceFieldsExample
+{
+	public static void main(String []args) {
+		Example ob = new Example();
+		ob.printConstant();
+		System.out.println(Constants.MAX_VALUE);
+		System.out.println(ob.MAX_VALUE);		
+	}
+}
+
+	Note: 
+	 - must init the interface fields, coz they are implicitly final, (even if they are static)
+	 - As it is public and static by default, it can accessed using <interface_name>.<field_name>
+	 - You can access it with in implementing class directly coz it is public in interface so it is inherited.
+	 - using object of implementing class you can access it directly as <obj_nm>.<field_name>, coz it os public.
+
+
+	// Advantages of Interface Fields
+
+	 - Interface fields provide a mechanism to define constants that are globally accessible throughout 
+	   the application.
+	 - All implementing classes share the same constant values, reducing redundancy.
+	 - Fields can be accessed directly via the interface name, making them convenient to use in different 
+	   parts of the application.
+
+	//  Limitations of Interface Fields
+	 
+	- Fields are final, meaning their values cannot be changed once initialized. This limits their use to 
+	  constant values only.
+	- Since fields are static, they are not associated with any instance of a class. They cannot hold 
+	  instance-specific data.
+	- Using an interface solely to define constants is often considered poor design because interfaces are 
+	  intended to define behavior, not data. A better alternative is to use an enum or a utility class.
+
+
+	// Alternatives to Interface Fields
+
+	 - In Java, Enum can serve as an alternative to using fields in interfaces for defining a fixed set of 
+	   constants. While interface fields are traditionally used for this purpose, using Enum is often a better 
+	   and more robust approach. Enums are preferred when you need to define a set of constants with type safety.
+
+	 - Constants can also be defined in a utility class with a private constructor to prevent instantiation.
+
+	 - For more advanced and immutable constant configurations, you can use Java record(Java 14+).
+
+	   record is a special type of class designed to represent immutable data. It is a concise way to define 
+	   a class whose main purpose is to carry data, similar to Data Transfer Objects (DTOs) or value objects.
+
+//-------------------------------------------
+
+	// Methods within interface
+
+	// Public and Abstract Methods (Pre-Java 8 and Onward)
+	
+	Abstract methods are the core of interfaces. They define behavior that any implementing class must provide.
+
+	Characteristics:
+
+	- Declared without a body.
+	- Must be implemented by any concrete (non-abstract) class that implements the interface.
+	- Implicitly public and abstract (you can omit these modifiers).
+
+	Purpose: Abstract methods enforce a contract, ensuring that all implementing classes share a common behavior.
+
+	interface Animal {
+    		void eat();    // Abstract method
+    		void sleep();  // Abstract method
+	}
+
+	class Dog implements Animal {
+
+    		public void eat() {
+        		System.out.println("Dog is eating");
+    		}
+
+    		public void sleep() {
+        		System.out.println("Dog is sleeping");
+    		}
+	}
+	class DemoFAIM
+	{
+		public static void main(String []args) {
+
+			Dog ob = new Dog();
+			ob.eat();
+			ob.sleep();
+		}
+	}
+
+
+///-------------------------------------
+
+	// Implementing runtime polymorphism using interface
+
+interface Shape
+{
+	 void area();
+}
+class Rect implements Shape
+{
+	public void area()
+	{
+		System.out.println("In Rect area()");
+	}
+}
+class Triangle implements Shape
+{
+	public void area()
+	{
+		System.out.println("In Triangle area()");
+	}
+}
+class Circle implements Shape
+{
+	public void area()
+	{
+		System.out.println("In Circle area()");
+	}
+}
+
+class DemoRuntimePolyusingInterface
+{
+	public static void main(String []args)
+	{
+		Shape ref;
+
+		ref=new Rect(); 
+		ref.area(); 
+
+		// OR
+
+		ref=new Circle(); 
+		ref.area(); 
+
+		// OR
+
+		ref=new Triangle(); 
+		ref.area(); 
+
+	}
+}
+
+/---------------------------------------------------------------------------------------------------------------------
+
+	// Default Methods in Interface
+
+	Default methods in Java interfaces were introduced in Java 8 to provide method implementations in interfaces. 
+	Before Java 8, interfaces could only contain abstract methods, but default methods offer a way to add 
+	functionality to interfaces without breaking the existing classes that implement them.
+
+	- Default methods allow you to define a method body (implementation) in the interface itself.
+	- Default methods enable adding new methods to existing interfaces without forcing the classes that 
+	  implement them to modify their code.
+	- Implementing classes can override default methods if a specific implementation is needed.
+	- Default methods must always be public (implicit in interfaces). They cannot be private, protected, or static.
+	- If a class implements multiple interfaces with the same default method name, the class must explicitly 
+	  resolve the conflict.
+
+
+interface MyInterface
+{
+	void show();
+	default void displayMessage() {
+		System.out.println("This is Default Message");
+	}
+}
+class MyClass implements MyInterface
+{
+	public void show() {
+		System.out.println("In MyClass show()");
+	}
+	public void display() {
+		System.out.println("In MyClass display()");
+	}
+}
+class YourClass implements MyInterface
+{
+	public void show() {
+		System.out.println("In YourClass show()");
+	}
+	public void displayMessage() {
+		System.out.println("This is Custom Message");
+	}
+}
+class DemoDefaultInterfaceMethod 
+{
+	public static void main(String[] args) 
+	{
+		MyClass ob = new MyClass();
+		ob.show();
+		ob.display();
+		ob.displayMessage();
+	
+		System.out.println("\n ------------------------------------------");
+
+		YourClass ob1 = new YourClass();
+		ob1.show();
+		ob1.displayMessage();
+	}
+}
+
+
+//---------------------------------------------------
+	
+	// Multiple interface implementation having default method with same name
+
+	If a class implements multiple interfaces with the same default method, the class must explicitly 
+	resolve the conflict.
+
+interface MyInterface
+{
+	void show();
+	default void displayMessage() {
+		System.out.println("This is Default Message - MyInterface");
+	}
+}
+interface YourInterface
+{
+	void display();
+	default void displayMessage() {
+		System.out.println("This is Default Message - YourInterface");
+	}
+}
+class CommanClass implements MyInterface, YourInterface
+{
+	public void show() {
+		System.out.println("In CommanClass show()");
+	}
+	public void display() {
+		System.out.println("In CommanClass display()");
+	}
+	public void displayMessage() {
+		YourInterface.super.displayMessage();
+		MyInterface.super.displayMessage();
+	}
+}
+
+class DefaultMethodConfilct
+{
+	public static void main(String[] args) 
+	{
+		CommanClass ob = new CommanClass();
+		ob.show();
+		ob.display();
+		ob.displayMessage();
+		ob.displayMessage();
+
+	}
+}
+
+	// Error in case of conflict
+	//  error: types MyInterface and YourInterface are incompatible;
+	// class CommanClass inherits unrelated defaults for displayMessage() from types MyInterface and YourInterface
+
+	Note: you cannot directly call A.super.greet() or B.super.greet() from the main method. 
+	The super keyword is used to access a parent interface's or class's method from within the child 
+	class that implements or extends it.
+
+//------------------------------------------------------------------------
+
+	// A class extends class and implements interface where class having show() method and interface
+	// having default implementation of show() - Both acts as base of CommonClass class.
+
+	--> In such case, no ambiguous condition, compiler gives priority to copy of show() via class.
+
+class MyClass
+{
+	void show(){}
+	public void displayMessage() {
+		System.out.println("This is Default Message - Myclass");
+	}
+}
+interface YourInterface
+{
+	void display();
+	default void displayMessage() {
+		System.out.println("This is Default Message - YourInterface");
+	}
+}
+class CommonClass extends MyClass implements YourInterface 
+{
+	public void show() {
+		System.out.println("In CommanClass show()");
+	}
+	public void display() {
+		System.out.println("In CommanClass display()");
+	}
+}
+
+class DefaultMethodConfilct
+{
+	public static void main(String[] args) 
+	{
+		CommonClass ob = new CommonClass();
+		ob.show();
+		ob.display();
+		ob.displayMessage();
+	}
+}
+
+
+//-------------------------------------------------------------------------------
+
+	// In case of class extends class and implements interface where a base having implementation of method,
+	// and same method present in base interface(public and abstract), in such case, method implementation in
+	// child is optional, and in such case, it will takes inherited copy of method from class as an implementation.
+
+
+class MyClass
+{
+	void show(){}
+	public void displayMessage() {
+		System.out.println("This is Default Message - Myclass");
+	}
+}
+interface YourInterface
+{
+	void display();
+	void displayMessage();
+}
+class CommonClass extends MyClass implements YourInterface 
+{
+	public void show() {
+		System.out.println("In CommanClass show()");
+	}
+	public void display() {
+		System.out.println("In CommanClass display()");
+	}
+}
+
+class DefaultMethodConfilct
+{
+	public static void main(String[] args) 
+	{
+		CommonClass ob = new CommonClass();
+		ob.show();
+		ob.display();
+		ob.displayMessage();
+	}
+}
+
+//---------------------------------------------------------------------------------------------------------
+
+	// Static methods in interfaces
+
+	Static methods in interfaces were introduced in Java 8. Unlike instance methods or default methods, 
+	static methods belong to the interface itself and are not inherited by implementing classes. They serve 
+	utility-like functionality, similar to static methods in classes, but are specific to the interface.
+
+
+	Characteristics of Static Methods in Interfaces
+
+	- Static methods are part of the interface itself, not the implementing class.
+	- They are called using the interface name, not the implementing class name or an object.
+	- Implementing classes do not inherit static methods from the interface.
+	- They cannot be overridden by the implementing classes.
+	- Provide utility or helper methods related to the interface.
+	- Avoid creating a separate utility class to hold such methods.
+	- Static methods in interfaces are always public by default.
+	- They cannot have any other access modifier (private, protected, or package-private).
+
+interface MathOperations {
+
+    static int add(int a, int b) {
+        return a + b;
+    }
+
+    static int multiply(int a, int b) {
+        return a * b;
+    }
+}
+
+public class StaticMethodsInInterface {
+    public static void main(String[] args) {
+
+        // Calling static methods using the interface name
+        System.out.println("Addition: " + MathOperations.add(5, 3));    // Output: 8
+        System.out.println("Multiplication: " + MathOperations.multiply(5, 3)); // Output: 15
+    }
+}
+
+
+	Static Methods vs Default Methods:
+	-----------------------------------
+
+	- Static methods belong to the interface and cannot be called on objects.
+	- Default methods are instance methods and can be called on objects of the implementing class.
+
+//---------------------------------------------------------------------------------------------------------
+
+	// Private Methods in Interfaces (Java 9)
+
+	Private methods in interfaces, introduced in Java 9, are designed to provide shared, reusable logic 
+	within the interface. These methods are accessible only within the interface itself and are not 
+	visible to implementing classes or other interfaces.
+	
+	- This avoids code duplication in default and static methods.
+	- Private methods can only be called by default or static methods within the same interface.
+	- They are not inherited by implementing classes.
+	- Private methods in interfaces must have a body (implementation). They cannot be abstract.
+	- Private methods can have two forms:
+		- Instance-level private methods: Can be called from default method only.
+		- Static private methods: Declared with static and invoked by static methods and default methods.
+
+
+interface Greeting {
+    // Default method using a private instance method
+    default void sayHello() {
+        System.out.println("Default sayHello method:");
+        log("Hello from default method");
+		logStatic("Hi from default method");
+    }
+
+    // Static method using a private static method
+    static void sayHi() {
+        System.out.println("Static sayHi method:");
+        logStatic("Hi from static method");
+		// log("Hello from default method"); // error: non-static method log(String) cannot be referenced from a static context
+    }
+
+    // Private instance method
+    private void log(String message) {
+        System.out.println("Logging: " + message);
+    }
+
+    // Private static method
+    private static void logStatic(String message) {
+        System.out.println("Logging (static): " + message);
+    }
+}
+
+public class PrivateStaticMethods {
+    public static void main(String[] args) {
+        Greeting obj = new Greeting() {}; // Anonymous implementation of Greeting
+
+        // Call the default method
+        obj.sayHello();
+
+        // Call the static method
+        Greeting.sayHi();
+    }
+}
+/-----------------------------------------------------------------------------------------------
+
+	// Difference Between Class and Interface
+	// Difference between abstract class and Interface.
+
+//-----------------------------------------------------------------------------------------------
+//======================================================================================================
+
+	// Write a program to peform the stack by implementing given StackFormat interface.
+
+interface StackFormat {
+	void push(int);
+	int pop();
+}
+
+//--------------
+import java.util.Scanner;
+interface StackFormat {
+	void push(int t);
+	int pop();
+}
+class MyStack implements StackFormat
+{
+	int []data = null;
+	int top;
+
+	public MyStack() {
+
+		top=-1;
+		data = new int[10];
+	}
+
+	public void push( int t) {
+
+		top++;
+		if(top>=data.length) {
+			top--;
+			System.out.println("Stack is Full");
+		}
+		else {
+			data[top]=t;
+			System.out.println("\n Data Insertation Sucessful...!!");
+		}
+	}
+
+	public int pop() {
+
+		if(top<0) {
+			System.out.println("Stack is empty");
+			return -1;
+		}
+		else
+			return data[top--];
+	}
+}
+class StackByInterface
+{
+	public static void main(String []args)
+	{
+		StackFormat stack = new MyStack();
+		Scanner sc = new Scanner(System.in);
+		int no, opt;
+		while(true) {		
+			System.out.println("\n ========== Menu ==========");
+			System.out.println("\n 1.Push \n 2.Pop \n 3.Stop");
+			System.out.println("\n Select your option: ");
+			opt=sc.nextInt();
+			switch(opt) {
+				case 1:
+					System.out.println("Enter any Number: ");
+					no=sc.nextInt();
+					stack.push(no);
+					break;
+				case 2:
+					no=stack.pop();
+					if(no!=-1)
+						System.out.println("Poped No: "+no);
+					break;
+				default:
+					System.out.println("\n Incorrect option: ");
+			}
+		}
+	}
+}
+
+//----------------------------------------------------------------------------------------------------
+
+	// Types of interfaces in java: 
+
+	 - Basic Interface:
+	 - Marker Interface:
+	 - Functional Interface:
+
+
+	1. Basic Interface: The Interface we have seen till Now.
+
+//-----------------------------
+
+	2. Marker Interface / Empty Interface / Tag Interface
+
+	A Marker Interface is a special type of interface in Java that does not contain any methods 
+	or fields. It is also known as a Tag Interface because its primary purpose is to act as a 
+	tag or a marker to indicate a specific property or capability of a class implementing it.
+
+	Marker interfaces convey metadata to the JVM or frameworks about a class's ability to perform
+	specific actions (e.g., serialization, cloning, or remote access).
+	  
+	Frameworks or libraries can check at runtime if a class implements a marker interface and 
+	apply specific logic accordingly.	
+
+	Examples of Marker Interfaces in Java:
+
+	1. Serializable: Classes implementing this interface can be serialized (converted into a byte 
+	  stream) and deserialized.
+
+	(Serialization: The process of converting a Java object into a byte stream so that it can be 
+	 saved to a file, transmitted over a network, or stored in a database.)
+
+	 (Deserialization: The process of converting a byte stream back into a Java object.)
+
+	e.g.
+
+	import java.io.Serializable;
+
+	class Person implements Serializable {
+   	 	private String name;
+    		private int age;
+
+    		// Constructor, getters, setters
+	}
+
+	2.Cloneable: Classes implementing this interface indicate that their objects can be cloned 
+	  using the clone() method.
+	 
+	  (Object Cloning in Java is the process of creating an exact copy (or duplicate) of an object. 
+	  This is typically done using the clone() method provided by the Object class.)
+
+
+	class Person implements Cloneable {
+    		private String name;
+
+    		/// .....
+	}
+
+	3. Remote: Marks a class as capable of being invoked remotely in a Remote Method Invocation 
+	   (RMI) application.
+
+	 (Remote Method Invocation (RMI) is a Java API that allows an object on one Java Virtual Machine 
+	  to invoke methods of an object on another JVM, typically over a network.)
+	
+	import java.rmi.Remote;
+	public interface MyRemote extends Remote {
+    		String sayHello() throws java.rmi.RemoteException;
+	}
+
+//--------------------------------------------------------------------------------------------
+
+	- Functional Interface:
+
+	A Functional Interface is an interface that contains exactly one abstract method. It can 
+	have multiple default or static methods, but only one abstract method defines its primary 
+	functionality. Functional interfaces enable the use of lambda expressions and method 
+	references, making Java functional programming-friendly.
+
+	Functional interfaces were introduced in Java 8, along with the java.util.function package, 
+	which provides many built-in functional interfaces.
+
+	// Consider Simple program
+
+interface Calculator {
+    int calculate(int a, int b);
+}
+class Example implements Calculator
+{
+	public int calculate(int a, int b) {
+		return a + b;
+	}
+}
+
+public class DemoFunctionalInterface {
+    public static void main(String[] args) {
+
+        Calculator add = new Example();
+
+        System.out.println("Sum: " + add.calculate(5, 4)); 
+    }
+}
+
+//----------------
+
+	//  program using anonomous inner class (can also be written normally)
+
+interface Calculator {
+    int calculate(int a, int b);
+}
+
+public class DemoFunctionalInterface {
+    public static void main(String[] args) {
+        // Traditional implementation using anonymous class
+        Calculator add = new Calculator() {
+
+            public int calculate(int a, int b) {
+                return a + b;
+            }
+        };
+
+        System.out.println("Sum: " + add.calculate(5, 4)); 
+    }
+}
+
+	// same programming Using the functional interface
+
+interface Calculator {
+    int calculate(int a, int b);
+}
+
+public class DemoFunctionalInterface {
+    public static void main(String[] args) {
+        // Using lambda expression
+        Calculator add = (a, b) -> a + b;
+        System.out.println("Sum: " + add.calculate(50, 40)); 
+    }
+}
+
+//----------------------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------------------
+
+	// Nested Interface 
+
+	A nested interface is an interface that is declared inside another class, interface, or even 
+	within another nested interface. Nested interfaces are primarily used for logically grouping 
+	interfaces or to provide restricted access within a containing class or interface. They can 
+	be declared as either static or non-static.
+
+	class Outer {
+    		interface NestedInterface {
+        		void display();
+    		}
+	}
+
+	or
+
+	interface ParentInterface {
+    		// Nested interface
+    		interface ChildInterface {
+        		void show();
+    		}
+	}
