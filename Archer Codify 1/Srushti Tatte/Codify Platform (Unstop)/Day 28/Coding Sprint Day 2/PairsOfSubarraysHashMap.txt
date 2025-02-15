@@ -1,0 +1,56 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        sc.close();
+
+        System.out.println(countPairsUsingHashMap(arr, n));
+    }
+
+    public static int countPairsUsingHashMap(int[] arr, int n) {
+        Map<Integer, List<int[]>> sumMap = new HashMap<>();
+        int[] prefixSum = new int[n + 1];
+
+        
+        for (int i = 0; i < n; i++) {
+            prefixSum[i + 1] = prefixSum[i] + arr[i];
+        }
+
+        for (int l = 0; l < n; l++) {
+            for (int r = l; r < n; r++) {
+                int sum = prefixSum[r + 1] - prefixSum[l];
+
+                if (!sumMap.containsKey(sum)) {
+                    sumMap.put(sum, new ArrayList<>());
+                }
+                sumMap.get(sum).add(new int[]{l, r});
+            }
+        }
+
+        int count = 0;
+
+     
+        for (List<int[]> subarrays : sumMap.values()) {
+            int size = subarrays.size();
+            for (int i = 0; i < size; i++) {
+                for (int j = i + 1; j < size; j++) {
+                    int[] sub1 = subarrays.get(i);
+                    int[] sub2 = subarrays.get(j);
+
+                    if (sub1[1] < sub2[0]) { 
+                        count++;
+                    }
+                }
+            }
+        }
+
+        return count;
+    }
+}

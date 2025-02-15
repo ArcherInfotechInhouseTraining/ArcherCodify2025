@@ -1,0 +1,41 @@
+import java.util.*;
+
+public class Main {
+    public static void findKthUniqueString(int n, String[] words, int k) {
+        LinkedHashMap<String, Integer> frequency = new LinkedHashMap<>();
+
+        
+        for (String word : words) {
+            frequency.put(word, frequency.getOrDefault(word, 0) + 1);
+        }
+
+    
+        List<String> uniqueStrings = new ArrayList<>();
+        for (Map.Entry<String, Integer> entry : frequency.entrySet()) {
+            if (entry.getValue() == 1) {
+                uniqueStrings.add(entry.getKey());
+            }
+        }
+
+        
+        if (uniqueStrings.size() < k) {
+            System.out.println("-1");
+        } else {
+            System.out.println(uniqueStrings.get(k - 1));
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        scanner.nextLine(); 
+
+        String[] words = new String[n];
+        for (int i = 0; i < n; i++) {
+            words[i] = scanner.nextLine();
+        }
+
+        int k = scanner.nextInt();
+        findKthUniqueString(n, words, k);
+    }
+}
