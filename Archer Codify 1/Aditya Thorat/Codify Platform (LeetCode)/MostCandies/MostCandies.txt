@@ -1,0 +1,22 @@
+/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+int findMax(int* candies, int candiesSize){
+    int i, max= candies[0];
+    for (i= 1; i<candiesSize; i++){
+        if(candies[i]> max)
+            max= candies[i];
+    }
+    return max;
+}
+
+bool* kidsWithCandies(int* candies, int candiesSize, int extraCandies, int* returnSize) {
+    int i, max= findMax(candies, candiesSize);
+    bool* output= (bool*)malloc(candiesSize*sizeof(bool));
+    *returnSize= candiesSize;
+    for(i= 0; i<candiesSize; i++){
+        if(candies[i]+extraCandies>= max) output[i]= true;
+        else output[i]= false;
+    }
+    return output;
+}
