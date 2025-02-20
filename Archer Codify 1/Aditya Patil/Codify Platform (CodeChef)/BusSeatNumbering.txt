@@ -1,0 +1,41 @@
+https://www.codechef.com/practice/course/logical-problems/DIFF800/problems/SEATNUMBER
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner (System.in);
+		int t = sc.nextInt();
+		while (t-- >0)
+		{
+		    int num = sc.nextInt();
+		if (num <16)
+		{
+		    if (num > 0 && num< 11)
+		    {
+		        System.out.println("Lower Double");
+		    }
+		    else {
+		        System.out.println("Lower Single");
+		    }
+		}
+		else if (num>15)
+		{
+		    if (num > 15 && num< 26)
+		    {
+		        System.out.println("Upper Double");
+		    }
+		    else {
+		        System.out.println("Upper Single");
+		    }
+		}
+		}
+		
+
+	}
+}

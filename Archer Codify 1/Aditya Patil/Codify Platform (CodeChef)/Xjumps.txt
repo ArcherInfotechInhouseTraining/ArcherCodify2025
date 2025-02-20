@@ -1,0 +1,25 @@
+https://www.codechef.com/practice/course/logical-problems/DIFF800/problems/XJUMP
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    Scanner sc = new Scanner (System.in);
+		// your code goes here
+		int t= sc.nextInt();
+		while(t-- >0)
+		{
+		    int x= sc.nextInt();
+		    int y= sc.nextInt();
+		    
+		    int moves = (x/y) + (x % y);
+		    
+		    System.out.println(moves);
+		}
+
+	}
+}
