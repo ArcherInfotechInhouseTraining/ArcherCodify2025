@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAware - Sustainability Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-100 font-sans">
+    
+    <!-- Header Section -->
+    <header class="bg-green-600 text-white py-4 px-6 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">EcoAware</h1>
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="hover:underline">Home</a></li>
+                <li><a href="#tips" class="hover:underline">Sustainability Tips</a></li>
+                <li><a href="#pledge" class="hover:underline">Take a Pledge</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen flex items-center justify-center text-center bg-green-500 text-white px-6">
+        <div>
+            <h2 class="text-4xl font-bold">Join the Movement for a Greener Future</h2>
+            <p class="mt-4 text-lg">Learn how small changes can make a big impact on sustainability.</p>
+            <a href="#pledge" class="mt-6 inline-block bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-100">Take Action</a>
+        </div>
+    </section>
+
+    <!-- Sustainability Tips Section -->
+    <section id="tips" class="py-16 px-6 bg-white">
+        <h2 class="text-3xl font-bold text-center text-green-700">Sustainability Tips</h2>
+        <div class="grid md:grid-cols-3 gap-8 mt-8">
+            <div class="bg-green-200 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold">Reduce Plastic Usage</h3>
+                <p class="mt-2">Use reusable bags, bottles, and containers to minimize plastic waste.</p>
+            </div>
+            <div class="bg-green-200 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold">Save Energy</h3>
+                <p class="mt-2">Turn off lights when not in use and opt for energy-efficient appliances.</p>
+            </div>
+            <div class="bg-green-200 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold">Go Green with Transport</h3>
+                <p class="mt-2">Use bicycles, public transport, or electric vehicles to reduce your carbon footprint.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Take a Pledge Section -->
+    <section id="pledge" class="py-16 px-6 bg-green-100">
+        <h2 class="text-3xl font-bold text-center text-green-700">Take a Sustainability Pledge</h2>
+        <form class="max-w-lg mx-auto mt-8 bg-white p-6 rounded-lg shadow-md">
+            <label class="block font-semibold">Your Name:</label>
+            <input type="text" class="w-full border p-2 rounded mt-2" placeholder="Enter your name" required>
+            
+            <label class="block font-semibold mt-4">Your Pledge:</label>
+            <textarea class="w-full border p-2 rounded mt-2" placeholder="E.g., I pledge to reduce water wastage." required></textarea>
+            
+            <button class="mt-4 bg-green-600 text-white px-6 py-2 rounded-lg font-semibold w-full hover:bg-green-700">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 bg-green-700 text-white mt-10">
+        <p>&copy; 2025 EcoAware. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
