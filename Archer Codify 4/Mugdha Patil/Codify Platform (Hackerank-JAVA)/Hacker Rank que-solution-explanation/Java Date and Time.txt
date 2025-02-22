@@ -1,0 +1,61 @@
+____________________________________________________________________________________________________________________________________________________________
+
+Problem Link: https://www.hackerrank.com/challenges/java-date-and-time/problem?isFullScreen=true
+
+You are given a date. You just need to write the method, , which returns the day on that date. To simplify your task, we have provided a portion of the code in the editor.
+
+The method should return  as the day on that date.
+
+
+Code: 
+	import java.io.*;
+	import java.math.*;
+	import java.security.*;
+	import java.text.*;
+	import java.util.*;
+	import java.util.concurrent.*;
+	import java.util.function.*;
+	import java.util.regex.*;
+	import java.util.stream.*;
+	import static java.util.stream.Collectors.joining;
+	import static java.util.stream.Collectors.toList;
+	import java.time.LocalDate;
+	import java.time.DayOfWeek;
+
+	class Result {
+
+    
+   		 public static String findDay(int month, int day, int year) {
+      	  	 LocalDate ld= LocalDate.of(year, month, day);
+         	DayOfWeek dow = ld.getDayOfWeek();
+      
+         	return dow.toString();
+    	}
+
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+
+        int month = Integer.parseInt(firstMultipleInput[0]);
+
+        int day = Integer.parseInt(firstMultipleInput[1]);
+
+        int year = Integer.parseInt(firstMultipleInput[2]);
+
+        String res = Result.findDay(month, day, year);
+
+        bufferedWriter.write(res);
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
+
+
+
