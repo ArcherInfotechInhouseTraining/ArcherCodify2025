@@ -4,13 +4,17 @@
 
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-    vector<int> twoSum(vector<int>& nums, int target) {
+    vector<int> twoSum(vector<int> &nums, int target)
+    {
         unordered_map<int, int> hash;
-        for (int i = 0; i < nums.size(); i++) {
+        for (int i = 0; i < nums.size(); i++)
+        {
             int complement = target - nums[i];
-            if (hash.find(complement) != hash.end() && hash[complement] != i) {
+            if (hash.find(complement) != hash.end() && hash[complement] != i)
+            {
                 return {i, hash[complement]};
             }
             hash[nums[i]] = i;
@@ -19,17 +23,19 @@ public:
     }
 };
 
-int main() {
+int main()
+{
     Solution solution;
     vector<int> nums = {2, 7, 11, 15};
     int target = 9;
     vector<int> result = solution.twoSum(nums, target);
-
-    if (!result.empty()) {
+    if (!result.empty())
+    {
         cout << "Indices: " << result[0] << ", " << result[1] << endl;
-    } else {
+    }
+    else
+    {
         cout << "No solution found." << endl;
     }
-
     return 0;
 }
