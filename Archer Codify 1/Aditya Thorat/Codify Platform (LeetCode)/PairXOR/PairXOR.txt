@@ -1,0 +1,10 @@
+int xorAllNums(int* nums1, int nums1Size, int* nums2, int nums2Size) {
+    int i, tot=0;
+    if(nums2Size%2)
+        for(i= 0; i<nums1Size; tot^= nums1[i++]);
+
+    if(nums1Size%2)
+        for(i= 0; i<nums2Size; tot^= nums2[i++]);
+
+    return tot;
+}

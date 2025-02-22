@@ -1,0 +1,13 @@
+int removeDuplicates(int* nums, int numsSize) {
+    int cur, unq= 1;
+    if (numsSize<= 1) return numsSize;
+    for(cur= 0; cur<numsSize-1; cur++){
+        if(nums[cur+1]<= nums[cur]){
+            for( ; nums[unq]<= nums[cur]; unq++){
+                if(unq>= numsSize-1) return cur+1;
+            }
+            nums[cur+1]= nums[unq];
+        }
+    }
+    return cur+1;
+}

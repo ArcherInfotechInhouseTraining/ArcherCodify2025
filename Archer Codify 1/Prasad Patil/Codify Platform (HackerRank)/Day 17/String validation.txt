@@ -1,0 +1,44 @@
+// String validation
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String s1 = sc.nextLine().trim();
+        String alt="[,\\@\\'\\?\\!\\@\\.\\_\\s]+";
+        String result[] = s1.split(alt);
+        int token=result.length ;
+        System.out.println(token);
+        
+        for(int i = 0 ;i<result.length;i++)
+        {
+           System.out.println(result[i]);
+        }
+        
+        sc.close();
+    }
+}
+
+    Scanner scan = new Scanner(System.in);
+    int count =0;
+    try {
+        String s = scan.nextLine().trim();
+        // Write your code here.
+
+        String[] tokens = s.split("[^a-zA-Z0-9]+");
+        count = tokens.length;
+        System.out.println(count);
+        for(String token: tokens) {
+            System.out.println(token);
+        }
+
+    } catch (Exception e) {
+        System.out.println(count);
+    } finally {
+        scan.close();
+    }

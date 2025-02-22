@@ -1,0 +1,21 @@
+char * mergeAlternately(char * word1, char * word2){
+    char* fWord;
+    int i, w=0, len, len1, len2;
+    len1= strlen(word1); 
+    len2= strlen(word2);
+    len= len1+len2+1;
+    fWord= (char*)calloc(len, sizeof(char));
+    for (i= 0; i< ((len1> len2)?len1:len2); i++){
+        if(i<len1 && i<len2){
+            fWord[w++]= word1[i];
+            fWord[w++]= word2[i];
+        }
+        else if(i<len1){
+            fWord[w++]= word1[i];
+        }
+        else if(i<len2){
+            fWord[w++]= word2[i];
+        }
+    }
+    return fWord;
+}

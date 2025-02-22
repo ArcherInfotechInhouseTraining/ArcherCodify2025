@@ -1,0 +1,13 @@
+/* Gives time limit exceeded error */
+
+int maxArea(int* height, int heightSize) {
+    int optimum= 0, i, j, current;
+    for(i= 0; i<heightSize; i++)
+    {
+        for(j= i+1; j<heightSize; j++){
+            current= (j-i)*((height[i]< height[j])?height[i]: height[j]);
+            optimum= (current > optimum)? current: optimum;
+        }
+    }
+    return optimum;
+}

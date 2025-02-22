@@ -1,0 +1,14 @@
+int maxArea(int* height, int heightSize) {
+    int start = 0, end = heightSize - 1;
+    int optimum = 0, current;
+
+    while (start < end) {
+        current = (end-start) * (height[start] < height[end] ? height[start] : height[end]);
+        optimum = (current > optimum) ? current : optimum;
+
+        if (height[start] < height[end]) start++;
+        else end--;
+    }
+
+    return optimum;
+}

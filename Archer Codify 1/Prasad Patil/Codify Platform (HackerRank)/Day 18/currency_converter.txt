@@ -1,0 +1,27 @@
+//currency converter
+
+
+import java.util.Scanner;
+import java.util.Locale;
+import java.text.NumberFormat;
+
+public class Solution {
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+        double payment = scanner.nextDouble();
+        scanner.close();
+        
+        
+        NumberFormat f_US = NumberFormat.getCurrencyInstance(Locale.US);
+        NumberFormat f_IN = NumberFormat.getCurrencyInstance(new Locale("en", "IN"));
+        NumberFormat f_CH = NumberFormat.getCurrencyInstance(Locale.CHINA);
+        NumberFormat f_FR = NumberFormat.getCurrencyInstance(Locale.FRANCE);
+
+      
+        System.out.println("US: " + f_US.format(payment));
+        System.out.println("India: " + f_IN.format(payment));
+        System.out.println("China: " + f_CH.format(payment));
+        System.out.println("France: " + f_FR.format(payment));
+    }
+}
