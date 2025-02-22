@@ -1,0 +1,53 @@
+*Title:*
+Given an array of strings strs, group all anagrams together into sublists. You may return the output in any order.
+
+An anagram is a string that contains the exact same characters as another string, but the order of the characters can be different.
+
+Example 1:
+Input: strs = ["act","pots","tops","cat","stop","hat"]
+Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
+
+*Link:*
+https://neetcode.io/problems/anagram-groups
+
+*Solution:*
+class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        HashMap<HashMap<Character, Integer>, ArrayList<String>> bmap = new HashMap<>();
+
+        for(String str: strs)
+        {
+            HashMap<Character, Integer> fmap = new HashMap<>();
+            for(int i=0; i<str.length(); i++)
+            {
+                char ch = str.charAt(i);
+                fmap.put(ch, fmap.getOrDefault(ch, 0) + 1);
+            }
+
+            if(bmap.containsKey(fmap)==false)
+            {
+                ArrayList<String> list = new ArrayList<>();
+                list.add(str);
+                bmap.put(fmap, list);
+            }
+            else{
+                ArrayList<String> list = bmap.get(fmap);
+                list.add(str);
+            }
+        }
+
+        List<List<String>> res = new ArrayList<>();
+        for(List<String> vals:bmap.values())
+        {
+            res.add(vals);
+        }
+        return res;
+    }
+}
+
+
+*Test Cases:*
+Input: strs = ["act","pots","tops","cat","stop","hat"]
+
+Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
+

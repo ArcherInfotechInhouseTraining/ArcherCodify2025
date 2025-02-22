@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black"
+    >
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="100dp"
+        android:text="@string/register_page"
+        />
+    <EditText
+        android:id="@+id/user_name"
+
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/User_Name"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:gravity="center"
+
+        />
+    <EditText
+        android:id="@+id/pass"
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/PassWord"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/course"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Course"
+        android:textColor="@color/white"
+        android:layout_marginStart="40dp"
+
+        />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="2"
+        android:layout_marginStart="40dp"
+        >
+
+        <CheckBox
+            android:id="@+id/C"
+            android:text="@string/C"
+            android:textColor="@color/white"
+
+            />
+        <CheckBox
+            android:id="@+id/CPP"
+            android:text="@string/CPP"
+            android:textColor="@color/white"
+            />
+        <CheckBox
+            android:id="@+id/Java"
+            android:text="@string/Java"
+            android:textColor="@color/white"/>
+        <CheckBox
+            android:id="@+id/HTML"
+            android:text="@string/HTML"
+            android:textColor="@color/white"/>
+        <CheckBox
+            android:id="@+id/CSS"
+            android:text="@string/CSS"
+            android:textColor="@color/white"/>
+        <CheckBox
+            android:id="@+id/Android"
+            android:text="@string/Android"
+            android:textColor="@color/white"/>
+
+    </GridLayout>
+    <TextView
+        android:id="@+id/Gender"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Gender"
+        android:textColor="@color/white"
+        android:layout_marginStart="40dp"/>
+    <GridLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="1"
+        android:layout_marginStart="40dp">
+        <RadioGroup
+            android:id="@+id/selectgender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/Male"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Male"
+        android:textColor="@color/white"/>
+        <RadioButton
+            android:id="@+id/Female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Female"
+            android:textColor="@color/white"/>
+        </RadioGroup>
+</GridLayout>
+
+
+        <TextView
+            android:id="@+id/Birth"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Birth"
+            android:textColor="@color/white"
+            android:layout_marginStart="40dp"/>
+
+    <EditText
+        android:id="@+id/Birth_choose"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/Birth"
+       android:textColor="@color/white"
+        android:background="@drawable/border"
+        android:gravity="center"
+
+        />
+    <TextView
+        android:id="@+id/Address"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Address"
+        android:textColor="@color/white"
+        android:layout_marginStart="40dp"/>
+
+        <EditText
+            android:id="@+id/Enter_add"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:text="@string/Address_Enter"
+            android:textColor="@color/white"
+
+            />
+
+        <TextView
+        android:id="@+id/City"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/City"
+        android:textColor="@color/white"
+        android:layout_marginStart="40dp"/>
+    <Spinner
+        android:id="@+id/Select_city"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:spinnerMode="dropdown"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        android:entries="@array/City_List"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:background="@drawable/border"
+
+        />
+        <TextView
+            android:id="@+id/upload"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/upload"
+            android:textColor="@color/white"
+            android:layout_marginStart="40dp"/>
+        <TextView
+            android:id="@+id/photo"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/upload"
+            android:textColor="@color/white"
+            android:background="@drawable/border"
+            android:backgroundTint="@color/purple"
+            android:gravity="center"
+
+            />
+        <ImageView
+            android:id="@+id/selectedPhotoView"
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:src="@drawable/img_1"
+            />
+
+        <TextView
+            android:id="@+id/switchBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Declaration"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="bottom"
+            android:paddingStart="50dp"
+            tools:ignore="RtlSymmetry" />
+
+        <Switch
+            android:id="@+id/s"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/term"
+            android:textColor="@color/white"
+            tools:ignore="UseSwitchCompatOrMaterialXml"
+            android:gravity="center"/>
+
+
+
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="40dp"
+            android:text="Register"
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+
+            />
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+
+

@@ -1,0 +1,118 @@
+2062. Count Vowel Substrings of a String
+
+A substring is a contiguous (non-empty) sequence of characters within a string.
+
+A vowel substring is a substring that only consists of vowels ('a', 'e', 'i', 'o', and 'u') and has all five vowels present in it.
+
+Given a string word, return the number of vowel substrings in word.
+
+Example 1:
+Input: word = "aeiouu"
+Output: 2
+Explanation: The vowel substrings of word are as follows (underlined):
+- "aeiouu"
+- "aeiouu"
+
+Example 2:
+Input: word = "unicornarihan"
+Output: 0
+Explanation: Not all 5 vowels are present, so there are no vowel substrings.
+
+Example 3:
+Input: word = "cuaieuouac"
+Output: 7
+Explanation: The vowel substrings of word are as follows (underlined):
+- "cuaieuouac"
+- "cuaieuouac"
+- "cuaieuouac"
+- "cuaieuouac"
+- "cuaieuouac"
+- "cuaieuouac"
+- "cuaieuouac"
+ 
+
+Constraints:
+1 <= word.length <= 100
+word consists of lowercase English letters only.
+
+
+Solution:
+public class VowelSubstrings {
+    public static int countVowelSubstrings(String word) {
+        int count = 0;
+        int n = word.length();
+        
+        for (int i = 0; i < n; i++) {
+            boolean a = false, e = false, i_v = false, o = false, u = false;
+            for (int j = i; j < n; j++) {
+                char ch = word.charAt(j);
+                
+                if (ch == 'a') a = true;
+                else if (ch == 'e') e = true;
+                else if (ch == 'i') i_v = true;
+                else if (ch == 'o') o = true;
+                else if (ch == 'u') u = true;
+                else break;
+                
+                if (a && e && i_v && o && u) {
+                    count++;
+                }
+            }
+        }
+        
+        return count;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(countVowelSubstrings("aeiouu")); // Output: 2
+        System.out.println(countVowelSubstrings("unicornarihan")); // Output: 0
+        System.out.println(countVowelSubstrings("cuaieuouac")); // Output: 7
+    }
+}
+public class VowelSubstrings {
+    public static int countVowelSubstrings(String word) {
+        int count = 0;
+        int n = word.length();
+        
+        for (int i = 0; i < n; i++) {
+            boolean a = false, e = false, i_v = false, o = false, u = false;
+            for (int j = i; j < n; j++) {
+                char ch = word.charAt(j);
+                
+                if (ch == 'a') a = true;
+                else if (ch == 'e') e = true;
+                else if (ch == 'i') i_v = true;
+                else if (ch == 'o') o = true;
+                else if (ch == 'u') u = true;
+                else break;
+                
+                if (a && e && i_v && o && u) {
+                    count++;
+                }
+            }
+        }
+        
+        return count;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(countVowelSubstrings("aeiouu"));         System.out.println(countVowelSubstrings("unicornarihan"));         System.out.println(countVowelSubstrings("cuaieuouac")); 
+    }
+}
+
+Explanation:
+Initializes count = 0 to store the number of valid vowel substrings.
+n = word.length() stores the length of the input string.
+
+The outer loop iterates over each character in word, treating it as the starting point of a possible substring.
+Five boolean variables (a, e, i_v, o, u) are initialized to false to track which vowels are present.
+
+The inner loop extends the substring starting at index i and ending at index j.
+ch = word.charAt(j) gets the current character.
+
+If ch is a vowel, the corresponding boolean flag is set to true.
+If ch is not a vowel, the loop stops (breaks) because the substring must only contain vowels.
+
+If all five vowel flags are true, it means the substring contains all five vowels at least once.
+Increase count.
+After checking all substrings, return the final count.

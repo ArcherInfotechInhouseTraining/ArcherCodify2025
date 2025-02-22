@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Blog</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero {
+            background: url('https://static.wixstatic.com/media/5bfb6f_26f1a5c736e544e09c63c82a4c792645~mv2_d_3839_1306_s_2.jpg/v1/fill/w_1899,h_594,al_b,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/5bfb6f_26f1a5c736e544e09c63c82a4c792645~mv2_d_3839_1306_s_2.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .blog-card {
+            transition: transform 0.3s;
+        }
+        .blog-card:hover {
+            transform: scale(1.05);
+        }
+
+.footer {
+    background-color: #333;
+    color: #8dd3ed;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-link {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.social-link:hover {
+   
+    color: #2720e0; /* A reddish hover color */
+}
+
+.fa-brands fa-instagram:hover{
+    color: #ef172c;
+
+}
+
+.header{
+    background-color: #333;
+}
+
+/* .container1{
+    background-color: rgba(165, 198, 200, 0.668);
+} */
+.col-12, .col-lg-auto, .mb-3, .mb-lg-0, .me-lg-3{
+    color: black;
+}
+
+.d-flex {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+}
+.hero {
+    background: linear-gradient(to bottom, rgba(0, 123, 255, 0.5), hwb(0 100% 0% / 0.9));
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+    </style>
+<script src="https://kit.fontawesome.com/01afc07dae.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container1">
+     
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 link-body-emphasis">About</a></li>
+          <li><a href="#" class="nav-link px-2 link-body-emphasis">Blog</a></li>
+          <li><a href="#" class="nav-link px-2 link-body-emphasis">Contact</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+
+<section class="hero">
+    <div class="container">
+        <h1>Going Places</h1>
+        <p>I haven't been everywhere, but it's on my list.</p>
+        <a href="#blog" class="btn btn-primary">Explore Blog</a>
+    </div>
+
+
+</section>
+
+<section id="blog" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center mb-4">
+                <h2>Recent Posts</h2>
+                <p>Discover my latest articles and updates.</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card blog-card">
+                    <img src="https://static.wixstatic.com/media/5bfb6f_9f2519d5fc2d41f990a10dd92eb8658d.jpg/v1/fill/w_393,h_325,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/5bfb6f_9f2519d5fc2d41f990a10dd92eb8658d.jpg" class="card-img-top" alt="Post Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Travel</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at arcu sapien.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card blog-card">
+                    <img src="https://static.wixstatic.com/media/5bfb6f_ea37f67cad544b348df9f3d0ff40f282.jpg/v1/fill/w_393,h_325,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/5bfb6f_ea37f67cad544b348df9f3d0ff40f282.jpg" class="card-img-top" alt="Post Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Eat</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at arcu sapien.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card blog-card">
+                    <img src="https://static.wixstatic.com/media/5bfb6f_c667d0c9bd634b1aa2b29311795f3c51.jpg/v1/fill/w_394,h_325,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/5bfb6f_c667d0c9bd634b1aa2b29311795f3c51.jpg" class="card-img-top" alt="Post Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Relax</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at arcu sapien.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+<footer class="footer">
+    <p>Follow me on:</p>
+    <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank" class="social-link">
+           <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="social-link">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.twitter.com" target="_blank" class="social-link">
+            <i class="fab fa-twitter"></i>
+        </a>
+    </div>
+    <p>&copy; 2025 Travel And Explore. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

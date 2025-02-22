@@ -1,0 +1,18 @@
+import java.util.*;
+
+public class Main {
+    static final int MOD = 998244353;
+
+    static long user_logic(long n) {
+    
+        return ((n % MOD) + MOD) % MOD;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        long n = scanner.nextLong();
+        scanner.close(); 
+        long result = user_logic(n);
+        System.out.println(result);
+    }
+}
