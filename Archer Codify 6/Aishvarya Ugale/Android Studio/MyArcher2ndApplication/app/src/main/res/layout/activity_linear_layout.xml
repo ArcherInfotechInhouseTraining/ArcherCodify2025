@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/img_3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LinearLayout"
+    android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/Linearlayout"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:background="@color/pink"
+            android:layout_marginBottom="25dp"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="40dp"
+
+            />
+
+        <ImageView
+
+            android:id="@+id/img"
+            android:layout_width="142dp"
+            android:layout_height="122dp"
+            android:layout_marginHorizontal="150dp"
+            android:background="@drawable/img_2"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"/>
+        <TextView
+            android:id="@+id/input1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/input1"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:background="@color/red"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="40dp"
+
+            />
+
+    <TextView
+        android:id="@+id/input2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="50dp"
+        android:background="@color/red"
+        android:text="@string/input2"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="25dp"
+
+
+        />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="50dp"
+        android:background="@color/purple"
+        android:text="@string/button"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="40dp"
+
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/img_4"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/img_4"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/img_4"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/img_4"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

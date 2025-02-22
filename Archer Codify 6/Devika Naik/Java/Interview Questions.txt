@@ -1,0 +1,962 @@
+1. What is an interface in Java?
+
+An interface in Java is a blueprint of a class that contains only abstract methods (before Java 8) or abstract and default/static methods (since Java 8). It is used to define a contract that implementing classes must follow. An interface provides 100% abstraction (before Java 8) and is a fundamental concept in Java for achieving multiple inheritance and loose coupling.
+ Key Characteristics of an Interface
+	Declared using the interface keyword.
+	Contains only method declarations (before Java 8).
+	All methods are public and abstract by default.
+	All variables are public, static, and final by default.
+	Cannot be instantiated directly.
+	A class implements an interface using the implements keyword.
+	A class can implement multiple interfaces.
+	Interfaces can extend multiple other interfaces.
+	Since Java 8, interfaces can have default and static methods.
+	Since Java 9, interfaces can have private methods.
+
+2. How do you declare an interface in Java?
+
+In Java, you declare an interface using the interface keyword. An interface defines a contract that classes can implement, specifying method signatures without providing implementations.
+
+Syntax:
+public interface MyInterface {
+    // Constant fields (optional)
+    int VALUE = 100;
+
+    // Abstract methods (no implementation)
+    void method1();
+    int method2(String param);
+}
+
+// Declaring an interface
+interface Animal {
+    void makeSound();
+}
+
+// Implementing the interface in a class
+class Dog implements Animal {
+    public void makeSound() {
+        System.out.println("Woof!");
+    }
+}
+
+// Usage
+public class Main {
+    public static void main(String[] args) {
+        Animal myDog = new Dog();
+        myDog.makeSound();  // Output: Woof!
+    }
+}
+Key Points:
+	Interfaces cannot have constructors because they cannot be instantiated directly.
+	A class implements an interface using the implements keyword.
+	Methods in an interface are implicitly public and abstract (before Java 8).
+	Java 8 introduced default and static methods in interfaces.
+	A class can implement multiple interfaces (unlike inheritance, which allows only one superclass).
+
+3. How does a class implement an interface?
+A class implements an interface in Java using the implements keyword. This means the class must provide implementations for all abstract methods declared in the interface.
+	All methods of an interface must be implemented in the class unless the class is abstract.
+	The methods must be declared public since interface methods are implicitly public abstract.
+	A class can implement multiple interfaces (unlike inheritance which supports only one superclass).
+
+public class Dog implements Animal {
+    @Override
+    public void eat() {
+        System.out.println("Dog is eating.");
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println("Dog is sleeping.");
+    }
+}
+
+
+4. Can an interface have concrete methods?
+Before Java 8: No, interfaces could only have abstract methods.
+Since Java 8: Interfaces can have default and static methods.
+Since Java 9: Interfaces can have private methods.
+Default Methods (Java 8)
+Default methods allow interfaces to have concrete method implementations. They are defined using the default keyword.
+
+Example:
+interface Vehicle {
+    void start();
+
+    // Concrete method in interface
+    default void honk() {
+        System.out.println("Honking... Beep Beep!");
+    }
+}
+
+class Car implements Vehicle {
+    public void start() {
+        System.out.println("Car is starting...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car myCar = new Car();
+        myCar.start();  // Output: Car is starting...
+        myCar.honk();   // Output: Honking... Beep Beep!
+    }
+}
+
+2. Static Methods (Java 8)
+Interfaces can also have static methods with implementations.
+
+Example:
+interface MathUtils {
+    static int square(int num) {
+        return num * num;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        int result = MathUtils.square(5);
+        System.out.println(result);  // Output: 25
+    }
+}
+Static methods belong to the interface and are called using the interface name (MathUtils.square(5)).
+3. Private Methods (Java 9)
+Java 9 introduced private methods in interfaces. These methods help in code reuse inside the interface but cannot be accessed by implementing classes.
+
+Example:
+interface Logger {
+    default void logInfo(String message) {
+        log("INFO: " + message);
+    }
+
+    default void logError(String message) {
+        log("ERROR: " + message);
+    }
+
+    // Private method (only accessible inside interface)
+    private void log(String message) {
+        System.out.println(message);
+    }
+}
+
+class Application implements Logger {}
+
+public class Main {
+    public static void main(String[] args) {
+        Application app = new Application();
+        app.logInfo("Application started");  
+        app.logError("Something went wrong"); 
+    }
+}
+Output:
+INFO: Application started
+ERROR: Something went wrong
+The log() method is private and cannot be accessed outside the interface.
+Key Takeaways
+	Default methods: Provide concrete methods in interfaces (Java 8).
+	Static methods: Belong to the interface itself (Java 8).
+	Private methods: Help in code reuse within the interface (Java 9).
+	Before Java 8, interfaces could only have abstract methods.
+
+
+
+5. Can an interface have fields?
+Yes, but all fields are implicitly public, static, and final (constants).
+public (accessible everywhere)
+static (belong to the interface, not instances)
+final (constant and cannot be changed)
+
+Example of Interface with Fields
+
+interface Constants {
+    // Fields in an interface (implicitly public, static, and final)
+    int MAX_USERS = 100;
+    String APP_NAME = "MyApp";
+}
+
+class App implements Constants {
+    void displayInfo() {
+        System.out.println("App Name: " + APP_NAME);
+        System.out.println("Max Users: " + MAX_USERS);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        App app = new App();
+        app.displayInfo();
+    }
+}
+Output:
+App Name: MyApp
+Max Users: 100
+Key Points About Interface Fields
+Always public static final
+
+You don’t need to explicitly write public static final because Java automatically applies these modifiers.
+Example:
+
+public static final int MAX_USERS = 100;  // This is equivalent to "int MAX_USERS = 100;"
+Cannot Be Changed
+
+Since fields are final, their values must be assigned at declaration and cannot be modified later.
+This would cause an error:
+MAX_USERS = 200;  //  Compilation Error
+Accessing Interface Fields
+
+Access via an implementing class:
+
+System.out.println(APP_NAME);  // Allowed inside an implementing class
+System.out.println(Constants.APP_NAME);  // Recommended
+Why Use Fields in Interfaces?
+	Defining constants (e.g., mathematical constants, configuration values).
+	Sharing common values across multiple classes without duplication.
+	Not for mutable data (use abstract classes instead if mutability is needed).
+
+6. Can an interface extend another interface?
+Yes, an interface can extend another interface in Java using the extends keyword. This allows an interface to inherit the methods of another interface, promoting code reuse and hierarchical abstraction.
+
+Syntax:
+
+interface ParentInterface {
+    void method1();
+}
+
+interface ChildInterface extends ParentInterface {
+    void method2();
+}
+Example:
+// Parent interface
+interface Animal {
+    void eat();
+}
+
+// Child interface extending Animal
+interface Pet extends Animal {
+    void play();
+}
+
+// Class implementing the Child interface (must implement both methods)
+class Dog implements Pet {
+    public void eat() {
+        System.out.println("Dog is eating.");
+    }
+
+    public void play() {
+        System.out.println("Dog is playing.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.eat();  // Output: Dog is eating.
+        myDog.play(); // Output: Dog is playing.
+    }
+}
+An interface can extend multiple interfaces
+
+Unlike classes, which can only extend one class, interfaces support multiple inheritance.
+Example:
+interface A {
+    void methodA();
+}
+
+interface B {
+    void methodB();
+}
+
+interface C extends A, B {  // Extending multiple interfaces
+    void methodC();
+}
+A class implementing a child interface must implement all inherited methods
+
+If a class implements ChildInterface, it must implement all methods from both ChildInterface and ParentInterface.
+Supports default methods (Java 8+)
+
+Default methods in the parent interface are inherited by the child interface but can be overridden.
+Why Use Interface Inheritance?
+	Code reuse – Avoids duplicating method declarations.
+	Multiple inheritance – A child interface can extend multiple parent interfaces.
+	Better abstraction – Allows defining specialized behaviors in child interfaces.
+
+
+
+
+Intermediate Questions
+7. What is the difference between an interface and an abstract class?
+Feature			|Interface					|Abstract Class
+Methods			|Only abstract (except default, static)		|Can have abstract & concrete methods
+Fields			|Only public static final			|Can have any fields (private, protected, etc.)
+Inheritance		|Can extend multiple interfaces			|Can extend only one abstract class
+Constructors		|Not allowed					|Allowed
+Access Modifiers	|Methods are public by default			|Can have any access modifier
+
+
+
+8. Can a class implement multiple interfaces?
+Yes, a class can implement multiple interfaces in Java. This is Java's way of achieving multiple inheritance, since a class can only extend one superclass but can implement multiple interfaces.
+
+Syntax
+interface InterfaceA {
+    void methodA();
+}
+
+interface InterfaceB {
+    void methodB();
+}
+
+// A class implementing both interfaces
+class MyClass implements InterfaceA, InterfaceB {
+    public void methodA() {
+        System.out.println("Method A implemented.");
+    }
+
+    public void methodB() {
+        System.out.println("Method B implemented.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.methodA();  // Output: Method A implemented.
+        obj.methodB();  // Output: Method B implemented.
+    }
+}
+Key Points
+A class can implement multiple interfaces
+
+The class must provide implementations for all methods declared in the interfaces.
+Example:
+class MyClass implements Interface1, Interface2, Interface3 { ... }
+Avoids Diamond Problem
+
+Since interfaces don’t store state (unlike classes), Java avoids the "Diamond Problem" seen in multiple inheritance in C++.
+Handling Default Methods (Java 8+)
+
+If two interfaces have the same default method, the implementing class must override it to resolve conflicts.
+Example:
+interface A {
+    default void show() {
+        System.out.println("A's show");
+    }
+}
+
+interface B {
+    default void show() {
+        System.out.println("B's show");
+    }
+}
+
+class MyClass implements A, B {
+    // Must override to resolve conflict
+    public void show() {
+        System.out.println("MyClass's show");
+    }
+}
+Why Use Multiple Interfaces?
+	Multiple inheritance of behavior (avoiding issues with class-based inheritance).
+	Better modularity – Allows separation of concerns.
+	Flexible design – A class can belong to multiple categories.
+
+
+9. Can an interface extend multiple interfaces?
+Yes, an interface can extend multiple interfaces in Java using the extends keyword. This allows an interface to inherit methods from multiple parent interfaces, promoting multiple inheritance in Java.
+
+Syntax:
+interface InterfaceA {
+    void methodA();
+}
+
+interface InterfaceB {
+    void methodB();
+}
+
+// InterfaceC extends both InterfaceA and InterfaceB
+interface InterfaceC extends InterfaceA, InterfaceB {
+    void methodC();
+}
+
+Example:
+
+// Parent interfaces
+interface Animal {
+    void eat();
+}
+
+interface Pet {
+    void play();
+}
+
+// Child interface extending both Animal and Pet
+interface Dog extends Animal, Pet {
+    void bark();
+}
+
+// Class implementing the child interface
+class Labrador implements Dog {
+    public void eat() {
+        System.out.println("Labrador is eating.");
+    }
+
+    public void play() {
+        System.out.println("Labrador is playing.");
+    }
+
+    public void bark() {
+        System.out.println("Labrador is barking.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Labrador myDog = new Labrador();
+        myDog.eat();   // Output: Labrador is eating.
+        myDog.play();  // Output: Labrador is playing.
+        myDog.bark();  // Output: Labrador is barking.
+    }
+}
+
+An interface can extend multiple interfaces
+Unlike classes, which can only extend one class, interfaces support multiple inheritance.
+Example:
+interface C extends A, B { }  // Valid
+No implementation needed in interfaces
+
+Since interfaces only declare methods (except default/static methods), there are no conflicts when extending multiple interfaces.
+Handling Default Methods (Java 8+)
+
+If multiple parent interfaces contain the same default method, the child interface must override it to avoid conflicts.
+Example:
+interface A {
+    default void show() { System.out.println("A's show"); }
+}
+
+interface B {
+    default void show() { System.out.println("B's show"); }
+}
+
+interface C extends A, B {
+    @Override
+    default void show() { System.out.println("C's show"); }
+}
+Why Extend Multiple Interfaces?
+	 Combines behaviors from multiple sources.
+	 Avoids diamond problem (since no state is inherited).
+	 Encourages modular and reusable design.
+
+
+10. What happens if two interfaces have the same method and a class implements both?
+If two interfaces have the same method signature and a class implements both, the class only needs to provide one implementation of the method. This is because interfaces in Java only define method signatures (not implementations, except for default methods).
+
+Scenario 1: Same Abstract Method in Both Interfaces
+If two interfaces declare the same abstract method, the class that implements them only needs to implement it once.
+
+Example:
+interface InterfaceA {
+    void show();  // Same method in both interfaces
+}
+
+interface InterfaceB {
+    void show();  // Same method in both interfaces
+}
+
+// Implementing both interfaces
+class MyClass implements InterfaceA, InterfaceB {
+    public void show() {  // Single implementation for both interfaces
+        System.out.println("Implemented show() method.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.show();  // Output: Implemented show() method.
+    }
+}
+Works fine because the method signature is identical.
+
+Scenario 2: Same Default Method in Both Interfaces (Conflict!)
+If two interfaces have the same default method, Java will not allow the class to inherit them directly. The class must override the method to resolve the conflict.
+
+Example:
+
+interface InterfaceA {
+    default void show() {
+        System.out.println("InterfaceA's show()");
+    }
+}
+
+interface InterfaceB {
+    default void show() {
+        System.out.println("InterfaceB's show()");
+    }
+}
+
+// Implementing both interfaces
+class MyClass implements InterfaceA, InterfaceB {
+    // Must override show() to resolve conflict
+    public void show() {
+        System.out.println("MyClass's overridden show()");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.show();  // Output: MyClass's overridden show()
+    }
+}
+Resolved by overriding the conflicting method.
+
+Scenario 3: Explicitly Calling a Default Method from an Interface
+If a class wants to use a specific interface’s default method, it can do so using InterfaceName.super.methodName().
+
+Example:
+
+interface InterfaceA {
+    default void show() {
+        System.out.println("InterfaceA's show()");
+    }
+}
+
+interface InterfaceB {
+    default void show() {
+        System.out.println("InterfaceB's show()");
+    }
+}
+
+class MyClass implements InterfaceA, InterfaceB {
+    public void show() {
+        // Explicitly calling InterfaceA's version
+        InterfaceA.super.show();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.show();  // Output: InterfaceA's show()
+    }
+}
+Explicitly resolving the conflict by choosing a specific default method.
+	If both interfaces have the same abstract method, the class implements it once.
+	The class can call a specific interface’s default method using InterfaceName.super.methodName().
+
+
+Advanced Questions
+11. What are default methods in Java 8 interfaces?
+Java 8 introduced default methods in interfaces, allowing them to have concrete method implementations. These methods help in adding new functionality to interfaces without breaking existing implementations.
+
+1. Syntax of a Default Method
+A default method is declared using the default keyword inside an interface.
+
+Example:
+interface Vehicle {
+    void start();  // Abstract method
+
+    // Default method with implementation
+    default void honk() {
+        System.out.println("Honking... Beep Beep!");
+    }
+}
+
+class Car implements Vehicle {
+    public void start() {
+        System.out.println("Car is starting...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car myCar = new Car();
+        myCar.start();  // Output: Car is starting...
+        myCar.honk();   // Output: Honking... Beep Beep!
+    }
+}
+The class Car does not need to implement honk(), but it can still use it.
+
+2. Why Use Default Methods?
+	Backward Compatibility → Allows adding new methods to interfaces without breaking existing code.
+	Avoiding Utility Classes → Methods like Collections.sort() can now be inside interfaces.
+	Multiple Interface Inheritance → Helps resolve conflicts when a class implements multiple interfaces.
+3. Overriding Default Methods in an Implementing Class
+If a class needs a custom implementation, it can override a default method.
+
+Example:
+
+class Bike implements Vehicle {
+    public void start() {
+        System.out.println("Bike is starting...");
+    }
+
+    @Override
+    public void honk() {
+        System.out.println("Bike honks: Beep Beep!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Bike myBike = new Bike();
+        myBike.honk();  // Output: Bike honks: Beep Beep!
+    }
+}
+The Bike class provides its own implementation of honk().
+
+4. Handling Default Method Conflicts in Multiple Interfaces
+If a class implements two interfaces with the same default method, it must override the method to resolve the conflict.
+
+Example:
+
+interface A {
+    default void show() {
+        System.out.println("A's show()");
+    }
+}
+
+interface B {
+    default void show() {
+        System.out.println("B's show()");
+    }
+}
+
+class C implements A, B {
+    @Override
+    public void show() {
+        System.out.println("C's overridden show()");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        C obj = new C();
+        obj.show();  // Output: C's overridden show()
+    }
+}
+The conflict is resolved by overriding show().
+
+5. Calling a Specific Default Method Using super
+To call a specific interface’s default method, use InterfaceName.super.methodName().
+
+Example:
+
+class D implements A, B {
+    @Override
+    public void show() {
+        A.super.show();  // Calls A's show() method
+    }
+}
+Explicitly chooses A's method.
+
+Key Takeaways
+	Default methods allow interfaces to have method implementations.
+	They help maintain backward compatibility.
+	A class can override a default method.
+	If two interfaces have the same default method, the class must override it to resolve conflicts.
+ 	InterfaceName.super.methodName() can be used to call a specific interface’s default method.
+
+
+12. Can default methods be overridden?
+Yes, a class implementing an interface can override default methods.
+
+class Car implements Vehicle {
+    @Override
+    public void start() {
+        System.out.println("Car is starting...");
+    }
+}
+
+13. What if a class implements two interfaces with the same default method?
+Java requires the implementing class to override the conflicting method explicitly.
+
+interface A {
+    default void show() { System.out.println("A's show"); }
+}
+
+interface B {
+    default void show() { System.out.println("B's show"); }
+}
+
+class C implements A, B {
+    @Override
+    public void show() {
+        System.out.println("Resolving conflict in C");
+    }
+}
+14. What are static methods in interfaces?
+Since Java 8, interfaces can have static methods, which are not inherited by implementing classes.
+
+interface Utility {
+    static void print() {
+        System.out.println("Utility print method");
+    }
+}
+
+class Demo {
+    public static void main(String[] args) {
+        Utility.print(); // Directly accessed via interface name
+    }
+}
+
+15. What are functional interfaces?
+A functional interface in Java is an interface that contains exactly one abstract method. It can have multiple default or static methods, but only one abstract method. Functional interfaces are the foundation of lambda expressions and functional programming in Java 8+.
+
+1. Defining a Functional Interface
+A functional interface can be created using the @FunctionalInterface annotation (optional but recommended).
+
+Example:
+@FunctionalInterface
+interface MyFunctionalInterface {
+    void show();  // Only one abstract method
+}
+The interface has only one abstract method, making it a functional interface.
+
+2. Built-in Functional Interfaces in Java (java.util.function)
+Java provides many built-in functional interfaces in java.util.function. Here are some common ones:
+
+Interface	Abstract 		Method	Description
+Runnable	void run()		Represents a task with no input & no return value.
+Callable<T>	T call()		Similar to Runnable but returns a value.
+Supplier<T>	T get()			Returns a value, takes no input.
+Consumer<T>	void accept(T t)	Takes an input, performs an action, no return.
+Function<T,R>	R apply(T t)		Takes input T, returns R.
+Predicate<T>	boolean test(T t)	Takes input T, returns boolean.
+
+
+3. Using Functional Interfaces with Lambda Expressions
+Functional interfaces allow lambda expressions to be used in place of anonymous classes.
+
+Example Without Lambda (Using Anonymous Class)
+@FunctionalInterface
+interface MyFunctionalInterface {
+    void show();
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyFunctionalInterface obj = new MyFunctionalInterface() {
+            public void show() {
+                System.out.println("Hello from Anonymous Class!");
+            }
+        };
+        obj.show();
+    }
+}
+Output:
+
+Hello from Anonymous Class!
+
+
+Example Using Lambda Expression (Simpler!)
+
+public class Main {
+    public static void main(String[] args) {
+        MyFunctionalInterface obj = () -> System.out.println("Hello from Lambda!");
+        obj.show();
+    }
+}
+Output (Same as before, but much cleaner):
+
+Hello from Lambda!
+Lambda expressions provide a concise way to implement functional interfaces.
+
+4. Built-in Functional Interface Examples
+Example: Using Predicate<T> (Checks a condition)
+
+import java.util.function.Predicate;
+
+public class Main {
+    public static void main(String[] args) {
+        Predicate<Integer> isEven = (n) -> n % 2 == 0;
+        
+        System.out.println(isEven.test(10)); // Output: true
+        System.out.println(isEven.test(7));  // Output: false
+    }
+}
+Example: Using Function<T, R> (Transforms Data)
+
+import java.util.function.Function;
+
+public class Main {
+    public static void main(String[] args) {
+        Function<String, Integer> stringLength = (str) -> str.length();
+        
+        System.out.println(stringLength.apply("Java"));  // Output: 4
+        System.out.println(stringLength.apply("Lambda")); // Output: 6
+    }
+}
+5. Functional Interface with Default and Static Methods
+A functional interface can have default and static methods, but it must have only one abstract method.
+
+@FunctionalInterface
+interface Calculator {
+    int add(int a, int b); // Abstract method
+
+    // Default method
+    default void show() {
+        System.out.println("This is a calculator!");
+    }
+
+    // Static method
+    static void info() {
+        System.out.println("Calculator Functional Interface");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator sum = (a, b) -> a + b; // Using lambda
+        System.out.println(sum.add(5, 10)); // Output: 15
+
+        sum.show(); // Output: This is a calculator!
+        Calculator.info(); // Output: Calculator Functional Interface
+    }
+}
+Lambda only implements the abstract method. Default and static methods work normally.
+
+6. Key Takeaways
+	A functional interface has exactly one abstract method.
+	It can have multiple default and static methods.
+	Lambda expressions work only with functional interfaces.
+	Java provides built-in functional interfaces in java.util.function.
+	The @FunctionalInterface annotation is optional but recommended.
+16. Can an interface have a main method?
+Yes, since Java 8, interfaces can have a main method.
+
+interface Test {
+    static void main(String[] args) {
+        System.out.println("Main method in an interface");
+    }
+}
+
+17. Can an interface have a constructor?
+No, interfaces cannot have constructors because they cannot be instantiated.
+
+18. What is a marker interface?
+A marker interface is an interface that does not declare any methods or fields. It is used to mark a class with metadata so that special behavior can be assigned to objects of that class at runtime.
+1. Examples of Built-in Marker Interfaces
+Java provides some built-in marker interfaces, such as:
+
+Marker Interface	Purpose
+Serializable		Marks objects that can be serialized (converted to a byte stream).
+Cloneable		Allows object cloning using Object.clone().
+Remote			Marks objects for remote method invocation (RMI).
+SingleThreadModel 
+(Deprecated)		Used in servlets to indicate that a new instance should be created for each request.
+
+2. Example: Serializable as a Marker Interface
+Without Serializable (Fails)
+import java.io.*;
+
+// A class without Serializable
+class Person {
+    String name;
+    
+    Person(String name) {
+        this.name = name;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            Person person = new Person("Alice");
+
+            // Serializing the object
+            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("data.ser"));
+            out.writeObject(person);  //  ERROR! Person is not serializable
+            out.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+throws java.io.NotSerializableException because Person does not implement Serializable.
+
+With Serializable (Works)
+
+import java.io.*;
+
+// Marking Person as Serializable
+class Person implements Serializable {
+    String name;
+
+    Person(String name) {
+        this.name = name;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            Person person = new Person("Alice");
+
+            // Serializing the object
+            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("data.ser"));
+            out.writeObject(person);  //  Works because Person is Serializable
+            out.close();
+
+            // Deserializing the object
+            ObjectInputStream in = new ObjectInputStream(new FileInputStream("data.ser"));
+            Person deserializedPerson = (Person) in.readObject();
+            in.close();
+
+            System.out.println("Deserialized: " + deserializedPerson.name);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+Now, Person can be serialized and deserialized successfully.
+
+3. Creating a Custom Marker Interface
+You can define your own marker interface and use it with instanceof to check if a class is "marked."
+
+Example: Custom Marker Interface
+// Marker interface (no methods)
+interface Special {}
+
+class MyClass implements Special {
+    void display() {
+        System.out.println("I am special!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        
+        // Checking if object is "marked"
+        if (obj instanceof Special) {
+            System.out.println("Object is marked as Special!");
+        } else {
+            System.out.println("Object is NOT Special!");
+        }
+    }
+}
+Output:
+Object is marked as Special!
+
+Used instanceof to check if obj is an instance of Special.
+
+4. Marker Interface vs Annotations
+Since Java 5, annotations have mostly replaced marker interfaces because they are more flexible.
+
+Using Annotations Instead of a Marker Interface
+@interface Special {}  // Custom annotation
+
+@Special
+class MyClass {
+    void display() {
+        System.out.println("I am special!");
+    }
+}
+ Annotations allow additional metadata and better flexibility.
+
+Key Takeaways
+	A marker interface has no methods; it "marks" a class for special behavior.
+	Used in Java's built-in interfaces like Serializable, Cloneable, and Remote.
+	Can be checked using instanceof.
+	Annotations are a modern alternative to marker interfaces.

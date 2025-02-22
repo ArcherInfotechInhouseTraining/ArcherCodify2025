@@ -1,0 +1,52 @@
+*Title:*
+Given an array of integers nums, return the length of the longest consecutive sequence of elements that can be formed.
+A consecutive sequence is a sequence of elements in which each element is exactly 1 greater than the previous element. The elements do not have to be consecutive in the original array.
+You must write an algorithm that runs in O(n) time.
+
+Examples : 
+Input: nums = [0,3,2,5,4,6,1,1]
+Output: 7
+
+
+*Link:*
+https://neetcode.io/problems/longest-consecutive-sequence
+
+*Solution:*
+class Solution {
+    public int longestConsecutive(int[] nums) {
+   Set<Integer> set = new HashSet<>();
+        for (int num : nums) {
+            set.add(num);
+        }
+
+        int max_length = 0;
+
+        for (int num : set) {
+            if (!set.contains(num - 1)) {
+                int currentNum = num;
+                int count = 1;
+
+                while (set.contains(currentNum + 1)) {
+                    currentNum++;
+                    count++;
+                }
+                if(max_length < count)
+                    max_length = count;
+            }
+        }
+        return max_length;
+    }
+}
+
+
+*Test Cases:*
+Input: nums = [2,20,4,10,3,4,5]
+
+Output: 4
+
+
+*Approach Used:*
+1. Stored all the elements in Set to avoid repetation.
+2. Checked for the elements with no preceding element i.e. 0 (in example).
+3. Checked for the longest consecutive sequence from that element.
+4. returned the sequence with maximum length.

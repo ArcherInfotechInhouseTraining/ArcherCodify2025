@@ -1,0 +1,27 @@
+char* convert(char* s, int numRows) {
+    int len = strlen(s), i, j=1, flg=0;
+    if (numRows == 1) return strdup(s);
+
+    char** strArr = (char**)malloc(numRows * sizeof(char*));
+    int* indx = (int*)calloc(numRows, sizeof(int));
+    char* opStr = (char*)calloc(len + 1, sizeof(char));
+
+    for (i = 0; i < numRows; strArr[i++] = (char*)calloc(len + 1, sizeof(char)));
+
+    for (i = 0; s[i]; i++) {
+        j+= flg ? 1:-1;
+        
+        strArr[j][indx[j]]= s[i];
+        indx[j]+=1;
+
+        if(j>= numRows-1 || j<= 0) flg=!flg;
+    }
+    for (j= i = 0; i < numRows; i++) {
+        strcpy(opStr + j, strArr[i]);
+        j += indx[i];
+    }
+    free(strArr);
+    free(indx);
+
+    return opStr;
+}

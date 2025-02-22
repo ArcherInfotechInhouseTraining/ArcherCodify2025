@@ -1,0 +1,76 @@
+345 Reverse Vowels of a String
+( https://leetcode.com/problems/reverse-vowels-of-a-string/description/?envType=study-plan-v2&envId=leetcode-75 )
+
+Given a string s, reverse only all the vowels in the string and return it.
+
+The vowels are 'a', 'e', 'i', 'o', and 'u', and they can appear in both lower and upper cases, more than once.
+
+ 
+
+Example 1:
+
+Input: s = "IceCreAm"
+
+Output: "AceCreIm"
+
+Explanation:
+
+The vowels in s are ['I', 'e', 'e', 'A']. On reversing the vowels, s becomes "AceCreIm".
+
+Example 2:
+
+Input: s = "leetcode"
+
+Output: "leotcede"
+
+
+
+//code
+
+
+class Solution {
+    public String reverseVowels(String s) {
+
+        char[] word=s.toCharArray();
+
+        int start=0;
+        int end=s.length()-1;
+        
+
+        while(start<end)
+        {
+            char ch1=word[start];
+            char ch2=word[end];
+            
+            
+                if(ch1=='A'||ch1=='a'||ch1=='E'||ch1=='e'||ch1=='I'||ch1=='i'||ch1=='O'||ch1=='o'||ch1=='U'||ch1=='u')
+                {
+                    
+                     if(ch2=='A'||ch2=='a'||ch2=='E'||ch2=='e'||ch2=='I'||ch2=='i'||ch2=='O'||ch2=='o'||ch2=='U'||ch2=='u')
+                     {
+                        char temp=word[start];
+                        word[start]=word[end];
+                        word[end]=temp;
+                        start++;
+                        end--;
+                        
+                     }
+                     else{
+                    end--;
+                       
+                    }
+                    
+                }
+                else{
+                 start++;
+                }
+                
+            
+            
+        }
+
+         return new String(word);
+       
+        
+    }
+}

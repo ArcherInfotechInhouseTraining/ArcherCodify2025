@@ -1,0 +1,20 @@
+int myAtoi(char* s) {
+    int i, neg= 0;
+    long long num;
+    for(i= 0; s[i]==32; i++);
+    s= s+i;
+    if (s[0]=='-'|| s[0]=='+'){
+        if (s[0]=='-') neg= 1;
+        s= s+1;
+    }
+    for(i= 0; s[i]; i++){
+        if (num>INT_MAX) break;
+        if((s[i]>=48 && s[i]<= 57))
+            num= (num*10) + (s[i]- 48);
+        else break;
+    }
+    num*= (neg)? -1:1;
+    if (num>INT_MAX) return INT_MAX;
+    if (num<INT_MIN) return INT_MIN;
+    return (int)num;
+}

@@ -1,0 +1,64 @@
+125. Valid Palindrome
+
+A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+
+Given a string s, return true if it is a palindrome, or false otherwise.
+
+Example 1:
+Input: s = "A man, a plan, a canal: Panama"
+Output: true
+Explanation: "amanaplanacanalpanama" is a palindrome.
+
+Example 2:
+Input: s = "race a car"
+Output: false
+Explanation: "raceacar" is not a palindrome.
+
+Example 3:
+Input: s = " "
+Output: true
+Explanation: s is an empty string "" after removing non-alphanumeric characters.
+Since an empty string reads the same forward and backward, it is a palindrome.
+ 
+Constraints:
+1 <= s.length <= 2 * 105
+s consists only of printable ASCII characters.
+
+Solution:
+class Solution {
+    public static boolean isPalindrome(String s) {
+        // Convert the string to lowercase and remove non-alphanumeric characters
+        s = s.toLowerCase().replaceAll("[^a-z0-9]", "");
+        
+        // Use two pointers to check if the string is a palindrome
+        int left = 0, right = s.length() - 1;
+        while (left < right) {
+            if (s.charAt(left) != s.charAt(right)) {
+                return false; // If characters at left and right are not equal, it's not a palindrome
+            }
+            left++;
+            right--;
+        }
+        return true; // If the loop completes, it's a palindrome
+    }
+
+    public static void main(String[] args) {
+        // Example test cases
+        String s1 = "A man, a plan, a canal: Panama";
+        String s2 = "race a car";
+        String s3 = " ";
+
+        System.out.println("Example 1: " + isPalindrome(s1)); 
+        System.out.println("Example 2: " + isPalindrome(s2));
+        System.out.println("Example 3: " + isPalindrome(s3));
+    }
+}
+
+Explanation:
+The input string is converted to lowercase using toLowerCase().
+Non-alphanumeric characters are removed using replaceAll("[^a-z0-9]", "").
+A pointer starts at the beginning of the string (left) and another at the end (right).
+The characters at these pointers are compared. If they are not equal, the string is not a palindrome.
+If they are equal, The pointers are moved inward (left++, right--) until they meet. The loop continues until left is greater than or equal to right.
+If the string becomes empty after removing non-alphanumeric characters, it is considered a palindrome.
+

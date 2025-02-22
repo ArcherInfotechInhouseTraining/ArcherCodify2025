@@ -1,0 +1,169 @@
+<!-- Website Assignment: Build a Personal Blog
+Homepage
+
+www.archerinfotech.in Bootstrap Assignment Mo. 9850678451
+Objective:
+Create a responsive personal blog homepage using Bootstrap.
+The website should consist of a header, a hero section, a blog
+post grid, and a footer. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini.Project.Blog</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <style>
+        #hero-section{
+            background-image: url('blog.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 85vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            display: grid;
+        }
+
+        .navbar-brand:hover{
+            transform: scale(1.2);
+            transition: all .4s ease;
+        }
+
+        #hero-section h1{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+        #hero-section h2{
+            justify-content: first baseline;
+        }
+
+        #hero-section p{
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .social{
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container bg-secondary" >
+        <header class="navbar navbar-expand-lg navbar-light  border-bottom mb-2" style="height: 15vh;">
+            <a class="navbar-brand">ADITYA</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav">
+                        <li class="nav-item h4"><a href="#" class="nav-link">Home</a></li>
+                        <li class="nav-item h4"><a href="#" class="nav-link">About</a></li>
+                        <li class="nav-item h4"><a href="#blog" class="nav-link">Blog</a></li>
+                        <li class="nav-item h4"><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>   
+                </div>
+
+        </header>
+    </div>
+
+    <!-- hero -->
+
+    <section class="container bg-body-tertiary  rounded mb-2 py-2" id="hero-section" >
+        <h1 class="display-1">My name is Aditya Patil.</h1>
+        <h2>I am doing my Engineering in D y Patil College Of Engineering and Innovation.</h2>
+        <h3>I am Intern at Archer Infotech</h3>
+       
+        <h5>I am fronted Designer</h5>
+
+    </section>
+
+    <!-- Blog Section: -->
+
+    <div class="container mb-2" id="blog" >
+        <div class="row">
+            <div class="col col-lg-4 col-md-6 col-sm-12 " style="background-color: rgb(236, 178, 112);" >
+                <h1> Java: The Backbone of Enterprise Applications</h1>
+                <p>Java continues to dominate the tech world with its robust, platform-independent, and secure nature. Used in enterprise applications, Android development, and backend services, Java powers platforms like Netflix, LinkedIn, and Amazon. With frameworks like Spring Boot and tools like JVM optimizations, Java is evolving for modern applications.</p>
+                <a href="#">Read more...</a>
+            </div>
+    
+            <div class="col col-lg-4 col-md-6 col-sm-12 text-center" style="background-color: rgb(229, 194, 154);">
+                <h1>HTML: The Foundation of Every Website</h1>
+                <p>HyperText Markup Language (HTML) is the backbone of web development, defining structure and content. The latest version, HTML5, introduces semantic elements, multimedia support, and improved accessibility. With evolving web standards, mastering HTML is essential for building modern, responsive, and SEO-friendly websites.</p>
+                <a href="#">Read more...</a>
+                
+            </div>
+    
+            <div class="col col-lg-4 col-md-6 col-sm-12 text-center" style="background-color: rgb(236, 178, 112);" >
+                <h1>CSS: Styling the Web with Creativity</h1>
+                <p>Cascading Style Sheets (CSS) transform plain HTML into beautiful web pages. Features like Flexbox, Grid, and animations make layouts more responsive and interactive. Tools like Tailwind CSS and Bootstrap simplify development, while CSS variables and dark mode support enhance user experience.</p>
+                <a href="#">Read more...</a>
+            </div>
+    
+            <div class="col col-lg-4 col-md-6 col-sm-12 text-center" style="background-color: rgb(229, 194, 154);" >
+                <h1>C: The Mother of All Programming Languages</h1>
+                <p>C is the foundation of modern programming languages, offering speed, low-level memory access, and efficiency. Used in operating systems, embedded systems, and game engines, C remains essential for performance-critical applications. Learning C builds a strong programming foundation for mastering other languages like C++, Java, and Python.</p>
+                <a href="#">Read more...</a>
+            </div>
+    
+            <div class="col col-lg-4 col-md-6 col-sm-12 text-center" style="background-color: rgb(236, 178, 112);" >
+                <h1>C++: Power and Performance in One Language</h1>
+                <p>C++ combines the efficiency of C with object-oriented programming, making it ideal for game development, finance, and system programming. With modern updates like C++20’s concepts and coroutines, the language continues to evolve. Frameworks like Qt and Unreal Engine showcase C++'s power in GUI and gaming applications.</p>
+                <a href="#">Read more...</a>
+            </div>
+
+            <div class="col col-lg-4 col-md-6 col-sm-12 text-center" style="background-color: rgb(229, 194, 154);">
+                <h1>Android Development: Building the Next-Gen Mobile Apps</h1>
+                <p>Android remains the largest mobile OS, with Kotlin and Java as its primary languages. Jetpack Compose is redefining UI design, while AI-driven automation and 5G integration are transforming mobile experiences. Staying updated with Material Design, Firebase, and app performance optimization is key for modern Android developers.</p>
+                <a href="#">Read more...</a>
+            </div>
+    
+            
+
+           
+        </div>
+
+
+    </div>
+
+
+
+    <!-- Footer Section:
+o Include links for "Privacy Policy," "Terms of Service," and
+"Contact Us."
+o Social media icons arranged horizontally. -->
+
+<div class="container bg-dark-subtle" id="contact" style="height:10vh;">
+    <footer class="flex-wrap ">
+
+        <ul class="list-unstyled justify-content-between d-flex" >
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Us.</a></li>
+        </ul>
+        <div class="align-items-start ">
+            <ul class="list-unstyled nav justify-content-end gap-3">
+                <li><a href="#"><img class="social" src="facebook.png" ></a></li>
+                <li><a href="#"><img class="social" src="instagram.png" ></a></li>
+                  
+            </ul>
+        </div>
+        
+    </footer>
+</div>
+    
+
+</body>
+</html>

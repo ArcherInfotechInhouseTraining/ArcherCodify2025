@@ -1,0 +1,39 @@
+Problem Statement:
+Given a positive integer n, count the number of digits in n that divide n evenly (i.e., without leaving a remainder). Return the total number of such digits.
+
+A digit d of n divides n evenly if the remainder when n is divided by d is 0 (n % d == 0).
+Digits of n should be checked individually. If a digit is 0, it should be ignored because division by 0 is undefined.
+
+Input: n = 12
+Output: 2
+Explanation: 1, 2 when both divide 12 leaves remainder 0.
+Input: n = 2446
+Output: 1
+Explanation: Here among 2, 4, 6 only 2 divides 2446 evenly while 4 and 6 do not.
+Input: n = 23
+Output: 0
+Explanation: 2 and 3, none of them divide 23 evenly.
+
+solution explaination:
+approach we have divide the input with each digit in the input no and count the total number the input is completely divisible ignoring 0
+
+initially assign int n value to int no
+use this for no var for further manipulation 
+intialize int count to 0;
+while no is not equal to 0 continue checking if the input is completely divisible by the no%10 and no !=0;
+here first check the whether no%10 is equal to zero
+
+class Solution {
+    static int evenlyDivides(int n) {
+        int no = n;
+        int count=0;
+        while(no!=0){
+            int digit=no%10;
+            if(digit!=0 && n%digit==0){
+                count++;
+            }
+            no=no/10;
+        }
+        return count;
+    }
+}

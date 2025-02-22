@@ -1,0 +1,20 @@
+Title: Given a string A of comma delimited integers, print each integer in a separate line.
+
+Link: https://www.interviewbit.com/problems/stringstream/
+
+Solution: #include<iostream>
+#include<sstream>
+using namespace std;
+
+int main()  {
+    string A;
+    cin>>A;
+    
+    stringstream ss(A);
+    string temp;
+
+    while (getline(ss, temp, ',')) {
+        cout << temp << endl;
+    }
+    return 0;
+}
