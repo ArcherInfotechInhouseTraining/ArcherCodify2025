@@ -8,24 +8,24 @@ int findMin(vector<int> &nums)
 
     while (left < right)
     {
-        int mid = left + (right - left) / 2; // Avoids integer overflow
+        int mid = left + (right - left) / 2;
 
         if (nums[mid] > nums[right])
         {
-            left = mid + 1; // Minimum must be in the right half
+            left = mid + 1;
         }
         else
         {
-            right = mid; // Minimum is in the left half (including mid)
+            right = mid;
         }
     }
 
-    return nums[left]; // The minimum element
+    return nums[left];
 }
 
 int main()
 {
     vector<int> nums = {3, 4, 5, 1, 2};
-    cout << "Minimum element: " << findMin(nums) << endl; // Output: 1
+    cout << "Minimum element: " << findMin(nums) << endl;
     return 0;
 }
