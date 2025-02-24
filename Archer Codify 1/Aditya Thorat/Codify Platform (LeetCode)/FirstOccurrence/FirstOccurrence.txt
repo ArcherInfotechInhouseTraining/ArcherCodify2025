@@ -1,0 +1,13 @@
+int strStr(char* haystack, char* needle) {
+    int i, j; 
+    for (i=0; haystack[i]; i++){
+        if (haystack[i]== needle[0]){
+            for(j= 0; needle[j] && haystack[i+j]; j++){
+                if(haystack[i+j]!= needle[j]) break;
+                if(needle[j+1]==0) return i;
+
+            }
+        }
+    }
+    return -1;
+}
