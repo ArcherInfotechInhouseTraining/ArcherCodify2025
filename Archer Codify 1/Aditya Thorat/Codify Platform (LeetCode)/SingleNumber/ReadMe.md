@@ -25,8 +25,8 @@ Output: 1
 
 ### Constraints:
 
-1 <= nums.length <= 3 * 104
--3 * 104 <= nums[i] <= 3 * 104
-Each element in the array appears twice except for one element which appears only once.
+- 1 <= nums.length <= 3 * 104
+- -3 * 104 <= nums[i] <= 3 * 104
+- Each element in the array appears twice except for one element which appears only once.
 
 #### Note: Remember not to mistake this logic for problems where the non unique elements are repeated in odd numbers. This logic works only when the number of repeated elements is 2 or a multiple of 2.

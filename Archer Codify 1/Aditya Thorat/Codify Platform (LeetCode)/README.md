@@ -13,4 +13,4 @@
 ## Description:
 Archer Codify is a coding club consisting of students under Archer Training.
 This club is an iniative by Mr. Yogesh Patil for student's daily practice and profile building through completing problems on different coding patforms. This group activity improves ability, communication & regularity as well as encourages collaboration.
-    This folder contains all solved problems with their links and descriptions mentioned in the README file.
+    This folder contains all solved problems with their links and descriptions mentioned in the README files.

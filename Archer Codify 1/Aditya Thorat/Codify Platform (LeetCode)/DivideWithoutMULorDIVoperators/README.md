@@ -27,7 +27,7 @@ Output: -2
  
 ### Constraints:
 
--231 <= dividend, divisor <= 231 - 1
-divisor != 0
+- -231 <= dividend, divisor <= 231 - 1
+- divisor != 0
 
 

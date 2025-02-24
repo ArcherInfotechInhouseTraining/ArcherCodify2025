@@ -1,0 +1,15 @@
+int removeElement(int* nums, int numsSize, int val) {
+    int pntr = 0, plus = 0;
+
+    while (pntr + plus < numsSize) {
+        while (pntr + plus < numsSize && nums[pntr + plus] == val) {
+            plus++;  // Skip occurrences of val
+        }
+        if (pntr + plus < numsSize) {
+            nums[pntr] = nums[pntr + plus]; // Shift valid element forward
+        }
+        pntr++;
+    }
+    
+    return numsSize - plus; // New length of the array
+}
