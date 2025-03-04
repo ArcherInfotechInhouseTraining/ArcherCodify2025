@@ -28,9 +28,9 @@ Output: [8,9,9,9,0,0,0,1]
 
 ### Constraints:
 
-#### The number of nodes in each linked list is in the range [1, 100].
-#### 0 <= Node.val <= 9
-#### It is guaranteed that the list represents a number that does not have leading zeros.
+- The number of nodes in each linked list is in the range [1, 100].
+- 0 <= Node.val <= 9
+- It is guaranteed that the list represents a number that does not have leading zeros.
 
 
 ### Note: There is a simpler Alternative to solve this problem, but the constraint of variable range makes it useless for test cases where the number exceeds 10^16. It can still be used when the input is within the range of long long.

@@ -1,0 +1,157 @@
+Q.3 Sum Problem:
+
+Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+
+Notice that the solution set must not contain duplicate triplets.
+
+ 
+
+Example 1:
+
+Input: nums = [-1,0,1,2,-1,-4]
+Output: [[-1,-1,2],[-1,0,1]]
+Explanation: 
+nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.
+nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.
+nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.
+The distinct triplets are [-1,0,1] and [-1,-1,2].
+Notice that the order of the output and the order of the triplets does not matter.
+Example 2:
+
+Input: nums = [0,1,1]
+Output: []
+Explanation: The only possible triplet does not sum up to 0.
+Example 3:
+
+Input: nums = [0,0,0]
+Output: [[0,0,0]]
+Explanation: The only possible triplet sums up to 0.
+ 
+
+Constraints:
+
+3 <= nums.length <= 3000
+-105 <= nums[i] <= 105
+
+
+
+
+
+
+Using HashSet...
+=====================================================================
+import java.util.*;
+
+class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        Set<List<Integer>> result = new HashSet<>();
+        int n = nums.length;
+
+        for (int i = 0; i < n - 2; i++) {
+            Set<Integer> seen = new HashSet<>();
+            for (int j = i + 1; j < n; j++) {
+                int complement = -nums[i] - nums[j];
+
+                if (seen.contains(complement)) {
+                    List<Integer> triplet = Arrays.asList(nums[i], nums[j], complement);
+                    Collections.sort(triplet);
+                    result.add(triplet);
+                }
+
+                seen.add(nums[j]);
+            }
+        }
+
+        return new ArrayList<>(result);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        int[] nums = {-1, 0, 1, 2, -1, -4};
+        System.out.println(sol.threeSum(nums));
+    }
+}
+
+
+
+Solution:
+=====================================||||||||||||||||||======================================================
+
+
+Step-by-Step Explanation:
+
+Step 1: Create a HashSet to Store Unique Triplets
+
+Set<List<Integer>> result = new HashSet<>();
+
+	#result stores unique triplets because a HashSet does not allow 	duplicates.
+	#This prevents duplicate triplets like [ -1, 0, 1 ] from appearing 	multiple times.
+
+
+Step 2: Iterate Through Each Element (nums[i])
+
+for (int i = 0; i < n - 2; i++) {
+
+	#i represents the first number in the triplet.
+	#We stop at n - 2 because we need at least 3 numbers to form a 	triplet.
+
+Step 3: Create a HashSet to Track Seen Elements
+
+Set<Integer> seen = new HashSet<>();
+
+	#This seen set stores numbers we've seen in the inner loop.
+	#It helps us check if the third required number (complement) exists.
+
+
+Step 4: Iterate for the Second Number (nums[j])
+
+for (int j = i + 1; j < n; j++) {
+
+	#The second number nums[j] is picked after nums[i].
+	#We check for the third number (complement) in the seen HashSet.
+
+
+Step 5: Compute the Required Third Number
+
+int complement = -nums[i] - nums[j];
+We need nums[i] + nums[j] + complement = 0, so:
+complement=−(nums[i]+nums[j])
+	#This is the number we're looking for in the seen HashSet.
+
+
+Step 6: Check if the Third Number Exists in HashSet
+if (seen.contains(complement)) {
+
+	#If complement exists in seen, we found a valid triplet [nums[i], nums[j], 	complement].
+
+
+Step 7: Sort the Triplet to Avoid Duplicates
+List<Integer> triplet = Arrays.asList(nums[i], nums[j], complement);
+Collections.sort(triplet);
+
+	#Sorting ensures that [1, -1, 0] and [-1, 0, 1] are treated as the same triplet.
+	#This helps eliminate duplicate triplets.
+
+
+Step 8: Store the Triplet in HashSet
+result.add(triplet);
+
+	#We add the sorted triplet to the result HashSet.
+	#Since HashSet automatically removes duplicates, we don’t need extra 	duplicate checks.
+
+
+Step 9: Add the Current Number to seen HashSet
+
+seen.add(nums[j]);
+
+	#This stores nums[j] so that we can find it later as a complement.
+	#Helps track elements that might form a valid triplet.
+
+
+Step 10: Convert HashSet to List and Return
+
+return new ArrayList<>(result);
+
+	#Since we stored unique triplets in result, we convert it to a List and 	return it.

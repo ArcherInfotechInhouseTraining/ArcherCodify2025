@@ -24,5 +24,5 @@ Output: [-1,0,3,4,5]
  
 ### Constraints:
 
-The number of nodes in the list is in the range [1, 5000].
--5000 <= Node.val <= 5000
+- The number of nodes in the list is in the range [1, 5000].
+- -5000 <= Node.val <= 5000

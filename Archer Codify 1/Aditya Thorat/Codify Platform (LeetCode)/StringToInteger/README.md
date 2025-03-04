@@ -78,5 +78,5 @@ Reading stops at the first non-digit character 'w'.
 
 ### Constraints:
 
-0 <= s.length <= 200
-s consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.
+- 0 <= s.length <= 200
+- s consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.
