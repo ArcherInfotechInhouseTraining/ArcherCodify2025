@@ -1,0 +1,70 @@
+Title:- High Scores
+
+Manage a game player's High Score list.
+
+Your task is to build a high-score component of the classic Frogger game, one of the highest selling and most addictive games of all time, and a classic of the arcade era. Your task is to write methods that return the highest score from the list, the last added score and the three highest scores.
+
+Link:- https://exercism.org/tracks/java/exercises/high-scores
+
+Solutions:-
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+class HighScores {
+
+    private List<Integer> Scores;
+    public HighScores(List<Integer> highScores) {
+        Scores= new ArrayList<>(highScores);
+    }
+
+    List<Integer> scores() {
+        
+        return Scores;
+    }
+
+    Integer latest() {
+        
+        if(!Scores.isEmpty()){
+            return Scores.get(Scores.size()-1);
+        }
+        return null;
+    }
+
+    Integer personalBest() {
+        if(!Scores.isEmpty()){
+            return Collections.max(Scores);
+        }
+        return null;
+    }
+
+    List<Integer> personalTopThree() {
+
+        List<Integer> topThree = new ArrayList<>(Scores);
+        Collections.sort(topThree, Collections.reverseOrder());
+        return topThree.size() > 3 ? topThree.subList(0, 3) : topThree;
+        
+      
+    }
+
+}
+class Main
+{
+    public static void main(String[] args)
+    {
+        List<Integer> demo= new ArrayList<>();
+        
+        Scanner sc= new Scanner(System.in);
+        int x=sc.nextInt();
+        for(int i=0;i<x;i++){
+            demo.add(sc.nextInt());
+        }
+        
+        
+        HighScores ob= new HighScores(demo);
+        
+        System.out.println(ob.personalTopThree());
+    }
+}
