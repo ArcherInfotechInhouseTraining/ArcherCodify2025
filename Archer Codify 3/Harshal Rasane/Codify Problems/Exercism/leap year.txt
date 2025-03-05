@@ -1,0 +1,48 @@
+Title:- Introduction
+A leap year (in the Gregorian calendar) occurs:
+
+In every year that is evenly divisible by 4.
+Unless the year is evenly divisible by 100, in which case it's only a leap year if the year is also evenly divisible by 400.
+
+
+Some examples:
+
+1997 was not a leap year as it's not divisible by 4.
+1900 was not a leap year as it's not divisible by 400.
+2000 was a leap year!
+
+Link:- https://exercism.org/tracks/java/exercises/leap
+
+Solution:- 
+
+import java.util.Scanner;
+class Leap {
+
+    static boolean isLeapYear(int year) {
+        if (year%4==0)
+        {
+            if(year%100==0){
+                return year%400==0;
+            }
+            else{
+                return true;
+            }
+        }
+        return false;
+    }
+}
+class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int i = sc.nextInt();
+        if(Leap.isLeapYear(i)== true)
+        {
+            System.out.println("This is a Leap Year.");
+        }
+        else{
+            System.out.println("This is not a Leap Year.");
+        }
+    }
+}
