@@ -1,0 +1,44 @@
+#include "beer_song.h"
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_LINE_LENGTH 1024
+
+void recite(uint8_t start, uint8_t down, char **song) 
+{
+    uint8_t current = start;
+    uint16_t index = 0;
+
+    for (uint8_t i = 0; i < down; i++)
+    {
+        if (current > 1)
+        {
+            snprintf(song[index++], MAX_LINE_LENGTH,
+                     "%d bottles of beer on the wall, %d bottles of beer.", current, current);
+            snprintf(song[index++], MAX_LINE_LENGTH,
+                     "Take one down and pass it around, %d bottle%s of beer on the wall.",
+                     current - 1, (current - 1) == 1 ? "" : "s");
+        }
+        else if (current == 1) 
+        {
+            snprintf(song[index++], MAX_LINE_LENGTH,
+                     "1 bottle of beer on the wall, 1 bottle of beer.");
+            snprintf(song[index++], MAX_LINE_LENGTH,
+                     "Take it down and pass it around, no more bottles of beer on the wall.");
+        } 
+        else
+        {
+            snprintf(song[index++], MAX_LINE_LENGTH,
+                     "No more bottles of beer on the wall, no more bottles of beer.");
+            snprintf(song[index++], MAX_LINE_LENGTH,
+                     "Go to the store and buy some more, 99 bottles of beer on the wall.");
+        }
+
+        current--;
+
+        if (i < down - 1) 
+        {
+            strcpy(song[index++], "");  
+        }
+    }
+}
