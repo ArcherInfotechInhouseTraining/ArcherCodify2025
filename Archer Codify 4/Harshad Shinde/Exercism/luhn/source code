@@ -1,0 +1,33 @@
+#include "luhn.h"
+#include <ctype.h>
+#include <string.h>
+
+bool luhn(const char *num) 
+{
+    int sum = 0;
+    int leng = 0;
+    //int doubleDigit = 0;
+
+    for (int i = strlen(num) - 1, alternate = 0; i >= 0; i--) {
+        if (isspace(num[i])) 
+        {
+            continue;
+        }
+        if (!isdigit(num[i])) 
+        {
+            return false;
+        }
+
+        int digit = num[i] - '0';
+        if (alternate) 
+        {
+            digit *= 2;
+            if (digit > 9) digit -= 9;
+        }
+        sum += digit;
+        alternate = !alternate;
+        leng++;
+    }
+
+    return (leng > 1) && (sum % 10 == 0);
+}

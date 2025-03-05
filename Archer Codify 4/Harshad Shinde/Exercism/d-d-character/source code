@@ -1,0 +1,42 @@
+#include "dnd_character.h"
+#include <stdlib.h>
+#include <math.h>
+
+int modifier(int sco)
+{
+    return (int) floor((sco - 10) / 2.0);
+}
+
+
+int ability(void) 
+{
+    int rol[4];
+    int sum = 0;
+    int min = 6;
+
+    for (int i = 0; i < 4; i++) 
+    {
+        rol[i] = (rand() % 6) + 1; 
+        sum += rol[i];
+        if (rol[i] < min)
+        {
+            min = rol[i]; 
+        }
+    }
+    
+    return sum - min; 
+}
+
+dnd_character_t make_dnd_character(void) 
+{
+    dnd_character_t character;
+    character.strength = ability();
+    character.dexterity = ability();
+    character.constitution = ability();
+    character.intelligence = ability();
+    character.wisdom = ability();
+    character.charisma = ability();
+    character.hitpoints = 10 + modifier(character.constitution);
+
+    return character;
+}
