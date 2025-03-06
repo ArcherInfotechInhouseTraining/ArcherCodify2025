@@ -20,9 +20,9 @@ Output: []
  
 ### Constraints:
 
-The number of nodes in the tree is in the range [1, 5000].
-1 <= Node.val <= 107
-root is a binary search tree.
-1 <= val <= 107
+- The number of nodes in the tree is in the range [1, 5000].
+- 1 <= Node.val <= 107
+- root is a binary search tree.
+- 1 <= val <= 107
 
 

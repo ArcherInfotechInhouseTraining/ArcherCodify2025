@@ -31,8 +31,8 @@ The last word is "joyboy" with length 6.
  
 ### Constraints:
 
-1 <= s.length <= 104
-s consists of only English letters and spaces ' '.
-There will be at least one word in s.
+- 1 <= s.length <= 104
+- s consists of only English letters and spaces ' '.
+- There will be at least one word in s.
 
 

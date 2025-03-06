@@ -1,0 +1,16 @@
+https://www.interviewbit.com/problems/functions-basic/
+
+Solution: 
+
+#include <iostream>
+int compute(int A, int B) {
+    return (A * A) + (B * B);
+}
+int main()
+ {
+    int A, B;
+    std::cout << "Enter two integers: ";
+    std::cin >> A >> B;
+    std::cout << "Result: " << compute(A, B) << std::endl;
+    return 0;
+}

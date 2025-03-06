@@ -30,11 +30,11 @@ Every string satisfies the conditions, so we return [3,2,1].
  
 ### Constraints:
 
-1 <= words.length <= 105
-1 <= words[i].length <= 40
-words[i] consists only of lowercase English letters.
-sum(words[i].length) <= 3 * 105
-1 <= queries.length <= 105
-0 <= li <= ri < words.length
+- 1 <= words.length <= 105
+- 1 <= words[i].length <= 40
+- words[i] consists only of lowercase English letters.
+- sum(words[i].length) <= 3 * 105
+- 1 <= queries.length <= 105
+- 0 <= li <= ri < words.length
 
 #### Note: A simpler alternative solution for this problem which is easier to understand exceeds time limit. The program has also been provided in java.

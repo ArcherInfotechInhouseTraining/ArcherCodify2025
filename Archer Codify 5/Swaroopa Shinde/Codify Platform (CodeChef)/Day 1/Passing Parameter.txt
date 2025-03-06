@@ -1,0 +1,19 @@
+https://www.interviewbit.com/problems/passing-parameters/
+
+Solution :
+#include <iostream>
+void compute(int &A, int &B, int &C)
+ {
+    A = A * A * A;
+    B = B * B * B;
+    C = C * C * C;
+}
+int main() 
+{
+    int A, B, C;
+    std::cout << "Enter three integers: ";
+    std::cin >> A >> B >> C;
+    compute(A, B, C);
+    std::cout << "Cubed values: " << A << " " << B << " " << C << std::endl;
+    return 0;
+}
