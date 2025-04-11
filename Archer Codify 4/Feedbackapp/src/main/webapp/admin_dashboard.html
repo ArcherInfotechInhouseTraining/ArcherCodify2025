@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #dbefff, #f5faff);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .dashboard {
+            width: 600px;
+            margin: 100px auto;
+            background: #ffffff;
+            padding: 50px 40px;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #007bff;
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            padding: 14px 30px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 300px;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-links a.manage {
+            background: #28a745; /* Green */
+        }
+
+        .nav-links a.manage:hover {
+            background: #218838;
+        }
+
+        .nav-links a.view {
+            background: #17a2b8; /* Teal */
+        }
+
+        .nav-links a.view:hover {
+            background: #117a8b;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h2>Admin Dashboard</h2>
+        <div class="nav-links">
+            <a class="manage" href="question_management.html">Manage Questions</a>
+            <a class="view" href="ViewResultsServlet">View Feedback Results</a>
+        </div>
+    </div>
+</body>
+</html>

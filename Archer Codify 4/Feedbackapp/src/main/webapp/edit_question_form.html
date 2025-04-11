@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Question</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        .form-container {
+            background: white;
+            width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Edit Question</h2>
+        <form method="post" action="EditQuestionServlet">
+            <input type="hidden" name="id" value="${id}">
+
+            <label>Question Text:</label>
+            <input type="text" name="question_text" value="${question_text}" required>
+
+            <label>Subject:</label>
+            <input type="text" name="subject" value="${subject}" required>
+
+            <label>Maximum Marks:</label>
+            <input type="number" name="max_marks" value="${max_marks}" required>
+
+            <input type="submit" value="Update Question">
+        </form>
+        <div class="back-link">
+            <a href="admin_dashboard.html">← Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

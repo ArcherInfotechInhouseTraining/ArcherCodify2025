@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Feedback System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #c2e9fb, #f9f7f7);
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #dee2e6;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar h1 {
+            color: #007bff;
+            font-size: 26px;
+            font-weight: 700;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar h1 i {
+            margin-right: 10px;
+            color: #007bff;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 17px;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        /* Custom Colors for Each Link */
+        .nav-home {
+            background-color: #f0f9ff;
+            color: #007bff;
+        }
+
+        .nav-home:hover {
+            background-color: #cce6ff;
+            color: #0047a3;
+        }
+
+        .nav-register {
+            background-color: #fff0f5;
+            color: #d63384;
+        }
+
+        .nav-register:hover {
+            background-color: #fcd6e3;
+            color: #a61e58;
+        }
+
+        .nav-login {
+            background-color: #f0fff4;
+            color: #28a745;
+        }
+
+        .nav-login:hover {
+            background-color: #c6f6d5;
+            color: #1c7c35;
+        }
+
+        .nav-admin {
+            background-color: #fff8e1;
+            color: #fd7e14;
+        }
+
+        .nav-admin:hover {
+            background-color: #ffe0b2;
+            color: #c05600;
+        }
+
+        .container {
+            text-align: center;
+            color: #333;
+            margin-top: 100px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .container h1 {
+             font-size: 36px;
+             font-weight: bold;
+             margin-bottom: 15px;
+             color: #6a1b9a; /* Deep Purple for Welcome Title */
+       }
+
+          .container p {
+              font-size: 18px;
+              opacity: 0.95;
+              color: #44475b; /* Soft dark bluish-gray for subtitle */
+          }
+
+        .button {
+             display: inline-block;
+             margin: 10px;
+             padding: 14px 30px;
+             font-size: 18px;
+             font-weight: 600;
+             color: white;
+             background: linear-gradient(to right, #a855f7, #ec4899); /* Purple to Pink */
+             border: none;
+             border-radius: 50px;
+             text-decoration: none;
+             transition: 0.3s ease;
+             box-shadow: 0 5px 15px rgba(236, 72, 153, 0.3);
+        }
+
+           .button:hover {
+                  background: linear-gradient(to right, #9333ea, #db2777);
+                  transform: scale(1.05);
+             }
+
+        .footer {
+         text-align: center;
+         background-color: #f8f9fa;
+         color: #000000; /* Black text */
+         padding: 12px;
+         position: fixed;
+         bottom: 0;
+         width: 100%;
+         font-size: 16px;
+         font-weight: bold; /* Bold text */
+         border-top: 1px solid #dee2e6;
+}
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar div {
+                margin-top: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .container h1 {
+                font-size: 32px;
+            }
+
+            .button {
+                font-size: 16px;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1><i class="fas fa-book-reader"></i>Library Feedback System</h1>
+        <div>
+            <a href="index.html" class="nav-home"><i class="fas fa-home"></i> Home</a>
+            <a href="user_register.html" class="nav-register"><i class="fas fa-user-plus"></i> Register</a>
+            <a href="user_login.html" class="nav-login"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="admin_login.html" class="nav-admin"><i class="fas fa-user-shield"></i> Admin</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Welcome to the Library</h1>
+       <p><span style="font-weight:bold; color:#2c3e50;">Discover books, submit your feedback, and help us improve your experience.</span></p>
+        <a href="user_register.html" class="button"><i class="fas fa-rocket"></i> Get Started</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Library Management System | All Rights Reserved.</p>
+    </div>
+
+</body>
+</html>

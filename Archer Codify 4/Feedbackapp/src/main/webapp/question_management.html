@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question Management</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #e0f7fa, #f5faff);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 60px auto;
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 30px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            color: white;
+            margin-top: 10px;
+        }
+
+        .btn-add {
+            background: #28a745; /* Green */
+        }
+
+        .btn-add:hover {
+            background: #218838;
+        }
+
+        .btn-view {
+            background: #17a2b8; /* Teal */
+        }
+
+        .btn-view:hover {
+            background: #117a8b;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+        }
+
+        td.actions {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Manage Feedback Questions</h2>
+        <form action="AddQuestionServlet" method="post">
+            <input type="text" name="question_text" placeholder="Enter question text" required>
+            <input type="text" name="subject" placeholder="Enter subject" required>
+            <input type="number" name="max_marks" placeholder="Enter max marks" required>
+            <input type="submit" value="Add Question" class="btn btn-add">
+        </form>
+
+        <form action="ViewQuestionsServlet" method="get">
+            <input type="submit" value="View All Questions" class="btn btn-view">
+        </form>
+    </div>
+</body>
+</html>
