@@ -1,0 +1,19 @@
+#include <stddef.h>
+
+size_t get_count(const char *s)
+{
+    size_t cnt = 0ul;
+    if (!s)
+        return 0ul;
+    while (*s)
+        switch (*s++) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            ++cnt;
+            break;
+        }
+    return cnt;
+}
