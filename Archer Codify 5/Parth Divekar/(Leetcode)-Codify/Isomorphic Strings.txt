@@ -1,0 +1,58 @@
+question:
+
+link:https://leetcode.com/problems/isomorphic-strings
+
+Given two strings s and t, determine if they are isomorphic.
+
+Two strings s and t are isomorphic if the characters in s can be replaced to get t.
+
+All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.
+
+ 
+Solution:
+
+
+
+class Solution {
+    static boolean isIsomorphic(String s, String t) {
+        if (s.length() != t.length()) {
+            return false; 
+        }
+
+        int[] mapST = new int[256]; 
+        int[] mapTS = new int[256]; 
+
+       
+        for (int i = 0; i < 256; i++) {
+            mapST[i] = -1;
+            mapTS[i] = -1;
+        }
+
+        for (int i = 0; i < s.length(); i++) {
+            char chS = s.charAt(i);
+            char chT = t.charAt(i);
+
+            if (mapST[chS] != -1 || mapTS[chT] != -1) {
+                if (mapST[chS] != chT || mapTS[chT] != chS) {
+                    return false;
+                }
+            } else {
+                
+                mapST[chS] = chT;
+                mapTS[chT] = chS;
+            }
+        }
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+        String s1 = "egg", t1 = "add";
+        String s2 = "foo", t2 = "bar";
+        String s3 = "paper", t3 = "title";
+
+        System.out.println(isIsomorphic(s1, t1)); 
+        System.out.println(isIsomorphic(s2, t2)); 
+        System.out.println(isIsomorphic(s3, t3)); 
+    }
+}

@@ -1,0 +1,17 @@
+double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Size) {
+    int* nums, itr, itr1, itr2, numsSize= nums1Size + nums2Size;
+
+    nums= (int *)calloc(numsSize, sizeof(int));
+    for(itr= itr1= itr2= 0; itr1+itr2 < numsSize; ){
+
+        if(itr1 >= nums1Size) nums[itr++]= nums2[itr2++];
+
+        else if (itr2 >= nums2Size) nums[itr++]= nums1[itr1++];
+
+        else{
+            if(nums1[itr1] < nums2[itr2]) nums[itr++]= nums1[itr1++];
+            else nums[itr++]= nums2[itr2++];
+        }
+    }
+    return ((nums[numsSize/2])+(nums[(numsSize/2)- !((numsSize)& 1)])) / 2.0;
+}

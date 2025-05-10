@@ -1,0 +1,31 @@
+Reversing strings (reading them from right to left, rather than from left to right) is a surprisingly common task in programming.
+
+
+reverse_string.cpp
+
+#include "reverse_string.h"
+namespace reverse_string 
+{
+	std::string reverse_string(std::string s) 
+    {
+		std::string reversedString = "";
+		for (int i = s.size() - 1; i >= 0; i--) 
+        {
+			reversedString = reversedString + s[i];
+		}
+		return reversedString;
+	}	
+} 
+
+
+
+reverse_string.h
+
+#if !defined(REVERSE_STRING_H)
+#define REVERSE_STRING_H
+#include <string>
+namespace reverse_string 
+{
+	std::string reverse_string(std::string s);	
+}  
+#endif

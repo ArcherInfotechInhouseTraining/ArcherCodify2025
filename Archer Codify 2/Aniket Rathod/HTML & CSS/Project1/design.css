@@ -1,0 +1,61 @@
+body
+{
+    width: 100%;
+	height: auto;
+	background-image: url('Pictures/Nature1.jpg');
+	background-size:cover;
+	background-blend-mode: luminosity;
+}
+
+
+h1{
+    background-color: aqua;
+}
+
+
+.box .content{
+    width: 100%;
+}
+
+.box h1, p {
+    margin: 20px 40px;
+    float: left;
+    text-shadow: 2px 2px 2px #2ecc71;
+	color: aliceblue;
+	
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 5ch;
+	
+}
+
+section{
+	height: 300px;
+	width: 100%;
+	background-image: url('Pictures/Nature2.jpg');
+	background-size:cover;
+}
+
+
+footer a{
+	
+	position: fixed;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 10px;
+	background: rgb(67, 44, 23);
+    background: linear-gradient(0deg, rgb(200, 65, 65) 0%, rgb(199, 154, 154) 55%);
+	
+  }
+
+  a:hover{
+	background-color: #2ecc71;
+	font-size: 25px;
+  }
+
+  h3{
+	color: aliceblue;
+  }

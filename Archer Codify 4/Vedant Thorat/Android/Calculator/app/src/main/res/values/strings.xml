@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="ac">AC</string>
+    <string name="bs">BS</string>
+    <string name="per">%</string>
+    <string name="sev">7</string>
+    <string name="eig">8</string>
+    <string name="ni">9</string>
+    <string name="fou">4</string>
+    <string name="fiv">5</string>
+    <string name="si">6</string>
+    <string name="on">1</string>
+    <string name="tw">2</string>
+    <string name="th">3</string>
+    <string name="ze">0</string>
+    <string name="dot">.</string>
+    <string name="eq">=</string>
+    <string name="div">/</string>
+    <string name="mul">X</string>
+    <string name="sub">-</string>
+    <string name="add">+</string>
+
+
+</resources>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head></head>
+	<body>
+		<form>
+		Enter Your Name: <input type="text"><br>
+		Enter your Email Address: <input type="email"><br>
+		Enter Address: <textarea  rows=10 cols=30></textarea><br>
+		Select your Gender:<br>
+		<input type="radio" id="Female" name="gender" value="Female">
+		<label for="Female">Female</label><br>
+		<input type="radio" id="Male" name="gender" value="Male">
+		<label for="Male">Male</label><br>
+		<input type="radio" id="Others" name="gender" value="Others">
+		<label for="Others">Female</label><br>
+		<hr>
+		<br>
+		Select the your category:<br>
+		<input type="checkbox" id>Fresher<br>
+		<input type="checkbox" name="b">Experienced<br>
+		<hr>
+		<label for="field">Choose a Field</label>
+		<select id="field" name="field" size="3">
+			<option value="Cloud Engineer">Cloud Engineer</option>
+			<option value="Developer"> Developer </option>
+			<option value="tester"> tester</option>
+			<option value="Data scientist"> Data scientist </option>
+			<option value="Data analyst">Data analyst </option>
+		</select>
+		<br>
+		<hr>
+		Enter your experienced company :<input list="companies" name="company">
+		<datalist  id = "companies">
+		<option value ="Tcs">
+		<option value ="google">
+		<option value ="microsoft">
+		<option value ="infosys">
+		<option value ="wipro">
+		</datalist>
+		<input type="submit">
+		</form>
+	</body>
+</html>

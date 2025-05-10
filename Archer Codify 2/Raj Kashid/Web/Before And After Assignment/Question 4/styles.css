@@ -1,0 +1,43 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+.animated-link {
+    position: relative;
+    text-decoration: none;
+    color: #007acc;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.animated-link::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #007acc;
+    transition: width 0.3s linear;
+}
+
+.animated-link:hover {
+    color: #005f99;
+}
+
+.animated-link:hover::after {
+    width: 100%;
+}
