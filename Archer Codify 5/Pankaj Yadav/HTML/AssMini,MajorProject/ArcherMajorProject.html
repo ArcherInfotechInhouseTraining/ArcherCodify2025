@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Major Project</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    /* Custom Styles */
+    .hero {
+      background: url('https://img.freepik.com/free-vector/creative-geometric-design-space_53876-89781.jpg?semt=ais_hybrid') no-repeat center center/cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 2px 2px 4px rgba(15, 14, 14, 0.7);
+    }
+
+    .about img {
+      max-width: 100%;
+      border-radius: 50%;
+    }
+
+    .services .card {
+      transition: transform 0.3s ease;
+    }
+
+    .services .card:hover {
+      transform: scale(1.05);
+    }
+
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .portfolio-item .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .portfolio-item:hover .overlay {
+      opacity: 1;
+    }
+
+    footer {
+      border-top: 1px solid #ccc;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header (Navigation Bar) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">My Website</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Welcome to My Website</h1>
+    <p class="lead">Your gateway to success</p>
+    <a href="#contact" class="btn btn-primary">Get Started</a>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 about">
+        <img src="src img/anime img.jpg" alt="Profile Image" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <h2>About Me</h2>
+        <p>Hi, I'm, a passionate web developer with [X years] of experience in creating intuitive, responsive, and user-friendly websites and applications. I specialize in [specific skills or technologies, e.g., front-end development, back-end development, or full-stack development], and I'm proficient in technologies like [list programming languages, frameworks, or tools, e.g., JavaScript, React, Node.js, etc.].
+
+          I thrive on crafting seamless digital experiences and enjoy collaborating with teams to bring ideas to life. Whether it's building dynamic web applications, optimizing performance, or ensuring cross-platform compatibility, I love solving challenges with clean and efficient code.
+          
+          When I'm not coding, you can find me [hobby or interest, e.g., exploring new tech trends, contributing to open-source projects, or enjoying outdoor activities].
+          
+          Let’s build something amazing together! Feel free to [connect with me, view my portfolio, or reach out].</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="container py-5">
+    <h2 class="text-center mb-4">Our Services</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <i class="bi bi-laptop mb-3" style="font-size: 50px; color: #007bff;"></i>
+          <div class="card-body">
+            <h5 class="card-title">Web Design</h5>
+            <p class="card-text">We create beautiful and responsive websites that meet your business needs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <i class="bi bi-paint-bucket mb-3" style="font-size: 50px; color: #007bff;"></i>
+          <div class="card-body">
+            <h5 class="card-title">Graphic Design</h5>
+            <p class="card-text">We design eye-catching graphics to enhance your brand's identity.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <i class="bi bi-bar-chart-line mb-3" style="font-size: 50px; color: #007bff;"></i>
+          <div class="card-body">
+            <h5 class="card-title">Digital Marketing</h5>
+            <p class="card-text">We help businesses grow through effective digital marketing strategies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="container py-5">
+    <h2 class="text-center mb-4">Our Portfolio</h2>
+    <div class="row">
+      <div class="col-md-4 portfolio-item">
+        <img src="src img/HTML.png" class="img-fluid" alt="Portfolio Item 1">
+        <div class="overlay">
+          <h5>HTML</h5>
+        </div>
+      </div>
+      <div class="col-md-4 portfolio-item">
+        <img src="src img/css.png" class="img-fluid" alt="Portfolio Item 2">
+        <div class="overlay">
+          <h5>CSS</h5>
+        </div>
+      </div>
+      <div class="col-md-4 portfolio-item">
+        <img src="src img/JS.png" class="img-fluid" alt="Portfolio Item 3">
+        <div class="overlay">
+          <h5>JAVA SCRIPT</h5>
+        </div>
+      </div>
+      <div class="col-md-4 portfolio-item">
+        <img src="src img/webdev.jpeg" class="img-fluid" alt="Portfolio Item 4">
+        <div class="overlay">
+          <h5>WEB DEV</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4 portfolio-item">
+        <img src="src img/Appdev.jpg" class="img-fluid" alt="Portfolio Item 6">
+        <div class="overlay">
+          <h5>APP DEV</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4 portfolio-item">
+        <img src="src img/IOS DEV.jpeg" class="img-fluid" alt="Portfolio Item 5">
+        <div class="overlay">
+          <h5>IOS DEV</h5>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container py-5">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <form action="#" method="POST" novalidate>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" required>
+        <div class="invalid-feedback">Please enter your name.</div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" required>
+        <div class="invalid-feedback">Please enter a valid email.</div>
+      </div>
+      <div class="mb-3">
+        <label for="subject" class="form-label">Subject</label>
+        <input type="text" class="form-control" id="subject" required>
+        <div class="invalid-feedback">Please enter a subject.</div>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" rows="4" required></textarea>
+        <div class="invalid-feedback">Please enter your message.</div>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center">
+    <div class="container py-4">
+      <p>&copy; 2025 My Website. All rights reserved.</p>
+      <div>
+        <a href="#" class="mx-2"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="mx-2"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="mx-2"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="mx-2"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybD4DAlmUtW1s8Zg3Rns7tLzL0WqGbIWdFZyF2VQyy4vppFPJ" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0pI3aWgfoyR4lLkPbgq5AVCme14xZzFT3pXfJgt9H8zv8V2Q" crossorigin="anonymous"></script>
+  <script>
+    // Form validation
+    (function () {
+      'use strict'
+      var forms = document.querySelectorAll('.needs-validation')
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+  </script>
+</body>
+
+</html>

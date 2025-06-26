@@ -1,0 +1,209 @@
+
+						C++ Programming
+			==================================================================
+
+	Data Types --> Needed for memory allocation
+
+							 |----> Data structure --> std.algo
+	int		Array		structure =====> |
+	char  ====> 	pointer	====> 	union		 |----> C++ prog --> allows you to store
+	float				enum				     the data in secure   	
+	double								     manner 	
+
+
+	To store the data in secure manner the c++ introduced a new data type called class.
+	It is next to structure.
+		Basically the class is taken from language simula67 and Bjarne stroustrup
+	from AT&T Bell Lab, USA, forms a new language called "C With Class" and later on
+	It is renamed as C++, as a incremented version of C.
+
+	The are some basic differences, lets see one by one
+
+	- In C, some header files are included by default (stdio.h, stdlib.h....)
+	  but in C++, No any header file included by default.
+
+	- There are predefined input and output streams. from wic
+		- cin is predefined input stream
+		- cout is predefined output stream
+
+			 CPU
+		________________________
+		|			|
+		|	 CU		|
+		|_______________________|
+  I/P		|			|		o/p
+   [  ]		|	ALU		|	|----> [ ]
+    |	 	|_______________________|	|
+    |	 	|			|	|
+    |---------->|	IM		|-------|
+In C - scanf()	|_______________________| In C - printf()
+In C++ - cin		^	|	  In C++ - cout
+		________|_______V________
+		|			|
+		|	EM		|
+		|_______________________|
+
+
+
+	// C++ Welcome Program
+
+	Before proceeding further, we must know about the output stream.
+	To display the data on screen cout is used
+
+	syntax:
+		cout<<"<format_String>";
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	cout<<"Welcome to C++ Programming";
+	return 0;
+}
+
+
+	- return type int: C does not return anything to OS, so the returning
+		   type of main() in C is void but In C++, int value
+			   0 returned to OS, therefore the return type of main()
+			   is int and 0 indicated sucessful execution.	   
+
+	- cout:Basically it is prdfefined output stream, It is actually the object of
+			 ostream class. It is defined in iostream.h so you need to include it
+			 @top of main. 
+
+	- Insertion Operator(<<): The operator << is bitwise Leftshift operator
+			 here it is overloaded, and additionally when it is used with cout
+			 it will put the data on screen and terefore it is known as the
+			 put to or insertion operator.
+
+
+ //=====================================================================================
+
+	// Simple cout demo program with basic fomating
+
+#include<iostream.h>
+#include<iomanip.h>
+int main()
+{
+	cout<<endl<<"Good Morning"<<endl<<"Work Hard";
+
+	int x=10,y=12;
+	float ft=56.43;
+	
+	cout<<"\n Value of x and y is: "<<x<<setw(10)<<y;
+	cout<<endl<<"Value of x is: "<<x<<endl<<"Value of y="<<y
+		<<"\t ft="<<setprecision(4)<<ft;
+
+	return 0;
+}
+
+  Note:
+	- endl is manipulator, which inserts the newline (\n or any other escape sequence character)
+	  allowed here)
+
+	- C++ allows to decl. the variables anywere in the program, but it must be decleared
+	  before using it.
+
+	- In C++, We dont need format specifiers, it will take the type automatically.
+	  and while displaying the stream manipulators, identifiers, strings must be seperated
+	  using<<
+	
+	- cout<<"xxxx"; It can be expanded within one or more lines.
+
+	- setprecision() To set the width setw() and for precision setprecision() 
+	  is used and both are defined in iomanip.h
+
+ //==============================================================================================
+
+	Now after the basic IO we will start in a sequence.
+
+	 character set ==> Tokens --> instructions --> program
+
+
+	- character is same coz it it actually c with class.
+
+	- Tokens: It is smallest individual unit in the program
+
+		- constant
+		- keyword (48 keywords)
+		- identifier
+		- strings
+		- operators
+
+	Now, lets start with data type,
+
+		/// C++ Data Types
+
+	Data type is tool which is needed for the memory allocation and i is referred at the
+	time of memory allocation in type decl.
+
+
+				C++ Data Types
+					|
+     		-------------------------------------------------
+		|			|			|
+	  User-defined 		     Built-in		     Derived
+	  - structure                   |		      - Array	
+	  - Union	     -------------------------	      - pointer
+	  - Enum	     |		 |	     |        - function
+	  - class	Integral       void   Floating type   - reference
+			   |			     |	
+		     --------------		-----------
+		     |            |		|	  | 
+		    int          char        float      double 
+
+
+
+	// Data input in C++: 
+
+	Here, cin, which is pre-defined object of istream class and it is from the
+	iostream.h, used as a input stream. and the operator >> is used as get in
+	operator or also known as extraction operator, used totake a data input.
+	basically it is bitwise right-shift operatorwhich is overloaded here.
+
+	syntax:
+		cin>> <var_nm>;
+
+		e.g.
+			int x;
+			cin>>x;
+
+			int a;
+			float b;
+			double d;
+			cin>>a>>b>>d;
+
+	Note that it will not require & to get an address, it is gained automatically by the cin.	
+
+ Lets see one example:
+
+int main()
+{
+	cout<<"\n The Example of Data Input"<<endl;
+	
+	int a,b;
+	cout<<"\n Enter any two int values: ";
+	cin>>a>>b;
+
+	cout<<endl<<"Enter two fractional values: ";
+	float f;
+	double d;
+	cin>>f>>d;
+
+	cout<<endl<<" a="<<a<<"\t b="<<b;
+	cout<<endl<<"f="<<f<<"\t d="<<d;
+
+	return 0;
+}			
+
+//=========================================================================================
+
+
+
+
+
+
+
+
+
+

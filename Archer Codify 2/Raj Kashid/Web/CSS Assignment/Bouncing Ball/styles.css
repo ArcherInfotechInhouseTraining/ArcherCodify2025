@@ -1,0 +1,30 @@
+/* General Reset */
+body {
+    margin: 0;
+    display: flex;
+    align-items: flex-end; /* Position ball at the bottom */
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    /*overflow: hidden;*/
+}
+
+/* Ball Styling */
+.ball {
+    width: 100px;
+    height: 100px;
+    background-color: #007acc;
+    border-radius: 50%;
+    position: relative;
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+/* Bouncing Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Ball is at the bottom */
+    }
+    50% {
+        transform: translateY(-300px); /* Ball moves up */
+    }
+}

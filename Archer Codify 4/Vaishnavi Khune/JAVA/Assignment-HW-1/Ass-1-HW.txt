@@ -1,0 +1,520 @@
+1. Explain what is platform dependency and what is platform independency.
+
+Ans:
+-platform dependency:
+Applications that are developed by using a few languages such as C language cannot be executed on other operating systems, whenever we compile the source code of a program written using these languages, we will generate Machine code (or ) Executable code (or) Native code.
+The machine code generated for one operating system cannot execute on other operating systems. This kind of code is called platform-dependent code. 
+
+-platform independency:
+It is an approach to executing an application on multiple Operating Systems, this feature is available in advanced languages like C#, and JAVA as well as any .NET languages also.                                                      
+ In all these languages whenever we compile the source code, first it is converted into semi-finished/Intermediate code which can be carried and executed on any machine but to run the code on a machine first we need to install software on the machine which converts the intermediate code into machine code according to the Operating System.   
+
+2. Explain how data is entered using command line arguments with examples.
+
+Ans:
+Java command-line argument is an argument i.e. passed at the time of running the Java program. In Java, the command line arguments passed from the console can be received in the Java program and they can be used as input. The users can pass the arguments during the execution bypassing the command-line arguments inside the main() method.
+
+// Java Program to Illustrate First Argument
+ 
+// Class
+class GFG {
+ 
+    // Main driver method
+    public static void main(String[] args)
+    {
+        // Printing the first argument
+        System.out.println(args[0]);
+    }
+}
+
+3. Explain Unary operators in Java with examples.
+
+Ans:
+
+-Unary Operators in Java:
+Java unary operators are the types that need only one operand to perform any operation like increment, decrement, negation, etc. It consists of various arithmetic, logical and other operators that operate on a single operand.
+
+-Operator 1: Unary minus(-)
+This operator can be used to convert a positive value to a negative one. 
+
+Syntax: 
+-(operand)
+
+-Operator 2: ‘NOT’ Operator(!)
+This is used to convert true to false or vice versa. Basically, it reverses the logical state of an operand.
+
+Syntax: 
+!(operand)
+
+-Operator 3: Increment(++)
+It is used to increment the value of an integer. It can be used in two separate ways: 
+
+3.1: Post-increment operator
+
+When placed after the variable name, the value of the operand is incremented but the previous value is retained temporarily until the execution of this statement and it gets updated before the execution of the next statement. 
+
+Syntax: num++;
+
+3.2: Pre-increment operator
+
+When placed before the variable name, the operand’s value is incremented instantly.
+
+Syntax: ++num;
+
+-Operator 4: Decrement ( — )
+It is used to decrement the value of an integer. It can be used in two separate ways: 
+
+4.1: Post-decrement operator
+
+When placed after the variable name, the value of the operand is decremented but the previous values is retained temporarily until the execution of this statement and it gets updated before the execution of the next statement. 
+
+Syntax: num--;
+
+4.2: Pre-decrement operator
+
+When placed before the variable name, the operand’s value is decremented instantly. 
+
+Syntax: --num;
+
+-Operator 5: Bitwise Complement(~)
+This unary operator returns the one’s complement representation of the input value or operand, i.e, with all bits inverted, which means it makes every 0 to 1, and every 1 to 0. 
+
+Syntax: ~(operand);
+
+-Example program in Java that implements all basic unary operators for user input:
+
+import java.util.Scanner;
+ 
+public class UnaryOperators {
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+ 
+        // fro user inputs here is the code.
+ 
+        // System.out.print("Enter a number: ");
+        // int num = sc.nextInt();
+        int num = 10;
+ 
+        int result = +num;
+        System.out.println(
+            "The value of result after unary plus is: "
+            + result);
+ 
+        result = -num;
+        System.out.println(
+            "The value of result after unary minus is: "
+            + result);
+ 
+        result = ++num;
+        System.out.println(
+            "The value of result after pre-increment is: "
+            + result);
+ 
+        result = num++;
+        System.out.println(
+            "The value of result after post-increment is: "
+            + result);
+ 
+        result = --num;
+        System.out.println(
+            "The value of result after pre-decrement is: "
+            + result);
+ 
+        result = num--;
+        System.out.println(
+            "The value of result after post-decrement is: "
+            + result);
+    }
+}
+
+-Output:
+The value of result after unary plus is: 10
+The value of result after unary minus is: -10
+The value of result after pre-increment is: 11
+The value of result after post-increment is: 11
+The value of result after pre-decrement is: 11
+The value of result after post-decrement is: 11
+
+4. Write a C program to input marks of five subjects Physics, Chemistry, Biology, Mathematics 
+and Computer. Calculate percentage and grade according to following:
+Percentage >= 90% : Grade A
+Percentage >= 80% : Grade B
+Percentage >= 70% : Grade C
+Percentage >= 60% : Grade D
+Percentage >= 40% : Grade E
+Percentage < 40% : Grade F
+
+Ans:
+
+import java.util.Scanner;
+
+class StudGrade
+{
+public static void main(String args[])
+{
+
+Scanner sc =new Scanner(System.in);
+
+int p,c,b,m,comp;
+float per;
+
+System.out.println("Enter the Physics Marks:");
+p=sc.nextInt();
+
+System.out.println("Enter the Chemistry Marks:");
+c=sc.nextInt();
+
+System.out.println("Enter the Biology Marks:");
+b=sc.nextInt();
+
+System.out.println("Enter the Mathematics Marks:");
+m=sc.nextInt();
+
+System.out.println("Enter the Computer Marks:");
+comp=sc.nextInt();
+
+int total = (p+c+b+m+comp);
+
+per=((float)total/500)*100;
+
+System.out.println("Your percentage is:"+per);
+
+if(per>=90)
+{
+System.out.println("Your Grade : A");
+
+}else if(per<90 && per>=80)
+{
+System.out.println("Your Grade : B");
+
+}else if(per>=70 && per<80)
+{
+System.out.println("Your Grade : C");
+
+}else if(per>=60 && per<70)
+{
+System.out.println("Your Grade : D");
+
+}else if(per>=40 && per<60)
+{
+System.out.println("Your Grade : E");
+
+}else if(per<40)
+{
+System.out.println("Your Grade : F");
+
+}
+
+}
+}
+
+5. Write a program to enter the runs scored by a player in three matches and display the highest 
+runs scored using the ? :  operator.
+
+Ans:
+
+import java.util.Scanner;
+
+class Runs
+{
+
+public static void main(String args[])
+{
+
+Scanner sc = new Scanner(System.in);
+int a,b,c;
+
+System.out.println("Enter the runs scored by a player in three matches:");
+a=sc.nextInt(); 
+b=sc.nextInt(); 
+c=sc.nextInt();  
+
+int z= (a>b) ? ((a>c) ? a : c) : ((b>c) ? b : c);
+
+System.out.println("Highest Score is:"+z);
+
+}
+}
+
+6. Write a program to check entered number is an Abundant Number or not.
+Ans:
+
+-Abundant Number:
+A number n is said to be an Abundant Number if the sum of all the proper divisors of the number denoted by sum(n) is greater than the value of the number n. sum(n)> n.
+
+Program:
+
+import java.util.Scanner;
+
+class AbundantNum
+{
+public static void main(String args[])
+{
+
+Scanner sc = new Scanner(System.in);
+
+System.out.println("Enter a number :");
+int n = sc.nextInt();
+int i;
+int sum=0;
+
+for(i=1;i<n;i++)
+{
+ if(n%i==0)
+{
+ sum=sum+i;
+
+}
+}
+
+if(sum>n){
+System.out.println(n+" is Abundant number");
+}else
+{
+System.out.println(n+" is not Abundant number");
+}
+
+}
+
+}
+
+7. Write a program to calculate the factorial of entered number
+
+Ans:
+
+import java.util.Scanner;
+
+class Facto
+{
+
+public static void main(String args[])
+{
+
+Scanner sc = new Scanner(System.in);
+
+System.out.println("Enter a number:");
+int n=sc.nextInt();
+int fact=1;
+int i;
+
+for(i=n;i>0;i--){
+
+fact= fact*i ;
+
+}
+System.out.println("Factorial of "+n+" is:"+fact);
+
+}
+}
+
+8.  Write a program to print the following Patterns.
+
+*********
+ ********
+  *******
+   ******
+    *****
+     ****
+      ***
+       **
+        *    
+ and 
+
+    A
+   ABA
+  ABCBA
+ ABCDCBA
+ABCDEDCBA
+
+Ans:
+// For * pattern
+
+class Pattern
+{
+
+public static void main(String args[])
+{
+
+int i,j;
+
+for(i=0;i<9;i++)
+{
+  for(j=0;j<9;j++)
+{ 
+if(j<i)
+{
+System.out.print(" ");
+}else
+{
+System.out.print("*");
+}
+}
+System.out.println("\n");
+}
+
+}
+}
+
+// For Abcd pattern
+
+class Pattern
+{
+
+public static void main(String args[])
+{
+
+int i,j;
+char ch;
+
+for(i=0;i<5;i++)
+{
+ch='A';
+  for(j=0;j<(5+i);j++)
+{ 
+ if(j<(4-i))
+{
+System.out.print(" ");
+
+}else if(j<5)
+{
+
+System.out.print(ch);
+ch++;
+if(j==4)
+{
+ch--;
+}
+}else
+{
+--ch;
+System.out.print(ch);
+
+}
+
+}
+System.out.println("\n");
+}
+
+}
+}
+
+
+9. Write a program to print Fibonacci series given ahead. 0 1 1 2 3 5 8 13 21 34
+
+Ans:
+
+class Fibonacci
+{
+
+public static void main(String args[])
+{
+
+int a=0;
+int b=1;
+int i;
+int c;
+
+System.out.print("Fibonacci series: ");
+
+System.out.print(a+"\t"+b);
+
+for(i=0;i<8;i++)
+{
+c=a+b;
+a=b;
+b=c;
+System.out.print("\t"+c);
+}
+
+}
+}
+
+10. Write a menu driven program to perform different arithmetic operations (Using switch)
+
+Ans:
+
+import java.util.Scanner;
+
+class ArithOpMenu
+{
+
+public static void main(String args[])
+{
+
+Scanner sc = new Scanner(System.in);
+
+System.out.println("Select the Operation: \n 1. Addition\n 2. Subtraction\n 3. Multiplication\n 4. Division");
+int a=sc.nextInt();
+
+System.out.println("Enter two numbers:");
+int b=sc.nextInt();
+int c=sc.nextInt();
+
+float ans;
+
+switch(a)
+{
+
+case(1):
+ans=b+c;
+System.out.println("Addition is :"+ans);
+break;
+
+case(2):
+ans=b-c;
+System.out.println("Subtraction is :"+ans);
+break;
+
+case(3):
+ ans=b*c;
+System.out.println("Multiplication is :"+ans);
+break;
+
+case(4):
+float an=(float)b/c;
+System.out.println("Division is :"+an);
+break;
+ default:
+System.out.println("Wrong option selected.");
+
+}
+
+}
+}
+
+11. Write a program to sort an array in descending order
+
+Ans:
+
+public class SortArray  
+{  
+public static void main(String[] args)   
+{  
+//creating an instance of an array  
+int[] arr = new int[] {78, 34, 1, 3, 90, 34, -1, -4, 6, 55, 20, -65};  
+System.out.println("Array elements after sorting:");  
+//sorting logic  
+for (int i = 0; i < arr.length; i++)   
+{  
+for (int j = i + 1; j < arr.length; j++)   
+{  
+int tmp = 0;  
+if (arr[i] < arr[j])   
+{  
+tmp = arr[i];  
+arr[i] = arr[j];  
+arr[j] = tmp;  
+}  
+}  
+//prints the sorted element of the array  
+System.out.print(arr[i]+"\t");  
+}  
+}  
+}  
+
+
+
+
+
+

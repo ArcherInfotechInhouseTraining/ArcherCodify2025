@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Galada&family=Monsieur+La+Doulaise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Bungee+Spice&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Galada&family=Geist+Mono:wght@100..900&family=Monsieur+La+Doulaise&family=Sevillana&display=swap');
+        .hero {
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZbTNzViFG8ZTYTTF0LO2rnxPxdXJlpqZiMA&s') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            font-family: "DM Serif Text", serif;
+            font-weight: 800;
+            font-style: bold;
+            margin: 80px 0px 5px 0px;           
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+        }
+
+        .footer {
+            background-color: #07325d;
+            padding: 20px 0;
+        }
+
+        .footer a {
+            margin: 20px;
+        }
+        .navbar{
+            background: darkgrey;
+            font-family: "DM Serif Text", serif;
+            font-weight: 900;
+            font-style: bold;
+            padding-right: 10px;
+            font-size: 18px;
+
+        }
+        
+        .navbar .collapse a:hover{
+            background-color:darkgray;
+            color: white;
+            font-weight: 900;
+            font-style: bold;
+             border-radius: 5px;
+
+        }
+        .col{
+            margin:50px;
+            padding: 10px;
+            height: 200px;
+            width: 500px;
+            border-radius: 5px;
+        }
+        .col-auto{
+            margin:50px;
+            padding: 10px;
+            border: 2px solid black;
+            border: 5px;
+
+        }
+        .col-auto img{
+                 height:150px ;
+                 width:200px ;
+
+        }
+        .card-body img{
+                height: 200px;
+                width: 300px;
+                margin: 30px;
+        }
+        .col-lg-4,.col-md-6{
+            height: 600px;
+            width:400px ;
+            float: left;
+            text-align: center;
+            margin-right: 30px;
+        }
+        .navbar .container{
+            margin-top:10px ;
+        }
+.footer .container a{
+            margin-top:20px;
+            text-decoration: none;
+            color: black;
+            
+
+        }
+.footer .container a:hover{
+           background-color: darkgray;
+
+        }
+        .footer .container{
+            margin: 10px;
+        }
+        
+    
+        
+        
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar navbar-expand-lg  fixed-top navbar-light  bg-light">
+            <div class="container ">
+                <a class="navbar-brand" href="#">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqm0YPDESLNXQ8fbRXw2kSiG1Jwl7x9wQ1LQ&s" alt="Bootstrap" width="30" height="24">
+    </a>
+                <a class="navbar-brand" href="#">My Blog</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto justify-content-end">
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blogpost.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+ <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Hello, I am Divya</h1>
+            <p>Welcome To My Blogs</p>
+        </div>
+    </section>
+    
+   
+    <!-- Blog Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Blog Card 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Fashion And Beauty Blogs</h5>
+                            <img src="https://img.freepik.com/premium-photo/top-view-women-using-laptop-searching-cosmetic-information-makeup-beauty-concept_1423-1392.jpg">
+                            <p class="card-text">The world of fashion moves fast, so fashion blogs work to keep readers informed on the latest trends in clothing, accessories, and style. </p>
+                            <a href="#" class="btn btn-secondary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Card 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Food Blogs</h5>
+                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ8e79TCwVwHWMEyhO-Dq1tNqn3RDn634Y_qcsH7CVNqhgJQNlLDqXT4073zoBqIpo47U&usqp=CAU">
+                            <p class="card-text">Food blogs offer recipes, cooking tips, and restaurant reviews, catering to everyone from home cooks to passionate foodies. </p>
+                            <a href="#" class="btn btn-secondary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Card 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Lifestyle Blogs </h5>
+                             <img src="https://thrivemyway.com/wp-content/uploads/2021/10/The-Everygirl-Best-Sustainable-Lifestyle-Blogs.png">
+                            <p class="card-text">For those interested in the everyday lives and experiences of others, lifestyle blogs are a great go-to. Generally more personal than other blogs, lifestyle blogs provide readers with advice and inspiration for everyday living.</p>
+                            <a href="#" class="btn btn-secondary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Card 4 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Travel Blogs</h5>
+                             <img src="https://assets.bucketlistly.blog/sites/5adf778b6eabcc00190b75b1/assets/5d4d27bc76b7c205751b8425/asiyami-main-image.jpg">
+                            <p class="card-text">Travel blogs are for you if you’ve got a serious case of wanderlust or have just been bitten by the travel bug.</p>
+                            <a href="#" class="btn btn-secondary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Card 5 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Technology Blogs</h5>
+                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz1wzkFjgREGO_Eeru8x7J0hZb1NBaYDSoew&s">
+                            <p class="card-text">The tech space can be daunting to get into. Not only is it a fast-moving world, but newcomers also have trouble understanding technical specifications across a range of products.</p>
+                            <a href="#" class="btn btn-secondary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Card 6 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Health and Fitness Blogs </h5>
+                             <img src="https://www.glofox.com/wp-content/uploads/2020/10/young-woman-workout-by-laptop-online-fitness-coach-workout-club-trainer-video-sport-class-social_t20_1nX4Yv.jpg">
+                            <p class="card-text">The world has become more health conscious. This means that finding trusted information on fitness and wellbeing is really important. The aim of health and fitness blogs is to inspire and guide readers toward better health.
+
+                                You can find workout routines tailored to various fitness levels and nutrition advice for specific health goals. </p>
+                            <a href="#" class="btn btn-secondary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p class="mb-2">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </p>
+            <div>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>
