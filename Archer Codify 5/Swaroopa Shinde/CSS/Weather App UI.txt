@@ -1,0 +1,109 @@
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App UI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="day">
+  <div class="container">
+    <h1>Weather in Pune</h1>
+    <div class="weather-box">
+      <img src="sun.png" alt="Weather Icon" class="icon">
+      <div class="temp">32°C</div>
+      <div class="description">Sunny</div>
+      <div class="details">
+        <p>Humidity: 40%</p>
+        <p>Wind: 10 km/h</p>
+      </div>
+    </div>
+    <button onclick="toggleTheme()">Toggle Theme</button>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("night");
+    }
+  </script>
+</body>
+</html>
+
+---------------------------------------------------------------------------------------------------------------------
+
+style.css
+
+:root {
+  --bg-day: #e0f7fa;
+  --text-day: #333;
+  --bg-night: #2c3e50;
+  --text-night: #ecf0f1;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 0.5s, color 0.5s;
+}
+
+body.day {
+  background: var(--bg-day);
+  color: var(--text-day);
+}
+
+body.night {
+  background: var(--bg-night);
+  color: var(--text-night);
+}
+
+.container {
+  max-width: 400px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.weather-box {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  backdrop-filter: blur(5px);
+}
+
+.icon {
+  width: 80px;
+}
+
+.temp {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.details {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #4fc3f7;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #039be5;
+}
+
