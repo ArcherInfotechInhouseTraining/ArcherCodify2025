@@ -1,0 +1,199 @@
+Main.java
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        EmployeeManager manager = new EmployeeManager();
+        Scanner sc = new Scanner(System.in);
+        int choice;
+
+        do {
+            System.out.println("\n--- Employee Management System ---");
+            System.out.println("1. Add Employee");
+            System.out.println("2. View All Employees");
+            System.out.println("3. Calculate Salary");
+            System.out.println("4. Exit");
+            System.out.print("Enter choice: ");
+            choice = sc.nextInt();
+            sc.nextLine(); // consume newline
+
+            switch (choice) {
+                case 1:
+                    manager.addEmployee();
+                    break;
+                case 2:
+                    manager.viewEmployees();
+                    break;
+                case 3:
+                    manager.calculateSalary();
+                    break;
+                case 4:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid choice.");
+            }
+        } while (choice != 4);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------
+
+Employee.java
+
+public class Employee {
+    private int id;
+    private String name;
+    private double basicSalary;
+
+    public Employee(int id, String name, double basicSalary) {
+        this.id = id;
+        this.name = name;
+        this.basicSalary = basicSalary;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getBasicSalary() {
+        return basicSalary;
+    }
+
+    public double calculateSalary() {
+        double hra = 0.2 * basicSalary;
+        double da = 0.1 * basicSalary;
+        return basicSalary + hra + da;
+    }
+
+    @Override
+    public String toString() {
+        return "ID: " + id + ", Name: " + name + ", Basic Salary: " + basicSalary;
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------
+
+EmployeeManager.java
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class EmployeeManager {
+    private ArrayList<Employee> employees = new ArrayList<>();
+    private Scanner sc = new Scanner(System.in);
+
+    public void addEmployee() {
+        System.out.print("Enter ID: ");
+        int id = sc.nextInt();
+        sc.nextLine(); // consume newline
+        System.out.print("Enter Name: ");
+        String name = sc.nextLine();
+        System.out.print("Enter Basic Salary: ");
+        double salary = sc.nextDouble();
+        employees.add(new Employee(id, name, salary));
+        System.out.println("Employee added successfully!");
+    }
+
+    public void viewEmployees() {
+        if (employees.isEmpty()) {
+            System.out.println("No employees to show.");
+            return;
+        }
+        for (Employee e : employees) {
+            System.out.println(e);
+        }
+    }
+
+    public void calculateSalary() {
+        System.out.print("Enter employee ID: ");
+        int id = sc.nextInt();
+        for (Employee e : employees) {
+            if (e.getId() == id) {
+                double total = e.calculateSalary();
+                System.out.println("Total Salary for " + e.getName() + ": ₹" + total);
+                return;
+            }
+        }
+        System.out.println("Employee not found.");
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------
+
+OUTPUT:
+
+--- Employee Management System ---
+1. Add Employee      
+2. View All Employees
+3. Calculate Salary  
+4. Exit
+Enter choice: 1      
+Enter ID: 101
+Enter Name: Swarupa
+Enter Basic Salary: 25000
+Employee added successfully!
+
+--- Employee Management System ---
+1. Add Employee
+2. View All Employees
+3. Calculate Salary
+4. Exit
+Enter choice: 1
+Enter ID: 102
+Enter Name: Vaishnavi
+Enter Basic Salary: 30000
+Employee added successfully!
+
+--- Employee Management System ---
+1. Add Employee
+2. View All Employees
+3. Calculate Salary
+4. Exit
+Enter choice: 1
+Enter ID: 103
+Enter Name: Priyanka
+Enter Basic Salary: 35000
+Employee added successfully!
+
+--- Employee Management System ---
+1. Add Employee
+2. View All Employees
+3. Calculate Salary
+4. Exit
+Enter choice: 2
+ID: 101, Name: Swarupa, Basic Salary: 25000.0
+ID: 102, Name: Vaishnavi, Basic Salary: 30000.0
+ID: 103, Name: Priyanka, Basic Salary: 35000.0
+
+--- Employee Management System ---
+1. Add Employee
+2. View All Employees
+3. Calculate Salary
+4. Exit
+Enter choice: 3
+Enter employee ID: 2
+Employee not found.
+
+--- Employee Management System ---
+1. Add Employee
+2. View All Employees
+3. Calculate Salary
+4. Exit
+Enter choice: 3
+Enter employee ID: 102
+Total Salary for Vaishnavi: ?39000.0
+
+--- Employee Management System ---
+1. Add Employee
+2. View All Employees
+3. Calculate Salary
+4. Exit
+Enter choice: 4
+Exiting...
+PS C:\Users\Admin\Desktop\Employee Mgt Sys> 
