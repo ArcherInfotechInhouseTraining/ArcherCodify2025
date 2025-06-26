@@ -1,0 +1,141 @@
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <vector>
+#include <string>
+using namespace std;
+
+struct Student {
+    int rollNo;
+    string name;
+    int totalDays = 0;
+    int presentDays = 0;
+};
+
+vector<Student> students;
+
+void loadStudents() {
+    ifstream fin("students.txt");
+    students.clear();
+    Student s;
+    while (fin >> s.rollNo >> ws && getline(fin, s.name) && fin >> s.totalDays >> s.presentDays) {
+        students.push_back(s);
+    }
+    fin.close();
+}
+
+void saveStudents() {
+    ofstream fout("students.txt");
+    for (Student &s : students) {
+        fout << s.rollNo << endl << s.name << endl << s.totalDays << " " << s.presentDays << endl;
+    }
+    fout.close();
+}
+
+void addStudent() {
+    Student s;
+    cout << "Enter Roll No: ";
+    cin >> s.rollNo;
+    cin.ignore();
+    cout << "Enter Name: ";
+    getline(cin, s.name);
+    s.totalDays = 0;
+    s.presentDays = 0;
+    students.push_back(s);
+    saveStudents();
+    cout << "Student added.\n";
+}
+
+void markAttendance() {
+    cout << "--- Mark Attendance for Today (P/A) ---\n";
+    for (auto &s : students) {
+        char status;
+        cout << s.rollNo << " - " << s.name << ": ";
+        cin >> status;
+        s.totalDays++;
+        if (status == 'P' || status == 'p') {
+            s.presentDays++;
+        }
+    }
+    saveStudents();
+    cout << "Attendance marked.\n";
+}
+
+void viewAttendance() {
+    cout << "\n--- Attendance Report ---\n";
+    cout << setw(10) << "Roll No" << setw(20) << "Name"
+         << setw(15) << "Present/Total" << setw(12) << "Percent\n";
+
+    for (const auto &s : students) {
+        float percent = (s.totalDays == 0) ? 0.0 : ((float)s.presentDays / s.totalDays) * 100;
+        cout << setw(10) << s.rollNo << setw(20) << s.name
+             << setw(10) << s.presentDays << "/" << s.totalDays
+             << setw(10) << fixed << setprecision(1) << percent << "%\n";
+    }
+}
+
+int main() {
+    int choice;
+    loadStudents();
+
+    do {
+        cout << "\n--- Student Attendance Tracker ---\n";
+        cout << "1. Add Student\n2. Mark Attendance\n3. View Attendance\n4. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+        cin.ignore(); // consume newline
+
+        switch (choice) {
+            case 1: addStudent(); break;
+            case 2: markAttendance(); break;
+            case 3: viewAttendance(); break;
+            case 4: cout << "Exiting...\n"; break;
+            default: cout << "Invalid choice.\n";
+        }
+    } while (choice != 4);
+
+    return 0;
+}
+
+OUTPUT :
+
+Enter your choice: 1
+Enter Roll No: 
+13
+Enter Name: Vaishnavi
+Student added.
+
+--- Student Attendance Tracker ---
+1. Add Student
+2. Mark Attendance
+3. View Attendance
+4. Exit
+Enter your choice: 2
+--- Mark Attendance for Today (P/A) ---
+12 - Swarupa: P
+13 - Vaishnavi: A
+Attendance marked.
+
+--- Student Attendance Tracker ---
+1. Add Student
+2. Mark Attendance
+3. View Attendance
+4. Exit
+Enter your choice: 3
+
+--- Attendance Report ---
+   Roll No                Name  Present/Total    Percent
+        12             Swarupa         1/1     100.0%
+        13           Vaishnavi         0/1       0.0%
+
+--- Student Attendance Tracker ---
+1. Add Student
+2. Mark Attendance
+3. View Attendance
+4. Exit
+Enter your choice: 4
+Exiting...
+
+Explanation :
+Student Attendance Tracker (C++) – Built a console-based attendance tracking system using structures, 
+2D logic, file I/O, and menu-driven design to mark and report student attendance with percentages.
