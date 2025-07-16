@@ -1,0 +1,727 @@
+
+	---------------- C++ Programming ----------------------
+
+	History: 
+
+		ALGOL60 ---> CPL ---> BCPL -----> B ---> C(1972) ----> C++(1983-85)
+	
+		- C++ is actually C with Class later on  it is renamed as C++, as a incremented version of C.
+		- It is developed at AT&T Bell Lab, USA by bjarne Stroustrup
+		- initially it developed to provide the security to data.
+		- After some years, the higher level languages like Java, Python, C# are used as a famous development
+		  languages but as IOT and machine interfacing grows the execution spped of language become most important 
+		  term, and therefore as C++ having greater speed as compare to another HLL. now again C++ becoming a famous.
+		   i.e. in short due to Security and speed it is used in the industry.
+
+	Version History:
+	
+	Classic C++: (C++ before C++98): Additional data types, different IO style, function overloading, class and object, 				
+		  constructor and destructors, inheritance, polymorphism, operator overloading, file IO, exception handling, 
+		templets, STL...
+
+	Modern C++:	
+	- C++98(ISO/IEC): Standardized the core features of C++.
+	- C++03 : A minor revision aimed at fixing defects and clarifying ambiguities in the C++98 standard.
+	- C++11: auto keyword, Lambda expressions, range based loops, uniform init. syntax, smart pointer, additional terms in 	  		
+		 structure, Multithreading support, move semantics...etc
+	- C++14: constexpr additions, binary literals and generic lambdas, variable templet.
+	- C++17: inline variables, Structured binding, fold expression, standard library with optional and variant types., filesystem 	 		 
+		 library, parallel algorithm.
+	- C++20: concepts, ranges, corutines, modules, modern format labrary.
+	- C++23: released in December 2023 as a expermental stage
+	- C++26: C++ standards are on a fixed three-year release cycle.
+
+	Compilers and IDE: 
+
+		Compilers: GNU GCC, g++, CMake .. (Online/Offline)
+		IDE: It is integrated development environment --> compiler + editor + lib + doc + addons
+
+	//------------------------------------------------------------------------------------------------------------------
+
+	The are some basic differences, lets see one by one
+
+	- In C, some header files are included by default (stdio.h, stdlib.h....)
+	  but in C++, No any header file included by default.
+
+	- There are predefined input and output streams. from wic
+		- cin is predefined input stream
+		- cout is predefined output stream
+
+			 CPU
+		________________________
+		|			|
+		|	 CU		|
+		|_______________________|
+  I/P		|			|		o/p
+   [  ]		|	ALU		|	|----> [ ]
+    |	 	|_______________________|	|
+    |	 	|			|	|
+    |---------->|	IM		|-------|
+In C - scanf()	|_______________________| In C - printf()
+In C++ - cin		^	|	  In C++ - cout
+		________|_______V________
+		|			|
+		|	EM		|
+		|_______________________|
+
+	// Welcome program in C++
+	#include<iostream>
+	int main()
+	{
+		std::cout<<"Welcome to  C++ Programming AND ARCHER INFOTECH";
+		return 0;
+	}
+	
+// Simple cout demo program with basic formatting
+
+#include<iostream.h>
+#include<iomanip.h>
+int main()
+{
+	cout<<endl<<"Good Morning"<<endl<<"Work Hard";
+
+	int x=10,y=12;
+	float ft=56.43;
+	
+	cout<<"\n Value of x and y is: "<<x<<setw(10)<<y;
+	cout<<endl<<"Value of x is: "<<x<<endl<<"Value of y="<<y
+		<<"\t ft="<<setprecision(4)<<ft;
+
+	return 0;
+}
+
+  Note:
+	- endl is manipulator, which inserts the newline (\n or any other escape sequence character)
+	  allowed here)
+
+	- C++ allows to decl. the variables anywhere in the program, but it must be declared
+	  before using it.
+
+	- In C++, We don't need format specifiers, it will take the type automatically.
+	  and while displaying the stream manipulators, identifiers, strings must be separated
+	  using<<
+	
+	- cout<<"xxxx"; It can be expanded within one or more lines.
+
+	- setprecision() To set the width setw() and for precision setprecision() 
+	  is used and both are defined in iomanip.h
+
+	// Comments in C++:
+
+		// ---> single line comment
+		/* ..... */	--> Multiline comment
+
+
+	- Basic Program Structure
+
+		- pre-processor directives
+		- Namespace decl.
+		- class decl.
+		- functions and comments
+		- main() function
+
+
+	- C++ Tokens: these are smallest possible units in the program, which acts as building block for the instructions.
+		The C++ tokens are
+			- Constants and literals
+			- identifiers
+			- comments
+			- keywords
+			- punctuators
+			- preprocessor directives
+			- operators
+	
+
+	Data types in C++: Data type is tool, which is used at the time of memory allocation to know about the
+			   memory need. It is represented using the keyword, that keyword in used in the decl. instruction,
+			   in function to mention the argument type and return type, in pointer and arrays for defining the type,
+			   in the type casting, and in the structure to mention the member type 
+
+					C++ Data Types
+					     |
+		----------------------------------------------------------------------------
+		|					|				    |
+	Derived Data Types			Built-in Data types		 User-defined Data types
+	   |						|				      	    |			
+	- Array						|					- structure
+	- pointer			--------------------------------------			- union
+	- function			|		  |		    |			- enum
+	- reference		 Integral data types   void data type    Floating data types	- class
+	- auto				 |		     |			|
+	- decltype		------------------------    void(NA)		- float(4)
+			   	|	   |	      |				- double(8)
+			       bool(1)   int(4)	      char(1)			- long double (8/12/16)
+					 short(2)     wchar_t (2 or 4) 
+					 long(4/8)    char8_t (1)	
+					 long long(8) char16_t (2)
+						      char32_t (4)
+#include<iostream>
+int main()
+{
+	std::cout<<" ********** Personal Details **********";
+	std::cout<<"Name: Amit Ajit Pol";
+	std::cout<<"age: 23";
+	std::cout<<"contact number 9850678451";
+	std::cout<<"Email: info@archerinfotech.in";
+	std::cout<<"Address: F12, Divyadarshan soviety, behind kothrud bus stand, kothrud, Pune";
+	return 0;
+}
+
+	Like a normal printf() in C, the above program using cout<< gives the output in unformatted manner.
+	to display the output in well formatted manner we need to use "Escape Sequence characters"
+
+	\n 	- newline
+	\t 	- Horz. Tab
+	\b 	- backspace
+	\r 	- carriage return
+	\\	- to print \
+	\'	- to print '
+	\"	- to print "
+	\0	- to represent NULL
+	\a   	- Alert or Bell
+	\f	- Form feed
+	\v	- Vertical Tab
+	\?	- to print ?
+	\nnn	- octal representation
+	\xhh	- hex representation
+
+
+#include <iostream>
+using namespace std;
+int main() {
+    cout << "Escape Sequence Characters Demo:\n";
+    cout << "1. Newline: Line 1\nLine 2\nLine 3\n";
+    cout << "2. Horizontal tab: Column 1\tColumn 2\tColumn 3\n";
+    cout << "3. Backspace: 123\b45\n";
+    cout << "4. Carriage return: 1234\rAB\n";
+    cout << "5. Backslash: C:\\path\\to\\file\n";
+    cout << "6. Single quote: It\'s raining.\n";
+    cout << "7. Double quote: She said, \"Hello.\"\n";
+    cout << "8. Null character: Hello\0World\n";
+    cout << "9. Alert (bell): Beep!\a\n";
+    cout << "10. Form feed: Page 1\fPage 2\n";
+    cout << "11. Vertical tab: Line 1\vLine 2\n";
+    cout << "12. Question mark: What\? Why\?\n";
+    cout << "13. Octal representation: \110\145\154\154\157\n";
+    cout << "14. Hexadecimal representation: \x48\x65\x6C\x6C\x6F\n";
+
+    return 0;
+}
+
+
+Manipulators in C++: In C++, manipulators are special functions or objects provided by the Standard Library that 
+are used to modify the behaviour of input and output streams. They are typically used in conjunction with the 
+insertion (<<) and extraction (>>) operators to format input and output data. 
+Manipulators can perform various tasks such as setting field width, formatting numbers, controlling precision, and more. 
+
+	std::setw(<size>) : set the width of next output fields.
+	std::setprecision(int n): decides the number if digits after decimal point while displaying the fractional number
+	std::fixed: 
+	std::scientific:
+	std::left: 
+	std::right:
+	std::boolalpha: 
+	std::hex:
+	std::oct:
+	std::dec: 
+	
+
+#include <iostream>
+#include <iomanip> // for manipulators
+using namespace std;
+int main() {
+    // setw(int n)
+    cout << setw(20) << "Name" << setw(10) << "Age" << setw(15) << "Salary" << endl;
+    cout << setw(20) << "John Doe" << setw(10) << 30 << setw(15) << 50000.0 << endl;
+    // setprecision(int n) and fixed
+    double pi = 3.14159265359;
+    cout << setprecision(3) << fixed << "Pi: " << pi << endl;
+    // scientific
+    double num = 123456.789;
+    cout << scientific << "Number: " << num << endl;
+    // left and right
+    cout << setw(10) << left << "Left" << setw(10) << right << "Right" << endl;
+    // boolalpha
+    bool flag = true;
+    cout << boolalpha << "Flag: " << flag << endl;
+    // hex, oct, and dec
+    int value = 255;
+    cout << "Hex: " << hex << value << endl;
+    cout << "Oct: " << oct << value << endl;
+    cout << "Dec: " << dec << value << endl;
+    return 0;
+}
+
+
+//--------------------------------------------------------------------------------------------------------
+
+	Constants and Literals: 
+		
+		- literals: These are the fixed values, which are assigned to variable.
+		
+			45 - integer literal		'a' - character literal
+
+		- constant: These are the named values defined using identifier, which remains unchanged throughout
+			     the program execution. It not possible to change its value. if someone attempt to change
+			      it, compiler will generate an error message.
+
+			There are following ways of defining the constants:
+
+			- Using const Keyword: (C++98)
+			- Using enum: (C++98)
+			- Using #define Preprocessor Directive: (C++98)
+			- Using constexpr Keyword: (C++11)
+			- Using using Alias: (C++14)
+
+	
+- Using const Keyword: (C++98): 
+
+	int x=100;		const int y=200;
+
+#include <iostream>
+int main() {
+    // Declaring integer constants
+    const int MAX_VALUE = 100;
+    const int MIN_VALUE = 0;
+
+    // Declaring floating-point constants
+    const double PI = 3.14159;
+    const float GRAVITY = 9.81f;
+
+    // Declaring character constants
+    const char NEWLINE = '\n';
+    const char TAB = '\t';
+
+    // Using constants in expressions
+    int range = MAX_VALUE - MIN_VALUE;
+    double circumference = 2 * PI * 5.0;
+
+    // Outputting constants
+    std::cout << "Range: " << range << NEWLINE;
+    std::cout << "Circumference: " << circumference << NEWLINE;
+
+   /// MIN_VALUE=10; /// error: assignment of read-only variable 'MIN_VALUE'|
+    return 0;
+}
+
+
+//-----------------------------------------------------------------------------------------------------
+
+- Using const expr Keyword: (C++11):
+
+#include<iostream>
+int main() 
+{
+    constexpr int MAX_VALUE = 100;
+    int num = 5;
+    // Print the values
+    std::cout << "Max value: " << MAX_VALUE << std::endl;
+    std::cout << " num: " << num << std::endl;
+
+    /// MAX_VALUE=300; ///error: assignment of read-only variable 'MAX_VALUE'
+    num=200;
+    std::cout << "Max value: " << MAX_VALUE << std::endl;
+    std::cout << " num: " << num << std::endl;
+
+    return 0;
+}
+
+
+	// In above both cases, using const and constexpr, we declared constants, and when we tried to modify it, 
+	// it will generate an error message.
+
+//----------------------------------------------------------------------------------------------------------------------------
+
+
+- Using enum: (C++98)
+
+	enum [<name>]{const1, const2,...,constN};
+
+	e.g.	enum color {red, green, blue, black};		or 	enum {red, green, blue, black}; 
+
+
+
+	enum color {RED, GREEN, BLUE, BLACK};	or 	enum {RED, GREEN, BLUE, BLACK};
+ 
+	RED	Equivalent to 0
+	GREEN   Equivalent to 1 
+	BLUE    Equivalent to 2
+	BLACK   Equivalent to 3
+
+ 
+Unscoped Enum:
+// Declaration
+enum Color { RED, GREEN, BLUE};
+// Usage
+Color c = RED;
+
+Scoped Enum:
+// Declaration
+enum class Fruit {
+    APPLE,
+    BANANA,
+    ORANGE
+};
+// Usage
+Fruit f = Fruit::APPLE;
+
+	// using unscoped 
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    enum Color { RED=7, GREEN=20, BLUE};
+    enum Ink {BLACK, PINK, YELLOW, RED}; //error: 'RED' conflicts with a previous declaration|
+
+    cout<<endl<<" Colors:"<<RED<<"\t"<<GREEN<<"\t"<<BLUE;
+    cout<<endl<<" Colors:"<<Color::RED<<"\t"<<Color::GREEN<<"\t"<<Color::BLUE;
+
+    cout<<endl<<" INK:"<<BLACK<<"\t"<<PINK<<"\t"<<BLUE; // Take the value from 1st enum
+
+    return 0;
+}
+
+	// using scoped
+#include<iostream>
+using namespace std;
+int main()
+{
+    enum class Color {RED=7, GREEN=20, BLUE};
+    enum class Ink {BLACK, PINK, YELLOW, RED};
+
+   // cout<<endl<<" Colors:"<<RED<<"\t"<<GREEN<<"\t"<<BLUE; //error: 'RED' was not declared in this scope|
+    cout<<endl<<" Colors:"<<(int)Color::RED<<"\t"<<(int)Color::GREEN<<"\t"<<(int)Color::BLUE;
+
+    cout<<endl<<" INK:"<<(int)Ink::BLACK<<"\t"<<(int)Ink::PINK<<"\t"<<(int)Ink::RED;
+
+    return 0;
+}
+///-------------------------------------------------------------------------------------------
+
+- Using #define Preprocessor Directive (C++98):  
+
+	For example: 	#define PI 3.14159	and 	#define MAX_SIZE 100
+
+#include<iostream>
+#define PI_VALUE  3.14159
+int main() {
+    // Usage of the constant
+    double radius = 5.0;
+    double area = PI_VALUE * radius * radius;
+    std::cout << "Area: "<< area;
+    return 0;
+}
+
+//------------------------------------------------------------------------------------------
+
+- Using using Alias: (C++14)
+
+
+#include<iostream>
+using PI = double;
+constexpr PI PI_VALUE = 3.14159;
+
+int main() {
+    // Usage of the constant
+    double radius = 5.0;
+    double area = PI_VALUE * radius * radius;
+    std::cout << "Area: "<< area;
+    return 0;
+}
+
+//--------------------------------------------------------------------------------------------
+
+Input and Output in C++ using cin, cout: 
+
+
+		 				  CPU  
+					_________________________
+					|			|
+				|----->	|	  CU		|---> sends the command signal to every connected peripherial
+				|	|_______________________|
+		   Input	|	|			|	 	 Output
+console input	    [ ]		|   |-->|	  ALU		|---|     |--->   [ ]
+streal		     |		|   |	|_______________________|   |	  | console output stream
+   c- scanf()	     |		|   |---|			|<--|	  | c - printf()
+  c++ - cin	     |		|-------|	  IM		|	  | c++ - cout
+		     |---------------->	|_______________________|---------|
+				   	       ^          |	
+			    file input stream  |	  | file output stream	
+     C - file *fp=fopen("..","r")	 ______|__________V______  c - file *fp=fopen("..","w")
+					|			|
+					|	  EM		|
+					|_______________________|
+
+
+cin (Standard Input): cin is a predefined object of the istream class, which represents the standard input stream. It is used to read data from the standard input device, typically the keyboard, and store it into variables. >> operator is actually bitwise right shift operator, which is overloaded here along with cin, to extract the data from stream and therefore it is known as get-in or extraction operator.
+
+		Syntax: 	cin>> <variable_name>;
+
+	Note that, cin>> does not need an address of variable using & operator, it needs only variable name. 
+	address collected automatically.
+
+
+cout (Standard Output): cout is a predefined object of the ostream class, which represents the standard output stream. It is used to output data to the standard output device, typically the console/screen. << operator is actually bitwise left-shift operator, which when used along with cout, it will inserts / prints the data on screen and therefore it is called as insertion operator or put-to operator.
+	
+	Syntax:  	cout<< “<format_string>”<< <variable_name><<endl;
+
+	Note that it does not need amy format specifier.
+
+//----------------------------------------------------------------------------------------
+#include<iostream>
+#include <iostream>
+int main() {
+    int intValue;
+    short shortValue;
+    long longValue;
+    long long longLongValue;
+
+    // Input different types of integers
+    std::cout << "Enter an integer (int): ";
+    std::cin >> intValue;
+
+    std::cout << "Enter an integer (short): ";
+    std::cin >> shortValue;
+
+    std::cout << "Enter an integer (long): ";
+    std::cin >> longValue;
+
+    std::cout << "Enter an integer (long long): ";
+    std::cin >> longLongValue;
+
+    // Display the input integers
+    std::cout << "Integer (int)"<<sizeof(int)<<": " << intValue << std::endl;
+    std::cout << "Integer (short)"<<sizeof(short)<<": " << shortValue << std::endl;
+    std::cout << "Integer (long)"<<sizeof(long)<<": " << longValue << std::endl;
+    std::cout << "Integer (long long)"<<sizeof(long long)<<": " << longLongValue << std::endl;
+
+    return 0;
+}
+
+
+    /// Dynamic decl and dynamic init.
+    
+- Dynamic decl: C++ allows you to decl. variable anywhere in the program,
+                just decl. before using it. known as dynamic declaration.
+                    
+- Dynamic initilization: The them initialization refers to assigining
+        the value to variable at the time of memory allocation. if the
+        value to which valiable in initialized is decided at runtime.
+        such initilization is known as Dynamic initilization.
+       
+
+/// WAP to calc the simple interest.
+#include<iostream>
+using namespace std;
+int main()    
+{
+    int pa; 
+    cout<<endl<<"Enter the pr. amount: ";
+    cin>>pa;
+    
+    double roi;// dynamic decl
+    cout<<endl<<"Enter the rate of intr: ";
+    cin>>roi;
+    
+    int noy; // dynamic decl
+    cout<<endl<<"Enter the dur: ";
+    cin>>noy;
+    
+    double si=(pa*roi*noy)/100; // dynamic init
+    cout<<endl<<"simple interest: "<<si;
+    
+    return 0;
+}
+
+//--------------------------------------------------------------------------------------------------------
+
+	/// Fractional data input and display
+
+#include <iostream>
+
+int main() {
+    float floatValue;
+    double doubleValue;
+    long double longDoubleValue;
+
+    // Input different types of fractional values
+    std::cout << "Enter a fractional value (float): ";
+    std::cin >> floatValue;
+
+    std::cout << "Enter a fractional value (double): ";
+    std::cin >> doubleValue;
+
+    std::cout << "Enter a fractional value (long double): ";
+    std::cin >> longDoubleValue;
+
+    // Display the input fractional values
+    std::cout << "Fractional value (float): " << floatValue << std::endl;
+    std::cout << "Fractional value (double): " << doubleValue << std::endl;
+    std::cout << "Fractional value (long double): " << longDoubleValue << std::endl;
+
+    return 0;
+}
+
+//----------------------------------------------------------------------------------------------------
+
+	// Dealing with Boolean data
+
+The Boolean data type (bool keyword) used to hold the result of condition, it is value 1 when the condition is Ture and 0 when the condition is false. C++20 introduces boolean literals true and false, which can be used to represent true and false values respectively.
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    bool b1=true;
+    bool b2=false;
+    cout<<endl<<"b1 is: "<<b1;
+    cout<<endl<<"b2 is: "<<b2<<endl;
+
+    int x=34, y=56;
+    b1=x>y;
+    b2=x!=y;
+    cout<<endl<<"b1 is: "<<b1;
+    cout<<endl<<"b2 is: "<<b2<<endl;
+
+    cout<<std::boolalpha;
+    cout<<endl<<"b1 is: "<<b1;
+    cout<<endl<<"b2 is: "<<b2;
+
+    return 0;
+}
+
+
+//--------------------------------------------------------------------------------------------------------
+
+	// Using character data types
+
+#include <iostream>
+
+int main() {
+    char ch;
+    std::cout << "Enter a character: ";
+    std::cin >> ch;
+    std::cout << "Character entered: " << ch << std::endl;
+    return 0;
+}
+
+#include <iostream>
+int main() {
+    wchar_t wch;
+    std::wcout << L"Enter a wide character: ";
+    std::wcin >> wch;
+    std::wcout << L"Wide character entered: " << wch << std::endl;
+    return 0;
+}
+
+
+	// character input - output
+
+#include <iostream>
+int main() {
+    char str[40];
+
+    std::cout<<std::endl<<"Enter any string: ";
+    std::cin>>str;
+    std::cout<<std::endl<<" str is: "<<str;
+
+    const int MAX_SIZE = 100;
+    char charArray[MAX_SIZE];
+    std::cout << std::endl<< "Enter a string with spaces: ";
+    //fflush(stdin);
+    std::cin.ignore();
+    std::cin.getline(charArray, MAX_SIZE);
+    std::cout << "Entered string: " << charArray << std::endl;
+
+    return 0;
+}
+
+//------------------------------------------------------------------------------------------------------------------
+
+	/// Using void data type: 
+
+	- we know that, the void data type is used to mention the function returning nothing in response to call.
+	  Also when function does no collect any argument, the we use the void 
+
+		i.e.	void show(void){....}
+
+	- The another use of void is to declare the "Generic Pointer".
+	  The generic pointer is a pointer which is convertable to any type.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    char ch='A';
+    float ft=3.4;
+    int x=3245;
+
+    void *gp; /// generic pointer
+
+    gp=&ch;
+    cout<<endl<<" ch using gp:"<<*(char*)gp; // classic way of casting
+    cout<<endl<<" ch using gp:"<<*static_cast<char*>(gp)<<endl;// modern way of casting
+
+    gp=&ft;
+    cout<<endl<<" ft using gp:"<<*(float*)gp; // classic way of casting
+    cout<<endl<<" ft using gp:"<<*static_cast<float*>(gp)<<endl;// modern way of casting
+
+    gp=&x;
+    cout<<endl<<" x using gp:"<<*(int*)gp; // classic way of casting
+    cout<<endl<<" xusing gp:"<<*static_cast<int*>(gp)<<endl;// modern way of casting
+
+    return 0;
+}
+//--------------------------------------------------------------------
+
+// Operators in C++: special symbols with well defined meaning, which
+		     will be used to process the data, when they are 
+		     operated on operands.
+
+	- All C operators are valid in C++, and these are
+
+		- Assignment Operators [=]:   							
+		- Unary Operators [ - ++ -- (type) sizeof ]:
+		- Arithmetic Operators [ + - * / % ]:
+		- Relational Operators [ < <= > >= ]:
+		- Equality Operators [==, != ]
+		- Logical Operators [ && || !]:
+		- Conditional Operators [ ? : ]:
+		- Bitwise Operators [ & | ^ >> << ]:
+		- Special Operators [ , ; . -> &(ampersand) * ]:
+
+	- Additionally C++ provides the following operators.
+            
+                - :: (scope resolution operator)
+                - ::* (pointer to member Declarator)
+                - ->* and .* (pointer to member operators)
+                - delete (Memory release operator)
+                - new (memory allocation operator)
+                - endl (Line feed operator)
+                - setw (field width operator)
+    	
+ - :: (scope resolution operator): 
+   The scope resolution operator is used to access the global member always
+   from any scope, It will access the global member even from the nested scope.
+
+#include<iostream>
+using namespace std;
+int x=1000; // Global member
+int main()
+{
+	int x=100; // local to main()
+	cout<<"\n In main(upper) x: "<<x<<"\t global x: "<<::x;
+	{
+		int a=x; // local to inner scope
+		cout<<"\n Inner scope(upper) x: "<<x<<"\t a="<<a<<"\t global x: "<<::x;
+		int x=10;// local to inner scope
+		a=x;
+		cout<<"\n Inner scope(lower) x: "<<x<<"\t a="<<a<<"\t global x: "<<::x;
+	}
+	cout<<"\n In main(lower) x: "<<x<<"\t global x: "<<::x;
+	return 0;
+}
+
+//------------------------------------------------------------------------------------
