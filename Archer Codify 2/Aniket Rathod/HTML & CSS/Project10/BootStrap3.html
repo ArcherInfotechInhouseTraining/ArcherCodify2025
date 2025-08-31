@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BootStrap->Docs->Components</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+
+        .container-fluid{
+            border: 5px solid rgb(255, 0, 0);
+            height: auto;
+            background-color: white;
+            background-size: cover;
+            padding: 5px 5px 5px 5px; 
+        }
+
+        .container, .tags{
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin: 30px;
+        }
+
+        .container, .btn{
+            margin-left: 30px;
+        }
+
+        .container, .btn-group{
+            margin-top: 20px;
+        }
+
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="tags"><h3>------------------------------Accordion------------------------------</h3></div>
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Accordion Item #1
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Accordion Item #2
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Accordion Item #3
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="tags"><h3>------------------------------Alert------------------------------</h3></div>
+
+        <div class="alert alert-primary" role="alert">
+            A simple primary alert—check it out!
+        </div>
+        <div class="alert alert-secondary" role="alert">
+            A simple secondary alert—check it out!
+        </div>
+        <div class="alert alert-success" role="alert">
+            A simple success alert—check it out!
+        </div>
+        <div class="alert alert-danger" role="alert">
+            A simple danger alert—check it out!
+        </div>
+        <div class="alert alert-warning" role="alert">
+            A simple warning alert—check it out!
+        </div>
+        <div class="alert alert-info" role="alert">
+            A simple info alert—check it out!
+        </div>
+        <div class="alert alert-light" role="alert">
+            A simple light alert—check it out!
+        </div>
+        <div class="alert alert-dark" role="alert">
+            A simple dark alert—check it out!
+        </div>
+        
+        <div class="tags"><h3>------------------------------Badge -> Notificaton ------------------------------</h3></div>
+
+        <button type="button" class="btn btn-primary">
+            Notifications <span class="badge text-bg-secondary">4</span>
+        </button>
+
+        <button type="button" class="btn btn-primary position-relative">
+            Inbox
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span>
+        </button>
+
+        <button type="button" class="btn btn-primary position-relative">
+            Profile
+            <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+              <span class="visually-hidden">New alerts</span>
+            </span>
+        </button>
+
+        <div class="tags"><h3>------------------------------Buttons------------------------------</h3></div>
+
+          <button type="button" class="btn btn-primary">Primary</button>
+          <button type="button" class="btn btn-secondary">Secondary</button>
+          <button type="button" class="btn btn-success">Success</button>
+          <button type="button" class="btn btn-danger">Danger</button>
+          <button type="button" class="btn btn-warning">Warning</button>
+          <button type="button" class="btn btn-info">Info</button>
+          <button type="button" class="btn btn-light">Light</button>
+          <button type="button" class="btn btn-dark">Dark</button>
+          <button type="button" class="btn btn-link">Link</button>
+
+        
+
+        <div class="tags"><h3>------------------------------Buttons group------------------------------</h3></div>
+
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group me-2" role="group" aria-label="First group">
+                  <button type="button" class="btn btn-primary">1</button>
+                  <button type="button" class="btn btn-primary">2</button>
+                  <button type="button" class="btn btn-primary">3</button>
+                  <button type="button" class="btn btn-primary">4</button>
+                </div>
+                <div class="btn-group me-2" role="group" aria-label="Second group">
+                  <button type="button" class="btn btn-secondary">5</button>
+                  <button type="button" class="btn btn-secondary">6</button>
+                  <button type="button" class="btn btn-secondary">7</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Third group">
+                  <button type="button" class="btn btn-info">8</button>
+                </div>
+            </div>
+
+            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                <button type="button" class="btn btn-primary">1</button>
+                <button type="button" class="btn btn-primary">2</button>
+              
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                  </ul>
+                </div>
+            </div>
+            
+        <div class="tags"><h3>------------------------------Card------------------------------</h3></div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://cdn.myanimelist.net/images/anime/4/43643.jpg" style="height: 300px;" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">The Pet Girl of Sakurasou</h5>
+              <p class="card-text">After being kicked out of the normal dorm for keeping a stray cat, Sorata Kanda moves into Sakura Dormitory.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Creator: Hajime Kamoshida</li>
+              <li class="list-group-item">Stars: Yoshitsugu MatsuokaAi KayanoMariko Nakatsu</li>
+              <li class="list-group-item">2012 ‧ Drama ‧ 1 season</li>
+            </ul>
+            <div class="card-body">
+              <a href="https://en.wikipedia.org/wiki/The_Pet_Girl_of_Sakurasou" class="card-link">Wikipedia</a>
+              <a href="https://www.crunchyroll.com/series/G619QQK7Y/the-pet-girl-of-sakurasou?srsltid=AfmBOorvI2M08ZRgmo0s21Qw8_cAhbcjYp0GYauNNFVxBrY1XLMG3nHm" class="card-link">crunchyroll</a>
+            </div>
+          </div>
+
+        <div class="tags"><h3>------------------------------Carousel------------------------------</h3></div>
+
+            
+
+            
+        
+        
+        
+
+
+    
+    
+    
+    
+    
+    
+    
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>  
+</html>

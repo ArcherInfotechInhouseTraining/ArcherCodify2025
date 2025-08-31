@@ -1,0 +1,72 @@
+import java.util.*;
+
+class ListNode {
+    int val;
+    ListNode next;
+    ListNode(int x) { val = x; next = null; }
+}
+
+public class Main {
+    public static String userLogic(ListNode head) {
+        // Step 1: Concatenate digits to form a single number
+        StringBuilder concatenatedNumber = new StringBuilder();
+        ListNode current = head;
+        while (current != null) {
+            concatenatedNumber.append(current.val);
+            current = current.next;
+        }
+
+        // Convert concatenated number to long, ignoring leading zeros
+        long concatenatedNum = Long.parseLong(concatenatedNumber.toString());
+
+        // Step 2: Reverse the concatenated number
+        long reversedNumber = Long.parseLong(new StringBuilder(String.valueOf(concatenatedNum)).reverse().toString());
+
+        // Step 3: Calculate the sum of digits of the reversed number
+        long sumOfDigits = 0;
+        long temp = reversedNumber;
+        while (temp > 0) {
+            sumOfDigits += temp % 10;
+            temp /= 10;
+        }
+
+        // Step 4: Subtract the sum of digits from the reversed number
+        long finalValue = reversedNumber - sumOfDigits;
+
+        // Step 5: Check if the result is even or odd
+        return (finalValue % 2 == 0) ? "even" : "odd";
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+
+        // Handle edge case: N <= 0
+        if (N <= 0) {
+            System.out.println("even");
+            return;
+        }
+
+        ListNode head = null;
+        ListNode tail = null;
+        for (int i = 0; i < N; i++) {
+            int value = sc.nextInt();
+
+            // Ensure only single-digit numbers are allowed (constraint check)
+            if (value < 0 || value > 9) {
+                System.out.println("Invalid input");
+                return;
+            }
+
+            ListNode newNode = new ListNode(value);
+            if (head == null) {
+                head = newNode;
+            } else {
+                tail.next = newNode;
+            }
+            tail = newNode;
+        }
+        String result = userLogic(head);
+        System.out.println(result);
+    }
+}

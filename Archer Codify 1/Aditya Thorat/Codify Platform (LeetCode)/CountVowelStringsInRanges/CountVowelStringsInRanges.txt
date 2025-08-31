@@ -1,0 +1,18 @@
+int isVowel(char c) {
+    c = tolower(c);
+    return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
+}
+
+int* vowelStrings(char** words, int wordsSize, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {
+    int* ret, i;
+    int* counts;
+    *returnSize= queriesSize;
+    counts= (int*)calloc(wordsSize+1,sizeof(int));
+    ret= (int*)malloc(sizeof(int)*queriesSize);
+    for(i=0; i<wordsSize; i++)
+        counts[i+1]= counts[i]+ (isVowel(words[i][0]) && isVowel(words[i][strlen(words[i]) - 1]));
+    
+    for(i=0; i<queriesSize; i++)
+        ret[i]= counts[queries[i][1]+1]-counts[queries[i][0]];
+    return ret;
+}

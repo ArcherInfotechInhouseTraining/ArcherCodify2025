@@ -1,0 +1,5 @@
+Solution Link
+
+https://exercism.org/tracks/java/exercises/scrabble-score/solutions/Adi7558
+
+https://exercism.org/tracks/java/exercises/scrabble-score/edit 

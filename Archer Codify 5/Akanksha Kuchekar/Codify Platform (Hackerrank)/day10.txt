@@ -1,0 +1,33 @@
+https://www.hackerrank.com/challenges/java-string-reverse/problem?isFullScreen=true
+
+sol->
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        /* Enter your code here. Print output to STDOUT. */
+        String S=new StringBuilder(A).reverse().toString();
+        if(A.equals(S)){
+            System.out.println("Yes");
+        }
+        else{
+            System.out.println("No");
+        }
+        
+        
+    }
+}
+
+/*
+Creates a StringBuilder object with the input string A.
+Reverses the string using the reverse() method.
+Converts the reversed StringBuilder back to a String using .toString().
+*/
+
+
+

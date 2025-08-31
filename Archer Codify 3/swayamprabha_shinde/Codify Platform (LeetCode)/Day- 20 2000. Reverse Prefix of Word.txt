@@ -1,0 +1,83 @@
+2000. Reverse Prefix of Word
+
+Given a 0-indexed string word and a character ch, reverse the segment of word that starts at index 0 and ends at the index of the first occurrence of ch (inclusive). If the character ch does not exist in word, do nothing.
+
+For example, if word = "abcdefd" and ch = "d", then you should reverse the segment that starts at 0 and ends at 3 (inclusive). The resulting string will be "dcbaefd".
+Return the resulting string.
+
+Example 1:
+Input: word = "abcdefd", ch = "d"
+Output: "dcbaefd"
+Explanation: The first occurrence of "d" is at index 3. 
+Reverse the part of word from 0 to 3 (inclusive), the resulting string is "dcbaefd".
+
+Example 2:
+Input: word = "xyxzxe", ch = "z"
+Output: "zxyxxe"
+Explanation: The first and only occurrence of "z" is at index 3.
+Reverse the part of word from 0 to 3 (inclusive), the resulting string is "zxyxxe".
+
+Example 3:
+Input: word = "abcd", ch = "z"
+Output: "abcd"
+Explanation: "z" does not exist in word.
+You should not do any reverse operation, the resulting string is "abcd".
+ 
+
+Constraints:
+1 <= word.length <= 250
+word consists of lowercase English letters.
+ch is a lowercase English letter.
+
+
+solution:
+public class ReversePrefix {
+    public static String reversePrefix(String word, char ch) {
+        int index = -1;
+        for (int i = 0; i < word.length(); i++) {
+            if (word.charAt(i) == ch) {
+                index = i;
+                break;
+            }
+        }
+        
+        if (index == -1) {
+            return word;
+        }
+        
+        char[] arr = word.toCharArray();
+        int left = 0, right = index;
+        while (left < right) {
+            char temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+            left++;
+            right--;
+        }
+        
+        return new String(arr);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(reversePrefix("abcdefd", 'd')); // Output: "dcbaefd"
+        System.out.println(reversePrefix("xyxzxe", 'z')); // Output: "zxyxxe"
+        System.out.println(reversePrefix("abcd", 'z'));   // Output: "abcd"
+    }
+}
+
+Explaination:
+
+We initialize index = -1, assuming that ch is not in the string.
+We iterate over each character in word using a loop.
+If we find ch, we store its index and break out of the loop.
+
+If ch was not found (index == -1), we return the original string.
+
+We convert word to a character array so we can modify it in place.
+We use two pointers (left and right):
+left starts at 0
+right starts at index
+We swap characters at left and right, then move them toward each other.
+This continues until left >= right, which means the segment is reversed.
+
+We convert the modified character array back to a string and return it.

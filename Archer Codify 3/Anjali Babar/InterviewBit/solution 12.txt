@@ -1,0 +1,19 @@
+Title: Create a function named “compute” which takes two integer arguments A and B and returns an integer denoting A2 + B2.
+
+Link: https://www.interviewbit.com/problems/functions-basic/
+
+Solution:                                                                              
+
+#include<iostream>
+using namespace std;
+
+int compute(int A, int B) {
+    return (A * A) + (B * B);
+}
+
+int main()  {
+    int A, B;
+    cin>>A>>B;
+    cout<<compute(A, B)<<endl;
+    return 0;
+}

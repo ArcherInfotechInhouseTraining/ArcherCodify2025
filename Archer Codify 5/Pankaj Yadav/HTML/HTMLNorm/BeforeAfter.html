@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            padding: 0% 30%;
+        }
+        .btn{
+            border: 3px solid black;
+            border-radius: 20px;
+            margin: 30px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .content{
+            border: 3px solid red;
+            padding: 20px;
+        }
+        .content::before{
+            content: "🦅🦃🦢";
+            color: green;
+            font-weight: 900;
+        }
+        .content::after{
+            content: "After!";
+            color: blue;
+            font-weight: 900;
+        }
+
+        .p{
+            font-size: 18px;
+            font-weight: 900;
+        }
+
+        .b1{
+            color: green;
+            border-color: green;
+            box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .b1::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: green;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: translateX(-100%);
+            transition: .5s all ease;
+        }
+
+        .b1:hover::before{
+            transform: translateX(0%);
+        }
+
+        .b1:hover{
+            color: #fff;
+            border-color: #fff;
+        }
+             /* button-2 */
+        .b2{
+            color: white;
+            border-color: white;
+            box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .b2::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: translateX(-40%);
+            transition: .5s all ease;
+        }
+
+        .b2:hover::before{
+            transform: translateX(-100%);
+        }
+
+        
+        .b2::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: translateX(40%);
+            transition: .5s all ease;
+        }
+
+        .b2:hover::after{
+            transform: translateX(100%);
+        }
+
+        .b2:hover{
+            color: red;
+            border-color: red;
+        }
+
+
+            
+         /* button-3 */
+         .b3{
+            color: white;
+            border-color: white;
+            box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .b3::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: blue;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: translateY(-40%);
+            transition: .5s all ease;
+        }
+
+        .b3:hover::before{
+            transform: translateY(-100%);
+        }
+
+        
+        .b3::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: blue;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: translateY(40%);
+            transition: .5s all ease;
+        }
+
+        .b3:hover::after{
+            transform: translateY(100%);
+        }
+
+        .b3:hover{
+            color: blue;
+            border-color: blue;
+        }
+
+        /* button-4 */
+        .b4{
+            color: white;
+            border-color: white;
+            box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .b4::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: green;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: translateX(-40%);
+            transition: .5s all ease;
+        }
+
+        .b4:hover::before{
+            transform: translateX(-100%) rotate(180deg);
+        }
+
+        
+        .b4::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: green;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: translateX(40%);
+            transition: .5s all ease;
+        }
+
+        .b4:hover::after{
+            transform: translateX(100%) rotate(180deg);
+        }
+
+        .b4:hover{
+            color: green;
+            border-color: green;
+        }
+
+         /* button-5 */
+         .b5{
+            color: Black;
+            border-color: Black;
+            box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .b5::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            position: absolute;
+            border-radius: 20px;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: translateX(0%) translateX(0%) scale(0%);
+            transition: .5s all ease;
+        }
+
+        .b5:hover::before{
+            transform: translateX(0%) translateX(0%) scale(100%);
+        }
+
+       .b5:hover{
+            color: black;
+            border-color: red;
+        }
+
+        
+             /* img */
+
+             .img{
+            border: 3px solid black;
+            border-radius: 20px;
+            margin: 30px;
+            text-align: center;
+            cursor: pointer;
+            background-image: url(https://m.media-amazon.com/images/I/81aRXFZ6d-L._AC_UF1000,1000_QL80_.jpg);
+        }
+
+        .m{
+            color: white;
+            border-color: white;
+            box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .m::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: translateX(-40%);
+            transition: .5s all ease;
+        }
+
+        .m:hover::before{
+            transform: translateX(-100%);
+        }
+
+        
+        .m::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: translateX(40%);
+            transition: .5s all ease;
+        }
+
+        .m:hover::after{
+            transform: translateX(100%);
+        }
+
+        .m:hover{
+            color: red;
+            border-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="btn b1"><p>Button1</p></div>
+        <div class="btn b2"><p>Button2</p></div>
+        <div class="btn b3"><p>Button3</p></div>
+        <div class="btn b4"><p>Button4</p></div>
+        <div class="btn b5"><p>Button5</p></div>
+        <div class="img m"><p>........</p></div>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, optio provident itaque debitis vel placeat dolorem voluptatem quo corrupti mollitia, voluptate totam laudantium accusamus accusantium quam praesentium velit cumque quidem. Incidunt itaque ex quasi. Eius maiores officia aliquid nam exercitationem consectetur vel maxime tempore quaerat eum! Excepturi sint aut quam itaque, sunt quo doloremque optio explicabo dignissimos adipisci sed dolore voluptates ratione, saepe quas assumenda, eum quia harum. Voluptates, id?</p>
+        </div>
+    </div>
+</body>
+</html>

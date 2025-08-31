@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball Animation</title>
+
+    <style>
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200vh;
+    margin: 0;
+    background-color: #faeee9;
+    overflow: hidden;
+}
+
+.ball1 {
+    width: 50px;
+    height: 50px;
+    background-color: #eaff61;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    animation: bounce 1.9s infinite ease-in-out;
+}
+.ball2 {
+    width: 50px;
+    height: 50px;
+    background-color: #ff61e7;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    animation: bounce 1.6s infinite ease-in-out;
+}
+.ball3 {
+    width: 50px;
+    height: 50px;
+    background-color: #61ff8b;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    animation: bounce 1.2s infinite ease-in-out;
+}
+.ball4 {
+    width: 50px;
+    height: 50px;
+    background-color: #61c2ff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    animation: bounce 2.1s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-550px);
+    }
+    
+}
+</style>
+
+</head>
+<body>
+    <div class="ball1"></div>
+    <div class="ball2"></div>
+    <div class="ball3"></div>
+    <div class="ball4"></div>
+</body>
+</html>

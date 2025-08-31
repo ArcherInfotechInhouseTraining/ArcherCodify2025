@@ -1,0 +1,88 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+/* Tooltip Container */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip Button */
+.tooltip-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007acc;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.tooltip-button:hover {
+    background-color: #005f99;
+}
+
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    top: -50px; /* Position above the button */
+    left: 50%; /* Center tooltip horizontally */
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    visibility: hidden; /* Hidden by default */
+    opacity: 0;
+    transition: opacity 0.3s ease, top 0.3s ease;
+    z-index: 10;
+}
+
+/* Tooltip Arrow */
+.tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+/* Tooltip Visibility on Hover */
+.tooltip-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    top: -50px; /* Move up slightly for hover effect */
+}
+
+/* Media Query for Right Positioning */
+@media (max-width: 600px) {
+    .tooltip {
+        top: 50%;
+        left: calc(100% + 10px); /* Position tooltip to the right */
+        transform: translateY(-50%);
+    }
+
+    .tooltip::after {
+        bottom: auto;
+        top: 50%;
+        left: -6px;
+        transform: translateY(-50%);
+        border-width: 6px;
+        border-color: transparent #333 transparent transparent;
+    }
+}

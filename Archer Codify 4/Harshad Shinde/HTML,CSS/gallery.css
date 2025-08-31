@@ -1,0 +1,165 @@
+.head{
+    height: 70px;
+    width: 600px;
+    border: solid;
+    background-color: beige;
+    text-align: center;
+    margin-left: 350px; ;
+    
+}
+.box{
+    height: 300px;
+    width: 600px;
+    border: solid red;
+    background-color: lightcyan;
+    margin-left: 350px;
+    margin-top: 50px;
+    border-radius: 20px;
+   display: flex;
+    justify-content: space-between;
+}
+#Image{
+    height: 170px;
+    width: 170px;
+    background-color:red;
+    margin-left:20px ;
+    margin-top: 50px;
+    border-radius: 30px;
+    background-image: url(devika.jpg);
+    background-size: cover;
+
+}
+#text{
+    height: 230px;
+    text-align: center;
+    width: 290px;
+    background-color:lightsalmon;
+    margin-right: 30px;
+    margin-top: 40px;
+    border-radius: 30px;
+}
+
+.box1{
+    height: 300px;
+    width: 600px;
+    border: solid red;
+    background-color: lightcyan;
+    margin-left: 350px;
+    margin-top: 50px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#Image1{
+    height: 170px;
+    width: 170px;
+    background-color:red;
+    margin-left:20px ;
+    margin-top: 50px;
+    border-radius: 30px;
+    background-image: url(yoga.jpg);
+    background-size: cover;
+
+}
+#text1{
+    height: 230px;
+    text-align: center;
+    width: 290px;
+    background-color:lightsalmon;
+    margin-right: 30px;
+    margin-top: 40px;
+    border-radius: 30px;
+}
+
+
+.box2{
+    height: 300px;
+    width: 600px;
+    border: solid red;
+    background-color: lightcyan;
+    margin-left: 350px;
+    margin-top: 50px;
+    display: flex;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+#Image2{
+    height: 170px;
+    width: 170px;
+    background-color:red;
+    margin-left:20px ;
+    margin-top: 50px;
+    border-radius: 30px;
+    background-image: url(img.jpg);
+    background-size: cover;
+
+}
+#text2{
+    height: 230px;
+    text-align: center;
+    width: 290px;
+    background-color:lightsalmon;
+    margin-right: 30px;
+    margin-top: 40px;
+    border-radius: 30px;
+}
+
+
+.box3{
+    height: 300px;
+    width: 600px;
+    border: solid red;
+    background-color: lightcyan;
+    margin-left: 350px;
+    margin-top: 50px;
+    display: flex;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+#Image3{
+    height: 170px;
+    width: 170px;
+    background-color:red;
+    margin-left:20px ;
+    margin-top: 50px;
+    border-radius: 30px;
+
+}
+#text3{
+    text-align: center;
+    height: 230px;
+    width: 290px;
+    background-color:lightsalmon;
+    margin-right: 30px;
+    margin-top: 40px;
+    border-radius: 30px;
+}
+.box4{
+    height: 300px;
+    width: 600px;
+    border: solid red;
+    background-color: lightcyan;
+    margin-left: 350px;
+    margin-top: 50px;
+    display: flex;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+#Image4{
+    height: 170px;
+    width: 170px;
+    background-color:red;
+    margin-left:20px ;
+    margin-top: 50px;
+    border-radius: 30px;
+
+}
+#text4{
+    text-align: center;
+    height: 230px;
+    width: 290px;
+    background-color:lightsalmon;
+    margin-right: 30px;
+    margin-top: 40px;
+    border-radius: 30px;
+}

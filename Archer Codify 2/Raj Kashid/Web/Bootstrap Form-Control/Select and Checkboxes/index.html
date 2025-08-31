@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Select and Checkboxes</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Select and Checkboxes</h2>
+    <form>
+	<!-- Dropdown List -->
+	<div class="form-group">
+	    <label for="options">Select an Option</label>
+	    <select class="form-control" id="options">
+		<option>Option 1</option>
+		<option>Option 2</option>
+		<option>Option 3</option>
+	    </select>
+	</div>
+	
+	<!-- Inline Checkboxes -->
+	<div class="form-group">
+	    <label>Preferences</label><br>
+	    <div class="form-check form-check-inline">
+		<input class="form-check-input" id="agreeTerms" type="checkbox">
+		<label class="form-check-label" for="agreeTerms">Agree to terms</label>
+	    </div>
+	    <div class="form-check form-check-inline">
+		<input class="form-check-input" id="subscribeNewsletter" type="checkbox">
+		<label class="form-check-label" for="subscribeNewsletter">Subscribe to newsletter</label>
+	    </div>
+	    <div class="form-check form-check-inline">
+		<input class="form-check-input" id="receiveUpdates" type="checkbox">
+		<label class="form-check-label" for="receiveUpdates">Receive updates</label>
+	    </div>
+	</div>
+	
+	<button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

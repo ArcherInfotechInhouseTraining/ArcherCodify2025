@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion-Yo !</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      *
+      {
+        background-color:gainsboro ;
+       
+      }
+        /* Adjust carousel image container */
+        .carousel-inner {
+            padding: 0 15px; /* Add padding to prevent images from touching the edges */
+        }
+        
+        .carousel-item {
+            margin: 0 30px;
+         /* Add margin between carousel items */
+        }
+
+        .carousel-item img {
+            object-fit:contain;
+            max-height: 750px;
+            max-width: 3000px; 
+            border-radius: 10px;
+            margin:0 auto;
+            
+        }
+        
+        /* Adjust spacing for the carousel indicators */
+        .carousel-indicators button {
+            margin: 0 5px; /* Small margin between the indicators */
+        }
+        
+        /* Adjust carousel control buttons */
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-color: #000; /* Change the color of the prev/next icons */
+        }
+
+        /* Optional: Add spacing between the product cards */
+        .card:hover {
+            margin-bottom: 30px; /* Space between product cards */
+            transform: translateX(-10px); 
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+        }
+        h2:hover
+        {
+          transform: translateX(-10px); 
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+        
+        }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container" style="background-color:#343a40">
+        <a class="navbar-brand" href="index.html" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: xx-large; color: palevioletred;">
+            <i class="fas fa-shopping-cart me-2"></i>ClickNCart
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html" style="color: crimson; font-weight: bold; font-size:x-large"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16" style="color: white;">
+                    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/></svg>Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" style="color: rgb(20, 100, 220); font-weight: bold;font-size:x-large"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                  </svg>Fashion</a></li>
+                 
+                <li class="nav-item"><a class="nav-link" href="groccery.html" style="color: darkmagenta; font-weight: bold;font-size:x-large"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-basket2" viewBox="0 0 16 16">
+                    <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0z"/>
+                    <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-.623l-1.844 6.456a.75.75 0 0 1-.722.544H3.69a.75.75 0 0 1-.722-.544L1.123 8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.163 8l1.714 6h8.246l1.714-6z"/>
+                  </svg>Grocery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" style="color: fuchsia; font-weight: bold;font-size:x-large"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-bag-heart" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1M8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+                  </svg>Beauty</a></li>
+                  <li class="nav-item"><a class="nav-link" href="feedback.html" style="color:rgb(14, 245, 14) ; font-weight: bold;font-size:x-large"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-card-checklist" viewBox="0 0 16 16">
+                    <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+                    <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"/>
+                  </svg>customer feedback</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h2 style="margin-left:100px;margin-top:80px;color:black; font-style:italic">FOR MEN :</h2>
+            <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="Shirt">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="color:crimson;font-size:xx-large">Shirts for Men</h5>
+              <p style="font-size: x-large;">Some representative placeholder content for the first slide.</p>
+            </div>
+            <h2 style="margin-left:100px;margin-top:80px;color:rgb(215, 60, 86); font-style:italic">Tshirts for Men :</h2>
+            <section class="py-5">
+                <div class="container">
+                    <div class="row g-4">
+                        <!-- Example Product Cards -->
+                        <div class="col-lg-4 col-md-6" >
+                            <div class="card blog-card">
+                                <img src="https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Product Image" style="height:400px; width:90%">
+                                <div class="card-body">
+                                    <h5 class="card-title">DAMENSCH Men’s Regular Fit Half Sleeve</h5>
+                                    <p class="card-text">
+                                      Polo T-Shirt | 3 Button Polos for Men<br>
+                                      <span style="color: red;">-33%</span> 
+                                      <span style="color: green;">₹870</span>
+                                    </p>
+                                    <a  class="btn btn-primary" href="Checkout.html">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6" >
+                          <div class="card blog-card">
+                              <img src="https://images.unsplash.com/photo-1611403119860-57c4937ef987?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Product Image" style="height:400px; width:90%">
+                              <div class="card-body">Being Human White Coloured Men Shirts</h5>
+                                  <p class="card-text">
+                                    (Size: L)-BHMLS24643-WHITE<br>
+                                    <span style="color: red;">-40%</span> 
+                                    <span style="color: green;">₹1,739</span>
+                                  </p>
+                                  <a href="Checkout.html" class="btn btn-primary">Buy Now</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6" >
+                        <div class="card blog-card">
+                            <img src="https://plus.unsplash.com/premium_photo-1690366910824-ea406d0a61bd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHRzaGlydHMlMjBmb3IlMjBtZW58ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="Product Image" style="height:400px; width:90%">
+                            <div class="card-body">
+                                <h5 class="card-title">Levi's </h5>
+                                <p class="card-text">Levi's Men's Solid Regular Fit T-Shirt<br>
+                                  <span style="color: red;">-75%</span> 
+                                  <span style="color: green;">₹299</span></p>
+                                <a href="#" class="btn btn-primary">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" >
+                      <div class="card blog-card">
+                          <img src="https://m.media-amazon.com/images/I/61EE6mtxi3L._SY879_.jpg" class="card-img-top" alt="Product Image" style="height:400px; width:90%">
+                          <div class="card-body">
+                              <h5 class="card-title">SMOWKLY </h5>
+                              <p class="card-text">SMOWKLY Solid Colored Round Neck T- Shirt for Men || Mens T Shirt || Trendy T Shirt.<br>
+                                <p class="card-text">
+                                  TAGDO Men's Waffle Knitted Crew Neck Regular Fit Tees (5154)<br>
+                                  <span style="color: red;">-75%</span> 
+                                  <span style="color: green;">₹299</span>
+                                </p> 
+                              </p>
+                              <a href="Checkout.html" class="btn btn-primary">Buy Now</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6" >
+                    <div class="card blog-card">
+                        <img src="https://m.media-amazon.com/images/I/81csgfZcMmL._SY879_.jpg" class="card-img-top" alt="Product Image" style="height:465px; width:90%">
+                        <div class="card-body">
+                            <h5 class="card-title">Brand: TAGDO</h5>
+                            <p class="card-text">7
+                              TAGDO Men's Waffle Knitted Crew Neck Regular Fit Tees (5154)<br>
+                              <span style="color: red;">-15%</span> 
+                              <span style="color: green;">₹299</span>
+                            </p>                    
+                            <a href="Checkout.html" class="btn btn-primary">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" >
+                  <div class="card blog-card">
+                      <img src="https://m.media-amazon.com/images/I/61b4R3TMXoL._SY879_.jpg" class="card-img-top" alt="Product Image" style="height:465px; width:90%">
+                      <div class="card-body">
+                          <h5 class="card-title">Symbol Premium</h5>
+                          <p class="card-text">7
+                            Symbol Premium Men's Super Soft Classic Polo T-Shirt: Regular Fit<br>
+                            <span style="color: red;">-25%</span> 
+                            <span style="color: green;">₹599</span>
+                          </p>                    
+                          <a href="Checkout.html" class="btn btn-primary">Buy Now</a>
+                      </div>
+                  </div>
+              </div>
+
+                        <!-- Repeat Product Cards -->  
+            </section>
+          </div>
+          <div class="carousel-item">
+            <h2 style="margin-left:100px;margin-top:80px;color:black; font-style:italic;">FOR WOMAN :</h2>
+            <img src="https://img.goodfon.com/wallpaper/nbig/0/59/bmw-528i-girl-legs-model.webp" class="d-block w-100" alt="Cargo-jeans">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="color:crimson;font-size:xx-large"></h5>
+              <p style="font-size: x-large"></p>  
+            </div>
+             <h2 style="margin-left:100px;margin-top:80px;color:rgb(215, 60, 86); font-style:italic">Latest JEANS for women :</h2>
+            <section class="py-5">
+                <div class="container">
+                    <div class="row g-4">
+                        <!-- Example Product Cards -->
+                        <div class="col-lg-4 col-md-6" >
+                            <div class="card blog-card">
+                                <img src="https://m.media-amazon.com/images/I/71PqXeQnchL._SY741_.jpg" class="card-img-top" alt="Product Image" style="height:400px; width:90%">
+                                <div class="card-body">
+                                    <h5 class="card-title">QNIM</h5>
+                                    <p class="card-text">
+                                      QNIM Fitted Women Jeans<br>
+                                      <span style="color: red;">-23%</span> 
+                                      <span style="color: green;">₹670</span>
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6" >
+                          <div class="card blog-card">
+                              <img src="https://m.media-amazon.com/images/I/51NLgy9yuIL._SY741_.jpg" class="card-img-top" alt="Product Image" style="height:400px; width:90%">
+                              <div class="card-body">GRECIILOOKS</h5>
+                                  <p class="card-text">
+                                    GRECIILOOKS Regular Fit Trousers for Women | Women Trousers | Women's High-Waisted Pant | Women Trousers Pants | Korean Trousers for Women<br>
+                                    <span style="color: red;">-50%</span> 
+                                    <span style="color: green;">₹739</span>
+                                  </p>
+                                  <a href="#" class="btn btn-primary">Buy Now</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6" >
+                        <div class="card blog-card">
+                            <img src="https://m.media-amazon.com/images/I/612+ZjkLFoL._SY879_.jpg" class="card-img-top" alt="Product Image" style="height:400px; width:90%">
+                            <div class="card-body">
+                                <h5 class="card-title">KOTTY</h5>
+                                <p class="card-text">KOTTY Women High Rise Relaxed Fit Cotton Lycra Blend Ankle Length Jeans<br>
+                                  <span style="color: red;">-75%</span> 
+                                  <span style="color: green;">₹499</span></p>
+                                <a href="#" class="btn btn-primary">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" >
+                      <div class="card blog-card">
+                          <img src="https://m.media-amazon.com/images/I/511xXDxFL6L._SY879_.jpg" class="card-img-top" alt="Product Image" style="height:400px; width:90%">
+                          <div class="card-body">
+                              <h5 class="card-title">VERO MODA </h5>
+                              <p class="card-text">VERO MODA Women's Boot Cut Jeans<br>
+                                <p class="card-text">
+                                  TAGDO Men's Waffle Knitted Crew Neck Regular Fit Tees (5154)<br>
+                                  <span style="color: red;">-35%</span> 
+                                  <span style="color: green;">₹1,299</span>
+                                </p> 
+                              </p>
+                              <a href="#" class="btn btn-primary">Buy Now</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6" >
+                    <div class="card blog-card">
+                        <img src="https://m.media-amazon.com/images/I/61BGqBUKMKL._SY879_.jpg" class="card-img-top" alt="Product Image" style="height:465px; width:90%">
+                        <div class="card-body">
+                            <h5 class="card-title">FOREVER 21</h5>
+                            <p class="card-text">7
+                              FOREVER 21 Women Solid Flared Regular Fit Jeans<br>
+                              <span style="color: red;">-35%</span> 
+                              <span style="color: green;">₹699</span>
+                            </p>                    
+                            <a href="#" class="btn btn-primary">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" >
+                  <div class="card blog-card">
+                      <img src="https://m.media-amazon.com/images/I/71HljoJtwzL._SX569_.jpg" class="card-img-top" alt="Product Image" style="height:465px; width:90%">
+                      <div class="card-body">
+                          <h5 class="card-title">INKD </h5>
+                          <p class="card-text">7
+                            INKD Women's Barrel Fit Jeans - High-Rise | Cotton Blend | Stretchable Fabric | Lightweight | Classic 5 Pocket Styling<br>
+                            <span style="color: red;">-15%</span> 
+                            <span style="color: green;">₹799</span>
+                          </p>                    
+                          <a href="#" class="btn btn-primary">Buy Now</a>
+                      </div>
+                  </div>
+              </div>
+
+                        <!-- Repeat Product Cards -->
+                    
+               
+            </section>
+
+          </div>
+
+          <div class="carousel-item">
+            <h5 style="color:black;font-size:xx-large;margin:auto">Watches:</h5>
+            <img src="https://images.unsplash.com/photo-1730628801130-61ca50004a48?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D;" style="height: 100%;width:100%">
+            <div class="carousel-caption d-none d-md-block">
+              <p style="font-size: x-large;">Some representative placeholder content for the third slide.</p>  
+            </div>
+            <h2 style="margin-left:100px;margin-top:80px;color:rgb(215, 60, 86); font-style:italic">Latest Watches :</h2>
+            <section class="py-5">
+                <div class="container">
+                    <div class="row g-4">
+                        <!-- Example Product Cards -->
+                        <div class="col-lg-4 col-md-6" >
+                            <div class="card blog-card">
+                                <img src="https://m.media-amazon.com/images/I/81wJYH5kdTL._SX679_.jpg" class="card-img-top" alt="Product Image" style="height:400px; width:90%">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fossil </h5>
+                                    <p class="card-text">
+                                      Fossil Analog Silver Dial Men's Watch-ME3252 Stainless Steel, Silver Strapbr>
+                                      <span style="color: red;">-23%</span> 
+                                      <span style="color: green;">₹24,670</span>
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6" >
+                          <div class="card blog-card">
+                              <img src="https://m.media-amazon.com/images/I/61ybeKQto8L._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="Product Image" style="height:380px; width:90%">
+                              <div class="card-body"><h5>Casio </h5>
+                                  <p class="card-text">
+                                    Casio Stainless Steel Men Vintage Digital Grey Dial Unisex A-158Wa-1Q (D011), Band Color-Silver<br>
+                                    <span style="color: red;">-30%</span> 
+                                    <span style="color: green;">₹1,739</span>
+                                  </p>
+                                  <a href="#" class="btn btn-primary">Buy Now</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6" >
+                        <div class="card blog-card">
+                            <img src="https://m.media-amazon.com/images/I/61nHurGwZhL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="Product Image" style="height:380px; width:90%">
+                            <div class="card-body">
+                                <h5 class="card-title">OLEVS</h5>
+                                <p class="card-text">OLEVS Watches for Men Diamond Date Day Calendar Black Wrist Watches Quartz Analog Business Stainless Steel Two Tone Waterproof Luminous Men Watch<br>
+                                  <span style="color: red;">-75%</span> 
+                                  <span style="color: green;">₹3,499</span></p>
+                                <a href="#" class="btn btn-primary">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" >
+                      <div class="card blog-card">
+                          <img src="https://m.media-amazon.com/images/I/61ydlTzptNL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="Product Image" style="height:400px; width:90%">
+                          <div class="card-body">
+                              <h5 class="card-title">Daniel Klein for Women </h5>
+                              <p class="card-text">Daniel Klein Analog Rose Gold Dial Women's Watch-DK11800-4<br>
+                                 
+                             <span style="color: red;">-35%</span> 
+                                  <span style="color: green;">₹1,299</span>
+                                </p> 
+                              </p>
+                              <a href="#" class="btn btn-primary">Buy Now</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6" >
+                    <div class="card blog-card">
+                        <img src="https://m.media-amazon.com/images/I/71R7AfsSLuL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="Product Image" style="height:385px; width:90%">
+                        <div class="card-body">
+                            <h5 class="card-title">LOUIS DEVIN-for Women </h5>
+                            <p class="card-text">FLOUIS DEVIN Rose Gold Plated Mesh Chain Analog Wrist Watch for Women (Black/Blue/Rose Gold Dial) | RG162<br>
+                              <span style="color: red;">-35%</span> 
+                              <span style="color: green;">₹14,699</span>
+                            </p>                    
+                            <a href="#" class="btn btn-primary">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" >
+                  <div class="card blog-card">
+                      <img src="https://m.media-amazon.com/images/I/61RKfgsk5FL._SX679_.jpg" class="card-img-top" alt="Product Image" style="height:395px; width:90%">
+                      <div class="card-body">
+                          <h5 class="card-title">G-SHOCK</h5>
+                          <p class="card-text">Casio G-Shock G-5600UE-1DR Digital Dial Black Resin Strap Men's Watch Tough Solar Shock Resistant G1166<br>
+                            <span style="color: red;">-15%</span> 
+                            <span style="color: green;">₹3,799</span>
+                          </p>                    
+                          <a href="#" class="btn btn-primary">Buy Now</a>
+                      </div>
+                  </div>
+              </div>
+
+                        <!-- Repeat Product Cards -->
+                    
+               
+            </section>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+   
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

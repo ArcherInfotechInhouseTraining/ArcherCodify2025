@@ -1,0 +1,34 @@
+Problem:
+
+You are going to be given a non-empty string. Your job is to return the middle character(s) of the string.
+
+If the string's length is odd, return the middle character.
+If the string's length is even, return the middle 2 characters.
+Examples:
+"test" --> "es"
+"testing" --> "t"
+"middle" --> "dd"
+"A" --> "A"
+
+Code:
+#include <string.h>
+
+/* remember to null-terminate outp! */
+
+char *get_middle(char outp[3], const char *inp)
+{
+  int len = strlen(inp);
+  int index = ((int)len / 2);
+  if (len % 2)
+  {
+    outp[0] = inp[index];
+    outp[1] = '\0';
+  }
+  else
+  {
+    outp[0] = inp[index-1];
+    outp[1] = inp[index];
+    outp[2] = '\0';
+  }
+  return outp;
+}

@@ -1,0 +1,48 @@
+Reasoning Ability Test	15	15
+Section II	Technical Ability Test	10	10
+Section III	Verbal Ability Test	20	20
+Section IV	Pseudocode Test	5	10
+Section V	Numerical Puzzle Test	4	10
+Section VI	English Grammar Test	5	10
+Section VII	English Writing Test
+
+
+
+nfosys Mathematical Ability Detailed Syllabus:
+
+Number series and Letter series
+Time and Work
+Time, Speed and Distance
+Probability
+Ratio and Proportions
+Average
+Percentage
+Alligations and Mixtures
+Seating arrangements
+Permutation and combination
+Profit and Loss
+Direction sense
+Cryparithmetic
+
+Infosys Logical Reasoning Detailed Syllabus:
+
+Puzzle          
+Arrangements       
+Syllogisms  
+Coding Decoding  
+Number series      
+Clocks and Calendar       
+Data Sufficiency    
+Most logical choice          
+Logical Deduction
+Infosys Verbal Ability Detailed Syllabus:
+
+Sentence completion (4 Questions)
+Error correction (4 Questions)
+Error detection/ Identify correct sentence (4 Questions)
+Reading comprehension (5 Questions)
+Critical reasoning (3 Questions)
+Important concepts: Tenses, Verbs, Articles, Vocabulary, Prepositions, Subject-Verb agreement, Parallelism
+
+
+(Note: English is always said to be the toughest of the three sections in the Infosys online test, not because of the number of questions and shorter duration but due to the difficulty of the questions which are usually of GRE and CAT level)

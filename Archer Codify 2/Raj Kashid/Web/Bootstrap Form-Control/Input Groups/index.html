@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Input Groups</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Input Groups</h2>
+    <form>
+	<!-- Input Group with Prefix (@) -->
+	<div class="form-group">
+	    <label for="username">@ Username</label>
+	    <div class="input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text">@</span>
+		</div>
+		<input class="form-control" id="username" placeholder="Enter your username" type="text">
+	    </div>
+	</div>
+	
+	<!-- Input Group with Suffix (USD) -->
+	<div class="form-group">
+	    <label for="amount">Amount</label>
+	    <div class="input-group">
+		<input class="form-control" id="amount" placeholder="Enter amount" type="number">
+		<div class="input-group-append">
+		    <span class="input-group-text">USD</span>
+		</div>
+	    </div>
+	</div>
+	
+	<button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

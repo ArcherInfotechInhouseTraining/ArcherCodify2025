@@ -1,0 +1,11 @@
+void public vowelStrings(int[] result, String[] words, int[][] queries) 
+{
+	int[] counts= new int[words.length()+1];
+	result= new int[queries.length()];
+	for(int i; i< words.length(); i++)
+	{
+		counts[i+1]= counts[i] + (isVowel(words[i][0]) && isVowel(words[i][words[i].length() -1]));
+	}
+	for(i=0; i<queriesSize; i++)
+        	result[i]= counts[queries[i][1]+1]-counts[queries[i][0]];
+}

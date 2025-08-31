@@ -1,0 +1,102 @@
+.header{
+	font-size: 50px;
+	font-weight: 100px;
+	position: sticky;
+	text-align: center;
+	top: -3px;
+	overflow: hidden;
+	border: 5px solid black;
+}
+.box1{
+	height:300px;
+	width:700px;
+	
+	margin: 50px 300px 50px 300px;
+	border: 10px solid black;
+padding: 10px;
+}
+.border-item1 img{
+	float: left;
+	height: 200px;
+	width:250px;
+	padding: 30px;
+	
+	border-image-slice:200 ;
+	border-image-width: 250px;
+	border-image-repeat: round;
+	margin-right: 30px;
+
+}
+
+.border-item1 p{
+	text-align: center;
+	margin: 30px 30px 30px 30px;
+	padding-top: 50px ;
+	padding-right: 0px;
+	padding-left: 100px;
+	color: #000;
+	font-weight: 700;
+	font-size: 15px;
+}
+.box2{
+	height:300px;
+	width:700px;
+	
+	margin: 50px 300px 50px 300px;
+	border: 10px solid black;
+padding: 10px;
+}
+.border-item2 img{
+	float: right;
+	height: 200px;
+	width:250px;
+	padding: 30px;
+	
+	border-image-slice:200 ;
+	border-image-width: 250px;
+	border-image-repeat: round;
+	margin-right: 30px;
+
+}
+
+.border-item2 p{
+	text-align: center;
+	margin: 30px 30px 30px 30px;
+	padding-top: 50px ;
+	padding-right: 50px;
+	padding-left: 50px;
+	color: #000;
+	font-weight: 700;
+	font-size: 15px;
+}
+.box3{
+	height:300px;
+	width:700px;
+	
+	margin: 50px 300px 50px 300px;
+	border: 10px solid black;
+padding: 10px;
+}
+.border-item3 img{
+	float: right;
+	height: 200px;
+	width:250px;
+	padding: 30px;
+	
+	border-image-slice:200 ;
+	border-image-width: 250px;
+	border-image-repeat: round;
+	margin-right: 30px;
+
+}
+
+.border-item3 p{
+	text-align: center;
+	margin: 30px 30px 30px 30px;
+	padding-top: 50px ;
+	padding-right: 50px;
+	padding-left: 50px;
+	color: #000;
+	font-weight: 700;
+	font-size: 15px;
+}

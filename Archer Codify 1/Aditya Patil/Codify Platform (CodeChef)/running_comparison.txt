@@ -1,0 +1,86 @@
+https://www.codechef.com/practice/course/arrays/ARRAYS/problems/RUNCOMPARE
+
+Running Comparison
+Alice and Bob recently got into running, and decided to compare how much they ran on different days.
+
+They each ran for 
+N
+N days — on the 
+i
+t
+h
+i 
+th
+  day, Alice ran 
+A
+i
+A 
+i
+​
+  meters and Bob ran 
+B
+i
+B 
+i
+​
+  meters.
+
+On each day,
+
+Alice is unhappy if Bob ran strictly more than twice her distance, and happy otherwise.
+Similarly, Bob is unhappy if Alice ran strictly more than twice his distance, and happy otherwise.
+For example, on a given day
+
+If Alice ran 200 meters and Bob ran 500, Alice would be unhappy but Bob would be happy.
+If Alice ran 500 meters and Bob ran 240, Alice would be happy and Bob would be unhappy.
+If Alice ran 300 meters and Bob ran 500, both Alice and Bob would be happy.
+On how many of the N days were both Alice and Bob happy?
+
+output-------------------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt();
+
+        while (t-- > 0) {
+            int n = scanner.nextInt();
+            int[] a = new int[n];
+            int[] b = new int[n];
+
+            for (int i = 0; i < n; i++) {
+                a[i] = scanner.nextInt();
+            }
+
+            for (int i = 0; i < n; i++) {
+                b[i] = scanner.nextInt();
+            }
+            
+            int cnt=0;
+            
+            for (int i=0; i<n; i++)
+            {
+                if ( a[i] > (2*b[i]))
+                {
+                    
+                }
+                    
+                else if(b[i] > (2*a[i]))
+                {
+                    
+                }
+                else
+                    cnt++;
+                    
+                    
+                
+                
+                
+            }
+            
+            System.out.println(cnt);
+            
+        }
+    }
+}

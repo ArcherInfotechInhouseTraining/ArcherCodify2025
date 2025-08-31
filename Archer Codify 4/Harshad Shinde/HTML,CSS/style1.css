@@ -1,0 +1,33 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Pacifico&display=swap');
+.box{
+
+    height: 500px;
+    width: 500px;
+    border: solid,30px;
+    border-image-source: url(borderi.jpg);
+    border-image-slice: 150;
+    border-image-width: 40px;
+    border-image-repeat: round;
+    border-image-outset: 10px;
+    background-clip: border-box;
+    background-attachment: local;
+    overflow: scroll;
+    margin-left: 400px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}
+.box1 h1,h3{
+    margin: 100px;
+    background-color:aqua;
+    color: white;
+
+}
+h1{
+    font-family: "Pacifico", cursive;
+}
+h4{
+    font-family: "Lavishly Yours", cursive;
+}

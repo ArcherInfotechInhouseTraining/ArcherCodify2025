@@ -1,0 +1,115 @@
+350. Intersection of Two Arrays II
+
+Title:
+Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must appear as many times as it shows in both arrays and you may return the result in any order.
+
+Example 1:
+Input: nums1 = [1,2,2,1], nums2 = [2,2]
+Output: [2,2]
+
+Example 2:
+Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+Output: [4,9]
+Explanation: [9,4] is also accepted.
+ 
+
+Constraints:
+
+1 <= nums1.length, nums2.length <= 1000
+0 <= nums1[i], nums2[i] <= 1000
+
+
+Solution:
+import java.util.*;
+
+public class Solution {
+    public static int[] intersect(int[] nums1, int[] nums2) {
+        // Use a HashMap to store the frequency of elements in nums1
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int num : nums1) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+
+        // List to store the intersection
+        List<Integer> intersection = new ArrayList<>();
+        for (int num : nums2) {
+            // If the number exists in the map and has a non-zero frequency
+            if (map.getOrDefault(num, 0) > 0) {
+                intersection.add(num);
+                map.put(num, map.get(num) - 1); // Decrease the frequency
+            }
+        }
+
+        // Convert the list to an array
+        int[] result = new int[intersection.size()];
+        for (int i = 0; i < intersection.size(); i++) {
+            result[i] = intersection.get(i);
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        // Test cases
+        int[] nums1 = {1, 2, 2, 1};
+        int[] nums2 = {2, 2};
+        System.out.println("Output: " + Arrays.toString(intersect(nums1, nums2))); // Output: [2, 2]
+
+        int[] nums3 = {4, 9, 5};
+        int[] nums4 = {9, 4, 9, 8, 4};
+        System.out.println("Output: " + Arrays.toString(intersect(nums3, nums4))); // Output: [4, 9]
+    }
+}
+
+
+Output:
+Input nums1 = [1,2,2,1]
+      nums2 = [2,2]
+Output [2,2]
+Expected [2,2]
+
+Explanation:
+
+HashMap:
+Used to store the frequency of elements from the first array (nums1).
+The keys are the integers from the array, and the values are the number of times each integer appears in nums1.
+
+ArrayList:
+Used to dynamically store the elements that are common between nums1 and nums2.
+
+For each element in nums2, check if it exists in the map with a non-zero frequency.
+If it exists:
+Add the element to the intersection list.
+Decrease its frequency in the map by 1, since we have "used" one occurrence of the element.
+
+map.getOrDefault(num, 0):
+Checks if num already exists in the map. If it does, retrieve its frequency; otherwise, default to 0.
+For every element in nums1, its frequency is incremented and stored in the map.
+Example: For nums1 = {1, 2, 2, 1}:
+
+After the loop, the map will be:
+css
+Copy code
+{
+  1: 2, // '1' appears twice
+  2: 2  // '2' appears twice
+}
+
+For each element in nums2, check if it exists in the map with a non-zero frequency.
+If it exists:
+Add the element to the intersection list.
+Decrease its frequency in the map by 1, since we have "used" one occurrence of the element.
+Example: For nums2 = {2, 2} and the earlier map:
+
+The first 2 is found in the map (frequency = 2), so it's added to the intersection and the frequency is reduced to 1.
+The second 2 is also found (frequency = 1), so it's added to the intersection and the frequency is reduced to 0.
+Final intersection list: [2, 2].
+
+The ArrayList intersection is converted to a static array result for the method's output.
+The result array contains the intersection elements.
+Example: For intersection = [2, 2], the resulting array is [2, 2].
+
+
+
+
+
+

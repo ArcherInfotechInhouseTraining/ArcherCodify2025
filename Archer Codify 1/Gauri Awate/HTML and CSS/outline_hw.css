@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Galada&family=Monsieur+La+Doulaise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Bungee+Spice&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Galada&family=Geist+Mono:wght@100..900&family=Monsieur+La+Doulaise&family=Sevillana&display=swap');
+
+.item-box{
+	height: 300px;
+	width: 300px;
+	outline: 4px dashed red;
+}
+.box{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	height: 700px;
+	width: 700px;
+	
+	margin: 35px auto 0px auto;
+	column-gap: 35px;
+
+}
+
+#box1:hover{
+	outline:4px solid green;
+}
+p{
+	margin: 20px;
+	padding: 10px;
+	text-align: center;
+	font-family: "Galada", serif;
+	font-weight: 400;
+	font-size: 10px;
+
+}
+
+

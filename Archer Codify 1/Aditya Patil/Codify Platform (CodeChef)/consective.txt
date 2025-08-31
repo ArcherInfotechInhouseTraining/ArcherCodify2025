@@ -1,0 +1,39 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    Scanner sc = new Scanner (System.in);
+		// your code goes here
+		int T=sc.nextInt();
+		
+		while( T-- >0)
+		    
+        {   int n=sc.nextInt();
+		    String S= sc.next();
+		    
+		   int ope=0;
+		    
+		    for ( int i=0 ; i+1<S.length(); i++)
+		    {
+		        char first=S.charAt(i);
+		        char sec=S.charAt(i+1);
+		        
+		        
+		        if( first ==sec)
+		        {
+		            ope=ope+1;
+		        }
+		        else{
+		            
+		        }
+		    }
+		    
+		    System.out.println(ope);
+		}
+
+	}
+}

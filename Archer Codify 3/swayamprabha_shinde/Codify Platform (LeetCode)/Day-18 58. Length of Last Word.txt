@@ -1,0 +1,66 @@
+58. Length of Last Word
+
+Given a string s consisting of words and spaces, return the length of the last word in the string.
+
+A word is a maximal substring consisting of non-space characters only. 
+
+Example 1:
+Input: s = "Hello World"
+Output: 5
+Explanation: The last word is "World" with length 5.
+
+Example 2:
+Input: s = "   fly me   to   the moon  "
+Output: 4
+Explanation: The last word is "moon" with length 4.
+
+Example 3:
+Input: s = "luffy is still joyboy"
+Output: 6
+Explanation: The last word is "joyboy" with length 6.
+
+Solution:
+
+public class LastWordLength {
+    public static int lengthOfLastWord(String s) {
+        int length = 0;
+        boolean isWord = false;
+
+        // Traverse the string from the end
+        for (int i = s.length() - 1; i >= 0; i--) {
+            // If we find a non-space character, start counting
+            if (s.charAt(i) != ' ') {
+                length++;
+                isWord = true;
+            }
+            // If we encounter a space after counting a word, break
+            else if (isWord) {
+                break;
+            }
+        }
+        return length;
+    }
+
+    public static void main(String[] args) {
+        // Test cases
+        String s1 = "Hello World";
+        String s2 = "   fly me   to   the moon  ";
+        String s3 = "luffy is still joyboy";
+
+        System.out.println("Output 1: " + lengthOfLastWord(s1)); 
+        System.out.println("Output 2: " + lengthOfLastWord(s2)); 
+        System.out.println("Output 3: " + lengthOfLastWord(s3)); 
+    }
+}
+
+Explanation:
+
+length: Keeps track of the length of the last word.
+isWord: A flag to indicate whether we’ve started counting the last word. This helps to handle cases where there are trailing spaces in the string.
+We loop backward through the string, starting from the last character (s.length() - 1) and stopping at the first character (i >= 0).
+s.charAt(i) != ' ': If the current character is not a space, it is part of a word.
+Increment length to count the character.
+Set isWord = true to indicate that we’ve started counting a word.
+If we encounter a space after starting to count the last word (isWord == true), we stop the loop using break.
+This ensures that we only count the last word and not anything before it.
+length contains the number of characters in the last word.

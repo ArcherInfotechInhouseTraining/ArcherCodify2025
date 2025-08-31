@@ -1,0 +1,44 @@
+https://www.codechef.com/practice/course/logical-problems/DIFF800/problems/EXAMCHEF
+
+In Chefland, there are X schools, and each school has Y students.
+The year end results are in and a total of Z students passed the exams.
+
+Assuming that all students appeared for the exams, find whether the number of students who passed in Chefland was strictly greater than 50%.
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case consists of three space-separated integers X,Y, and Z, as mentioned in the statement.
+Output Format
+For each test case, output on a new line, YES, if the total number of students who passed in Chefland was strictly greater than 50%, otherwise print NO.
+
+
+
+---------------------------------->
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef {
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int t = sc.nextInt();
+        
+        while (t-- > 0) {
+            int x = sc.nextInt();
+            int y = sc.nextInt();
+            int z = sc.nextInt();
+            
+            int tot = x * y;
+            double per = (z * 100.0) / tot;
+            
+            if (per > 50.0)
+                System.out.println("Yes");
+            else
+                System.out.println("No");
+        }
+        
+        sc.close();
+    }
+}

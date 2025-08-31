@@ -1,0 +1,82 @@
+1941. Check if All Characters Have Equal Number of Occurrences
+
+Problem Statement:
+Given a string s, return true if s is a good string, or false otherwise.
+
+A string s is good if all the characters that appear in s have the same number of occurrences (i.e., the same frequency).
+
+ 
+
+Example 1:
+
+Input: s = "abacbc"
+Output: true
+Explanation: The characters that appear in s are 'a', 'b', and 'c'. All characters occur 2 times in s.
+Example 2:
+
+Input: s = "aaabb"
+Output: false
+Explanation: The characters that appear in s are 'a' and 'b'.
+'a' occurs 3 times while 'b' occurs 2 times, which is not the same number of times.
+
+Constraints:
+s consists of lowercase English letters.
+
+Solution:
+
+class Solution {
+    public static boolean areOccurrencesEqual(String s) {
+        // Convert the string into a character array
+        char[] characters = s.toCharArray();
+
+        // Find the frequency of the first character
+        int referenceFrequency = 0;
+        for (char c : characters) {
+            if (c == characters[0]) {
+                referenceFrequency++;
+            }
+        }
+
+        // Check if all other characters have the same frequency
+        for (char c : characters) {
+            int currentFrequency = 0;
+            for (char d : characters) {
+                if (d == c) {
+                    currentFrequency++;
+                }
+            }
+            if (currentFrequency != referenceFrequency) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+        // Test cases
+        String s1 = "abacbc";
+        String s2 = "aaabb";
+
+        System.out.println("Is \"" + s1 + "\" a good string? " +  areOccurrencesEqual(s1));             System.out.println("Is \"" + s2 + "\" a good string? " +  areOccurrencesEqual(s2)); 
+    }
+}
+   
+Explanation:
+Frequency Calculation: We first calculate the frequency of the first character in the string.
+Frequency Validation: For each character in the string, calculate its frequency and compare it with the reference frequency.
+Outer Loop: Iterates over each character.
+Inner Loop: Counts the frequency of the current character.
+
+The loop counts how many times the first character (characters[0]) appears in the string.
+This count is stored as the reference frequency.
+
+For each character c in the string, the inner loop counts how many times c appears (currentFrequency).
+It then checks if currentFrequency matches referenceFrequency.
+If any character has a different frequency, it immediately returns false.
+Otherwise, the loop continues to check all characters.
+If all characters have the same frequency as the reference frequency, the method returns true.
+
+
+
+

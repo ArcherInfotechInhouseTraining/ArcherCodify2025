@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Galada&family=Monsieur+La+Doulaise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Bungee+Spice&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Galada&family=Geist+Mono:wght@100..900&family=Monsieur+La+Doulaise&family=Sevillana&display=swap');
+
+h1{
+	font-size: 30px;
+	font-weight: 700;
+	font-family: cursive;
+	
+	margin-left: 400px;
+	word-spacing: 10px;
+
+}
+
+.box1{
+	height:300px;
+	width:700px;
+	
+	margin: 50px 300px 50px 300px;
+	border: 10px dashed burlywood;
+padding: 10px;
+}
+.border-item1 img{
+	float: left;
+	height: 200px;
+	width:250px;
+	padding: 30px;
+	border-image-source: url('images/border.png');
+	border-image-slice:200 ;
+	border-image-width: 250px;
+	border-image-repeat: round;
+	margin-right: 30px;
+
+}
+
+.border-item1 p{
+	text-align: center;
+	margin: 30px 30px 30px 30px;
+	padding-top: 50px ;
+	padding-right: 0px;
+	padding-left: 100px;
+	color: #000;
+	font-weight: 700;
+	font-size: 15px;
+}
+.box2{
+	height:300px;
+	width:700px;
+	
+	margin: 50px 300px 50px 300px;
+	border: 10px dashed burlywood;
+padding: 10px;
+}
+.border-item2 img{
+	float: left;
+	height: 200px;
+	width:250px;
+	padding: 30px;
+	border-image-source: url('images/floral.png');
+	border-image-slice:50 ;
+	border-image-width: 350px;
+	border-image-repeat: round;
+	margin-right: 30px;
+	
+
+}
+
+.border-item2 p{
+	text-align: center;
+	margin: 30px 30px 30px 30px;
+	padding-top: 50px ;
+	padding-right: 0px;
+	padding-left: 100px;
+	color: #000;
+	font-weight: 700;
+	 font-family: "Bokor", system-ui;
+	 font-size: 15px;
+
+}
+.box3{
+	height:300px;
+	width:700px;
+	
+	margin: 50px 300px 50px 300px;
+	border: 10px dashed burlywood;
+padding: 10px;
+}
+.border-item3 img{
+	float: left;
+	height: 200px;
+	width:250px;
+	padding: 30px;
+	border-image-source: url('images/animated.png');
+	border-image-slice:50 ;
+	border-image-width: 250px;
+	border-image-repeat: round;
+	margin-right: 30px;
+
+}
+
+.border-item3 p{
+	text-align: center;
+	margin: 30px 30px 30px 30px;
+	padding-top: 50px ;
+	padding-right: 0px;
+	padding-left: 100px;
+	color: #000;
+	font-weight: 700;
+	font-family: "Monsieur La Doulaise", serif;
+	font-size: 15px;
+
+}
+.box4{
+	height:300px;
+	width:700px;
+	
+	margin: 50px 300px 50px 300px;
+	border:  10px dashed burlywood;
+padding: 10px;
+}
+.border-item4 img{
+	float: left;
+	height: 200px;
+	width:250px;
+	padding: 30px;
+	border-image-source: url('images/box.png');
+	border-image-slice:200 ;
+	border-image-width: 250px;
+	border-image-repeat: round;
+	margin-right: 30px;
+
+}
+
+.border-item4 p{
+	text-align: center;
+	margin: 30px 30px 30px 30px;
+	padding-top: 50px ;
+	padding-right: 0px;
+	padding-left: 100px;
+	color: #000;
+	font-weight: 700;
+	font-family: "Galada", serif;
+	font-size: 15px;
+}
+
+
+.box5{
+	height:300px;
+	width:700px;
+	
+	margin: 50px 300px 50px 300px;
+	border:  10px dashed burlywood;
+padding: 10px;
+}
+.border-item5 img{
+	float: left;
+	height: 200px;
+	width:250px;
+	padding: 30px;
+	border-image-source: url('images/simple.png');
+	border-image-slice:200 ;
+	border-image-width: 250px;
+	border-image-repeat: round;
+	margin-right: 30px;
+
+}
+
+.border-item5 p{
+	text-align: center;
+	margin: 30px 30px 30px 30px;
+	padding-top: 50px ;
+	padding-right: 0px;
+	padding-left: 100px;
+	color: #000;
+	font-weight: 700;
+	 font-family: "Sevillana", cursive;
+	 font-size: 15px;
+}
+
+.box6{
+	height:300px;
+	width:700px;
+	
+	margin: 50px 300px 50px 300px;
+	border:  10px dashed burlywood;
+padding: 10px;
+}
+.border-item6 img{
+	float: left;
+	height: 200px;
+	width:250px;
+	padding: 30px;
+	border-image-source: url('images/floral.png');
+	border-image-slice:50 ;
+	border-image-width: 350px;
+	border-image-repeat: round;
+	margin-right: 30px;
+
+}
+
+.border-item6 p{
+	text-align: center;
+	margin: 30px 30px 30px 30px;
+	padding-top: 50px ;
+	padding-right: 0px;
+	padding-left: 100px;
+	color: #000;
+	font-weight: 700;
+	font-family: "Geist Mono", monospace;
+	font-size: 15px;
+}
+
+.box7{
+	height:300px;
+	width:700px;
+	
+	margin: 50px 300px 50px 300px;
+	border:  10px dashed burlywood;
+padding: 10px;
+}
+.border-item7 img{
+	float: left;
+	height: 200px;
+	width:250px;
+	padding: 30px;
+	border-image-source: url('images/img5.jpg');
+	border-image-slice:200 ;
+	border-image-width: 250px;
+	border-image-repeat: round;
+	margin-right: 30px;
+
+}
+
+.border-item7 p{
+	text-align: center;
+	margin: 30px 30px 30px 30px;
+	padding-top: 50px ;
+	padding-right: 0px;
+	padding-left: 100px;
+	color: #000;
+	font-weight: 700;
+	font-family: "Bungee Spice", sans-serif;
+	font-size: 15px;
+}
+
+.box8{
+	height:300px;
+	width:700px;
+	
+	margin: 50px 300px 50px 300px;
+	border:  10px dashed burlywood;
+padding: 10px;
+}
+.border-item8 img{
+	float: left;
+	height: 200px;
+	width:250px;
+	padding: 30px;
+	border-image-source: url('images/hd.png');
+	border-image-slice:100 ;
+	border-image-width: 350px;
+	border-image-repeat: round;
+	margin-right: 30px;
+
+}
+
+.border-item8 p{
+	text-align: center;
+	margin: 30px 30px 30px 30px;
+	padding-top: 50px ;
+	padding-right: 0px;
+	padding-left: 100px;
+	color: #000;
+	font-weight: 700;
+	 font-family: "Bokor", system-ui;
+	 font-size: 15px;
+}
+
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radial Timer</title>
+  
+  <style>
+
+
+     /* styles.css */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f9;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: conic-gradient(#4caf50 0%, #e0e0e0 0%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.percentage {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  position: absolute;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Add animation class */
+@keyframes fill {
+  from {
+    background: conic-gradient(#4caf50 0%, #e0e0e0 0%);
+  }
+  to {
+    background: conic-gradient(#4caf50 100%, #e0e0e0 0%);
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="circle">
+      <div class="percentage">0%</div>
+    </div>
+    <button id="start-button">Start Timer</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

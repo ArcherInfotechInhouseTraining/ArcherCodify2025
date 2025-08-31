@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+    public static String user_logic(long a, long b, long c, long d) {
+        long totalSum = a + b + c + d;
+        
+       
+        if (totalSum % 2 != 0) {
+            return "NO";
+        }
+        
+        long target = totalSum / 2;
+         if (a == target || b == target || c == target || d == target || 
+            (a + b == target) || (a + c == target) || (a + d == target) || 
+            (b + c == target) || (b + d == target) || (c + d == target)) {
+            return "YES";
+        }
+        
+        return "NO";
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        long a = scanner.nextLong();
+        long b = scanner.nextLong();
+        long c = scanner.nextLong();
+        long d = scanner.nextLong();
+        
+
+        System.out.println(user_logic(a, b, c, d));
+    }
+}

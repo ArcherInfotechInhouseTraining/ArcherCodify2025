@@ -1,0 +1,26 @@
+body{
+    background-image: url(chy.jpg);
+    background-size: contain;
+
+}
+
+.box1{
+    width: 550px;
+    margin: 20px auto 0px auto;
+
+    border: 40px solid;
+    border-image-source: url(floralborder.png);
+    border-image-slice: 30;
+    border-image-width: 30px;
+    border-image-repeat: stretch;
+    background-image: url(hal.jpg);
+    background-size: contain;
+    color: rgba(14, 14, 14, 0.90);
+    font-family: ;
+    
+}
+
+.box h1{
+    margin: 20px;
+    padding: 30px;   
+}

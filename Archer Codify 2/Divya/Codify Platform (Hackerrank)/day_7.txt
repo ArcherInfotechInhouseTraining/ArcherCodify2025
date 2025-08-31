@@ -1,0 +1,63 @@
+Complete the Singleton class in your editor which contains the following components:
+
+A private Singleton non parameterized constructor.
+A public String instance variable named .
+Write a static method named getSingleInstance that returns the single instance of the Singleton class.
+Once submitted, our hidden Solution class will check your code by taking a String as input and then using your Singleton class to print a line.
+
+Input Format
+
+You will not be handling any input in this challenge.
+
+Output Format
+
+You will not be producing any output in this challenge.
+
+Sample Input
+
+hello world
+Sample Output
+
+Hello I am a singleton! Let me say hello world to you
+
+----------------------------------------------------------
+Solution:
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.lang.reflect.*;
+
+
+class Singleton{
+    public String str;
+    private static Singleton singleInstance = null;
+     private Singleton() {}
+    public static Singleton getSingleInstance() {
+        if (singleInstance == null) {
+            singleInstance = new Singleton();
+        }
+        return singleInstance;
+    }
+
+}
+
+
+-------------------------------------------
+Explaination:
+
+Private Constructor:
+
+The constructor is private to ensure that no other class can instantiate the Singleton class directly.
+Static Instance:
+
+A private static instance of the Singleton class (singleInstance) is declared. This will hold the single instance of the class.
+Static Method getSingleInstance:
+
+This method checks if the singleInstance is null.
+If it’s null, it creates a new instance of the Singleton class.
+If it’s not null, it simply returns the existing instance.
+This ensures that only one instance of the Singleton class is created.

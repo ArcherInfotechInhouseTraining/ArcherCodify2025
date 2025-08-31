@@ -1,0 +1,23 @@
+int isPalindrome(char* s, int i, int j){
+    while(i< j) {
+        if(s[i++] != s[j--]) return 0;
+    }
+    return 1;
+}
+char* longestPalindrome(char* s){
+    int optimal= 0, optStrt= 0, i, j;
+    char* longPal;
+    for(i= 0; s[i]; i++){
+        for(j= i; s[j]; j++){
+            if(isPalindrome(s, i, j)) {
+                if(j- i> optimal) {
+                    optimal= j- i;
+                    optStrt= i;
+                }
+            }
+        }
+    }
+    longPal= (char*)calloc(optimal + 2, sizeof(char)); 
+    for(i= 0; i<= optimal; longPal[i++]= s[optStrt + i]);
+    return longPal;
+}

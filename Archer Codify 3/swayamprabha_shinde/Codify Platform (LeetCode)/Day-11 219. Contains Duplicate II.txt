@@ -1,0 +1,120 @@
+219. Contains Duplicate II
+
+Title:
+Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k. 
+
+Example 1:
+Input: nums = [1,2,3,1], k = 3
+Output: true
+
+Example 2:
+Input: nums = [1,0,1,1], k = 1
+Output: true
+
+Example 3:
+Input: nums = [1,2,3,1,2,3], k = 2
+Output: false
+
+Constraints:
+1 <= nums.length <= 105
+-109 <= nums[i] <= 109
+0 <= k <= 105
+
+Solution:
+
+import java.util.HashMap;
+
+public class Solution {
+    public static boolean containsNearbyDuplicate(int[] nums, int k) {
+        // HashMap to store the element and its most recent index
+        HashMap<Integer, Integer> map = new HashMap<>();
+        
+        for (int i = 0; i < nums.length; i++) {
+            int num = nums[i];
+            // If the element is already in the map
+            if (map.containsKey(num)) {
+                // Check if the difference between indices is <= k
+                if (i - map.get(num) <= k) {
+                    return true;
+                }
+            }
+            // Update the map with the current index
+            map.put(num, i);
+        }
+        
+        // No duplicates within range k
+        return false;
+    }
+
+    public static void main(String[] args) {
+        // Example 1
+        int[] nums1 = {1, 2, 3, 1};
+        int k1 = 3;
+        System.out.println(containsNearbyDuplicate(nums1, k1)); // Output: true
+
+        // Example 2
+        int[] nums2 = {1, 0, 1, 1};
+        int k2 = 1;
+        System.out.println(containsNearbyDuplicate(nums2, k2)); // Output: true
+
+        // Example 3
+        int[] nums3 = {1, 2, 3, 1, 2, 3};
+        int k3 = 2;
+        System.out.println(containsNearbyDuplicate(nums3, k3)); // Output: false
+    }
+}
+
+Output:
+Input
+nums = [1,2,3,1]
+k = 3
+Output true
+Expected true
+
+Input
+nums = [1,0,1,1]
+k = 1
+Output true
+Expected true
+
+Input
+nums = [1,2,3,1,2,3]
+k = 2
+Output false
+Expected false
+
+HashMap Usage:
+We store each element in the HashMap with its most recent index.
+If we encounter a value that already exists in the map, we check if the difference between the current index and the previous index of that value is less than or equal to k
+
+nums[]: An array of integers.
+k: An integer representing the maximum allowed difference between the indices of two matching elements in nums.
+
+We use a HashMap to store the most recent index of each element in the array.
+The key of the map is the element of the array (Integer), and the value is the index of that element (Integer).
+We loop through the array nums[] using the index i.
+
+num is the current element in the array at index i.
+We check if num already exists in the map using map.containsKey(num). If it does, it means we have encountered this value before at some previous index.
+
+If the element num is found in the map, we retrieve the previous index of that element using map.get(num).
+We then calculate the absolute difference between the current index (i) and the stored index.
+If the difference i - map.get(num) is less than or equal to 
+k, it means we have found a pair of indices 𝑖
+i and 𝑗
+j such that:
+nums[i] == nums[j]
+abs(i - j)≤𝑘
+abs(i - j)≤k
+If this condition is met, we immediately return true, since the problem asks us to return true as soon as we find such a pair.
+
+map.put(num, i);
+If the element num is not found in the map or if the difference is greater than 
+𝑘
+k, we update the map with the current index i for the element num.
+This means the current index is now the most recent one for that element.
+
+If the loop finishes and we haven't found any matching elements whose indices satisfy the condition, we return false.
+
+
+

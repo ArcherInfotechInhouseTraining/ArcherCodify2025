@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a1
+        {
+            height: 200px;
+            width: 200px;
+            border: 2px solid red;
+            border-radius: 50%;
+            background-image: repeating-conic-gradient(red 0deg ,red 90deg,blue 90deg ,blue 198deg,green 198deg, green 280deg,yellow 250deg,yellow 360deg);
+            overflow: hidden;
+            transition: .5s all ease;
+            transform:translateX(0px) translateY(0px);
+            display: flex;
+            
+        }
+        .a1:hover{
+            transform:translateX(100px) translateY(0px);
+        }
+        .info1 , .info2
+        {
+            padding: 30px;
+            padding-top: 30px;
+        }
+        .s
+        {
+            padding-top: 35px;
+        }
+        .timer
+        {
+            height: 200px;
+            width: 200px;
+            border: 2px solid red;
+            border-radius: 50%;
+            background-image: conic-gradient(rgb(215, 122, 122) 25%,rgb(194, 83, 39) 55%,rgb(215, 183, 66) 75%,rgb(198, 145, 30) 100%);
+            overflow: hidden;
+            transition: .5s all ease;
+            transform: translateX(0px) translateY(0px) scale(0px);
+        }
+        .timer:hover{
+            transform: translateX(0px) translateY(0px) scale(0px);
+        }
+        .button
+        {
+            height: 30px;
+            width: 150px;
+            border: 3px solid black;
+            margin-top: 80px;
+            padding: 10px;
+            border-radius: 50px;
+            margin-left: 40px;
+            background-color: rgb(165, 104, 42);
+            font-size: 30px;
+            text-align: center;
+        }
+        .a2
+        {
+            padding-top: 30px;
+            display: flex;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="a1">
+
+    
+    <div class="info1">
+        <h4>25%</h4>
+        <h4 class="s">30%</h4>
+        </div>
+        <div class="info2">
+        <h4>20%</h4>
+        <h4 class="s">25%</h4>
+        </div>
+    </div>
+    <div class="a2">
+    <div class="timer">
+        
+    </div>
+    <div class="button">START</div></div>
+</body>
+</html>

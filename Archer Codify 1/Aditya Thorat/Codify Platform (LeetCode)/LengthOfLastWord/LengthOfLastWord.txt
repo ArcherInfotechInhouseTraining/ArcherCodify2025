@@ -1,0 +1,12 @@
+int lengthOfLastWord(char* s) {
+    int len= strlen(s)-1, i;
+    for( ;len>= 0; len--)
+    {
+        if(s[len]!= 32)
+        {
+            for(i= len; i>= 0 && s[i]!=32; i--);
+            break;
+        }
+    }
+    return len-i;
+}

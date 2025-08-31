@@ -1,0 +1,108 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+
+    background-size: cover;
+    background-blend-mode: saturation;
+    background-attachment: fixed;
+    margin: 80px auto;
+    overflow: scroll;
+
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.box{
+    width: 100%;
+    height: auto;
+
+}
+.box-item{
+    width: 200px;
+    height: 200px;
+    border: 2px solid yellow;
+    float: left;
+    margin: 20px;
+    border-radius: 50%;
+}
+@keyframes rotateClockwise{
+    0%{
+        transform: rotate(0deg);
+
+    }
+    100%{
+        transform:rotate(360deg) ;
+    }
+}
+* .b1{
+    background-image: conic-gradient(red,yellow,green);
+    animation: rotateClockwise 1s linear infinite;
+}
+
+.b2{
+    background-image: conic-gradient(from 45deg ,red,yellow,green);
+    animation: rotateClockwise 2s linear infinite;
+}
+
+.b3{
+    background-image: conic-gradient(from 45deg ,red,yellow,green,red);
+    animation: rotateClockwise 3s linear infinite;
+}
+
+.b4{
+    background-image: conic-gradient(at 30% 60% ,red,yellow,green,red);
+    animation: rotateClockwise 4s linear infinite;
+}
+
+.b5{
+    background-image: repeating-conic-gradient(red 10%,yellow 20%,green 30%);
+    animation: rotateClockwise 5s linear infinite;
+}
+
+.b6{
+    background-image: repeating-conic-gradient(red 0deg,red 90deg,yellow 90deg,yellow 180deg,green 180deg,green 270deg,blue 270deg,blue 360deg);
+    animation: rotateClockwise 6s linear infinite;
+}
+.b7{
+    background-image: repeating-conic-gradient(yellow 0deg ,yellow 90deg,black 90deg,black 180deg,yellow 180deg,yellow 270deg,black 270deg,black 360deg);
+    animation: rotateClockwise 7s linear infinite;
+}
+
+.b8{
+    background-image:url(https://imgs.search.brave.com/77cfEMIySpWAMLcU7Bv2fHt4M4K-oRwjxtAucpdrgSI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTQ1/OTcxNDQyNi9waG90/by9zd2lybC5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9WVg2/ZXhock51RFRKc0kz/ZU43clBDWVdJdl9F/bTgybTF5dVd2TEhm/OE5mcz0);
+    background-position: center;
+    background-repeat: space;
+    border-color: red green blue violet;
+    animation: rotateClockwise 8s linear infinite;
+}
+.b9{
+    background-image: repeating-conic-gradient(green 0deg, green 30deg, rgba(0,0,0,0.1) 20deg,rgba(0,0,0,0.1) 60deg);
+    animation: rotateClockwise 9s linear infinite;
+}
+
+.b10{
+    background-image: repeating-conic-gradient(yellow 0deg, yellow 90deg,black 90deg, black 180deg);
+    background-size: 20px 20px;
+    animation: rotateClockwise 10s linear infinite;
+}
+.b11{
+    background-image: url(devika.jpg);
+     background-size: cover;
+    animation: rotateClockwise 11s linear infinite;
+}
+.b12{
+    
+    width:700px;
+    height:250px;
+    border-radius:0px;
+    border-color:transparent;
+    background-image:repeating-conic-gradient(from -45deg at 25% 55%,red 0deg,red 90deg,blue 90deg, blue 180deg,green 180deg,green 270deg,yellow 270deg,yellow 360deg);
+    font-size:200px;
+    font-weight:50% ;
+    font-family: Facile Sans;
+    -webkit-background-clip: text;
+    color:transparent;
+    background-image: repeating-linear-gradient(red green blue);
+}

@@ -1,0 +1,154 @@
+/*20. Valid Parentheses
+
+  // Problem statement: 
+
+( https://leetcode.com/problems/valid-parentheses/description/)
+
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
+Every close bracket has a corresponding open bracket of the same type.
+ 
+
+Example 1:
+
+Input: s = "()"
+
+Output: true
+
+Example 2:
+
+Input: s = "()[]{}"
+
+Output: true
+
+Example 3:
+
+Input: s = "(]"
+
+Output: false
+
+Example 4:
+
+Input: s = "([])"
+
+Output: true
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+  //Solution: 
+*/
+class Solution {
+    public boolean isValid(String s) {
+        Stack<Character> stack=new Stack<>();
+
+        for(char c:s.toCharArray())
+        {
+            if(c=='(')
+            {
+                stack.push(')');
+            }
+            else if(c=='{')
+            {
+                stack.push('}');
+            }
+            else if(c=='[')
+            {
+                stack.push(']');
+            }
+
+            else if(stack.isEmpty()|| stack.pop() !=c)
+            {
+                return false;
+            }
+        } 
+     return stack.isEmpty();
+        
+    }
+}
+
+/*
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    //Explaination:
+
+
+public boolean isValid(String s)
+Purpose: Checks if the given string s of parentheses is valid.
+Input: A string s containing only parentheses ('(', ')', '{', '}', '[', ']').
+Output: Returns true if s is valid, otherwise false.
+Stack Declaration
+java
+Copy code
+Stack<Character> stack = new Stack<>();
+Stack: A Stack is declared to keep track of opening brackets and expected closing brackets.
+Why Stack? The stack helps implement the Last-In-First-Out (LIFO) behavior needed to match parentheses in reverse order.
+For-Each Loop
+java
+Copy code
+for (char c : s.toCharArray())
+Purpose: Iterates through each character of the string s.
+s.toCharArray() converts the string into an array of characters for easier traversal.
+When an Opening Bracket is Found
+java
+Copy code
+if (c == '(') {
+    stack.push(')');
+}
+Condition: Checks if the character is an opening bracket '('.
+Action: Push the corresponding closing bracket ')' onto the stack as the expected match.
+java
+Copy code
+else if (c == '{') {
+    stack.push('}');
+}
+Condition: Checks if the character is an opening bracket '{'.
+Action: Push the corresponding closing bracket '}' onto the stack as the expected match.
+java
+Copy code
+else if (c == '[') {
+    stack.push(']');
+}
+Condition: Checks if the character is an opening bracket '['.
+Action: Push the corresponding closing bracket ']' onto the stack as the expected match.
+When a Closing Bracket is Found
+java
+Copy code
+else if (stack.isEmpty() || stack.pop() != c) {
+    return false;
+}
+Condition: If the character is a closing bracket:
+stack.isEmpty(): Ensures there are opening brackets in the stack for comparison. If the stack is empty, it means there is no matching opening bracket.
+stack.pop() != c: Checks if the top of the stack (expected closing bracket) matches the current character. If it doesn’t match, the parentheses are invalid.
+Action: If either condition is true, return false immediately because the string is invalid.
+Final Check
+java
+Copy code
+return stack.isEmpty();
+Purpose: After traversing all characters:
+stack.isEmpty(): Validates that all opening brackets have been matched and popped. If the stack is empty, it means the string is valid.
+If not empty, it indicates unmatched opening brackets, so the string is invalid.
+How it Works with Examples
+Example 1: "({[]})"
+stack.push(')') for (.
+stack.push('}') for {.
+stack.push(']') for [.
+Match and pop ] with ].
+Match and pop } with }.
+Match and pop ) with ).
+stack.isEmpty() == true → Valid.
+Example 2: "([)]"
+stack.push(')') for (.
+stack.push(']') for [.
+Mismatch: stack.pop() returns ] but c is ).
+Return false.
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    //Reference
+https://youtu.be/TaWs8tIrnoA?si=X_wLFx24pqsuH1tL
+
+*/

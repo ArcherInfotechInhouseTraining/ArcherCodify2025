@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+
+.box{
+	width: 570px;
+	height: 500px;
+	margin: 35px auto 0px auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	
+}
+
+.box .box-item{
+	width: 120px;
+	height: 120px;
+	margin: auto 10px auto 10px;
+}
+
+.box #img-box1{
+	background-image: url('https://t3.ftcdn.net/jpg/07/06/81/20/240_F_706812096_8FFO9XLkK6MjAG8clTTn8nKOlf1ofDkv.jpg');
+/*	background-image: url('images/peacock.png');*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: lightpink;
+	background-blend-mode: multiply;
+	outline: 2px dotted black;
+	outline-offset: -6px;
+}
+.box #img-box2{
+	background-image: url('https://t3.ftcdn.net/jpg/07/06/81/20/240_F_706812096_8FFO9XLkK6MjAG8clTTn8nKOlf1ofDkv.jpg');
+/*	background-image: url('images/peacock.png');*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: yellowgreen;
+	background-blend-mode: multiply;
+	outline: 2px dashed black;
+	outline-offset: -6px;
+}
+.box #img-box3{
+	background-image: url('https://t3.ftcdn.net/jpg/07/06/81/20/240_F_706812096_8FFO9XLkK6MjAG8clTTn8nKOlf1ofDkv.jpg');
+/*	background-image: url('images/peacock.png');*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: burlywood;
+	background-blend-mode: multiply;
+	outline: 2px solid black;
+	outline-offset: -6px;
+}
+.box #img-box4{
+	background-image: url('https://t3.ftcdn.net/jpg/07/06/81/20/240_F_706812096_8FFO9XLkK6MjAG8clTTn8nKOlf1ofDkv.jpg');
+/*	background-image: url('images/peacock.png');*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: cadetblue;
+	background-blend-mode: multiply;
+	outline: 2px ridge black;
+	outline-offset: -6px;
+}
+.box #img-box5{
+	background-image: url('https://t3.ftcdn.net/jpg/07/06/81/20/240_F_706812096_8FFO9XLkK6MjAG8clTTn8nKOlf1ofDkv.jpg');
+/*	background-image: url('images/peacock.png');*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: blanchedalmond;
+	background-blend-mode: multiply;
+	outline: 2px groove black;
+	outline-offset: -6px;
+}
+.box #img-box6{
+	background-image: url('https://t3.ftcdn.net/jpg/07/06/81/20/240_F_706812096_8FFO9XLkK6MjAG8clTTn8nKOlf1ofDkv.jpg');
+/*	background-image: url('images/peacock.png');*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: chocolate;
+	background-blend-mode: multiply;
+	outline: 2px dotted black;
+	outline-offset: -6px;
+}
+
+.box .text-box p{
+	font-family: "Rouge Script", cursive;
+  	font-weight: 700;
+  	font-style: normal;
+  	line-height: 20px;
+
+}
+.btn{
+	margin-top: 30px;
+	width: 350px;
+	height: auto;
+}
+
+.btn a{
+	width: 80px;
+	text-decoration: none;
+	border: 3px solid red;
+	color: red;
+	padding: 10px 20px;
+/*	margin: 30px auto 0px auto;*/
+	border-radius: 20px;
+}
+.btn a:hover{
+	background-color: red;
+	color: white;
+}

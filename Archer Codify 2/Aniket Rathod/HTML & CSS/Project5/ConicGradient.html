@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConicGradient</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgIBwgHBw0IBwcHBw0HBwcHBw8ICQcNFREWFhURFRMYHSggGBolGxMTITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDw0NDzcZFRk3Ny0rKysrKy0rKysrNysrKystKysrLSsrKysrKy0rKysrLSsrKysrKysrKysrKysrK//AABEIALQBGAMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAAAAQIEBwP/xAAWEAEBAQAAAAAAAAAAAAAAAAAAEQH/xAAaAQADAQEBAQAAAAAAAAAAAAABAgMABAUG/8QAGBEBAQEBAQAAAAAAAAAAAAAAAAECERL/2gAMAwEAAhEDEQA/APTAHdx5vRAbg9EVG4PQBuD6FBuD0BQ4MoCkqkouIqelc1QVGq5ooqWqtAURtViKKnaZCKB1kFA6yCqHWQVQ6yQUL1kgoHQ65QR9K+eNAZhAERUGFQAEVFxhgqKSqRcVFxLSuVUVDS+RRUNLZAVDSsQUTpwFBkFAZAAYUAYAAtqgMVxgPpng8EVBHgIM3FEGHiiKw8VcZXAGKqKWqRVxlrEtK5axcZxcQ0tlpUxXPqK5qgI6isoAnYeUVAvB6og3G6ABxuioBwOqINwFEA4DlQR9K8fwogzeRAFvKiDN5UQZuKqDDI0rOKWnjS4yqWoeNNYxjWI6isaXGVR1FJWhBG5PNKqCdyf0AB5b0CAeR6ohW8t1RAPIrRKUPIqJRvI8ctRB73XB4USgh4VBBL4UQFvKiAh5aKgwcaVmrQrcVphrCWDGsVlajYeVurmsYqVyaVujNVO5N6VazSkuR9NVEA8j6UQoeB9KIgeTSrSpUreTytUrNSh5PG6MUbwdziFepKj4VEDQtwogYtwogJblRAS3LQgJLloRWDi40xjWEsBpWVJYXrWLjKp3LdaGVpLlvTQgXy3pRBvI+gqAeTzS0qVKHk8q1KVKHlXNWpUqVvK2WqMUDyq+Ig64a5UQPCXKoBoS5FQMS5UASXIqAp2NKyrEsVUUCVpWcUtidaVlS2EtVWVL5L1RAPIelpUG8j6URA8nmlpUQPKuatSiB5XzSpU1N0PLpwtREbytGRA0W4ogeFsADQlgqBk7FAFOwVFMSwVFZKxcVFZLStMqCNVUUE6oihxNRBuAANwYIAcPKII3Fs0TVQvHTiprOrrOhx04FZG4ugBIuAHgUAMSgoJKAD1OwUB6SwUB6lqKqK3UdRVRWQ1FEUEdKAJABgUQARFQDQQGWyiaqA6Ms6mrqaDqxWQGdEqooit1BQ0AAHpaChuloig9JRQHpLBQbqWooKPUdQVFZDUFRWR0KiilUUBANABEVAGIAy2UTVTQdGWdZ1rU0HTisigLSqKiS0oA3R6ArdZBQelqKDdKKA9LYKBupWCgPUdQVFFHUFQM59KAKVVMDBKoACIADEAZXKJqoC+amstIW1fNZUUvVegBF4AFPABjADAoAgKgxaoApVQDRHQAeIaUAzn0KBkaACVQAFAANBABSIgBVciASr5EAqj/2Q==');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-blend-mode: saturation;
+            background-attachment: fixed;
+            margin: 80px auto;
+            overflow: scroll;
+        }
+
+        body::-webkit-scrollbar{
+            display: none;
+        
+        }
+
+        .box{
+            width: 100%;
+            height: auto;
+        }
+
+        .box-item{
+            width: 200px;
+            height: 200px;
+            border: 2px solid rgb(255, 0, 0);
+            float: left;
+            margin: 20px;
+            border-radius: 50%;
+        }
+
+        .b1{
+            background-image: conic-gradient(red,yellow,green);
+            animation: rotateClockwise 5s linear infinite;
+        }
+
+        .b2{
+            background-image: conic-gradient(from 45deg,red,yellow,green);
+            animation: rotateClockwise 5s linear infinite;
+        }
+
+        .b3{
+            background-image: conic-gradient(from 45deg,red,yellow,green,red);
+            animation: rotateClockwise 5s linear infinite;
+        }
+
+        .b4{
+            background-image: conic-gradient(at 30% 60%,red,yellow,green,red);
+            animation: rotateClockwise 5s linear infinite;
+        }
+
+        .b5{
+            background-image: conic-gradient(red 10%,yellow 20%,green 30%);
+            animation: rotateClockwise 5s linear infinite;
+        }
+
+        .b6{
+            background-image: repeating-conic-gradient(red 0deg,red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg, blue 360deg);
+            animation: rotateClockwise 5s linear infinite;
+        }
+
+        .b7{
+            background-image: repeating-conic-gradient(rgb(0, 255, 17) 0deg, rgb(0, 255, 17) 90deg, black 90deg,black 180deg);
+            animation: rotateClockwise 5s linear infinite; 
+        }
+
+        .b8{
+            background-image: url('https://img.pixers.pics/pho_wat(s3:700/FO/17/65/93/65/5/700_FO176593655_7d85cc119701f8d8ffb94501b2074aa3.jpg,700,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,650,jpg)/sheer-window-curtains-spiral-background-optical-illusion-vector-illustration.jpg.jpg');
+            background-size: cover;
+            background-repeat: space;
+            background-position: center;
+            animation: rotateClockwise 1s linear infinite;
+            
+        }
+
+        .b9{
+            background-image: repeating-conic-gradient(rgb(255, 179, 0) 0deg, rgb(0, 255, 255) 30deg, rgba(0,0,0,0.1) 20deg,rgba(0,0,0,0.1) 60deg);
+            animation: rotateClockwise 5s linear infinite;   
+        }
+
+        .b10{
+            background-image: repeating-conic-gradient(yellow 0deg, yellow 90deg, black 90deg, black 180deg);   
+            background-size: 20px 20px;
+            animation: rotateClockwise 5s linear infinite;
+        }
+
+        /*
+        .b11{
+            height: 250px;
+            width: 50%;
+            border-radius: 0px;
+            border-color: transparent;
+            background-image: url('https://e7.pngegg.com/pngimages/246/45/png-clipart-ford-gt40-supercar-ford-mustang-car-body-car-performance-car-thumbnail.png');
+            background-size: cover;
+        }
+        */
+
+        .b11{
+            width: 100%;
+            height: 250px;
+            border-radius: 0px;
+            border-color: transparent;
+            background-image: linear-gradient(to right, red,blue,green,yellow);
+            font-size: 200px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        
+        @keyframes rotateClockwise{
+            0%{
+                transform: rotate(0dge);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box-item b1"></div>
+        <div class="box-item b2"></div>
+        <div class="box-item b3"></div>
+        <div class="box-item b4"></div>
+        <div class="box-item b5"></div>
+        <div class="box-item b6"></div>
+        <div class="box-item b7"></div>
+        <div class="box-item b8"></div>
+        <div class="box-item b9"></div>
+        <div class="box-item b10"></div>
+        <div class="box-item b11"><p>Aniket Rathod</p></div>
+    </div>
+</body>
+</html>

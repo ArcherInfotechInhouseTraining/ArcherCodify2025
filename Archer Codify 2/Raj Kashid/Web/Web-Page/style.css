@@ -1,0 +1,68 @@
+img {
+  height: auto;
+  width: 100%;
+  border-radius: 20px;
+  outline: 2px solid white;
+  outline-offset: -10px;
+}
+.nav {
+  position: sticky;
+  top: 0px;
+  margin-top: 5px;
+  background-color: lightgray;
+  padding: 10px;
+  /* outline: 1px solid black; */
+  border: 2px solid black;
+  outline-offset: -8px;
+  border-radius: 20px;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: url(horse.svg), pointer;
+}
+
+.components {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.components h1 {
+  padding: 10px;
+  margin: 10px auto;
+  height: 40px;
+  width: 20%;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: lightgray;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  cursor: url(Cursor.svg), pointer;
+}
+
+.components p {
+  padding: 10px;
+  text-align: justify;
+  height: 100px;
+  margin: 10px auto;
+  width: 80%;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: lightgray;
+  cursor: url(Cursor.svg), pointer;
+}

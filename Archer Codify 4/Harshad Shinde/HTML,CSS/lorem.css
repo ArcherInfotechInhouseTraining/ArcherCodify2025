@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.content{
+    width: 70%;
+    margin: 50px auto 0px auto;
+    text-align: center;
+   
+}
+.content h1{
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-decoration-line:underline overline;
+    text-decoration-color:red ;
+    text-decoration-style: wavy;
+}
+.content .link{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.content .link a:active{
+
+    text-decoration-color: aliceblue;
+}

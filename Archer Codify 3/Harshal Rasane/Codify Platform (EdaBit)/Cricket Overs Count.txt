@@ -1,0 +1,42 @@
+Title:- Cricket Balls to Overs!
+        In cricket, an over consists of six deliveries a bowler bowls from one end. Create a function that takes the number of nBalls bowled by a bowler and calculates the number of overs bowled by him/her.
+
+Examples
+totalOvers(2400) ➞ [400]
+
+totalOvers(164) ➞ [27.2]
+// 27 overs and 2 balls were bowled by the bowler.
+
+totalOvers(945) ➞ [157.3]
+// 157 overs and 3 balls were bowled by the bowler.
+
+totalOvers(5) ➞ [0.5]
+
+Link:- https://edabit.com/challenge/2X6PsSfWtBpK3HGbx
+
+Solution:- 
+
+
+#include<iostream>
+using namespace std;
+float totalOvers(int nBalls) {
+	
+	int over=nBalls/6;
+	
+	int balls= nBalls%6;
+	
+	double result= over + balls/10.0;
+	return result;
+}
+int main()
+{
+	int balls;
+	
+	cout<<"Enter the Balls:"<<endl;
+	cin>>balls;
+	
+	cout<<"Total Overs Played is :"<<totalOvers(balls)<<endl;
+	
+	return 0;
+	
+}

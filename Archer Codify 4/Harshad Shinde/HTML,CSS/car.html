@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running BMW Car</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #87ceeb; /* Sky-blue background */
+        }
+
+        .road {
+            width: 100%;
+            height: 150px;
+            position: absolute;
+            bottom: 0;
+            background: #555; /* Road color */
+        }
+
+        .road:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            background: white;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background: repeating-linear-gradient(
+                90deg,
+                white,
+                white 20px,
+                transparent 20px,
+                transparent 40px
+            );
+        }
+
+        .car {
+            position: absolute;
+            bottom: 160px;
+            width: 150px;
+            animation: moveCar 5s linear infinite;
+        }
+
+        @keyframes moveCar {
+            0% {
+                transform: translateX(-200px);
+            }
+            100% {
+                transform: translateX(100vw);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://imgs.search.brave.com/VpIUDAhakNek9T7sHyQXIAopr6h7zYncduKqHYD7euk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8x/MS8xOC8xMi81MS9h/dXRvbW9iaWxlLTE4/MzQyNzRfNjQwLmpw/Zw" alt="BMW Car" class="car">
+    <div class="road"></div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+int divide(int dividend, int divisor) {
+    int i= 0, flg= 0;
+    long divd, divs;
+    if(dividend==-2147483648 && divisor== -1)
+    {
+            return -1 - dividend;
+    }
+    if(divisor== 1)
+    {
+            return dividend;
+    }
+    
+    divd= dividend;
+    if(divd<0)
+    {
+        divd= 0-divd;
+        flg= !flg;
+    }
+
+    divs= divisor;
+    if(divs<0)
+    {
+        divs= 0- divs;
+        flg= !flg;
+    }
+
+    while(divd >= divs)
+    {
+        divd -= divs;
+        i++;
+    }
+    if(flg)
+        i=0-i;
+
+    return i;
+}

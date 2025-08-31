@@ -1,0 +1,141 @@
+1.Two Sum (Leetcode ,Difficulty: Easy) =
+(https://leetcode.com/problems/two-sum/description/)
+
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+You can return the answer in any order.
+
+ 
+
+Example 1:
+
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+Example 2:
+
+Input: nums = [3,2,4], target = 6
+Output: [1,2]
+Example 3:
+
+Input: nums = [3,3], target = 6
+Output: [0,1]
+ 
+
+
+//-------------------------------------------------------------------------------------------------------------------
+
+Solution =>
+
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer,Integer>map=new HashMap<>();
+        for(int i=0;i<nums.length;i++)
+        {
+            int complement=target-nums[i];
+            if(map.containsKey(complement))
+            {
+                return new int[] {map.get(complement),i};
+            }
+            else
+            {
+                map.put(nums[i],i);
+            }
+        }
+     throw new IllegalArgumentException("Not Match");
+    }
+}
+
+//-------------------------------------------------------------------------------------------------------------------
+Explaination=>
+
+
+This code implements a solution to the Two Sum problem using a hash map for efficient lookup. The problem is defined as follows:
+
+Given an array of integers (nums) and a target value (target), return the indices of two numbers from nums that add up to the target. Assume exactly one solution exists, and the same element cannot be used twice.
+
+
+Input Parameters:
+
+nums: Array of integers to search for two elements that sum to the target.
+target: Integer value that is the sum of the two required elements.
+Output:
+
+An integer array of size 2 containing the indices of the two elements that sum to the target.
+Approach:
+
+A HashMap (map) is used to store the elements of nums as keys and their respective indices as values for quick lookups.
+Detailed Execution:
+Initialization:
+
+java
+Copy code
+Map<Integer,Integer>map=new HashMap<>();
+A HashMap is created to store pairs of <value, index>.
+Iteration through the Array:
+
+java
+Copy code
+for(int i=0; i<nums.length; i++) { ... }
+The for loop iterates through each element of the array nums.
+Compute the Complement:
+
+java
+Copy code
+int complement = target - nums[i];
+For the current number nums[i], calculate the complement needed to reach the target.
+Example: If target = 9 and nums[i] = 7, the complement is 9 - 7 = 2.
+Check if Complement Exists in Map:
+
+java
+Copy code
+if(map.containsKey(complement)) { ... }
+If the complement exists as a key in map, it means we have found two numbers (nums[i] and complement) that add up to the target.
+Return the Indices:
+
+java
+Copy code
+return new int[] {map.get(complement), i};
+Fetch the index of the complement from the map and pair it with the current index i. Return the result.
+Add the Current Element to the Map:
+
+java
+Copy code
+map.put(nums[i], i);
+If the complement is not found, store the current number (nums[i]) in the map along with its index (i) for potential matching in future iterations.
+Exception:
+
+java
+Copy code
+throw new IllegalArgumentException("Not Match");
+If no solution is found (should not happen given the problem's constraints), throw an exception.
+Example Walkthrough:
+Input:
+
+java
+Copy code
+nums = [2, 7, 11, 15], target = 9
+Execution:
+
+Initialize map: {} (empty initially).
+Iteration 1: i = 0, nums[i] = 2
+Compute complement = 9 - 2 = 7
+map does not contain 7
+Add 2 to map: {2: 0}
+Iteration 2: i = 1, nums[i] = 7
+Compute complement = 9 - 7 = 2
+map contains 2 at index 0
+Return: [0, 1]
+Output:
+
+java
+Copy code
+[0, 1]
+
+//-------------------------------------------------------------------------------------------------------------------
+  // Reference
+https://youtu.be/WeF3_nk-UqY?si=4P5ezqrQ8Lz-G33d
+https://youtu.be/kGN46Z3y4WM?si=d1QeIGdaszW3t3Q6

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structural Pseudo Classes Selectors</title>
+    <style>
+        .box1, .box2{
+            border: 2px, solid black;
+            padding: 0px, 30px;
+            width: 300px;
+        }
+
+        .container p:last-child{
+            background-color: aqua;
+        }
+
+        .container h1:first-child{
+            background-color:aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+            <h1>Heading of Box1</h1>
+            <p>1st part of box1</p>
+            <p>2nd part of box1</p>
+            <p>3rd part of box1</p>
+        </div>
+
+        <p>1st part of container</p>
+        <p>2st part of container</p>
+
+        <div class="box2">
+            <h1>Heading of Box2</h1>
+            <p>1st part of box2</p>
+            <p>2nd part of box2</p>
+            <p>3rd part of box3</p>
+        </div>
+    </div>
+</body>
+</html>
