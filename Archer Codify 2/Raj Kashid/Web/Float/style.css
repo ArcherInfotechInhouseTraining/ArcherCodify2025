@@ -1,0 +1,36 @@
+img {
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+    outline: 2px solid white;
+    outline-offset: -10px;
+    opacity: 0.95;
+    border: 2px solid black;
+}
+
+div {
+    margin: 10px auto;
+    width: 95%;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #b6cbbd71;
+}
+
+.d1 img {
+    float: left;
+}
+
+.d2 img {
+    float: right;
+}
+
+.d3 img {
+    float: left;
+}
+
+.d4 img {
+    float: right;
+}

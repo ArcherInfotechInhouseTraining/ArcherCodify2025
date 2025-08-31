@@ -1,0 +1,47 @@
+Problem:
+Given two words and a letter, return a single word that's a combination of both words, merged at the point where the given letter first appears in each word. The returned word should have the beginning of the first word and the ending of the second, with the dividing letter in the middle. You can assume both words will contain the dividing letter.
+
+Examples
+("hello", "world", "l")       ==>  "held"
+("coding", "anywhere", "n")   ==>  "codinywhere"
+("jason", "samson", "s")      ==>  "jasamson"
+("wonderful", "people", "e")  ==>  "wondeople"
+
+Code:
+
+#include <stdlib.h>
+
+char *strings_merge (const char *s1, const char *s2, char separator)
+{
+ char *s3=NULL;
+    s3= (char*)malloc(100);
+  int k=0;
+  for(int i=0;s1[i]!='\0';i++)
+    {
+    if(s1[i]!=separator)
+      {
+      s3[i]=s1[i];
+      k++;
+    }
+    else if(s1[i]==separator)
+      {
+      break;
+    }
+  }
+  for(int j=0;s2[j]!='\0';j++)
+    {
+    if(s2[j]==separator)
+      {
+      int i=0;
+      for(int l=j;s2[l]!='\0';l++)
+        {
+        s3[k+i]=s2[l];
+        i++;
+        
+      }
+      s3[k+i]='\0';
+      break;
+  }
+}
+  return s3;
+  }

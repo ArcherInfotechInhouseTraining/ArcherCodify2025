@@ -1,0 +1,45 @@
+problem:
+
+Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+
+For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1. (81-1-1-81)
+
+Example #2: An input of 765 will/should return 493625 because 72 is 49, 62 is 36, and 52 is 25. (49-36-25)
+
+Note: The function accepts an integer and returns an integer.
+
+Happy Coding!
+
+
+
+Code:
+
+  #include <stdio.h>
+#include <stdlib.h>
+
+unsigned long long square_digits(unsigned n) {
+    unsigned long long result = 0;
+    unsigned long long place_value = 1; // This will keep track of the place value when concatenating digits
+    
+    while (n > 0) {
+        unsigned digit = n % 10; // Get the last digit of the number
+        unsigned squared_digit = digit * digit; // Square the digit
+
+        // We need to add the squared digits to the result
+        // Check if squared_digit is a 2-digit number, and handle place value accordingly.
+        if (squared_digit >= 10) {
+            result += (squared_digit % 10) * place_value; // Add the second digit
+            place_value *= 10; // Shift for the next digit
+            result += (squared_digit / 10) * place_value; // Add the first digit
+        } else {
+            result += squared_digit * place_value;
+        }
+
+        // Shift the place_value for the next digit
+        place_value *= 10; // Move two places to the left for the next squared digit
+
+        n /= 10; // Remove the last digit
+    }
+
+    return result;
+}
