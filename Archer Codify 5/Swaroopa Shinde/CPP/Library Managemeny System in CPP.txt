@@ -1,0 +1,262 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+using namespace std;
+
+class Book {
+private:
+    int id;
+    string title;
+    string author;
+    bool isIssued;
+
+public:
+    Book() {}
+    Book(int i, string t, string a, bool issue = false) {
+        id = i;
+        title = t;
+        author = a;
+        isIssued = issue;
+    }
+
+    int getId() const { return id; }
+    string getTitle() const { return title; }
+    string getAuthor() const { return author; }
+    bool getIssueStatus() const { return isIssued; }
+
+    void issueBook() { isIssued = true; }
+    void returnBook() { isIssued = false; }
+
+    void display() const {
+        cout << "ID: " << id << ", Title: " << title
+             << ", Author: " << author
+             << ", Status: " << (isIssued ? "Issued" : "Available") << endl;
+    }
+
+    string toFileString() const {
+        return to_string(id) + "," + title + "," + author + "," + (isIssued ? "1" : "0") + "\n";
+    }
+
+    static Book fromFileString(string line) {
+        int id;
+        string title, author;
+        bool issued;
+        size_t pos1 = line.find(',');
+        size_t pos2 = line.find(',', pos1 + 1);
+        size_t pos3 = line.find(',', pos2 + 1);
+
+        id = stoi(line.substr(0, pos1));
+        title = line.substr(pos1 + 1, pos2 - pos1 - 1);
+        author = line.substr(pos2 + 1, pos3 - pos2 - 1);
+        issued = line.substr(pos3 + 1) == "1";
+
+        return Book(id, title, author, issued);
+    }
+};
+
+class Library {
+private:
+    vector<Book> books;
+
+    void loadBooks() {
+        books.clear();
+        ifstream in("books.txt");
+        string line;
+        while (getline(in, line)) {
+            books.push_back(Book::fromFileString(line));
+        }
+        in.close();
+    }
+
+    void saveBooks() {
+        ofstream out("books.txt");
+        for (Book& b : books)
+            out << b.toFileString();
+        out.close();
+    }
+
+public:
+    Library() {
+        loadBooks();
+    }
+
+    void addBook(Book b) {
+        books.push_back(b);
+        saveBooks();
+        cout << "Book added successfully!\n";
+    }
+
+    void displayBooks() {
+        for (Book& b : books)
+            b.display();
+    }
+
+    void searchBook(string title) {
+        bool found = false;
+        for (Book& b : books) {
+            if (b.getTitle() == title) {
+                b.display();
+                found = true;
+            }
+        }
+        if (!found) cout << "Book not found.\n";
+    }
+
+    void issueBook(int id) {
+        for (Book& b : books) {
+            if (b.getId() == id) {
+                if (!b.getIssueStatus()) {
+                    b.issueBook();
+                    saveBooks();
+                    cout << "Book issued.\n";
+                    return;
+                } else {
+                    cout << "Already issued.\n";
+                    return;
+                }
+            }
+        }
+        cout << "Book ID not found.\n";
+    }
+
+    void returnBook(int id) {
+        for (Book& b : books) {
+            if (b.getId() == id) {
+                if (b.getIssueStatus()) {
+                    b.returnBook();
+                    saveBooks();
+                    cout << "Book returned.\n";
+                    return;
+                } else {
+                    cout << "Book was not issued.\n";
+                    return;
+                }
+            }
+        }
+        cout << "Book ID not found.\n";
+    }
+};
+
+int main() {
+    Library lib;
+    int choice;
+
+    do {
+        cout << "\n1. Add Book\n2. Display Books\n3. Search Book\n4. Issue Book\n5. Return Book\n6. Exit\nEnter choice: ";
+        cin >> choice;
+        cin.ignore();
+
+        if (choice == 1) {
+            int id;
+            string title, author;
+            cout << "Enter ID: "; cin >> id; cin.ignore();
+            cout << "Enter Title: "; getline(cin, title);
+            cout << "Enter Author: "; getline(cin, author);
+            lib.addBook(Book(id, title, author));
+        } else if (choice == 2) {
+            lib.displayBooks();
+        } else if (choice == 3) {
+            string title;
+            cout << "Enter Title to search: ";
+            getline(cin, title);
+            lib.searchBook(title);
+        } else if (choice == 4) {
+            int id;
+            cout << "Enter Book ID to issue: ";
+            cin >> id;
+            lib.issueBook(id);
+        } else if (choice == 5) {
+            int id;
+            cout << "Enter Book ID to return: ";
+            cin >> id;
+            lib.returnBook(id);
+        }
+    } while (choice != 6);
+
+    return 0;
+}
+
+
+OUTPUT:
+
+1. Add Book
+2. Display Books
+3. Search Book
+4. Issue Book
+5. Return Book
+6. Exit
+Enter choice: 1
+Enter ID: 1
+Enter Title: Great gatsby
+Enter Author: F.Scott Fitzgerald
+Book added successfully!
+
+1. Add Book
+2. Display Books
+3. Search Book
+4. Issue Book
+5. Return Book
+6. Exit
+Enter choice: 2
+ID: 1, Title: Great gatsby, Author: F.Scott Fitzgerald, Status: Available
+
+1. Add Book
+2. Display Books
+3. Search Book
+4. Issue Book
+5. Return Book
+6. Exit
+Enter choice: 3
+Enter Title to search: Gitanjali
+Book not found.
+
+1. Add Book
+2. Display Books
+3. Search Book
+4. Issue Book
+5. Return Book
+6. Exit
+Enter choice: 3
+Enter Title to search: Great gatsby
+ID: 1, Title: Great gatsby, Author: F.Scott Fitzgerald, Status: Available
+
+1. Add Book
+2. Display Books
+3. Search Book
+4. Issue Book
+5. Return Book
+6. Exit
+Enter choice: 4
+Enter Book ID to issue: 1
+Book issued.
+
+1. Add Book
+2. Display Books
+3. Search Book
+4. Issue Book
+5. Return Book
+6. Exit
+Enter choice: 5
+Enter Book ID to return: 2
+Book ID not found.
+
+1. Add Book
+2. Display Books
+3. Search Book
+4. Issue Book
+5. Return Book
+6. Exit
+Enter choice: 5
+Enter Book ID to return: 1
+Book returned.
+
+1. Add Book
+2. Display Books
+3. Search Book
+4. Issue Book
+5. Return Book
+6. Exit
+Enter choice: 6
+
+

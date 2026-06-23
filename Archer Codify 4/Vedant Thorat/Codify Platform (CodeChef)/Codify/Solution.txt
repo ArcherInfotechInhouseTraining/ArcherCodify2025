@@ -1,0 +1,59 @@
+Problem :
+
+Cost of Groceries
+Chef visited a grocery store for fresh supplies. There are
+N items in the store where the ith item has a freshness value Ai and cost Bi.
+
+Chef has decided to purchase all the items having a freshness value greater than equal to X. Find the total cost of the groceries Chef buys.
+
+
+Sample :
+
+Input			
+4
+2 20
+15 67
+10 90
+3 1
+1 2 3
+1 2 3
+3 100
+10 90 50
+30 7 93
+4 50
+12 78 50 40
+40 30 20 10
+
+Output
+90
+6
+0
+50
+
+Solution :
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        int n,x;
+        cin>>n>>x;
+        int a[n],b[n];
+        for(int i=0;i<n;i++){
+            cin>>a[i];
+        }
+        for(int j=0;j<n;j++){
+            cin>>b[j];
+        }
+        int ans = 0;
+        for (int i = 0; i < n; i++) {
+            if (a[i] >= x) {
+                ans += b[i];
+            }
+        }
+        cout << ans << endl;
+    }
+    return 0;
+}

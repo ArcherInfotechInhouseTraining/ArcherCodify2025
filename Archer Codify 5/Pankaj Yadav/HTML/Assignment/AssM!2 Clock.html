@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <title>Conic Gradient: Radial Timer</title>
+  </head>
+  <style>
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radial {
+  height: 20rem;
+  width: 20rem;
+  background-image: radial-gradient(white, black);
+  border-radius: 50%;
+  position: relative;
+}
+
+.second {
+  height: 9rem;
+  width: 0.1rem;
+  background-color: black;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  animation: 60s infinite second;
+}
+
+@keyframes second {
+  0% {
+    transform-origin: 0% 100%;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform-origin: 0% 100%;
+
+    transform: rotate(360deg);
+  }
+}
+
+.minute {
+  height: 7rem;
+  width: 0.5rem;
+  background-color: black;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  animation: 60m infinite second;
+}
+
+@keyframes minute {
+  0% {
+    transform-origin: 0% 100%;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform-origin: 0% 100%;
+
+    transform: rotate(360deg);
+  }
+}
+.hour {
+  height: 5rem;
+  width: 0.6rem;
+  background-color: black;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  animation: 60h infinite second;
+}
+
+@keyframes hour {
+  0% {
+    transform-origin: 0% 100%;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform-origin: 0% 100%;
+
+    transform: rotate(360deg);
+  }
+}
+
+  </style>
+  <body>
+    <div class="radial">
+      <div class="second"></div>
+      <div class="minute"></div>
+      <div class="hour"></div>
+    </div>
+  </body>
+</html>

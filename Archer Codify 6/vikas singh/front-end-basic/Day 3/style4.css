@@ -1,0 +1,59 @@
+
+.box{
+	max-width: 100%;
+	min-width: 550px;
+	max-height: 100%;
+	/*margin-left: 300px;
+	margin-top: 0px;
+	margin-right: 600px;
+	margin-bottom: 500px;*/
+
+	margin: 80px 80px 0px 80px;
+
+	/*border: 20px solid;
+	border-image-source: url('images/pic.png');
+	border-image-slice: 40;
+	border-image-width: 30px;
+	border-image-repeat: round;*/
+
+	border-image: url('images/pic.png') 40 / 30px / 30px round;
+}
+
+.box h1, p{
+	margin: 20px;
+	/*background-color: red;
+	color: white;*/
+
+	/*padding-left: 90px;
+	padding-top: 80px;
+	padding-bottom: 30px;
+	padding-right: 10px;*/
+
+	padding: 80px 10px 30px 90px;
+}
+
+h1{
+	font-family: "Mr Bedfort", cursive;
+	font-weight: 400;
+	font-size: 42px;
+}
+/*.box p{
+	font-family: "Caveat", cursive;
+	font-weight: 400;
+	font-size: 18px;
+}*/
+p{
+	font-weight: 900;
+	font-size: 20px;
+	line-height: 50px;
+	word-spacing: 30px;
+	text-align: center;
+}
+a{
+	margin: 70px;
+	font-size: 50px;
+	text-decoration: none;
+	color: red;
+	text-transform: full-width;
+	letter-spacing: 50px;
+}

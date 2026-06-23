@@ -1,0 +1,46 @@
+https://www.codechef.com/practice/course/arrays/ARRAYS/problems/UWCOI20A
+
+Find maximum in an Array
+Given a list of N integers, representing height of mountains. Find the height of the tallest mountain.
+
+Input:
+First line will contain T, number of testcases. Then the testcases follow.
+The first line in each testcase contains one integer, N.
+The following line contains N space separated integers: the height of each mountains.
+Output:
+For each testcase, output one line with one integer: the height of the tallest mountain for that test case.
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner (System.in);
+		int t= sc.nextInt();
+		while(t-- >0)
+		{
+		    int n=sc.nextInt();
+		    int []mount =new int[n];
+		    
+		    for (int i=0 ; i<n ; i++)
+		    {
+		        mount[i]= sc.nextInt();
+		    }
+		    int max=mount[0];
+		    for (int i:mount)
+		    {
+		        if (i > max)
+		            max=  i;
+		    }
+		    System.out.println(max);
+		    
+		    
+		}
+
+	}
+}

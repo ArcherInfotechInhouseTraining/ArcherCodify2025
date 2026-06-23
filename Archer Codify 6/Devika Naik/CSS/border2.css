@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+
+.box{
+    width: 600px;
+    margin:20px auto;
+
+    border:20px solid;
+    border-image-source: url(finalborder.jpg);
+    border-image-slice: 50;
+    border-image-width: 50px;
+    border-image-repeat: no-repeat;
+    border-image-outset: 20px;
+}
+.box h1,p{
+    margin:40px;
+    padding:30px;
+}
+
+.box1{
+    width:550px;
+    margin:150px 40px 40px 300px;
+
+    max-width: 100%;
+    min-width: 200px;
+    border-image:url('bordersqu.png') 170/ 30px / 50px round;
+}
+.box1 h1,p{
+    color:brown;
+    background-color: bisque;
+    margin:40px;
+    padding:30px;
+    font-family: "Leckerli One", cursive;
+}

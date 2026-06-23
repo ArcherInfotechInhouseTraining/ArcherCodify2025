@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>With bootstrap</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <style>
+          .container, .container-sm,.container-md,.container-lg,.container-xl,.container-xxl,.container-fluid{
+            border:5px solid red;
+            height: 500px;
+          }
+          .row{
+            background-color: pink;
+          }
+          .col{
+            border:2px solid black;
+            text-align: center;
+            background-color: lightblue ;
+          }
+          .col-1,.col-2,.col-3,.col-4,.col-5,.col-6{
+            border:2px solid black;
+            text-align: center;
+            background-color: lightblue;
+          }
+          
+        </style>
+    </head>
+
+    <body><p class="h1">h1. Bootstrap heading</p>
+      <p class="h2">h2. Bootstrap heading</p>
+      <p class="h3">h3. Bootstrap heading</p>
+      <p class="h4">h4. Bootstrap heading</p>
+      <p class="h5">h5. Bootstrap heading</p>
+      <p class="h6">h6. Bootstrap heading</p>
+      <h3>
+        Fancy display heading
+        <small class="text-body-secondary">With faded secondary text</small>
+      </h3>
+      <h1 class="display-1">Display 1</h1>
+<h1 class="display-2">Display 2</h1>
+<h1 class="display-3">Display 3</h1>
+<h1 class="display-4">Display 4</h1>
+<h1 class="display-5">Display 5</h1>
+<h1 class="display-6">Display 6</h1>
+<p class="lead">
+  This is a lead paragraph. It stands out from regular paragraphs.
+</p>
+<p><abbr title="attribute">attr</abbr></p>
+<p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
+<blockquote class="blockquote">
+  <p>A well-known quote, contained in a blockquote element.</p>
+</blockquote>
+<figure>
+  <blockquote class="blockquote">
+    <p>A well-known quote, contained in a blockquote element.</p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Someone famous in <cite title="Source Title">Source Title</cite>
+  </figcaption>
+</figure>
+<figure class="text-center">
+  <blockquote class="blockquote">
+    <p>A well-known quote, contained in a blockquote element.</p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Someone famous in <cite title="Source Title">Source Title</cite>
+  </figcaption>
+</figure>
+<figure class="text-end">
+  <blockquote class="blockquote">
+    <p>A well-known quote, contained in a blockquote element.</p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Someone famous in <cite title="Source Title">Source Title</cite>
+  </figcaption>
+</figure>
+<ul class="list-unstyled">
+  <li>This is a list.</li>
+  <li>It appears completely unstyled.</li>
+  <li>Structurally, it's still a list.</li>
+  <li>However, this style only applies to immediate child elements.</li>
+  <li>Nested lists:
+    <ol type="A">
+      <li>are unaffected by this style</li>
+      <li>will still show a bullet</li>
+      <li>and have appropriate left margin</li>
+    </ol>
+  </li>
+  <li>This may still come in handy in some situations.</li>
+</ul>
+
+<ul class="list-inline">
+  <li class="list-inline-item">This is a list item.</li>
+  <li class="list-inline-item">And another one.</li>
+  <li class="list-inline-item">But they're displayed inline.</li>
+</ul>
+<dl class="row">
+  <dt class="col-sm-3">Description lists</dt>
+  <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+
+  <dt class="col-sm-3">Term</dt>
+  <dd class="col-sm-9">
+    <p>Definition for the term.</p>
+    <p>And some more placeholder definition text.</p>
+  </dd>
+
+  <dt class="col-sm-3">Another term</dt>
+  <dd class="col-sm-9">This definition is short, so no extra paragraphs or anything.</dd>
+
+  <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
+  <dd class="col-sm-9">This can be useful when space is tight. Adds an ellipsis at the end.</dd>
+
+  <dt class="col-sm-3">Nesting</dt>
+  <dd class="col-sm-9">
+    <dl class="row">
+      <dt class="col-sm-4">Nested definition list</dt>
+      <dd class="col-sm-8">I heard you like definition lists. Let me put a definition list inside your definition list.</dd>
+    </dl>
+  </dd>
+</dl>
+
+<img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid" alt="...">
+<img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-thumbnail" alt="...">
+<img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=600" class="rounded float-start" alt="...">
+<img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=600" class="rounded float-end" alt="...">
+
+<img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=600" class="rounded mx-auto d-block" alt="...">
+
+<div class="text-center">
+  <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=600" class="rounded" alt="...">
+</div>
+<picture>
+  <source srcset="data:image/jpeg;base64,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" media="(min-width:730px)" type="image/svg+xml">
+  <img src="pengus.jpg" class="img-fluid img-thumbnail" alt="...">
+</picture>
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-success">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-striped-columns">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="table table-dark table-striped-columns">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-dark table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+<figure class="figure">
+  <img src="https://images.unsplash.com/photo-1559583985-c80d8ad9b29f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3" class="figure-img img-fluid rounded" alt="...">
+  <figcaption class="figure-caption">A caption for the above image.</figcaption>
+</figure>
+<figure class="figure">
+  <img src="https://images.unsplash.com/photo-1559583985-c80d8ad9b29f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3" class="figure-img img-fluid rounded" alt="...">
+  <figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
+</figure>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+Your task is to determine whether a given year is a leap year.
+
+leap.cpp
+
+#include "leap.h"
+namespace leap {
+bool is_leap_year(int year) {
+  return year % 400 == 0 || 
+         (year % 4 == 0 && year % 100 != 0);
+}
+} 
+
+
+
+leap.h
+
+#ifndef LEAP_H
+#define LEAP_H
+namespace leap {
+bool is_leap_year(int year);
+} // end of namespace leap
+#endif

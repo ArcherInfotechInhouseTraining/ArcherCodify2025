@@ -1,0 +1,45 @@
+.main h1{
+    text-align: center;
+    text-shadow: 5px;
+    color: brown;
+    background-image: linear-gradient(rgb(104, 151, 201),rgb(104, 201, 154));
+}
+
+.row1{
+    background-color: antiquewhite;
+    margin-top: 10px;
+    
+}
+
+.column1 img{
+    background-color:#95ffc8;
+    float: left;
+    width: 50%;
+    height:200px;   
+    margin-top: 10px;
+    border-radius: 20px;
+    border: 5px solid #555;
+    }
+
+.row1 .column2{
+    background-color:#d196c0;
+    float: right;
+    width: 50%;
+    height:200px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: 5px solid #555;
+}
+
+.row1 .column1{
+    padding-right: 90px;
+}
+
+h2{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+

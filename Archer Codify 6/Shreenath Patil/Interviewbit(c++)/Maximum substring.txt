@@ -1,0 +1,30 @@
+Given a string A consisting of only characters 'a' and 'b'.
+Divide the string into substrings of length B.
+Find the subtring with maximum count of 'a' and return the count.
+
+Note: If the length of the string is not a multiple of B and there are some characters left in the end consider them also as a substring.
+
+
+
+
+
+
+
+
+int Solution::solve(string A, int B) 
+{
+    int ans = INT_MIN;
+   
+    for(int i = 0; i<A.length(); i+=B)
+    {
+        int countA = 0;
+        for(int j = i; j<i+B && j<A.length(); j++)
+        {
+            if(A[j] == 'a')
+            countA++;
+        }
+        ans = max(ans,countA);
+    }
+   
+    return ans;
+}

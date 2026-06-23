@@ -1,0 +1,91 @@
+Convert String to Title Case
+
+Given a string S consisting of only lowercase and uppercase English letters and spaces, your task is to convert it into title case. In title case, the first letter of each word is capitalized while the rest are in lowercase, except for words that are entirely in uppercase (considered as acronyms), which should remain unchanged.
+
+Note:
+
+Words are defined as contiguous sequences of English letters separated by spaces.
+Acronyms are words that are entirely in uppercase and should remain unchanged.
+Assume the input does not contain leading, trailing, or multiple spaces between words.
+Input Format
+The first line contains a single integer T, the number of test cases.
+Each of the next T lines contains a string S.
+Output Format
+For each test case, print a single line containing the string S converted into title case.
+
+Constraints:
+1≤T≤100
+1≤∣S∣≤1000, where 
+∣S∣ is the length of the string.
+
+
+
+Explanation:
+In the first test case, each word is capitalized as they are not acronyms.
+In the second test case, "CODECHEF" is an acronym and remains in uppercase.
+In the third test case, "WELCOME" and "JUNGLE" are considered acronyms.
+In the fourth test case, "BROWN" is an acronym, while the rest of the words follow the title case rule.
+In the fifth test case, "PYTHON" is an acronym, and the rest of the string is converted to title case.
+
+
+Solution:
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin >> t;
+    cin.ignore();
+    while (t--) 
+    {
+        string s;
+        getline(cin, s);
+        int len = s.length();
+        int sp = 0;
+        bool fl = false;
+
+        for (int i = 0; i < len + 1; i++)
+        {
+            if ((s[i] == ' ') || s[i] == '\0') {
+                if (fl) {
+                    if (s[sp] >= 'a' && s[sp] <= 'z') {
+                        s[sp] -= 32;
+                    }
+               for (int j = sp + 1; s[j] != ' ' && s[j] != '\0'; j++) {
+                        if (s[j] >= 'A' && s[j] <= 'Z') 
+                        {
+                            s[j] += 32;
+                        }
+                    }
+                }
+                sp = i + 1;
+                fl = false;
+            }
+            else if (s[i] >= 'a' && s[i] <= 'z') {
+                fl = true;
+            }
+        }
+
+        cout << s << endl;
+    }
+
+    return 0;
+}
+
+
+Sample Input:
+
+5
+hello world
+this is a CODECHEF problem
+WELCOME to the JUNGLE
+the quick BROWN fOx
+
+
+
+Hello World
+This Is A CODECHEF Problem
+WELCOME To The JUNGLE
+The Quick BROWN Fox
+Programming In PYTHON

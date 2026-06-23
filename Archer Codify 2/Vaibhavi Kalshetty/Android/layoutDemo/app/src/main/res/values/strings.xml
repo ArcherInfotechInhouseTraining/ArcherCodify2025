@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ConstraintLayout</string>
+    <string name="Username">Enter the Username:</string>
+    <string name="random">ImageLogo</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="sign_in">Sign In</string>
+    <string name="hint_Un">Enter the Username</string>
+    <string name="password">Enter Password</string>
+    <string name="login_page">LOGIN PAGE</string>
+    <string name="headRE">Relative Layout</string>
+    <string name="input1">input1</string>
+    <string name="btn">Let\'s Go!</string>
+    <string name="headLE">LinearLayout</string>
+</resources>

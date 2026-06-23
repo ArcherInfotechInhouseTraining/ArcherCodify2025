@@ -1,0 +1,12 @@
+Title: Write a code to print "Hello, InterviewBit!" (without quotes) in the editor below.
+
+Link:https://www.interviewbit.com/problems/hello-world/
+
+Solution: #include<iostream>
+
+using namespace std;
+
+int main()  {
+    cout<<"Hello, InterviewBit!" <<endl;
+    return 0;
+}

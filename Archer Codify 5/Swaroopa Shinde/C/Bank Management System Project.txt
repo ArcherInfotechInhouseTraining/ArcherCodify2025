@@ -1,0 +1,215 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct Account {
+    int accNo;
+    char name[50];
+    float balance;
+};
+
+void createAccount();
+void deposit();
+void withdraw();
+void checkBalance();
+void viewAll();
+
+int main() {
+    int choice;
+
+    do {
+        printf("\n--- Bank Management System ---\n");
+        printf("1. Create Account\n2. Deposit\n3. Withdraw\n4. Check Balance\n5. View All Accounts\n6. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        getchar(); // flush newline
+
+        switch (choice) {
+            case 1: createAccount(); break;
+            case 2: deposit(); break;
+            case 3: withdraw(); break;
+            case 4: checkBalance(); break;
+            case 5: viewAll(); break;
+            case 6: printf("Thank you!\n"); break;
+            default: printf("Invalid choice. Try again.\n");
+        }
+    } while (choice != 6);
+
+    return 0;
+}
+
+void createAccount() {
+    struct Account acc;
+    FILE *fp = fopen("accounts.dat", "ab");
+
+    printf("Enter Account Number: ");
+    scanf("%d", &acc.accNo);
+    getchar();
+
+    printf("Enter Name: ");
+    fgets(acc.name, 50, stdin);
+    acc.name[strcspn(acc.name, "\n")] = 0;
+
+    printf("Enter Initial Balance: ");
+    scanf("%f", &acc.balance);
+
+    fwrite(&acc, sizeof(acc), 1, fp);
+    fclose(fp);
+
+    printf("Account created successfully!\n");
+}
+
+void deposit() {
+    int accNo, found = 0;
+    float amount;
+    struct Account acc;
+    FILE *fp = fopen("accounts.dat", "rb+");
+
+    printf("Enter Account Number to deposit into: ");
+    scanf("%d", &accNo);
+    printf("Enter amount to deposit: ");
+    scanf("%f", &amount);
+
+    while (fread(&acc, sizeof(acc), 1, fp)) {
+        if (acc.accNo == accNo) {
+            acc.balance += amount;
+            fseek(fp, -sizeof(acc), SEEK_CUR);
+            fwrite(&acc, sizeof(acc), 1, fp);
+            found = 1;
+            printf("Amount deposited successfully!\n");
+            break;
+        }
+    }
+
+    if (!found) printf("Account not found.\n");
+    fclose(fp);
+}
+
+void withdraw() {
+    int accNo, found = 0;
+    float amount;
+    struct Account acc;
+    FILE *fp = fopen("accounts.dat", "rb+");
+
+    printf("Enter Account Number to withdraw from: ");
+    scanf("%d", &accNo);
+    printf("Enter amount to withdraw: ");
+    scanf("%f", &amount);
+
+    while (fread(&acc, sizeof(acc), 1, fp)) {
+        if (acc.accNo == accNo) {
+            if (acc.balance >= amount) {
+                acc.balance -= amount;
+                fseek(fp, -sizeof(acc), SEEK_CUR);
+                fwrite(&acc, sizeof(acc), 1, fp);
+                printf("Amount withdrawn successfully!\n");
+            } else {
+                printf("Insufficient balance.\n");
+            }
+            found = 1;
+            break;
+        }
+    }
+
+    if (!found) printf("Account not found.\n");
+    fclose(fp);
+}
+
+void checkBalance() {
+    int accNo, found = 0;
+    struct Account acc;
+    FILE *fp = fopen("accounts.dat", "rb");
+
+    printf("Enter Account Number to check balance: ");
+    scanf("%d", &accNo);
+
+    while (fread(&acc, sizeof(acc), 1, fp)) {
+        if (acc.accNo == accNo) {
+            printf("Account No: %d\nName: %s\nBalance: %.2f\n", acc.accNo, acc.name, acc.balance);
+            found = 1;
+            break;
+        }
+    }
+
+    if (!found) printf("Account not found.\n");
+    fclose(fp);
+}
+
+void viewAll() {
+    struct Account acc;
+    FILE *fp = fopen("accounts.dat", "rb");
+
+    if (!fp) {
+        printf("No accounts found.\n");
+        return;
+    }
+
+    printf("\n%-10s %-20s %-10s\n", "Acc No", "Name", "Balance");
+    while (fread(&acc, sizeof(acc), 1, fp)) {
+        printf("%-10d %-20s %-10.2f\n", acc.accNo, acc.name, acc.balance);
+    }
+
+    fclose(fp);
+}
+
+
+Output :
+Bank Management System
+1. Create Account
+2. Deposit
+3. Withdraw
+4. Check Balance
+5. View All Accounts
+6. Exit
+Enter your choice: 1
+Enter Account Number: 101
+Enter Name: Shinde Swarupa
+Enter Initial Balance: 5000
+Account created successfully!
+
+Bank Management System
+1. Create Account
+2. Deposit
+3. Withdraw
+4. Check Balance
+5. View All Accounts
+6. Exit
+Enter your choice: 1
+Enter Account Number: 102
+Enter Name: Vaishnavi Tandale
+Enter Initial Balance: 3000
+Account created successfully!
+
+Bank Management System
+Enter your choice: 2
+Enter Account Number to deposit into: 101
+Enter amount to deposit: 1000
+Amount deposited successfully!
+
+Bank Management System
+Enter your choice: 3
+Enter Account Number to withdraw from: 102
+Enter amount to withdraw: 500
+Amount withdrawn successfully!
+
+Bank Management System
+Enter your choice: 4
+Enter Account Number to check balance: 101
+Account No: 101
+Name: Alice Smith
+Balance: 6000.00
+
+Bank Management System
+Enter your choice: 5
+
+Acc No     Name                    Balance   
+101        Shinde Swarupa          6000.00   
+102        Vaishnavi Tandale       2500.00   
+
+Bank Management System
+Enter your choice: 6
+
+Explanation :
+Bank Management System (C) – Developed a secure and interactive banking system using C. 
+Features include account creation, deposit/withdrawal, balance inquiry, and file-based data persistence using binary files and structures.
+

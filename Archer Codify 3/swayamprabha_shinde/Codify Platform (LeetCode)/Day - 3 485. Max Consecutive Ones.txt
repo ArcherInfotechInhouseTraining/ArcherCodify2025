@@ -1,0 +1,66 @@
+485. Max Consecutive Ones
+
+Title:
+Given a binary array nums, return the maximum number of consecutive 1's in the array.
+Example 1:
+
+Input: nums = [1,1,0,1,1,1]
+Output: 3
+
+Explanation: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.
+
+Example 2:
+Input: nums = [1,0,1,1,0,1]
+Output: 2
+
+Link:*https://leetcode.com/problems/max-consecutive-ones/?envType=problem-list-v2&envId=array
+
+Approach Used/Constraints:
+
+1 <= nums.length <= 105
+nums[i] is either 0 or 1.
+
+Solution: 
+class Solution {
+    // Method to find the maximum number of consecutive 1's
+    public int findMaxConsecutiveOnes(int[] nums) {
+        int maxCount = 0;
+        int currentCount = 0;
+
+        for (int num : nums) {
+            if (num == 1) {
+                currentCount++;
+                maxCount = Math.max(maxCount, currentCount);
+            } else {
+                currentCount = 0;
+            }
+        }
+        return maxCount;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        int[] nums = {1, 1, 0, 1, 1, 1};
+
+        Solution ob = new Solution();
+
+        int result = ob.findMaxConsecutiveOnes(nums);
+
+        System.out.println("Maximum consecutive 1's: " + result);
+    }
+}                                                                                     
+
+output :                                                                                          [1,1,1,0,1,1,1,1,1]                                                                                                                                                                               5                                                                                    
+Expected : 5   
+                                                                                              Explaination:
+
+- maxCount: Keeps track of the highest number of consecutive 1s found so far in the array.
+- currentCount: Tracks the current streak of consecutive 1s as the array is traversed.
+- For Each Element (num):
+         If num == 1:
+              Increment currentCount since the streak of consecutive 1s continues.
+              Update maxCount to the larger value between maxCount and currentCount.
+         If num == 0:
+              Reset currentCount to 0 since the streak of 1s is broken.
+- After iterating through the array, maxCount holds the maximum number of consecutive 1s and is returned as the result.

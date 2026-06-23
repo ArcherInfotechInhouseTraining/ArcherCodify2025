@@ -1,0 +1,68 @@
+Title:
+You are given an array of integer arr[] where each number represents a vote to a candidate. Return the candidates that have votes greater than one-third of the total votes, If there's not a majority vote, return an empty array. 
+
+Note: The answer should be returned in an increasing format.
+
+Example:
+Examples:
+
+Input: arr[] = [2, 1, 5, 5, 5, 5, 6, 6, 6, 6, 6]
+Output: [5, 6]
+Explanation: 5 and 6 occur more n/3 times.
+Input: arr[] = [1, 2, 3, 4, 5]
+Output: []
+Explanation: o candidate occur more than n/3 times.
+
+Link:
+https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/majority-vote
+
+Solution:
+
+class Solution {
+    // Function to find the majority elements in the array
+    public List<Integer> findMajority(int[] nums) {
+        // Your code goes here.
+        int len = nums.length;
+        int req_cnt = len/3;
+        
+        //List<int> tmpList = new ArrayList<>();
+        Set<Integer> s = new HashSet<>();
+        
+        for(int i=0; i<len; i++)
+        {
+            int freq=0;
+            for(int j=i; j<len;j++)
+            {
+                 if(nums[i]==nums[j])
+                 {
+                     freq += 1;
+                 }
+            }   
+            if(freq>req_cnt)
+            {
+                s.add(nums[i]);
+            }
+        }
+        List<Integer> li = new ArrayList<>(s);
+        return li;
+    }
+}
+
+
+Test Cases:
+For Input: 
+2 1 5 5 5 5 6 6 6 6 6
+Your Output: 
+5 6
+Expected Output: 
+5 6
+
+
+Algo:
+1. Find minimum required votes(ie. floor(n/3)).
+2. Create a empty set to add candidate(should be unique).
+3. Use loop to iterate through the candidate array.
+4. use another loop to calculate the frequency of votes.
+5. if freq cnt is greater than the minimum required votes then add it to the set.
+6. Convert set to list(as we have return result in list).
+*REQUIRES OPTIMIZATION*

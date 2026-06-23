@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+body{
+    background-image: url(back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.nav{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border: 3px solid black;
+    margin: 20px auto;
+    width:100%;
+}
+.nav .nav-list{
+    display:flex;
+    align-items: flex-start;
+}
+.nav .nav-list .nav-items{
+    width:130px;
+    height:30px;
+}
+
+.nav .nav-list .nav-items a{
+    padding:20px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: "Rancho", serif;
+    font-weight: 400;
+    font-style: normal;
+    color:rgb(0, 0, 1);
+    content:"\f015";
+    transition: all 1s ease;
+}
+.nav .nav-items a:hover{
+    color:rgba(220, 20, 60, 0.502);
+    margin-top:-1px;
+}
+.nav .nav-list .nav-items img{
+    height:50px;
+    width:50px;
+    margin-bottom: 10px;
+}
+.search-bar{
+    border-radius:20px;
+    border:2px solid blueviolet;
+    height:50px;
+    width:250px;
+    background-color:rgba(90, 49, 202, 0.4);
+}
+.content article{
+    width:20%;
+    height:800px;
+    background-color: rgba(230, 88, 27, 0.4);
+    float:left;
+    margin:30px auto 0px 12%;
+    border-radius: 40px;
+    transition: all 1s ease;
+    font-family: "Rancho", serif;
+    font-weight: 400;
+    font-size: 30px;
+    font-style: normal;
+}
+.content h1{
+    color:black;
+}
+.content article:hover{
+    color:black;
+    margin-top: -2px;
+    background-color: aquamarine;
+}
+.nav .nav-list .search-bar i{
+    margin-top:10px;
+    margin-right: 5px;
+    font-size: 30px;
+    float:inline-end;
+}

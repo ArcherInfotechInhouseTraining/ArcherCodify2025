@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>File Input</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>File Input</h2>
+    <form>
+	<!-- File Input -->
+	<div class="form-group">
+	    <label for="imageUpload">Upload Image</label>
+	    <div class="custom-file">
+		<input accept="image/*" class="custom-file-input" id="imageUpload" type="file">
+		<label class="custom-file-label" for="imageUpload">Choose file</label>
+	    </div>
+	</div>
+	
+	<button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>
+
+<!-- Bootstrap JS (for custom file input handling) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // Update the file input label when a file is selected
+    $('#imageUpload').on('change', function (event) {
+	var fileName = event.target.files[0].name;
+	$(this).next('.custom-file-label').html(fileName);
+    });
+</script>
+</body>
+</html>

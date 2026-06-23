@@ -1,0 +1,39 @@
+ #include <bits/stdc++.h>
+#include <string>
+using namespace std;
+string encodedBinaryString(const string &S){
+string encoded="";
+for(size_t i=0;i<S.length();i+=2){
+string store=S.substr(i,2);
+
+ if(store == "00"){
+    encoded += "A";
+   }
+  else if(store == "01"){
+       encoded += "T";
+    }
+           else  if(store == "10"){
+                encoded += "C";
+            }
+            if(store == "11"){
+                encoded += "G";
+            }
+            
+        }
+        return encoded;
+    }
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        string S;
+        cin>>S;
+        cout<<encodedBinaryString(S)<<endl;
+        
+        // your code goes here
+    }
+    return 0;
+
+} 

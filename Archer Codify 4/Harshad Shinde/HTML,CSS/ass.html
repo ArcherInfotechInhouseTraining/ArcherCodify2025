@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .clock{
+        height: 200px;
+        margin-top: 200px;
+        width: 200px;
+        border-radius: 50%;
+        border: 2px solid black;
+        position: relative;
+        background-image: radial-gradient(lightgreen 25%,white 55%,yellow 75%,pink 25%);
+    }
+    .second{
+        height: 80px;
+        width: 2px;
+        background-color:black;
+        position: absolute;
+        left: 100px;
+        top: 25px;
+        animation: 60s infinite second;
+    }
+    
+    .minutes{
+        height: 70px;
+        width: 2%;
+        background-color:red;
+        position: absolute;
+        left: 99px;
+        top: 35px;
+        animation: 60m infinite  minutes;
+    }
+    @keyframes second{
+        0%{
+            transform-origin: 0% 100%;
+            transform: rotate(0deg);
+
+        }
+        100%{
+            transform-origin:0% 100% ;
+            transform: rotate(360deg);
+        }
+    }
+    
+
+</style>
+<body>
+    <div class=" clock ">
+        <div class="second"></div>
+        <div class="minutes"></div>
+        <div class="hours"></div>
+    </div>
+
+</body>
+</html>

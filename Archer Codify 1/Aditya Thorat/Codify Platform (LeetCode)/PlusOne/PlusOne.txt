@@ -1,0 +1,31 @@
+
+int* plusOne(int* digits, int digitsSize, int* returnSize) {
+    int* ret, dig, carry=1;
+    ret= (int*)calloc(digitsSize+1, sizeof(int));
+    for(dig= digitsSize-1; dig>=0; dig--)
+    {
+        if(carry)
+        {
+            carry= 0;
+            if(digits[dig]==9){
+                if(dig==0)
+                    ret[0]= 1;
+                ret[dig+1]= 0;
+                carry= 1;
+            }
+            else
+                ret[dig+1]= digits[dig]+1;
+        }
+        else
+            ret[dig+1]= digits[dig];
+    }
+    if(ret[0]==0)
+    {
+        *returnSize= digitsSize;
+        ret= ret+1;
+    }
+    else
+        *returnSize= digitsSize+1;
+
+    return ret;
+}

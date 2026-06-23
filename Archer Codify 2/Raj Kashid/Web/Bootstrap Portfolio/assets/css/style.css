@@ -1,0 +1,236 @@
+:root {
+  --color-text-light: #b6cbce;
+  --color-text-heading: #eef3db;
+  --color-background-primary: #1e201e;
+  --color-background-secondary: #191919;
+  --color-brand: #f0a500;
+  --color-brand2: #ff7517;
+  --sidebar-width: 240px;
+  --font-base: "Poppins", sans-serif;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+}
+
+body {
+  background-color: var(--color-background-secondary);
+  color: var(--color-text-light);
+  font-family: var(--font-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text-heading);
+  font-weight: 700;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text-light);
+  transition: color 0.4s ease;
+}
+
+a:hover {
+  color: var(--color-brand);
+}
+
+a:focus {
+  outline: 3px dashed var(--color-brand);
+  outline-offset: 2px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.text-brand {
+  color: var(--color-brand);
+}
+
+.bg-base {
+  background-color: var(--color-background-primary);
+}
+
+.full-height {
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 0;
+  border-bottom: 1px solid var(--color-brand);
+}
+
+.shadow-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shadow-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px var(--color-brand);
+}
+
+.iconbox {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  background-color: var(--color-brand);
+  color: var(--color-background-primary);
+  border-radius: 12px;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: var(--color-background-primary);
+}
+
+.navbar .nav-link {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: var(--spacing-sm);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--color-brand);
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    min-height: 100vh;
+    width: var(--sidebar-width);
+    background: linear-gradient(rgba(30, 32, 30, 0.9), rgba(30, 32, 30, 0.9)),
+      url(../images/slidebar.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .navbar-brand img {
+    border: 10px solid var(--color-brand);
+  }
+
+  #content-wrapper {
+    padding-left: var(--sidebar-width);
+  }
+}
+
+/* BUTTON STYLES */
+.btn {
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-weight: 700;
+}
+
+.btn-brand {
+  background-color: var(--color-brand);
+  border-color: var(--color-brand);
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+  background-color: var(--color-brand2);
+  color: #fff;
+}
+
+.link-custom {
+  font-weight: 700;
+  position: relative;
+}
+
+.link-custom::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-brand);
+  position: absolute;
+  left: 0;
+  top: 110%;
+  transition: width 0.4s ease;
+}
+
+.link-custom:hover::after {
+  width: 100%;
+}
+
+/* PROJECT STYLES */
+.project {
+  position: relative;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s ease;
+  border-radius: 50px;
+}
+
+.project:hover img {
+  transform: scale(0.9);
+}
+
+.project:hover {
+  box-shadow: 0 0 20px var(--color-brand);
+}
+
+/* CONTACT FORM */
+#contact .form-control {
+  background-color: lightgray;
+  color: var(--color-background-primary);
+}
+
+#contact .form-control:focus {
+  border: 3px solid var(--color-brand);
+  box-shadow: none;
+}
+
+#contact input.form-control {
+  height: 45px;
+}
+
+/* SOCIAL ICONS */
+.social-icons a {
+  height: 40px;
+  width: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-background-primary);
+  font-size: 24px;
+  border-radius: 20px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .navbar {
+    position: relative;
+    width: 100%;
+  }
+
+  #content-wrapper {
+    padding-left: 0;
+  }
+
+  .iconbox {
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+  }
+
+  .full-height {
+    padding: 60px 0;
+  }
+
+  .btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+}

@@ -1,0 +1,51 @@
+Given an array arr of integers, find all the elements that occur more than once in the array. If no element repeats, return an empty array.
+
+Examples:
+
+Input: arr[] = [2, 3, 1, 2, 3]
+Output: [2, 3] 
+Explanation: 2 and 3 occur more than once in the given array.
+
+
+
+class Solution {
+    public List<Integer> findDuplicates(int[] arr) {
+        int count=0;
+        Map<Integer,Integer> map = new HashMap<>(); 
+        List<Integer> result = new ArrayList<>();
+        for (int num : arr) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if (entry.getValue() > 1) {
+                result.add(entry.getKey());
+            }
+        }
+
+        return result;
+         
+    }
+}
+
+
+
+I used a HashMap to count the occurrences of each element in the array. Then, I iterated through the map entries to find elements that appear more than once and added them to the result list.
+
+map.getOrDefault(num, 0):
+
+This method retrieves the value associated with the key num from the map.
+
+If the num key is not present in the map, it returns the default value 0.
+
+map.getOrDefault(num, 0) + 1:
+
+If the key num exists in the map, it gets the current count (value) and increments it by 1.
+
+If the key num does not exist, it starts with 0 (the default value) and increments it to 1.
+
+map.put(num, ...):
+
+This method inserts the key-value pair into the map.
+
+The key is num, and the value is the incremented count obtained in the previous step.

@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+*
+{
+    background-color: rgb(196, 156, 234);   
+}
+h1{
+    font-family: "DynaPuff", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    text-align: center;
+    color: rgb(160, 110, 206);
+}
+h1:hover
+{
+   color:white
+}
+.box
+{
+    width: 800px;
+    height: 550px;
+    border: 4px solid white;
+    margin: 20px 100px 0px 200px;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+}
+.box .box-items
+{
+    width: 150px;
+    height: 150px;
+    margin: 10px;   
+}
+.box .text-box
+{
+    text-align: center;
+    font-family: "Monsieur La Doulaise", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-style: italic;
+    font-weight: 800;
+    color: white;
+}
+.box #img-box1
+{
+    background-image: url('https://en.pimg.jp/110/436/618/1/110436618.jpg');
+    background-size: cover;
+    background-color: rgb(205, 102, 102);
+    background-blend-mode: multiply;
+    outline: 3px solid white;
+    outline-offset: -6px;
+}
+.box #img-box2
+{
+    background-image: url('https://en.pimg.jp/110/436/618/1/110436618.jpg');
+    background-size: cover;
+    background-color: rgb(199, 199, 122);
+    background-blend-mode: multiply;
+    outline: 3px solid white;
+    outline-offset: -6px;
+}
+.box #img-box3
+{
+    background-image: url('https://en.pimg.jp/110/436/618/1/110436618.jpg');
+    background-size: cover;
+    background-color: rgb(102, 205, 106);
+    background-blend-mode: multiply;
+    outline: 3px solid white;
+    outline-offset: -6px;
+}
+.box #img-box4
+{
+    background-image: url('https://en.pimg.jp/110/436/618/1/110436618.jpg');
+    background-size: cover;
+    background-color: rgb(120, 105, 162);
+    background-blend-mode: multiply;
+    outline: 3px solid white;
+    outline-offset: -6px;
+}
+.box #img-box5
+{
+    background-image: url('https://en.pimg.jp/110/436/618/1/110436618.jpg');
+    background-size: cover;
+    background-color: rgb(113, 162, 202);
+    background-blend-mode: multiply;
+    outline: 3px solid white;
+    outline-offset: -6px;
+}
+.box #img-box6
+{
+    background-image: url('https://en.pimg.jp/110/436/618/1/110436618.jpg');
+    background-size: cover;
+    background-color: rgb(164, 125, 216);
+    background-blend-mode: multiply;
+    outline: 3px solid white;
+    outline-offset: -6px;
+}
+button {
+    background-color: rgb(175, 130, 217);
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 12px;
+    margin: 20px;   
+}
+
+button a
+{
+    display: flex;
+    text-decoration: none;
+    background-color: white;
+    color: rgb(160, 110, 206);
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+.btn
+{
+    margin-left: 400px;
+    width: 400px;
+    height: 80px;
+
+}
+button:hover
+{
+    background-color: white;
+}

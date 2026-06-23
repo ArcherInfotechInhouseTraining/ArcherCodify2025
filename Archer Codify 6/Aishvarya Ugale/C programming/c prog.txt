@@ -1,0 +1,1312 @@
+              
+									---- C programming ----
+
+
+	Computer: 
+
+		Computers possess several key characteristics that define their capabilities and functionalities. Here are some 			
+		fundamental characteristics of computers:
+
+			Speed:	
+			Accuracy:
+			Versatility:	
+			Storage:
+			Automation:	
+			Diligence:
+			Reliability:	
+			Multitasking:
+			Connectivity:
+			Scalability:
+			Precision:
+			Programmability:
+			Cost-Effectiveness:
+
+		Understanding these characteristics helps in appreciating the versatility and impact of computers across different 	
+		industries and aspects of daily life.
+
+	Different areas of application of computer:
+
+		Computers have become integral to various aspects of modern life, and their applications span across a wide range of 		
+	fields. Here are some of the key areas of application for computers :
+	
+			Business and Finance :
+			Education :
+			Healthcare :
+			Entertainment :
+			Communication :
+			Science and Research :
+			Manufacturing and Industry :
+			Agriculture :
+			Government :
+			Transportation :
+			Traffic control and management
+			Satellite communication and control.
+			Data analysis
+			Simulation and Modelling
+			Artificial Intelligence and Machine Learning :
+			Environmental Monitoring :
+			Cybersecurity :
+			Personal Use :
+		These are just a few examples, and the influence of computers continues to grow across diverse sectors, shaping the 		
+		way we live, work, and interact with the world.
+
+	Def : It is data processing unit.
+
+			    Input --> [ ]  --> Output
+			   (Data)  Processing  (Information) 
+				     Unit		
+
+			data: Facts, Properties character. of entity under consideration. 
+			Info: well processed data.
+
+	Computer is two state, Multipurpose, programmable, electronic device, Which takes input from user,store it, process on it
+	and gives the output in desired format.
+
+							Computer 
+						            |
+						---------------------------------
+						|				|
+					   Hardware			     Software
+						|				|
+				----------------------			--------------------------
+				|		     |			|			 |	
+			       CPU            Peripheral 	     System		     Application
+				|		Devices		     Soft.		     Soft.		
+			     - CU                   |			|			 |
+			     - ALU 		- Input Dev.	      - OS			- CAD/CAD Soft
+			     - IM		- Output Dev.	      - Device Drivers		- Antivirus
+								      - Lang.Processor		- Ms-Office
+												- Media Players
+
+	- Hardware refers to the physical components or tangible parts of a computer system. These components are the tangible, mechanical, and electronic parts that make up a computer and enable it to function
+
+	- Software in the context of computers refers to the set of instructions, programs, and data that enable the hardware components to perform specific tasks.
+	 It is a non-physical entity that directs the operation of a computer and allows 
+	  users to interact with the hardware to achieve desired outcomes. 
+
+
+	Functional block diagram of a computer: 
+	A functional block diagram of a computer provides a high-level overview of its major components and their interconnections,
+ 		illustrating the key functions performed by each block
+
+		 				  CPU  
+					_________________________
+					|			|
+				|----->	|	  CU		|---> sends the command signal to every connected peripheral
+				|	|_______________________|
+		   Input	|	|			|	 	 Output
+		    [ ]		|   |-->|	  ALU		|---|     |--->   [ ]
+		     |		|   |	|_______________________|   |	  |
+		     |		|   |---|			|<--|	  |
+		     |		|-------|	  IM		|	  |
+		     |---------------->	|_______________________|---------|
+					       ^          |	
+					 ______|__________V______
+					|			|
+					|	  EM		|
+					|_______________________|
+
+
+
+		Memory: Storage Area
+
+					Memory
+					  |
+				-------------------------
+				|			|
+			 Internal/Primary	  External/Secondary
+				|			|
+			-----------------	  -------------------------
+			|		|	  |	|	|	  |
+		  Tmp/volatile/   Per/Non-Vola.  HDD   CD     DVD    PD,Memory cards
+		  short-term   	  long-term	
+			|		|
+		       RAM             ROM	
+                     - SRAM             |
+		     - DRAM    ---------------------------
+			       | 	|	|	 |
+			    Simple    PROM    EPROM  EEPROM	
+			     ROM
+
+
+		data flows in terms of electrical signals thw the system. we know that electrical
+		energy can be stored but we unable to store the electrical signals. so it can be stored 		
+		in magnetic form.
+
+				A
+
+			    10011010	(assume it as a ascii of character A)
+
+			__/\__/\/\_/\_
+		_________________________________________________________
+		| @--@@-@-						|
+	Write	|							|
+  ------------  |							|	
+	Read	|							|
+		|							|
+		|							|
+		|_______________________________________________________|
+
+			__/\__/\/\_/\_
+	
+			 10011010	
+			
+			     A
+	
+	Memory Units: 
+	
+		Binary digiTS ---> bits
+		0 or 1 --> bit
+
+		4 bits --> 1 nibble
+		8 bits --> 1 byte
+		1024 bytes --> 1 KB
+		1024 KB ---> 1 MB
+		1024 MB --> 1 GB	
+		1024 GB --> 1 TB
+
+
+	ASCII: ASCII,abbreviated from American Standard Code for Information Interchange, is a character encoding standard 
+	       for electronic communication.ASCII codes represent text in computers, telecommunications equipment, and other devices
+
+		A ==> 0010101...  ==> 65
+
+		A-Z ==> 65 to 90
+
+		a-z ==> 97 to 122
+		0-9 ===> 48 to 57
+
+	In TC, Addressable memory is 64k (65535 bytes)
+
+			[][][][][][][][][]
+			[][][][][][][][][]
+			[][][][][][][][][]
+			[][][][][][][][][]
+			[][][][][][][][][]
+			[][][][][][][][][]
+
+
+
+
+	How to learn C Programming:
+	==========================
+
+	
+	English  ==>  Character set --> Words --> Sentence --> Paragraph --> Chapter --> Book--> Library
+
+
+					     Constant	
+	C programming ==> Character Set -->  Keyword  --> Instruction --> Program --> Module --> Software
+					     Variable
+
+
+		Character set: We are using the lowercase US English for the coding so character set is same as English
+				which includes....
+
+					Alphabets:
+							- Uppercase A to Z
+							- Lowercase a to z
+
+					Digits: 	0 to 9
+
+
+					Special Symbols: !@#$%^&*(_)+ ....
+				
+
+
+		Constant, variable and keyword: 
+
+		Constant is element in the program which has fix value, and which cannot be changed.
+
+								C Constants
+								    |
+							---------------------------
+							|			  |
+						    Numeric 		     Non-Numeric
+							|			|
+						-----------------	-----------------
+						|		|	  |		|	
+					   Integer     floating-point  character     String
+					-6,4,56    -5.3,7.0,78.6755    'a', '$'     "A", "Hello"		
+									'H' '4'	     "a123"
+
+
+		variable: suppose, the formula of simple interest
+
+				si = (p*r*n) / 100 ;
+
+			variables ---> p,r,n,si
+			constant  ---> 100
+
+		Variable is element in the program which may change during the program execution.
+
+		Keyword: These are reserved words, whose meaning is already known to compiler. 
+			 There are 32 keywords in C. and these are
+
+		auto		double		int		struct
+		break		else		long		switch
+		case		enum		register	typedef
+		char		extern		return		union
+		continue	for		signed		void
+		do		if		static		while
+		default		goto		sizeof		volatile
+		const		float		short		unsigned
+
+
+//-----------------------------------------------------------------------------------------------------------------------------
+
+	// 	Instruction : It is command issued to perform the specific task.	
+
+				There are 4 different types of instructions.
+
+					1. Input-Output Instruction
+					2. Type Decl. Instruction
+					3. Arithmetic instruction
+					4. Control Instruction
+
+
+		Concept of Editor and IDE : notepad, Turboc++ IDE, codeblocks, Online Compiler.
+
+	Editor: A text editor is a tool designed for editing plain text files. It provides a simple interface for entering and 				modifying code. Text editors are lightweight and are often used for quick edits or for writing code in languages 
+		that do not require extensive development environments.
+
+	   IDE: An IDE is a comprehensive software suite that combines various tools and features to streamline the entire software development process. It provides an integrated environment for coding, debugging, testing, and deploying applications. 			IDEs are well-suited for larger projects and languages that require a more extensive set of development tools.
+Compilers and IDE: 
+
+		Compilers: GNU GCC, g++, CMake .. (Online/Offline)
+		IDE: It is integrated development environment --> compiler + editor + lib + doc + add-ons
+
+
+		- Compiler: Converts source code into executable code.
+		- Editor: Tool for writing and editing code.
+		- IDE: Comprehensive environment combining an editor, compiler, debugger, and other tools for software development.
+
+
+	Before starting to actual instructions, just see how and where to write a code.
+
+
+ 	In CodeBlocks							In TurboC
+	=============							==========
+
+	1. open codeblocks						1. open TC ---> file --> new
+	2. write a code							2. Write a code
+	#include<stdio.h>
+	int main()							void main()
+	{								{
+		printf("welcome");						clrscr();
+		return 0;							printf("\n Welcome to c programming");
+	}									getch();
+									}
+							
+	3. built							3. Compile (F9)
+	4. run to see output						4. Run ( Ctrl+F9 )
+
+
+
+	
+		1. Input-Output Instruction:
+
+		Let's start with Output Instruction:
+
+			The built-in function printf() used to display the data on screen.
+
+				Syntax:
+					printf("<Format_String>");
+
+					 e.g.
+						printf("Good Morning To All");
+
+
+	    // Welcome program
+    
+
+int main() // Starting point of the program
+{
+	printf("welcome to c programming");
+	return 0;
+}
+
+
+ Using comments: In the program, you can write the help or notes rather than instructions, which not a part of instructions called comments.
+		 there are 2 types of comments.
+
+		1. single line comment	// ... 
+
+		2. Multiline Comment /* .....*/
+
+
+
+        // WAP to display the personal details
+
+int main()
+{
+    printf("Personal Information");
+    printf("Name: Ajay Amit Pol");
+    printf("Age: 21 Gender: M");
+    printf("Address: shiv plaza, Near AB Chowk,G6, Pune-2");
+    printf("Marks- SSC: 90.45% HSC: 98.43");
+    printf("Amit is my good friend");
+    printf("\n What about you?");
+
+    return 0;
+}
+
+
+ This will displays the unformatted output, To display the output in well formatted manner
+ escape sequence characters are used.
+
+
+        List Of Escape Sequence Characters
+        ===================================
+
+        \n - Newline
+        \t - horz. Tab
+        \a - bell
+        \b - backspace
+        \v - vertical tab
+        \r - carriage return
+        \f - form feed
+        \' - to print '
+        \" - to print "
+        \\ - to print \
+        \? - to print ?
+        %% - to print %
+
+    // Above program with Escape Sequence Characters
+*/
+
+int main()
+{
+    printf("\n ****** Personal Information ******\a\a\a");
+    printf("\n Name: Ajay Amit Pol");
+    printf("\n Age: 21 \t Gender: \'M\' ");
+    printf("\n Address: \"shiv plaza\", Near AB Chowk,G\\6, Pune-2");
+    printf("\n Marks- SSC: 90.45%% \t HSC: 98.43%%");
+    printf("\n Amitraj is my good friend \r ABHI");
+    printf("\n What about\f you\?");
+    printf("\n ABC\bDEFGH\b\bIJKLMNOP");
+    return 0;
+}
+//==========================================================================================================================
+	// 2. Type Decl. Instruction: The aim this instruction is to allocate the memory.
+			
+		syntax:
+			<data_type> <var_nm>;
+	
+		Now we have to see Data Types: 
+
+			what is data type?  ==> It is programming tool, which is responsible for memory allocation.
+		
+			or In another words,
+
+		Data, which is input to computer, is divided into different groups according to the memory needs, where
+		individual group is called type and collectively it is known as data types.
+
+					
+							C Data Types
+							      |
+					--------------------------------------------------
+					|			|			 |
+				    Built-in		     Derived		    Userdefined		
+					|			|			|
+			  -------------------	 	------------------	       ---------------------
+			  |		    |        	|         |       |	       |	|	   | 
+			Numeric         Non-Numeric   Array    pointer  function    structure  Union     Enum
+			  |                  |
+		----------------        ------------------
+		|		|	|		|
+	    Integers	  Fractional   character     string
+	     (int)	      |		  |
+		          --------      (char)    
+                          |       |
+			(float) (double)
+
+
+		There are 4 different basic/Built-in types in C 
+
+		Data type       Memory 			format specifier
+
+		char		1 byte			    %c
+		
+		int 		2 bytes(TC)		    %d
+				4 bytes(GCC)
+
+		float		4 bytes			    %f
+
+		double		8 bytes			    %lf
+
+
+
+		Now We have to see <var_nm> means --> It is an identifier of memory location.
+
+
+		memory  ---> storage area.
+
+			Addressible memory --> maximum allowable storage for one program.
+
+			 [ 64K --> 65535 bytes] 
+
+			[][][][][][][][][][][]
+			[][][][][][][][][][][]
+			[][][][][][][][][][][]
+			[][][][][][][][][][][]	
+			[][][][][][][][][][][]
+			[][][][][][][][][][][]
+			[][][][][][][][][][][]
+			[][][][][][][][][][][]	
+			[][][][][][][][][][][]
+			[][][][][][][][][][][]
+			
+
+		We know that, variable name is identifier of memory location. there are some rules to select the identifier
+		and these are
+
+		- Uppercase and Lowercase letters are different.   int a, int A;
+		- No any special symbol is allowed rather than _ (Not even blank space) int a ; char _ch; float ft;
+		- It may be alphanumeric but must starts with alphabet or _  double db5,float _1; 
+		- Keyword can not be used as a identifier.
+
+
+	There are 4 differnt type of type decl.
+
+	1. simple decl:
+
+		int x;		char ch;	float ft;
+
+		x		ch		ft
+		[    ]           [ ]             [    ]
+	      2/4 bytes		1 byte		4 bytes
+
+
+	2. Multiple Decl:
+
+		int x,y,z;		double d1,d2;
+
+		x	y	z		d1		d2
+		[ ]	[ ]	[ ]		[       ]	[ 	]
+		  2/4 bytes each		    8 bytes each
+
+	
+	3. decl. with init:
+
+		int x=10;		char c1='A';
+
+		x	   		c1		
+		[ 10 ]                     [ 'A' ]	 
+	
+	
+	4. Multi. decl. with init:
+
+		int x=10, y=20;		char c1='A', c2='D';
+
+		x	   y			c1		c2
+		[ 10 ]     [ 20 ]                [ 'A' ]	 [ 'D' ]	
+
+//-----------------------------------------------------------
+
+	// WAP to init and display the values
+
+int main()
+{
+    int x=340;
+    char ch='A';
+    float ft=4.5;
+    double db=54.754545;
+
+    printf("\n value of x is: %d",x);
+    printf("\n ch=%c \t ft=%0.3f \n Val of db is %lf",ch,ft,db);
+
+    return 0;
+}
+
+
+//--------------------------------------------------------------------------------------------
+
+
+	Using input Instruction: The built-in function scanf() is used to input the data from the keyboard.
+				 this is from stdio.h
+
+
+				syntax: 
+					scanf("<format_specifier>",&<var_nm>);
+
+
+					int x;
+					scanf("%d",&x);
+
+					int x,y,z;
+					scanf("%d %d %d",&x,&y,&z);
+
+					char ch;
+					int a;
+					double db;
+					scanf("%c %d %lf",&ch,&a,&db);
+
+
+
+
+// WAP to input and display the values.
+
+int main()
+{
+    int x;
+    char ch;
+    float ft;
+    double db;
+
+    printf("\n Enter one character,integer and two fractional values: ");
+    scanf("%c %d %f %lf",&ch,&x,&ft,&db);
+
+    printf("\n value of x is: %d",x);
+    printf("\n ch=%c \t ft=%0.3f \n Val of db is %lf",ch,ft,db);
+
+    return 0;
+}
+
+//---------------------------------------------------------------------------
+
+    // When i write the above program as (character is entered at last or in between)
+
+        // Using fflush(stdin) to clear Keyboard buffer
+*/
+
+#include<stdio.h>
+int main()
+{
+    int x;
+    char ch;
+    float ft;
+    double db;
+
+    printf("\n Enter one integer and two fractional values: ");
+    scanf("%d %f %lf",&x,&ft,&db);
+
+    printf("\n Enter the character: ");
+    fflush(stdin); // Try to run with and without this instruction
+    scanf("%c",&ch);
+
+    printf("\n value of x is: %d",x);
+    printf("\n ch=%c \t ft=%0.2f \n Val of db is %lf",ch,ft,db);
+
+    return 0;
+}
+
+
+//------------------------------------------------------------------------------------
+
+	 // Arithmetic Instruction: This instruction provides the different operators, which are used to process the data.
+
+				- Assignment Operators [=]:   						
+				- Unary Operators [ - ++ -- (type) sizeof ]:
+				- Arithmetic Operators [ + - * / % ]:
+				- Relational Operators [ < <= > >= ]:
+				- Equality Operators [==, != ]
+				- Logical Operators [ && || !]:
+				- Conditional Operators [ ? : ]:
+				- Bitwise Operators [ & | ^ >> << ]:
+				- Special Operators [ , ; . -> &(ampersand) * ]:
+
+
+	- Assignment Operators [=]:   It will assigns the constant value, value of variable or answer of expression at its right to
+				      variable at left.
+
+					e.g.
+						x=10;		y=x;		z=x+y;	
+
+
+//--------------------------------------------------------------------------------
+
+    // Write as program to interchange the values of 2 variables
+
+int main()
+{
+    int x,y,tmp;
+
+    printf("\n Enter any 2 nos: ");
+    scanf("%d %d",&x,&y);
+
+    printf("\n Before Interchange Values of x: %d and y: %d",x,y);
+    tmp=x;
+    x=y;
+    y=tmp;
+    printf("\n After Interchange Values of x: %d and y: %d",x,y);
+
+    return 0;
+}
+
+----------------------------------------------------------------------------------
+
+    // Write as program to interchange the values of 3 Characters.
+
+#include<stdio.h>
+int main()
+{
+    char c1,c2,c3,tmp;
+    
+    printf("\n Enter any three characters: ");
+    scanf("%c %c %c",&c1,&c2,&c3);
+    
+    printf("\n characters are: %c %c %c",c1,c2,c3);
+    
+    tmp=c3;
+    c3=c1;                               //-==================A B C==-> C B A============
+    c1=c2;
+    c1=tmp;
+    
+    printf("\n Characters in revers manner: %c %c %c",c1,c2,c3);
+    return 0;
+}
+//---------------------------------------------------------------------------------------------------------
+
+    // Write as program to interchange the values of 2 variables (without using tmp)
+
+void main()
+{
+    int x,y;
+
+    printf("\n Enter any 2 nos: ");
+    scanf("%d %d",&x,&y); // 10 12
+
+    printf("\n Before Interchange Values of x : %d and y : %d",x,y);
+
+    x=x+y; // 22
+    y=x-y; // 10
+    x=x-y; // 12
+
+    printf("\n After Interchange Values of x: %d and y: %d",x,y);
+
+    return 0;
+}
+
+//---------------------------------------------------------------------------------------------------------------
+
+	- Unary Operators [ - ++ -- (type) sizeof ]:
+
+		-(Unary Minus) : It will gives the opposite value.
+
+			x=34;
+
+			y=-x;		The - operator is operated on x first, and then the -34 will be assigned to y.
+
+
+	- Increment(++) decrement(--) Operators: 
+
+				The increment operator will increase the value of variable by 1. and the decrement operator
+		decreases the value of operand by 1.
+
+					These operators are divided into two subtypes
+
+
+						    inc/dec operators
+							   |
+						  ---------------------
+						  |		      |	
+						 Pre		    Post
+					      (++x,--x)		  (x++, x--)
+
+
+					++x   <--->   x=x+1	<--->	x++
+
+					--x   <--->   x=x-1     <---> 	x--
+
+
+		
+		Means pre or post increment operator increases the value of operand by 1 where as pre or post decrement operator
+		decreases the value of operand by 1.
+
+			They behaves differently when they are used in the expression.
+
+		suppose,
+				x=4	and     y=9
+
+				and we have to calc. 
+
+					z = ++x + y--;	
+
+				1. operate all pre operators. (x increased by 1 i.e. 5)
+				2. with current values calc. the basic expr. (z=x+y)  ===> (z=5+9) ==> z=14.
+				3. operate all post operators (y decreased by 1)
+
+    // Using -, ++ -- operators
+
+int main()
+{
+	int x=4,y=9,z;
+
+	z=-x;
+	printf("\n x=%d \t y=%d \t z=%d",x,y,z); // 4 9 -4
+
+	x++;
+	--y;
+	printf("\n x=%d \t y=%d \t z=%d",x,y,z); // 5 8 -4
+
+	z = ++x + y-- ;
+	printf("\n x=%d \t y=%d \t z=%d",x,y,z); // 6  7  14
+
+	return 0;
+}
+
+//------------------------------------------------------------------------------------------------------------
+
+		- Using (type) and sizeof operators:
+
+	(type) refers to type casting. i.e. changing the type of variable only at the time of calculation.
+
+		suppose, x=13 and y=5, Now we have to calculate the z=x/y.
+
+		Note carefully that, In programming, ans of any expression is converted into type which is highest memory holder
+		present in that expression.
+
+
+			z=x/y  ==> z=(int/int), which gives the int type of value.
+
+						In maths terms, it will be 2.6 but only 2 will be considered.
+
+	 	To get the perfect value, we need any one operand in fractional. So to convert that operand in fractional, just use
+		the casting as,
+
+			z=(float)x/y;	 or	z=x/(float)y;  	 or	z=(float)x/(float)y;
+
+
+    // casting example
+
+int main()
+{
+    int x=13,y=5;
+    float z;
+
+    z=x/y;
+    printf("\n z is %f",z);
+
+    // to get the correct ans, we should convert any one or both N/D to float
+    // only at the time of calculation and which is done by type casting as shown
+
+    z=(float)x/y;
+    printf("\n z is %f",z);
+
+    z=x/(float)y;
+    printf("\n z is %f",z);
+
+    z=(float)x/(float)y;
+    printf("\n z is %f",z);
+
+    return 0;
+}
+
+
+	// sizeof operator: It will gives the memory need in terms of bytes using keyword of that data type. or memory allocated for that
+	//  		    variable using variable name.
+
+int main()
+{
+    int x=1467;
+    float y;
+
+    printf("\n For int type: %d",sizeof(int));//4
+    printf("\n For int variable x: %d",sizeof(x));//4
+
+    printf("\n For float type: %d",sizeof(float));//4
+    printf("\n For float variable x: %d",sizeof(y));//4
+
+    printf("\n For char type: %d",sizeof(char));//1
+    printf("\n For double type: %d",sizeof(double));//8
+
+    return 0;
+}
+
+
+//---------------------------------------------------------------------------------------------------------------------------------
+
+	- Arithmetic Operators [ + - * / % ]:
+
+	// Enter any two numbers, multi. by 10 to the half of 2nd number, sub ans from
+	// x^3
+
+int main()
+{
+	int x,y;
+	float t,ans;
+
+	printf("\n Enter any two nos: ");
+	scanf("%d %d",&x,&y);
+
+	t=((float)y/2)*10;
+
+	ans=(x*x*x)-t;
+
+	pritnf("\n Answer is: %f",ans);
+
+	return 0;
+}
+
+
+
+	
+// WAP to calc the simple interst
+
+formula: 	si = ( p * r * n ) / 100 ;
+	
+*/
+
+
+int main()
+{
+    int p,n;
+    float si,r;
+
+    printf("\n Enter the values of p r and n: ");
+    scanf("%d %f %d",&p,&r,&n);
+
+    si=(p*r*n)/100;
+
+    printf("\n Si is: %f",si);
+    return 0;
+}
+
+
+
+
+//------------------------------------------------------------------------------
+
+    // WAP to convert the temp from F to Deg.
+
+    formula: (0°C × 9/5) + 32 = 32°F
+
+            (°F − 32) / 1.8 = °C
+*/
+
+int main()
+{
+    float cesius,fehrenhite;
+
+    printf("Enter the temp in fehrenhite: ");
+    scanf("%f",&fehrenhite);
+
+    celsius = (fehrenhite -32)/1.8 ;
+    printf("temp in cesius is: %f",cesius);
+
+    return 0;
+}
+
+
+
+
+
+//-----------------------------------------------------------------------------------------
+
+
+		// Using / and % Operators
+
+		
+		// operator gives the Quotient and the % operator gives remainder 
+
+		suppose the expression	
+
+				z = 13 / 5 ;
+
+					
+				   2 <-------- Quotient (13/5)
+				________
+			      5	)  13
+				 - 10
+				________
+				   3  <----- remainder (13%5)
+
+
+
+
+
+	
+		13/5 ==> 2		13%5 ==> 3
+
+		234/10 ==> 23		234%10 ==> 4
+
+		2392/10 ==> 239		2392%10 ==> 2
+
+		4/12  ---> 0		4%12 ===> 4
+
+
+	// Enter any 3 digit number and display the addition of all 3 digits.
+
+            e.g. 148 -> 8+4+1 ==> 13
+
+		no	rem    sum
+				0
+		148	8	8
+		14	4	12
+		1	1	13
+		0
+
+	
+int main()
+{
+    int no,rem,sum=0;
+
+    printf("\n Enter any 3 digit no: ");
+    scanf("%d",&no);//148
+
+    rem=no%10;//8
+    sum=sum+rem;//8
+    no=no/10;//14
+
+    rem=no%10;//4
+    sum=sum+rem;//12
+    no=no/10;//1
+
+    rem=no%10;//1
+    sum=sum+rem;//13
+    no=no/10;//0
+
+    printf("\n Addition of all digits: %d",sum);
+    return 0;
+}
+
+//------------------------------------------------------------------------------------------------------------------------------
+
+	// Enter any 3 digit number and reverse it.
+
+		e.g.	No = 148	rev_No = 841
+
+No 	rem	rev=0[rev=(rev*10)+rem;]
+148	8	8     [0*10]+8==>8
+14	4	84----[8*10]+4==>84
+1	1	841---[84*10]+1==>841
+
+int main()
+{
+	int no,rem,rev=0;
+
+	printf("\n Enter any 3 digit number: ");
+	scanf("%d",&no); // 148
+	
+	rem=no%10; // 8
+	rev=(rev*10)+rem; // 8
+	no=no/10; //14
+
+	rem=no%10; // 4
+	rev=(rev*10)+rem; // 84
+	no=no/10; // 1
+
+	rem=no%10; // 1
+	rev=(rev*10)+rem; //841
+	no=no/10; // 0
+
+	printf("\n Reverse Number is: %d",rev);	
+
+	return 0;
+}
+
+
+//------------------------------------------------------------------------------------------------------------------------------
+
+	- Relational Operators [ < <= > >= ]:  The relational operators are used to find out the relation between 
+					       two operands. It will from the condition, which is helpful in the
+					       different conditional control statements.
+
+					       The ans of the condition is int value 1 when the condition is true.
+ 					       and the ans is int value 0 when the condition is false.
+
+
+
+	- Equality Operators [==, != ] : It is used to compare the two operands. and again it will forms the condition. when the condition 
+					 is true it represented using int value 1 otherwise 0
+
+	suppose 	x=10	y=100
+
+		(x>y) ==> false ==> 0
+		(x<=10) ==> true ==> 1
+		(y%2==0 ) ==> true ==> 1
+		(y<=50) ==> false ==> 0
+
+
+		suppose,
+
+			x=4	and     y=12  then,
+
+			(x>y) --> gives 0
+
+			(y>x) --> gives 1
+
+			(x%2==0) ---> gives 1
+
+			(y%5==0) --> gives 0
+
+			(x!=y) ----> gives 1
+
+int main()
+{
+	int x=4,y=12;
+	int ans;
+
+	ans=(x>y);
+	printf("\n Ans of (x>y) is %d",ans) ;
+
+	ans=(x!=y);
+	printf("\n Ans of (x!=y) is %d",ans) ;
+
+	printf("\n (x%%2==0) is %d",(x%2==0));
+
+	printf("\n y>x is %d",(y>x) );
+
+	printf("\n (x==y) is %d ",(x==y) );
+
+	return 0;
+}
+//------------------------------------------------------------------------------------------------
+
+	- Logical operators: [ && || ! ] : the logical operators are used to join two or more conditions.
+
+
+		ANDing refers to multiplication
+		A	B	C
+		0	0	0
+		0	1	0
+		1	0	0
+		1	1	1
+
+
+
+		ORing refers to Addition
+		A	B	C
+		0	0	0
+		0	1	1
+		1	0	1
+		1	1	1
+
+
+
+		when the conditions are joined using..
+
+			&&  --> will gives the 1 only when both/all conditions are true otherwise 0.
+
+			|| --> will gives 0 only when both/all conditions are false otherwise it will gives 1
+
+			!(true)--> false		!(false) --> true
+
+			!(1) --> 0			!(0) ---> 1
+
+
+        // using logical operators
+
+int main()
+{
+    int x=4,y=12;
+    int z;
+		0	1	 0
+    printf("\n (x>y)&&(y<100) is %d",(x>y)&&(y<100)); //0
+		1	1	  1
+    printf("\n (x!=y)&&(y<100) is %d",(x!=y)&&(y<100)); //1
+		  0	  1        1
+    printf("\n\n (x>y)||(y<100) is %d",(x>y)||(y<100)); //1
+		0       0.       0
+    printf("\n (x>y)||(y<10) is %d",(x>y)||(y<10)); //0
+		    1
+    printf("\n\n !(x%%2==0) is %d",!(x%2==0)); //0
+		1
+    printf("\n !(y%%5==0) is %d",!(y%5==0)); //1
+
+    return 0;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------
+
+// - Conditional operator: [? : ] - This is also known as if-then-else or ternary operator.
+
+					    This is the only operator which able to take the decision.
+
+
+		syntax:
+				<cond>  ?  <true_part>  :  <false_part>  ;
+
+			Only <true_part> will be executed when <condi> is True otherwise <false_part> will be executed.
+
+
+
+	// WAP to find max bet 2 nos using conditional operator
+
+int main()
+{
+    int n1,n2;
+
+    printf("\n Enter any two nos: ");
+    scanf("%d %d",&n1,&n2);
+
+    (n1>n2) ? printf("\n n1: %d is max",n1) : printf("\n n2: %d is max",n2) ;
+
+    return 0;
+}
+
+    // In another way
+
+int main()
+{
+    int n1,n2,mx;
+
+    printf("\n Enter any two nos: ");
+    scanf("%d %d",&n1,&n2);
+
+    mx = (n1>n2) ? n1 : n2 ;
+
+    printf("\n Max Number: %d",mx);
+
+    return 0;
+}
+
+    // Nesting of Conditional operator: using the conditional operator with another conditional operator.
+
+*/
+    // WAP to find max from any 3 nos
+
+int main()
+{
+    int n1,n2,n3,mx;
+
+    printf("\n enter any three nos: ");
+    scanf("%d %d %d",&n1,&n2,&n3);
+
+    mx = (n1>n2) ?  (n1>n3)?n1:n3    :   (n2>n3)?n2:n3   ;
+
+    printf("\n Max no: %d",mx);
+    return 0;
+}
+
+//---------------------------------------------------------------------------------------------------
+
+	// program to find the total bill and discount
+int main()
+{
+    float a,b,c,tot,dis;
+
+    printf("\n Enter the price of 3 items: ");
+    scanf("%f %f %f",&a,&b,&c);
+
+    tot=a+b+c;
+    (tot>1000) ? (dis=tot*0.07) : (dis=tot*0.03) ;
+
+    printf("\n Total Bill: %0.2f",tot);
+    printf("\n Discount: %0.2f",dis);
+    printf("\n Pay Rs: %0.2f",(tot-dis));
+
+    return 0;
+}
+
+
+//-----------------------------------------------------------------------------------------------------------------------
+
+   	/// Bitwise Operator: [ & | ^ >> << ]
+ 
+	decimal (10)
+	binary(2)
+	hexadécimal (16)-->(0 to 9 and A to F )
+	octal (0 to 7)
+	
+	     base
+	x=45(10)-->(2)
+	1	10	100	1000	10000	100000	1000000.............
+	
+					<-------------
+	2^0	2^1	2^2	2^3	2^4	2^5	2^6...........
+	1	2	4	8	16	32	64 128 256 512  1024.....
+	1	0	1	1	0	1==>(45--(2)base)
+	
+
+	65 -> ?(2)
+
+	64	32	16	8	4	2	1
+	1	0	0	0	0	0	1
+
+    These operators are used in the bit level operations.
+
+        & ==> 1 & 1 -> 1 otherwise 0
+        | ==> 0 | 0 -> 0 otherwise 1
+
+
+
+		ANDing refers to multiplication
+		A	B	C
+		0	0	0
+		0	1	0
+		1	0	0
+		1	1	1
+
+
+
+		ORing refers to Addition
+		A	B	C
+		0	0	0
+		0	1	1
+		1	0	1
+		1	1	1
+
+
+		X-ORing refers to Addition
+		A	B	C
+		0	0	0
+		0	1	1
+		1	0	1
+		1	1	0
+
+
+              0^0
+        ^ -->     ==> 0 otherwise 1
+              1^1
+
+    suppose x=10       y=12
+
+        (0000 1010)     (0000 1100)
+
+    (x&y)       (x|y)       (x^y)
+
+    1010        1010        1010
+   &1100       |1100       ^1100
+  ========    ========     =======
+    1000        1110        0110
+    (8)          (14)        (6)
+
+
+    x=10 (0000 1010)     y=12  (0000 1100)
+
+     z=x<<2              z=y>>2
+       (0010 1000)       (0000 0011)
+       ==>40            ==> 3
+ */
+
+ //-------------------------------------------------------
+
+ int main()
+ {
+     int x=24,y=10,z;
+	24-->0001 1000
+	10-->0000 1010
+
+     z=(x&y);
+     printf("\n (x&y) is %d", z);
+     printf("\n (x|y) is %d", (x|y));
+     printf("\n (x^y) is %d", (x^y));
+
+     printf("\n (x<<2) is %d", (x<<2));
+     printf("\n (y>>2) is %d", (y>>2));
+
+     return 0;
+ }
+
+
+//----------------------------------------------------------------------------------------------------------
+
+	// - Special Operators [ , ; . -> &(ampersand) * ]:
+
+
+			, - used as seperator  e.g.  int x,y,z;
+
+			; - it is used to indicate termination.
+
+			. and -> - these are member access operators
+
+			* - pointer declerator
+
+			& - Ampersand, used to gain the address of variable.
+
+		
+
+
+//-----------------------------------------------------------------------------------------------------------------------

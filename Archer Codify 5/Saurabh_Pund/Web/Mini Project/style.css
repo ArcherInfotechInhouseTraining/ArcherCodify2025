@@ -1,0 +1,139 @@
+li{
+    list-style: none;
+}
+
+.hero-section {
+    background-image: url("./img/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    opacity: 0;
+    min-height: 100vh;
+    animation: fadeIn 2s forwards;
+  }
+
+  .button{
+    background: transparent;
+    border: 1px solid white;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 1s ease;
+    animation: slideUp 1.5s ease-out forwards;
+  }
+
+  .button:hover{
+    background-color: #fff;
+    color: #222;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+    animation: slideUp 1.5s ease-out forwards;
+  }
+
+  .hero-section p {
+    font-size: 1.25rem;
+    margin-top: 15px;
+    animation: slideUp 2s ease-out forwards;
+  }
+
+  .hero-section a {
+    animation: fadeInUp 2s ease-out forwards;
+  }
+
+  /* Blog Card Styles */
+  .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    opacity: 0;
+    animation: fadeInCard 1.5s ease-out forwards;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .card-body h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  .card-body p {
+    font-size: 1rem;
+  }
+
+  /* Footer Section Styles */
+  .footer-section {
+    background-color: #2c3e50;
+    color: white;
+    padding: 40px 0;
+    opacity: 0;
+    animation: fadeInFooter 2s ease-out forwards;
+  }
+
+  .footer-section h4 {
+    color: #ecf0f1;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .footer-section a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-section a:hover {
+    color: #3498db;
+  }
+
+  /* Social Media Icon Styling */
+  .fab {
+    margin-right: 10px;
+  }
+
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInCard {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInFooter {
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Responsive Grid */
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2.5rem;
+    }
+  }

@@ -1,0 +1,19 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.header{
+    width: 100%;
+    background:linear-gradient(#333333,#dd1818);
+    border: 2px solid black;
+    text-align: center;
+}
+
+.set{
+    display:flex;
+    gap:30%;
+}
+
+}

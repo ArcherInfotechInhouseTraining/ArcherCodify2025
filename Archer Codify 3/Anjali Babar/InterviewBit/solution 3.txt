@@ -1,0 +1,17 @@
+Title: You are given a character called ch, print the ASCII value of the character.
+
+Link: https://www.interviewbit.com/problems/type-conversion/
+
+Solution:      
+                                                                                      #include<iostream>
+
+using namespace std;
+
+int main()  {
+    char ch;
+    cin>>ch;
+    
+     cout << static_cast<int>(ch) << endl;
+    
+    return 0;
+}

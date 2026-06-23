@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+body{
+	background-image: url('https://wallpaperdelight.com/wp-content/uploads/2024/03/Abstract-rainforest-reflections-in-a-tranquil-pond-capturing-the-beauty-of-nature-1536x861.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.nav{
+	width: 1310px;
+	height: auto;
+	padding: 20px;
+	margin: auto 100px 0px auto;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav .nav-list{
+	display: flex;
+	justify-content: flex-start;
+}
+
+.nav .nav-list .nav-items{
+	margin: 5px 10px;
+}
+
+.nav .nav-list .nav-items a{
+	text-decoration: none;
+	color: white;
+	font-family: "Permanent Marker", cursive;
+  	font-weight: 400;
+  	font-style: normal;
+  	font-size: 1.5rem;
+}
+.nav .logo{
+	width: 70px;
+	height: 70px;
+	margin-top: -20px;
+	background-image: url('img/logo.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 3px solid white;
+	border-radius: 50%;
+	margin-top: -12px;
+}
+
+.nav .search-box .search-item{
+	width: 250px;
+	height: 30px;
+	border-radius: 40px;
+	border: 1px solid white;
+	background-color: rgba(0, 0, 0, 0.4);
+	margin-top: 10px;
+}

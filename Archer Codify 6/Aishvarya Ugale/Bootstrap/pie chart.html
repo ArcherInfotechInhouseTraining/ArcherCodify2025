@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Without Bootstrap link</title>
+	<style>
+		*{
+            margin: 0px;
+            padding: 0px;
+        }
+	
+    body::-webkit-scrollbar{
+        display: none;
+    }
+	.box{
+        width: 100%;
+        height: auto;
+    }
+
+    .box-item{
+        width: 200px;
+        height: 200px;
+        border: 2px solid rgb(75, 9, 191);
+        float: left;
+        margin: 20px;
+        border-radius: 50%;
+    }
+    .b6{
+        background-image: repeating-conic-gradient(red 0%,red 25% ,yellow 25%,yellow 30%,blue 30%,blue 50%,green 70%,green 95%);
+        animation: rotateClockwise 2s linear infinite;
+        
+    }
+	
+	</style>
+</head>
+<body>
+	<div class="box">
+	<div class="box-item b6"></div>
+	</div>
+	
+</body>
+</html>

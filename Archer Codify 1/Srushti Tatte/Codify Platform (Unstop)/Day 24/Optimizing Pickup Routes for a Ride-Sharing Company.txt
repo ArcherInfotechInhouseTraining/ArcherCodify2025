@@ -1,0 +1,70 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        // Use BufferedReader for fast input and StringBuilder for fast output
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+
+        // Read the first line for n and m
+        String[] firstLine = br.readLine().split(" ");
+        int n = Integer.parseInt(firstLine[0]);
+        int m = Integer.parseInt(firstLine[1]);
+
+        // Adjacency list representation of the graph
+        List<List<int[]>> graph = new ArrayList<>();
+        for (int i = 0; i <= n; i++) {
+            graph.add(new ArrayList<>());
+        }
+
+        // Read all edges
+        for (int i = 0; i < m; i++) {
+            String[] edge = br.readLine().split(" ");
+            int a = Integer.parseInt(edge[0]);
+            int b = Integer.parseInt(edge[1]);
+            int c = Integer.parseInt(edge[2]);
+            graph.get(a).add(new int[]{b, c});
+        }
+
+        // Dijkstra's algorithm
+        long[] distances = new long[n + 1];
+        Arrays.fill(distances, Long.MAX_VALUE);
+        distances[1] = 0; // Distance to the main office (node 1) is 0
+
+        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingLong(x -> x[1]));
+        pq.add(new int[]{1, 0}); // Start with the main office
+
+        boolean[] visited = new boolean[n + 1];
+
+        while (!pq.isEmpty()) {
+            int[] current = pq.poll();
+            int node = current[0];
+            long currentDistance = current[1];
+
+            if (visited[node]) continue;
+            visited[node] = true;
+
+            for (int[] neighbor : graph.get(node)) {
+                int nextNode = neighbor[0];
+                int weight = neighbor[1];
+                if (distances[node] + weight < distances[nextNode]) {
+                    distances[nextNode] = distances[node] + weight;
+                    pq.add(new int[]{nextNode, (int) distances[nextNode]});
+                }
+            }
+        }
+
+        // Prepare the result
+        for (int i = 1; i <= n; i++) {
+            if (distances[i] == Long.MAX_VALUE) {
+                sb.append("-1 ");
+            } else {
+                sb.append(distances[i]).append(" ");
+            }
+        }
+
+        // Print the result
+        System.out.println(sb.toString().trim());
+    }
+}

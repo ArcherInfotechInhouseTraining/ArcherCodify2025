@@ -1,0 +1,59 @@
+
+https://www.geeksforgeeks.org/problems/sum-of-series2811/1?page=2&sortBy=submissions
+
+class Solution {
+    public static int seriesSum(int n) {
+        int sum=0;
+        for(int i=1;i<=n;i++)
+        {
+            sum=sum+i;
+        }
+        return sum;
+    }
+}
+
+https://www.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1?page=1&sprint=a663236c31453b969852f9ea22507634&sortBy=submissions
+class Solution {
+
+    // arr: input array
+    // Function to find the sum of contiguous subarray with maximum sum.
+    int maxSubarraySum(int[] arr) {
+        int maxsofar = Integer.MIN_VALUE;
+        int maxendshere = 0;
+        
+        for(int i=0;i<arr.length;i++)
+        {
+            maxendshere += arr[i];
+            
+            if(maxsofar < maxendshere){
+                maxsofar =maxendshere;
+            }
+            
+            if(maxendshere <0){
+                maxendshere = 0;
+            }
+        }
+        return maxsofar;
+    }
+}
+so here i have used kadanes algorithms 
+kadanes algorithm is an algorithm used to find 
+the largest sum of subarray in a one dimensional array
+
+i have consider two variables
+which are 
+	1. maxsofar-----> initialized to lowest value in array.
+	2. maxendshere---->intialized to zero. to the hold sum at the current position
+
+	for loop(start-->zeroth index to arr.length-1)
+	adding ith position element into maxendshere
+		
+	If maxendshere is greater than maxsofar, update maxsofar.
+
+	If maxendshere becomes negative, reset it to 0 because starting 
+	a new subarray might lead to a higher sum.
+	
+	After traversing the array, 
+	maxsofar will contain the maximum sum of the subarray.
+	
+	

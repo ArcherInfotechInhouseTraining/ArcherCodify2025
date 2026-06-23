@@ -1,0 +1,16 @@
+.custom-bullets {
+    padding: 0;
+}
+
+.custom-bullets li {
+    position: relative;
+    margin-left: 20px;
+    color: #007acc;
+}
+
+.custom-bullets li::before {
+    content: "●";
+    position: absolute;
+    left: -20px;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,76 @@
+body .box1, .box2, .box3{
+    flex: auto;
+    margin-top: 400px;
+}
+
+.box1{
+    background-image: url('Piu.jpg');
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    background-color: azure;
+    border: solid;
+    align-items: center;
+    float: left;
+    overflow: hidden;
+    margin-left: 200px;
+}
+
+.box1 h1{
+    border: solid;
+    color: rgb(27, 9, 98);
+}
+
+.box2{
+    background-image: url('har.jpg');
+    background-size: contain;
+    height: 250px;
+    width: 400px;
+    background-color: rgb(154, 83, 83);
+    border: solid;
+    float: left;
+    overflow: hidden;
+    background-attachment:local;
+    overflow: scroll;
+
+}
+
+.box2 h1{
+    border: solid;
+    color: rgb(16, 202, 209);
+}
+
+.box3{
+    background-image: url('hal.jpg');
+    background-size: cover;
+    margin-top: 40px;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(52, 11, 122);
+    border: solid;
+    float: right;
+    overflow: hidden;
+
+}
+
+.box3 h1{
+    border: solid;
+    color: rgb(22, 198, 16);
+}
+
+.box4{
+    background-image: url('chy.jpg');
+    background-size: contain;
+    margin-top: 500px;
+    height: 250px;
+    width: 250px;
+    background-color: rgb(216, 88, 24);
+    border: solid;
+    overflow: hidden;
+    float: bottom;
+}
+
+.box4 h1{
+    border: solid;
+    color: brown;
+}

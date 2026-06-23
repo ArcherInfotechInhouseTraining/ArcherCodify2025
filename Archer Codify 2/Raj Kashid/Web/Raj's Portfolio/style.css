@@ -1,0 +1,152 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.currColor {
+  color: #253654;
+}
+
+.footer .nav-link {
+  font-weight: 600;
+  color: #4e525b;
+}
+
+.footer .nav-link:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  width: 30px;
+}
+
+.hero p {
+  font-size: 1.5rem; 
+}
+
+#rajprofile {
+  max-width: 60%;
+  border-radius: 50%;
+  border: 3px solid black;
+  margin-top: 30px; /* Added more margin above the image */
+  margin-bottom: 20px;
+}
+
+.hero {
+  padding: 2rem 0;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+}
+
+.btn {
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  transition: transform 0.2s;
+  margin-top: 15px;
+  font-size: 1rem; /* Base font size for buttons */
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.footer {
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .navbar-nav {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  /* Center buttons and add spacing between them */
+  .hero .d-flex {
+    justify-content: center;
+  }
+
+  .hero .d-flex .btn {
+    font-size: 0.9rem; /* Smaller font size for buttons */
+    margin: 5px; /* Add spacing between buttons */
+    padding: 0.5rem 1rem; /* Reduce padding for smaller buttons */
+  }
+}
+
+@media (max-width: 576px) {
+  .footer .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .hero p,
+  .footer .nav-link {
+    font-size: 0.9rem; /* Adjust paragraph font size for mobile */
+  }
+
+  .btn {
+    padding: 0.5rem 1rem; /* Smaller button padding */
+    font-size: 0.85rem; /* Smaller font size on mobile */
+  }
+
+  .icon {
+    width: 25px;
+  }
+
+  /* Add margins and paddings to prevent elements from touching each other */
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    margin-bottom: 20px;
+  }
+
+  .footer .nav-link {
+    margin-bottom: 10px;
+  }
+
+  #rajprofile {
+    max-width: 80%; /* Adjust profile image width */
+  }
+
+  /* Center buttons vertically and horizontally */
+  .hero .d-flex {
+    flex-direction: column; /* Stack the buttons vertically on mobile */
+    align-items: center; /* Center the buttons */
+  }
+
+  .btn {
+    width: 100%; /* Make buttons full-width on mobile */
+    max-width: 150px; /* Limit button width for better presentation */
+  }
+}

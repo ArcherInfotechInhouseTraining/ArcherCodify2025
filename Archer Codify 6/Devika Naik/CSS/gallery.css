@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+.head{
+    text-align:center;
+    width:100%;
+    height:60px;
+    background-color:aquamarine;
+    border-radius:5px;
+    margin:15px auto 0px 30px;
+}
+.head h1{
+    font-size: 45px;
+    font-weight: 700;
+    color:blue;
+}
+.box1{
+    width:96%;
+    height:200px;
+    background-color: aquamarine;
+    padding-top:20px;
+    padding-left: 50px;
+    margin:20px auto 0px 30px;
+    border-radius:20px;
+    display:inline-flex;
+}
+.box1 .img1{
+    background-image: url(pengus.jpg);
+    background-size: cover;
+    width:180px;
+    height:180px;
+    border-radius: 10px;
+    border:3px solid black;
+}
+.box1 .text1{
+    height:180px;
+    width:800px;
+    padding-left:100px;
+}
+.box1 .text1 p{
+    font-family: "Rancho", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+}

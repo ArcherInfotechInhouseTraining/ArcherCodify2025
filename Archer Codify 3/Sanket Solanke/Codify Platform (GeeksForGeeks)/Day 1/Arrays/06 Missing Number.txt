@@ -1,0 +1,42 @@
+*Title:*
+You are given an array arr of size n - 1 that contains distinct integers in the range from 1 to n (inclusive). This array represents a permutation of the integers from 1 to n with one element missing. Your task is to identify and return the missing element.
+
+*Example:*
+Input: arr[] = [1, 2, 3, 5]
+Output: 4
+Explanation: All the numbers from 1 to 5 are present except 4.
+
+*Link:*
+https://www.geeksforgeeks.org/problems/missing-number-in-array1416/1?page=1&category=Arrays&sortBy=submissions
+
+*Solution:*
+
+// User function Template for Java
+class Solution {
+    int missingNumber(int arr[]) {
+        // code here
+        int len = arr.length+1;
+        int tot = (len)*(len+1)/2;
+        for(int i=0; i<len-1; i++)
+        {
+            tot-=arr[i];
+        }
+        
+        return tot;
+    }
+}
+
+*Test Cases:*
+For Input: 
+1 2 3 5
+Your Output: 
+4
+Expected Output: 
+4
+
+
+*Algo:*
+1. Calculate the length of array & add 1(for missing value).
+2. Calculate sum of all numbers from 1 tp length *n(n+1)/2*.
+3. Subtract each value from the calculated sum.
+4. We will be remained with the value of missing element

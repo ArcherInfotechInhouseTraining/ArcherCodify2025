@@ -1,0 +1,106 @@
+.main h1{
+    text-align: center;
+    text-shadow: 5px;
+    color: rgb(22, 12, 12);
+    font-family: "Permanent Marker", cursive;
+  font-weight: 800;
+  font-style: normal;
+    
+}
+
+.box
+{
+    height: 700px;
+    width: 900px;
+    border: 5px solid black;
+    margin: 25px auto auto 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.box .box-item
+{
+    height: 200px;
+    width: 200px;
+    /*border: 3px solid brown;*/
+    padding: 10px 0px 0px 10px;
+    margin: 10px 0px 0px 5px;
+}
+
+.box #img1
+{
+    background-size: cover;
+    background-image: url('https://forthenovellovers.wordpress.com/wp-content/uploads/2020/05/season-1.jpg?w=600');
+    border-style: inset;
+
+}
+
+.box  p
+{
+    text-align: center;
+    padding-top: 50px;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: orange;
+}
+
+.box2 center
+{
+    align-items: center;
+    margin: 10px auto auto auto;
+}
+
+.box2 center #btn1
+{
+    background-color: rgb(255, 170, 0);
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    
+}
+
+.box2 center #btn2
+{
+    background-color: rgb(255, 170, 0);
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-family: "M PLUS 1p", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+.box2 center #btn3
+{
+    background-color: rgb(255, 170, 0);
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-family: "Kalam", cursive;
+    font-weight: 700;
+    font-style: normal;
+    
+}

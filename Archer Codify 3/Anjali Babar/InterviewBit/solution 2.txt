@@ -1,0 +1,29 @@
+Title: You have to input 5 space-separated values: int, long, char, float and double respectively.
+
+Print each value on a new line in the same order it is received as input. Note that the floating point value should be correct up to 3 decimal places and the double to 9 decimal places.
+
+Link: https://www.interviewbit.com/problems/variable-and-types/
+
+Solution:
+#include<iostream>
+#include <iomanip> 
+using namespace std;
+
+int main()  {
+    int intValue;
+    long long longValue;
+    char charValue;
+    float floatValue;
+    double doubleValue;
+    
+    cin >> intValue >> longValue >> charValue >> floatValue >> doubleValue;
+    
+    cout << intValue << endl;
+    cout << longValue << endl;
+    cout << charValue << endl;
+
+    cout << fixed << setprecision(3) << floatValue << endl;
+    cout << fixed << setprecision(9) << doubleValue << endl;
+    
+    return 0;
+}

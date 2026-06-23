@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before & After</title>
+    <style>
+        .box{
+            padding: 0% 30%;
+        }
+
+        .btn{
+            border: 3px solid black;
+            border-radius: 20px;
+            margin: 30px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 40px;
+
+        }
+
+        /*Button 1*/
+
+        .b1{
+            color:blueviolet;
+            border-color:  aqua;
+            box-shadow: -2px 5px 10px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+ 
+        }
+
+        .b1::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: yellow;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-100%);
+            z-index: -1;
+            transition: .5s all ease;
+        }
+
+        .b1:hover::before{
+            transform: translateX(0%);
+        }
+
+        .b1:hover{
+            color: white;
+            border-color: wheat;
+        }
+
+        /*Button 2*/
+
+        .b2{
+            color:rgb(217, 139, 30);
+            border-color:  rgb(83, 133, 232);
+            box-shadow: -2px 5px 10px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+ 
+        }
+
+        .b2::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(231, 47, 47);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-50%);
+            z-index: -1;
+            transition: .5s all ease;
+        }
+
+        .b2:hover::before{
+            transform: translateX(-100%);
+        }
+
+        .b2::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(231, 47, 47);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(50%);
+            z-index: -1;
+            transition: .5s all ease;
+        }
+
+        .b2:hover::after{
+            transform: translateX(100%);
+        }
+
+        .b2:hover{
+            color: rgb(0, 0, 0);
+            border-color: rgb(200, 105, 105);
+        }
+
+        /*Button 3*/
+
+        .b3{
+            color:rgb(30, 217, 167);
+            border-color:  rgb(189, 39, 164);
+            box-shadow: -2px 5px 10px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+ 
+        }
+
+        .b3::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(127, 231, 47);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: -1;
+            transition: .5s all ease;
+        }
+
+        .b3:hover::before{
+            transform: translateY(-100%);
+        }
+
+        .b3::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(127, 231, 47);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(50%);
+            z-index: -1;
+            transition: .5s all ease;
+        }
+
+        .b3:hover::after{
+            transform: translateY(100%);
+        }
+
+        .b3:hover{
+            color: rgb(150, 109, 109);
+            border-color: rgb(200, 113, 105);
+        }
+
+        /*Button 4*/
+
+        .b4{
+            color:rgb(217, 139, 30);
+            border-color:  rgb(83, 133, 232);
+            box-shadow: -2px 5px 10px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+ 
+        }
+
+        .b4::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(231, 47, 47);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-100%);
+            z-index: -1;
+            transition: .5s all ease;
+        }
+
+        .b4:hover::before{
+            transform: translateX(-50%);
+        }
+
+        .b4::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(231, 47, 47);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(100%);
+            z-index: -1;
+            transition: .5s all ease;
+        }
+
+        .b4:hover::after{
+            transform: translateX(50%);
+        }
+
+        .b4:hover{
+            color: rgb(126, 120, 68);
+            border-color: rgb(200, 105, 105);
+        }
+
+        /*Button 5*/
+
+        .b5{
+            color:rgb(217, 139, 30);
+            border-color:  rgb(83, 133, 232);
+            box-shadow: -2px 5px 10px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+ 
+        }
+
+        .b5::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(47, 90, 231);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-100%);
+            z-index: -1;
+            transition: .5s all ease;
+        }
+
+        .b5:hover::before{
+            transform: translate(-50%) rotate(180deg);
+        }
+
+        .b5::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(47, 90, 231);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(100%);
+            z-index: -1;
+            transition: .5s all ease;
+        }
+
+        .b5:hover::after{
+            transform: translateX(50%) rotate(180deg);
+        }
+
+        .b5:hover{
+            color: rgb(255, 251, 211);
+            border-color: rgb(255, 209, 209);
+        }
+
+
+        /* Image */
+
+        .imgbtn{
+            border: 3px solid black;
+            border-radius: 20px;
+            margin: 30px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 40px;
+            object-fit: cover;
+        }
+
+        .b6::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(127, 231, 47);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(50%);
+            z-index: -1;
+            transition: .5s all ease;
+        }
+
+        .b6:hover::before:hover::after{
+            transform: translateY(100%);
+        }
+
+        .b6:hover{
+            color: rgb(150, 109, 109);
+            border-color: rgb(200, 113, 105);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="btn b1">Button 1</div>
+        <div class="btn b2">Button 2</div>
+        <div class="btn b3">Button 3</div>
+        <div class="btn b4">Button 4</div>
+        <div class="btn b5">Button 5</div>
+    </div>
+
+    <div class="imgbtn"><img src="https://static.wikia.nocookie.net/fruitsbasket/images/b/ba/Fruits_Basket_2019_Poster_3.jpg/revision/latest?cb=20190317001057" alt=""></div>
+</body>
+</html>

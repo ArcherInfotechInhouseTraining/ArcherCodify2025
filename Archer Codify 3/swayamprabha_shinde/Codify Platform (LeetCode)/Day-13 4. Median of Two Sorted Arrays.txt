@@ -1,0 +1,96 @@
+4. Median of Two Sorted Arrays
+
+Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
+
+The overall run time complexity should be O(log (m+n)).
+
+Example 1:
+Input: nums1 = [1,3], nums2 = [2]
+Output: 2.00000
+Explanation: merged array = [1,2,3] and median is 2.
+
+Example 2:
+Input: nums1 = [1,2], nums2 = [3,4]
+Output: 2.50000
+Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
+
+Solution:
+
+public class Solution {
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int m = nums1.length;
+        int n = nums2.length;
+        int[] mergedArray = new int[m + n];
+        
+        // Merge the two sorted arrays
+        int i = 0, j = 0, k = 0;
+        while (i < m && j < n) {
+            if (nums1[i] <= nums2[j]) {
+                mergedArray[k++] = nums1[i++];
+            } else {
+                mergedArray[k++] = nums2[j++];
+            }
+        }
+        while (i < m) {
+            mergedArray[k++] = nums1[i++];
+        }
+        while (j < n) {
+            mergedArray[k++] = nums2[j++];
+        }
+        
+        // Find the median
+        int totalLength = m + n;
+        if (totalLength % 2 == 1) {
+            return mergedArray[totalLength / 2];
+        } else {
+            int mid1 = mergedArray[(totalLength / 2) - 1];
+            int mid2 = mergedArray[totalLength / 2];
+            return (mid1 + mid2) / 2.0;
+        }
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        
+        int[] nums1 = {1, 3};
+        int[] nums2 = {2};
+        System.out.println("Median: " + solution.findMedianSortedArrays(nums1, nums2));  
+        // Output: 2.0
+        
+        int[] nums1_2 = {1, 2};
+        int[] nums2_2 = {3, 4};
+        System.out.println("Median: " + solution.findMedianSortedArrays(nums1_2, nums2_2)); 
+        // Output: 2.5
+    }
+}
+
+output:
+Input nums1 = [1,3]
+nums2 = [2]
+Output 2.00000
+Expected 2.00000
+
+Explaination:
+
+m is the size of nums1, and n is the size of nums2.
+mergedArray will store the combined elements of nums1 and nums2, sorted in non-decreasing order.
+i, j, and k are indices for traversing nums1, nums2, and mergedArray, respectively.
+
+
+Compare the current element of nums1 (nums1[i]) with nums2[j].
+Copy the smaller of the two into mergedArray and move the corresponding pointer (i or j) forward.
+Increment k (index of mergedArray).
+while (i < m):
+   -If nums1 has leftover elements after the main loop, copy them into mergedArray.
+    while (j < n):
+   -If nums2 has leftover elements after the main loop, copy them into mergedArray.
+
+If the total length of the merged array (m + n) is odd:
+  -The median is the element at the middle index: mergedArray[totalLength / 2].
+If the total length is even:
+  -The median is the average of the two middle elements:
+     mergedArray[(totalLength / 2) - 1]: The element just before the middle.
+     mergedArray[totalLength / 2]: The element at the middle.
+
+If odd, return the single middle element.
+If even, return the average of the two middle elements.

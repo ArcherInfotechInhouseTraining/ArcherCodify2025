@@ -1,0 +1,124 @@
+217. Contains Duplicate
+
+Title:
+
+Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct. 
+
+Example 1:
+Input: nums = [1,2,3,1]
+Output: true
+Explanation: The element 1 occurs at the indices 0 and 3.
+
+Example 2:
+Input: nums = [1,2,3,4]
+Output: false
+Explanation:All elements are distinct.
+
+Example 3:
+Input: nums = [1,1,1,3,3,4,3,2,4,2]
+Output: true
+
+Constraints:
+1 <= nums.length <= 105
+-109 <= nums[i] <= 109
+
+Solution:
+
+import java.util.HashSet;
+
+public class Solution {
+    public static boolean containsDuplicate(int[] nums) {
+        // Use a HashSet to store the elements of the array
+        HashSet<Integer> set = new HashSet<>();
+        for (int num : nums) {
+            // If the element is already in the set, return true
+            if (set.contains(num)) {
+                return true;
+            }
+            // Otherwise, add the element to the set
+            set.add(num);
+        }
+        // If no duplicates are found, return false
+        return false;
+    }
+
+    public static void main(String[] args) {
+        // Example 1
+        int[] nums1 = {1, 2, 3, 1};
+        System.out.println(containsDuplicate(nums1)); // Output: true
+
+        // Example 2
+        int[] nums2 = {1, 2, 3, 4};
+        System.out.println(containsDuplicate(nums2)); // Output: false
+
+        // Example 3
+        int[] nums3 = {1, 1, 1, 3, 3, 4, 3, 2, 4, 2};
+        System.out.println(containsDuplicate(nums3)); // Output: true
+    }
+}
+
+Output:
+
+Input
+nums = [1,1,1,3,3,4,3,2,4,2]
+Output true
+Expected true
+
+Input
+nums = [1,2,3,4]
+Output false
+Expected false
+
+Explanation:
+
+HashSet Usage: A HashSet is used to store unique elements. Its contains method allows us to check if an element already exists in constant time.
+
+For each number in the array:
+If it exists in the HashSet, it means it's a duplicate, and we return true.
+Otherwise, add it to the HashSet.
+
+Return False: If the loop completes without finding duplicates, return false.
+
+------ Here i have used hashset concept you can solve it by nested loops also ------
+
+program:
+
+public class ContainsDuplicateBasic {
+    public static boolean containsDuplicate(int[] nums) {
+        // Iterate through the array with two nested loops
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                // If any two elements are the same, return true
+                if (nums[i] == nums[j]) {
+                    return true;
+                }
+            }
+        }
+        // If no duplicates are found, return false
+        return false;
+    }
+
+    public static void main(String[] args) {
+        // Example 1
+        int[] nums1 = {1, 2, 3, 1};
+        System.out.println(containsDuplicate(nums1)); // Output: true
+
+        // Example 2
+        int[] nums2 = {1, 2, 3, 4};
+        System.out.println(containsDuplicate(nums2)); // Output: false
+
+        // Example 3
+        int[] nums3 = {1, 1, 1, 3, 3, 4, 3, 2, 4, 2};
+        System.out.println(containsDuplicate(nums3)); // Output: true
+    }
+}
+
+Nested Loops:
+
+The outer loop iterates through each element of the array.
+The inner loop compares the current element (nums[i]) with all subsequent elements (nums[j])
+
+If nums[i] == nums[j], it means the array contains a duplicate, and the function returns true.
+Return False:
+
+If no duplicates are found after all comparisons, the function returns false.

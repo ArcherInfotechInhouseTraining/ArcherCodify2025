@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Form with Radio Buttons</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	  rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Form with Radio Buttons</h2>
+    <form>
+	<!-- Radio Buttons -->
+	<div class="form-group">
+	    <label>Gender</label><br>
+	    <div class="form-check form-check-inline">
+		<input class="form-check-input" id="male" name="gender" type="radio" value="male">
+		<label class="form-check-label" for="male">Male</label>
+	    </div>
+	    <div class="form-check form-check-inline">
+		<input class="form-check-input" id="female" name="gender" type="radio"
+		       value="female">
+		<label class="form-check-label" for="female">Female</label>
+	    </div>
+	    <div class="form-check form-check-inline">
+		<input class="form-check-input" id="other" name="gender" type="radio" value="other">
+		<label class="form-check-label" for="other">Other</label>
+	    </div>
+	</div>
+	
+	<button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

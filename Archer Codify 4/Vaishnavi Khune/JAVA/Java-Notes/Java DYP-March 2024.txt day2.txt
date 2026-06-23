@@ -1,0 +1,720 @@
+
+		 				  CPU  
+					_________________________
+					|			|
+				|----->	|	  CU		|---> sends the command signal to every connected peripherial
+				|	|_______________________|
+		   Input	|	|			|	 	 Output
+		    [ ]		|   |-->|	  ALU		|---|     |--->   [ ]
+		     |		|   |	|_______________________|   |	  |
+		     |		|   |---|			|<--|	  |
+		     |		|-------|	  IM		|	  |
+	scanf()	     |---------------->	|_______________________|---------| printf()
+	cin				       ^          |		    cout 
+					 ______|__________V______
+					|			|
+					|	  EM		|
+					|_______________________|
+
+
+	---------- Java Programming -------------
+
+	Computer is two state, Multipurpose, programmable, electronic device, Which takes input from user, store it, 
+	process on it and gives the output in desired format.
+
+	
+
+		     SIMULA
+		     COBOL								   |-- Sun Microsystem --> Java
+	Assembly --> Fortran ----> ALGOL60 --> CPL --> BCPL-----> B -----> C ----> C++ ====|-- Microsoft corpo.--> .Net
+		     RPG	    (1960)   (1963)    (1967)    (1970)   (1972) (1983-84) |-- .......
+		     BASIC								   |
+		     Pascal
+		     ....
+
+
+
+			Instructions            Prog_nm
+                              |___________________|
+                                         |
+		                         |           Debug
+		source code	     *.c/*.cpp <---------------------|
+					 |			     ^	     
+					 |			     |
+				       compile --------------------->| compile-time error
+  					 |			     |	(syntax Errors)
+					 |			     |
+		backup file		*.bak			     | 
+					 |			     |	
+			Linker --------->|-------------------------->| Linker errors
+					 |			     |	
+	object code file		*.obj			     |
+					 |			     |
+					 |			     ^	
+	executable file 		*.exe			     |
+					 |			     |
+					Run ------------------------>| Runtime errors
+					 |
+				       Output
+
+
+
+Any hardware or software environment in which a program runs, is known as a platform.
+	Platform = Processor architecture + OS
+
+	In C and CPP, the machine code is generated on the machine on which code is compiled, due to that
+	the application will run only on machines having same config.(platform)which is known as platform
+	dependent. This is the limitation of C and C++.
+
+	Now we want the platform independent code.
+
+
+					     *.java
+						|
+						|
+					     Compile
+					     (javac)
+						|
+						|
+					    Bytecode	
+					    (*.class)
+	Compile					|
+       ================				|
+	Interpretation	-----------------------------------------
+				|		|		|	...
+			       JVM	       JVM	       JVM     <---------------- JVM is different for every platform
+ (Interpreter - java)		|		|		|			 means it is platform dependent
+			      Windows	      Linux	       Mac
+				|		|		|
+			 Native Code       Native Code    Native Code
+				|		|		|
+			       Run	       Run             Run
+				|		|		|
+			     Output	     Output          Output
+
+Java Editors and IDE's
+	======================
+
+		Editor: Notepad, Editplus, Notepad++ ...
+		
+		IDE: Best Java IDEs
+			Eclipse. Platform – Linux/macOS/Solaris/Windows. ...
+			NetBeans. Platform – Linux/macOS/Solaris/Windows. ...
+			IntelliJ IDEA. Platform – Linux/macOS/Windows. ...
+			BlueJ. Platform – Linux/macOS/Windows. ...
+			(Oracle) JDeveloper. Platform – Linux/macOS/Windows. 
+
+Now we have see, how to write a code where:
+
+		1. Use any editor/ide
+
+		2. Install jdk/jre (https://www.oracle.com/in/java/technologies/javase/javase8-archive-downloads.html)
+
+		3. Use notepad as a editor and write a code as
+
+			class <cls_nm>
+			{
+				public static void main(String []args)
+				{
+					------------------;
+					------------------;
+					program_body ;
+					------------------;
+					------------------;
+				}
+			}
+
+			class Demo
+			{
+				public static void main(String []args)
+				{
+					System.out.print("Welcome to Java Programming");
+				}
+			}
+
+		4. Save the code in C:\Program Files\Java\jdk-17.0.1\bin As <class_nm>.java
+
+		5. win+r --> cmd --> enter (attend the folder where the source file, compiler and interpreter is present) as
+
+			C:\Users\hp>cd\
+			C:\>cd "Program Files\Java\jdk-17.0.1\bin"
+			C:\Program Files\Java\jdk-17.0.1\bin>javac Demo.java     (compilation where you get the bytecode (*.class) )
+			C:\Program Files\Java\jdk-17.0.1\bin>java Demo  	 (Byte code interpretation)
+				Welcome to Java Programming
+			C:\Program Files\Java\jdk-17.0.1\bin>
+
+	//------------------------------------------------------------------------------------------------------------------
+
+How to run, same code when source file (*.java) is in different folder
+				
+			C:\Users\hp>e:
+			E:\>cd myjavafiles
+			E:\myjavafiles>javac First.java
+
+				'javac' is not recognized as an internal or external command,
+				operable program or batch file.
+
+			E:\myjavafiles>set path=C:\Program Files\Java\jdk-17.0.1\bin
+			E:\myjavafiles>javac First.java
+			E:\myjavafiles>java First
+				Welcome to Java Programming-First
+			E:\myjavafiles>
+
+		Note that the path is applicable till the current session of the command prompt.
+		to set the path in the permanent manner set the path in Environmeent variable
+
+
+		Setting the environment variable: this pc --> rh+ click ---> properties --> adv. system settings
+						--> Advanced tab --> environment variable --> user variable path
+
+
+				-if already path is there -> edit --> new-> paste path (C:\Program Files\Java\jdk-17.0.1\bin)
+
+				otherwise  user variable path--> new and write
+
+				variable name --> path
+				variable value --> C:\Program Files\Java\jdk-17.0.1\bin) --> ok....
+//-------------------------------------------------------------------------------------------------------------
+	Youtube Link: https://youtu.be/RBxum7M3B94?si=jepmNZAtetZfJKFp
+//-------------------------------------------------------------------------------------------------------------
+
+	Details of welcome program:
+	============================
+
+	class WelcomeProg
+	{
+		public static void main(String []args)
+		{
+			System.out.print("Welcome to Java");
+		}
+	}
+	
+
+	Line 1: class WelcomeProg:
+
+			class: It is keyword which allows you to create your own type.
+			WelcomeProg: this is name of UDT, it must be valide identifier. Internally in java lib, the have
+					  choosen, First letter of class name in uppercase and all other in lowercase if it is
+					  made from from one word, if multiple words then first character of each word in ucase
+					  and all other in lcase.
+
+						e.g.	First, Demo, FirstProgram, ExampleDemoWelcome
+					It is recommended, not compalsory
+
+	Line 3: public static void main(String []args) 
+
+			public: it is used to define the visiblity of method main(), coz the javac and java are not members of class
+				as a outsiders they must have access to class members therefore visibility is public.
+
+			static: The static members gains the memory space when class is loaded into memory, no need of object
+				creation. therefore the method main() decl. as static
+
+			void: It is returning type of method main(), it is void coz java program does not return any value to OS
+
+			main(): It is method name, and as it is main(), it is considered as a starting point of of your program
+
+			String []args: String is Built-in class from java.lang package, it is language support package, which is 
+					imported bydefault. []args it is array of arguments, which is passed automatically at the
+					time of execution from commandline, in absence null is collected.
+					simply it is array of objects.
+
+	Line 5:  System.out.print("Welcome to Java");
+
+			"Welcome to Java" : It is data, to be displayed
+			print() is a method from PrintStream class used to display the data on screen.
+			out is predefined object of PrintStream class, decleared as a static in System class
+			System is a class from java.lang package.
+
+ //-----------------------------------------------------------------------------------------------------------------------
+class FirstProgram
+{
+	public static void main(String []args)
+	{
+		System.out.println("Welcome to Java Programming");
+	
+		System.out.println(args[0]);	
+		System.out.println(args[1]);	
+		System.out.println(args[2]);
+
+		System.out.println("Bye Bye..!!");		
+	}
+}
+
+Note that, the IO in java is in form of string only.
+
+
+	Now we need to proceed using the path fillowed in the C and C++
+
+	i.e.
+				constant
+	charcter set -----> 	keyword ------> Instructions ----> program ----> module ---> software
+				variable
+
+
+
+
+	Java Character set:
+
+		- ASCII(American Standard Code for Information Interchange):  Provides the binary string to all symbols present
+		  in the US English, which are used in different electronic devices.
+
+		- ASCII used to code in english, but java supports different human understable languages for coding. means java
+		  having rich character set as cmp to c/c++. The Standard Code system names unicode system used in the 
+		  java which provides the 16 bit binary string to each symbol for different languages.     
+
+
+	// Constants: These are the elements in the program having fix value.
+
+								Java Constants
+								    |
+							---------------------------
+							|			  |
+						    Numeric 		     Non-Numeric
+							|			  |
+						-----------------	-----------------
+						|		|	|		|	
+					   Integer     floating-point  character     String
+					-6,4,56    -5.3,7.0,78.6755    'a', '$'     "A", "Hello"		
+									'H' '4'	     "a123"
+
+
+// Keyword: These are reserved words, whose meaning is already known to compiler. 
+
+
+
+		abstract	continue	for		new		switch
+
+		assert***	default		goto*		package		synchronized
+	
+		boolean		do		if		private		this
+
+		break		double		implements	protected	throw
+
+		byte		else		import		public		throws
+
+		case		enum****	instanceof	return		transient
+
+		catch		extends		int		short		try
+
+		char		final		interface	static		void
+
+		class		finally		long		strictfp**	volatile
+
+		const*		float		native		super		while 
+
+		*	 	not used
+		**	 	added in 1.2
+		***	 	added in 1.4
+		****	 	added in 5.0
+
+	(https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html)
+
+Java Data Types: Tool used for the memory allocation.
+
+
+		- Primitive data types: These are provided by the language itself. e.g. int, char, byte..
+		- Non-Primitive data types: The are defined by the programmers according to the need. e.g. class, interface
+
+
+
+						Java Data Types
+							|
+					---------------------------------
+					|				|
+				Primitive Data Types		Non-Primitive Data Types
+					|				|
+			   --------------------------              - string
+			   |			    |   	   - Array
+		      Numeric		 	boolean	   	   - Vector
+			  |	                (1 bit)
+			------------------
+			|		 |
+		   Integrals	      character	
+			|                |
+	-------------------------      char(2)		
+	|			|				
+      integer		     floating point    		
+      |				|					 
+      |- byte (1)		|- float(4)    
+      |- short (2)		|- double(8)
+      |- int(4)
+      |- long(8)
+
+
+	- The defalt integer value is considered as a int and default fractional value considered as double.
+	- When you decl the variable, java demands for the init. of variables, otherwise it will generate the
+	  error message, 
+				"variable xxx might not have been initialized"
+
+	- When the value of variable having higher type is assigned to variable of lower type, then it will
+	  generate the error message
+
+		e.g.
+			a=c;	gives the following error, when a is byte variable and c is int variable
+
+			"possible lossy conversion from int to byte" 
+		 
+		In such case, where you want to convert the value from higther type to lower type, go for
+		the type casting;
+
+			i.e.	a=(byte)c;
+
+		Note carefully that, lower type to higher type promoted automatically.
+
+	- The long costant is represented using 'l' or 'L' as a prefix and for the float 'f' or 'F' is used.
+
+	- Java allows you to decl. the variables anywhere in the program, just decl before using it.
+
+
+class IntData
+{
+	public static void main(String []args)
+	{
+		byte b=10; // If the literal it will be considered as a byte value
+		System.out.println("value of b: "+b);
+
+		int x=100;
+		// b=x; // if downcast then it will generate an error
+		b=(byte)x;
+		System.out.println("value of b: "+b);
+
+		long t;
+		t=x;
+		System.out.println("value of t: "+t);
+	}
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------
+
+	/// Different ways of input in Java
+
+	// 1. init and display
+
+class InitID
+{
+	public static void main(String []args)
+	{
+		byte b=10;
+		short s=23;
+		int i=50;
+		long no=456L;
+		System.out.println("\n b="+b+"\t s="+s+"\t i="+i+"\t no="+no);
+
+		float ft=4.5F;
+		double db=56.233;
+		System.out.println("\n ft="+ft+"\t db="+db);
+
+		boolean ans=true;
+		System.out.println("\n ans is: "+ans);
+	}
+}
+
+//---------------------------------------------------------------------------------------------------
+
+	// Data input using commandline
+class CmdlnID
+{
+	public static void main(String []args)
+	{
+		int a,b;
+		a=args[0];
+		b=args[1];
+		System.out.println("\n a="+a+"\t b="+b);
+	}
+}
+
+output on compile
+E:\jprodyp>javac CmdlnID.java
+CmdlnID.java:6: error: incompatible types: String cannot be converted to int
+                a=args[0];
+                      ^
+CmdlnID.java:7: error: incompatible types: String cannot be converted to int
+                b=args[1];
+                      ^
+2 errors
+
+//------------------------------------------------------------------------------
+class CmdlnID
+{
+	public static void main(String []args)
+	{
+		int a=0,b=0;
+		a=Integer.parseInt(args[0]);
+		b=Integer.parseInt(args[1]);
+		System.out.println("\n a="+a+"\t b="+b);
+		System.out.println("\n Sum: "+(a+b));
+	}
+}
+
+E:\jprodyp>javac CmdlnID.java
+
+E:\jprodyp>java CmdlnID
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+        at CmdlnID.main(CmdlnID.java:6)
+
+
+E:\jprodyp>java CmdlnID 11 22
+
+ a=11    b=22
+
+ Sum: 33
+//------------------------------------------------------------------------------------------------
+ // Dealing with the exception
+class CmdlnID
+{
+	public static void main(String []args)
+	{
+		int a=0,b=0;
+
+		try
+		{
+			a=Integer.parseInt(args[0]);
+			b=Integer.parseInt(args[1]);
+		}
+		catch(Exception e)
+		{
+			System.out.println("\n Please Pass the arguments thw commandline");
+		}
+		System.out.println("\n a="+a+"\t b="+b);
+		System.out.println("\n Sum: "+(a+b));
+	}
+}
+
+output: 
+E:\jprodyp>javac CmdlnID.java
+
+E:\jprodyp>java CmdlnID
+
+ Please Pass the arguments thw commandline
+
+ a=0     b=0
+
+ Sum: 0
+
+//======================================================================================================
+
+	// Using BufferedReader and InputStreamReader
+
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+class BrIsrID
+{
+	public static void main(String []args)
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+
+		int x=0;
+		double y=0.0;
+
+		System.out.println("Enter the int value: ");
+		x=br.readLine();
+		System.out.println("Enter the double value: ");
+		y=br.readLine();
+
+		System.out.println("\n x="+x+"\t y="+y);
+		
+	}
+}
+output on compile
+
+
+E:\jprodyp>javac BrIsrID.java
+BrIsrID.java:15: error: incompatible types: String cannot be converted to int
+                x=br.readLine();
+                             ^
+BrIsrID.java:17: error: incompatible types: String cannot be converted to double
+                y=br.readLine();
+                             ^
+2 errors
+
+//------------------------------
+
+
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+class BrIsrID
+{
+	public static void main(String []args)
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+
+		int x=0;
+		double y=0.0;
+
+		System.out.println("Enter the int value: ");
+		x=Integer.parseInt(br.readLine());
+		System.out.println("Enter the double value: ");
+		y=Double.parseDouble(br.readLine());
+
+		System.out.println("\n x="+x+"\t y="+y);
+		
+	}
+}
+output on Compile
+
+E:\jprodyp>javac BrIsrID.java
+BrIsrID.java:15: error: unreported exception IOException; must be caught or declared to be thrown
+                x=Integer.parseInt(br.readLine());
+                                              ^
+BrIsrID.java:17: error: unreported exception IOException; must be caught or declared to be thrown
+                y=Double.parseDouble(br.readLine());
+                                                ^
+2 errors
+
+//------------------------------------------------------------------------------------
+
+	There are two different ways to eliminate these Exceptions
+
+	a) use try catch
+	b) use throws clause
+
+
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+class BrIsrID
+{
+	public static void main(String []args) throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+
+		int x=0;
+		double y=0.0;
+
+		System.out.println("Enter the int value: ");
+		x=Integer.parseInt(br.readLine());
+		System.out.println("Enter the double value: ");
+		y=Double.parseDouble(br.readLine());
+
+		System.out.println("\n x="+x+"\t y="+y);
+		
+	}
+}
+
+output
+E:\jprodyp>javac BrIsrID.java
+
+E:\jprodyp>java BrIsrID
+Enter the int value:
+12
+Enter the double value:
+67.34
+
+ x=12    y=67.34
+
+
+
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+class BrIsrID
+{
+	public static void main(String []args)
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+
+		int x=0;
+		double y=0.0;
+
+		try
+		{
+			System.out.println("Enter the int value: ");
+			x=Integer.parseInt(br.readLine());
+			System.out.println("Enter the double value: ");
+			y=Double.parseDouble(br.readLine());
+		}
+		catch(Exception e){}
+		System.out.println("\n x="+x+"\t y="+y);
+		
+	}
+}
+
+output:
+
+E:\jprodyp>javac BrIsrID.java
+
+E:\jprodyp>java BrIsrID
+Enter the int value:
+23
+Enter the double value:
+45.78
+
+ x=23    y=45.78
+
+//============================================================================================
+
+	4. Input using Scanner class
+
+import java.util.Scanner;
+class ScannerID
+{
+	public static void main(String []args)
+	{
+		Scanner sc=new Scanner(System.in);
+
+		int x=0;
+		double y=0.0;
+		System.out.println("Enter the int value: ");
+		x=sc.nextInt();
+		System.out.println("Enter the double value: ");
+		y=sc.nextDouble();
+
+		System.out.println("\n x="+x+"\t y="+y);
+	}
+}
+
+output: 
+
+
+E:\jprodyp>javac ScannerID.java
+
+E:\jprodyp>java ScannerID
+Enter the int value:
+11
+Enter the double value:
+45.67
+
+ x=11    y=45.67
+
+//============================================================================================
+
+	5. Input using javax.swing.JOptionPane.showInputDialog()
+
+import javax.swing.JOptionPane;
+class InDialogID
+{
+	public static void main(String []args)
+	{
+		int x=0;
+		double y=0.0;
+
+		x=Integer.parseInt(JOptionPane.showInputDialog("Enter the int value: "));
+
+		y=Double.parseDouble(JOptionPane.showInputDialog("Enter the double value: "));
+
+		System.out.println("\n x="+x+"\t y="+y);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                      

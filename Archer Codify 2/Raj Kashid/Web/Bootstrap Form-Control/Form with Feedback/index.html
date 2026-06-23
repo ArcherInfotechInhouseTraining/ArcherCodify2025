@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Form with Feedback</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	  rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Form with Feedback</h2>
+    <form id="feedbackForm">
+	<!-- Email Field with Validation -->
+	<div class="form-group">
+	    <label for="email">Email Address</label>
+	    <input class="form-control" id="email" placeholder="Enter your email" required
+		   type="email">
+	    <div class="invalid-feedback" id="emailFeedback">
+		Please enter a valid email address.
+	    </div>
+	    <div class="valid-feedback" id="emailSuccess">
+		Looks good!
+	    </div>
+	</div>
+	
+	<!-- Submit Button -->
+	<button class="btn btn-primary" disabled id="submitButton" type="submit">Submit</button>
+    </form>
+</div>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Custom JavaScript for Form Validation -->
+<script>
+    const emailInput = document.getElementById('email');
+    const submitButton = document.getElementById('submitButton');
+    const emailFeedback = document.getElementById('emailFeedback');
+    const emailSuccess = document.getElementById('emailSuccess');
+    
+    // Function to validate email and enable/disable submit button
+    emailInput.addEventListener('input', function () {
+	const emailValue = emailInput.value;
+	if (emailValue && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
+	    emailInput.classList.remove('is-invalid');
+	    emailInput.classList.add('is-valid');
+	    emailFeedback.style.display = 'none';
+	    emailSuccess.style.display = 'block';
+	} else {
+	    emailInput.classList.remove('is-valid');
+	    emailInput.classList.add('is-invalid');
+	    emailFeedback.style.display = 'block';
+	    emailSuccess.style.display = 'none';
+	}
+	// Enable submit button if the email is valid
+	submitButton.disabled = !emailInput.classList.contains('is-valid');
+    });
+</script>
+</body>
+</html>

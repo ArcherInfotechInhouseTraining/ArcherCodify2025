@@ -1,0 +1,133 @@
+You are given an integer , you have to convert it into a string.
+
+Please complete the partially completed code in the editor. If your code successfully converts  into a string  the code will print "Good job". Otherwise it will print "Wrong answer".
+
+ can range between  to  inclusive.
+____________________________________________________________________________________________________________________________________________________________
+Sample Input 0
+
+100
+____________________________________________________________________________________________________________________________________________________________
+Sample Output 
+
+Good job
+____________________________________________________________________________________________________________________________________________________________
+
+
+import java.util.*;
+import java.security.*;
+public class Solution {
+ public static void main(String[] args) {
+
+  DoNotTerminate.forbidExit();
+
+  try {
+   Scanner in = new Scanner(System.in);
+   int n = in .nextInt();
+   in.close();
+   //String s=???; Complete this line below
+   String s= Integer.toString(n);
+   
+   //Write your code here
+
+   
+   if (n == Integer.parseInt(s)) {
+    System.out.println("Good job");
+   } else {
+    System.out.println("Wrong answer.");
+   }
+  } catch (DoNotTerminate.ExitTrappedException e) {
+   System.out.println("Unsuccessful Termination!!");
+  }
+ }
+}
+
+//The following class will prevent you from terminating the code using exit(0)!
+class DoNotTerminate {
+
+ public static class ExitTrappedException extends SecurityException {
+
+  private static final long serialVersionUID = 1;
+ }
+
+ public static void forbidExit() {
+  final SecurityManager securityManager = new SecurityManager() {
+   @Override
+   public void checkPermission(Permission permission) {
+    if (permission.getName().contains("exitVM")) {
+     throw new ExitTrappedException();
+    }
+   }
+  };
+  System.setSecurityManager(securityManager);
+ }
+}
+___________________________________________________________________________________________________________________________________________________________
+Explaination:
+
+import java.util.*;: This imports all classes in the java.util package, which includes utilities like Scanner used for taking input.
+
+import java.security.*;: This imports the security-related classes from the java.security package, 
+				      which allows us to control things like the security manager to prevent termination of the program.
+
+public class Solution: Defines a public class named Solution. The class is the entry point for the program.
+				  public static void main(String[] args): The main method which is the entry point for Java programs.
+				 It is static, meaning we don’t need to create an object to call this method.
+
+DoNotTerminate.forbidExit();: 
+				Calls a method forbidExit() from the DoNotTerminate class. 
+				This is used to prevent the program from being terminated by System.exit(0). 
+				If the program tries to exit this way, a SecurityException is thrown,
+				making sure the program cannot terminate unexpectedly.
+
+try: 
+	This begins a try-catch block. 
+	It is used to handle potential exceptions that may arise during runtime.
+
+Scanner in = new Scanner(System.in);:
+        Creates a Scanner object which reads from the standard input (keyboard).
+
+int n = in.nextInt();: Reads an integer input from the user and stores it in the variable n.
+
+in.close();: Closes the Scanner object, which is a good practice to avoid resource leaks.
+
+String s = Integer.toString(n);: Converts the integer n to its string representation. 
+		For example, if n = 100, then s = "100". This allows us to work with n as a string.
+
+if (n == Integer.parseInt(s)) :
+	This checks whether the integer value n is equal to the integer parsed from the string s. 
+	The method Integer.parseInt(s) converts the string s back into an integer.
+	If the values are equal, it prints "Good job".
+	If they are not equal, it prints "Wrong answer.
+
+catch (DoNotTerminate.ExitTrappedException e): 
+	This block catches the exception thrown if someone tries to call System.exit(0) during program execution. 
+	Instead of terminating the program, it prints "Unsuccessful Termination!!".
+
+class DoNotTerminate:
+	 It prevents the program from being terminated using System.exit(0).
+
+public static class ExitTrappedException extends SecurityException: 
+	A custom exception ExitTrappedException is defined, which extends SecurityException. 
+	This is the exception that will be thrown if System.exit(0) is called.
+
+private static final long serialVersionUID = 1;: 
+	This is used to ensure that the ExitTrappedException class is serializable.
+
+public static void forbidExit(): 
+	A static method forbidExit that sets up a custom SecurityManager.
+
+SecurityManager securityManager = new SecurityManager(): 
+	Creates a new SecurityManager object and overrides the checkPermission method.
+
+	This method is called whenever the program attempts to perform an action that requires a security permission (like System.exit(0)).
+	If the permission contains "exitVM" (which is related to virtual machine exit), it throws the custom ExitTrappedException.
+	If an exit attempt is detected, it throws the ExitTrappedException, which prevents the program from exiting.
+
+System.setSecurityManager(securityManager);: 
+	This sets the custom SecurityManager so that it can intercept and block calls to System.exit(0).
+
+
+
+
+

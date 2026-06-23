@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Structural Pseudo Classes</title>
+    </head>
+
+    <style>
+        .box1,.box2, .box3{
+            border: 2px solid black;
+            padding: 0px 30px;
+            width: 300px;
+        }
+        /* .container p:first-child{
+            background-color: pink;
+    
+        } */
+        /* .container p:last-child{
+            background-color: pink;
+    
+        } */
+        /* .container p:first-of-type{
+            background-color: pink;
+    
+        } */
+        /* .container p:last-of-type{
+            background-color: pink;
+    
+        } */
+        /* .container p:only-child{
+            background-color: pink;
+    
+        } */
+        /* .container p:only-of-type{
+            background-color: pink;
+    
+        } */
+        /* .container p:nth-of-type(2){
+            background-color: pink;
+    
+        } */
+        /* .container p:nth-last-child(2){
+            background-color: pink;
+    
+        } */
+        .container *:empty{
+            background-color: aqua;
+            width: 100%;
+            height: 20px;
+
+    
+        }
+      
+
+    </style>
+	<body>
+        <div class="container">
+            <div class="box1">
+                <h1>Heaing of box 1</h1>
+                <h1></h1>
+                <p>First para of box 1</p>
+                <p>second para of box1</p>
+                <p>Third para of box 1</p>
+                <h1></h1>
+
+            </div>
+            <p>First para of container</p>
+            <p>Second para of container</p>
+
+            <div class="box2">
+                <p>First para of box 2</p>
+                <p>second para of box 2</p>
+                <p>Third para of box 2</p>
+                <p>Fourth para of box 2</p>
+
+            </div>
+            <br>
+            <div class="box3">
+                <p>First para of box 2</p>
+                </div>
+            <p>third para of container</p>
+            <p>fourth para of container</p>
+            
+        </div>
+    </body>

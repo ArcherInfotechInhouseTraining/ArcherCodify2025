@@ -1,0 +1,73 @@
+
+1.Given two strings of lowercase English letters, A  and B, perform the following operations:
+
+2.Sum the lengths of  A and B.
+
+3.Determine if A is lexicographically larger than B (i.e.: does B come before A in the dictionary?).
+Capitalize the first letter in  and  and print them on a single line, separated by a space.
+
+
+=========================================================================================================================================
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+            // System.out.println("enter the A string:");
+            String A=sc.nextLine();
+            // System.out.println("enter the A string:");
+            String B=sc.nextLine();
+            int a = A.length();
+            int b = B.length();
+//            System.out.println(""+a);
+//            System.out.println(""+b);
+            int sum; 
+            System.out.println(""+(a+b));
+            int result =A.compareTo(B);
+            if(result<0)
+            {
+                System.out.println("No");
+            }
+            else if(result>0)
+            {
+                System.out.println("Yes");
+            }
+            else
+            {
+                System.out.println("No");
+            }
+            
+            char arrA[] = A.toCharArray();
+            char arrB[] = B.toCharArray();
+            
+            
+                if (arrA[0] >= 97 && arrA[0] <= 122)
+                { 
+                    arrA[0] = (char) (arrA[0] - 32); 
+                }
+                
+                if (arrB[0] >= 97 && arrB[0] <= 122)
+                { 
+                    arrB[0] = (char) (arrB[0] - 32); 
+                }
+                
+            
+            
+            String A1 = new String(arrA);
+            String B1 = new String(arrB);
+            System.out.println(A1+" "+B1); 
+                    
+
+    }
+        
+        
+    }
+
+
+
+
+

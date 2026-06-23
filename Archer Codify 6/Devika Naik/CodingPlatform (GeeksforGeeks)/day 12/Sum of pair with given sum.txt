@@ -1,0 +1,50 @@
+approach 1 : runs 1110 test case out of 1115
+class Solution {
+    boolean twoSum(int arr[], int target) {
+        Arrays.sort(arr);
+        for(int i=0;i<arr.length;i++){
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[i]+arr[j]==target){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+}
+approach 2: optimized reducing to one of the loop 
+We create an empty hash set named set.
+
+class Solution {
+    boolean twoSum(int arr[], int target) {
+       Set<Integer> set = new HashSet<>();
+       for(int num:arr){
+           int complement = target-num;
+           if(set.contains(complement)){
+               return true;
+           }
+           set.add(num);
+       }
+       return false;
+    }
+}
+
+Iteration 1
+num = 2
+
+Calculate complement = 9 - 2 = 7
+
+Check if 7 is in set (it's not).
+
+Add 2 to set. Now, set = {2}.
+
+Iteration 2
+num = 7
+
+Calculate complement = 9 - 7 = 2
+
+Check if 2 is in set (it is).
+
+Since the complement 2 is found in set, return true.
+
+So, the function will return true because the pair (2, 7) adds up to the target 9.

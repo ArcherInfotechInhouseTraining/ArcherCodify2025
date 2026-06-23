@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+body {
+	background-image: url('https://wallpapercave.com/wp/wp4729499.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* background-position: center; */
+}
+
+.nav {
+	/* width: 1310px; */
+	height: auto;
+	padding: 20px;
+	margin: auto 100px 0px auto;
+	/* background-color: rgba(0, 0, 0, 0.5); */
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.nav .nav-list {
+	display: flex;
+	justify-content: flex-start;
+
+
+}
+
+.nav .nav-list .nav-items {
+	margin: 10px 90px;
+}
+i.fa-house {
+	font-size: 20px;
+	/* margin-top: 20px; */
+	color: white;
+	padding: 0px 12px 0px 0px;
+}
+
+.nav .nav-list .nav-items a {
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	font-family: "Permanent Marker", cursive;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.5rem;
+}
+
+.nav .nav-list .nav-items a:hover {
+	color: rgb(201, 71, 6);
+}
+
+.nav .logo {
+	width: 80px;
+	height: 70px;
+	margin-top: -30px;
+	background-image: url('https://as2.ftcdn.net/v2/jpg/09/22/83/83/1000_F_922838303_dntwUK6qjIGC72FtdeQhnqJjs4htHTr3.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border: 3px solid rgba(177, 222, 235, 0.861);
+	border-radius: 50%;
+	margin-top: -12px;
+}
+
+.nav .search-box .search-item {
+	width: 200px;
+	height: 30px;
+	border-radius: 50px;
+	border: 1px solid rgba(60, 119, 186, 0.99);
+	background-color: rgba(0, 0, 0, 0.275);
+	margin-top: 14px;
+
+}
+
+.contain article p {
+	margin-top: 10px;
+	padding: 30px;
+	font-weight: bold;
+	font-family: "Knewave", system-ui;
+	font-weight: 800;
+	/* text-transform: lowercase; */
+	text-align: center;
+
+
+
+}
+
+.contain article h1 {
+	text-align: center;
+	color: rgba(1, 109, 148, 0.952);
+	/* color: conic-gradient(red, green, blue); */
+	font-family: "Knewave", system-ui;
+	font-weight: 800;
+	font-style: normal;
+
+
+}
+
+.contain article {
+	width: 18%;
+	height: 400px;
+	color: rgba(236, 217, 217, 0.88);
+	float: left;
+	margin: 81px 9px 0 10%;
+	font-weight: 800;
+	/* background-color: rgb(209, 196, 18); */
+	display: block;
+	border-radius: 100px 100px 0 0;
+	transition: all 1s ease;
+
+}
+
+.contain article:hover {
+	/* background-color: red; */
+	margin-top: -2px;
+	margin-bottom: 20px;
+}
+

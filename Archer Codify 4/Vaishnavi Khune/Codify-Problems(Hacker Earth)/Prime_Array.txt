@@ -1,0 +1,107 @@
+Problem
+ You are given an array A
+ having N
+ integers. Find the number of triplets (i,j,k)
+ such that 
+1<=i<j<k<=N
+.Ai * Aj * Ak 
+ is Prime number.
+Input format
+
+The first line of input contains an integer T
+ denoting the number of test cases. The description of each test case is as follows:
+The first line of each test case contains an integers N 
+.
+The second line of each test case contains N
+ integers A1,A2,A3.....AN
+.
+Output format
+
+For each test case, print the number of triplets that satisfy the given conditions in a separate line.
+
+Constraints
+1<=T<=10
+3<=N<=10^5
+1<=Ai<=10^5
+
+ 
+Sample Input
+2
+4
+4 5 6 2
+4
+1 1 4 5
+Sample Output
+0
+1
+Time Limit: 1
+Memory Limit: 256
+Source Limit:
+Explanation
+In the first test case there are no tuples that satisfy the given coditions.
+In the second test case the tuples will be 
+ as 
+ which is prime number.
+
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.*;
+class Main {
+
+    public static int isprime(int m)
+    {
+        int flag=0;
+        for(int z=2;z<=m/2;z++)
+        {
+            if(m%z==0)
+            {
+                flag=1;
+                break;
+            }
+        }
+        return flag;
+    }
+
+    public static void main(String args[] ) throws Exception {
+        //BufferedReader
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        
+        int t= Integer.parseInt(br.readLine());
+        
+        while(t>0)
+        {
+            
+        int n= Integer.parseInt(br.readLine());
+        
+        String name = br.readLine();               
+        String arr[]=name.split(" ");
+        int num[]=new int[arr.length];
+        int m=0;
+        int ans=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            num[i]=Integer.parseInt(arr[i]);
+        }
+        
+        for(int i=0; i<n-2;i++)
+        {
+            for(int j=i+1;j<n-1;j++)
+            {
+                for(int k=j+1;k<n;k++)
+                {
+                    m=num[i]*num[j]*num[k];
+                    int flag =isprime(m);
+                    if(flag==0 & m>1)
+                    {
+                        ans++;
+                    }
+                }
+            }
+        }
+        System.out.println(ans);
+        t--;
+        }
+        
+    }
+}
